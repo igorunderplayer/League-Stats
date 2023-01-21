@@ -1,12 +1,9 @@
-import { AxiosError } from 'axios';
-import { StatusBar } from 'expo-status-bar'
-import { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { useSummoner } from '../hooks/summoner';
 import Riot from '../services/riot';
 
 export default function InsertName() {
-  const [name, setName] = useState('')
-  const [region, setRegion] = useState('')
+  const { name, region, setName, setRegion } = useSummoner()
 
   async function handleOnPress() {
     try {
