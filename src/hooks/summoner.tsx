@@ -1,12 +1,14 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react'
+import { AxiosError } from 'axios'
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react'
 import Summoner from '../entities/Summoner'
+import Riot from '../services/riot'
 import usePersistedState from './usePersistedState'
 
 
 type SummonerContextData = {
-  name: string
-  region: string
-  summoner: Summoner,
+  name?: string
+  region?: string
+  summoner?: Summoner
   setName: React.Dispatch<React.SetStateAction<string>>
   setRegion: React.Dispatch<React.SetStateAction<string>>
 }
@@ -17,10 +19,30 @@ type AuthProviderProps = {
 
 export const SummonerContext = createContext({} as SummonerContextData);
 
-function AuthProvider({ children }: AuthProviderProps) {
-  const [summoner, setSummoner] = useState<Summoner>({} as Summoner)
-  const [name, setName] = usePersistedState<string>('name', '')
-  const [region, setRegion] = usePersistedState<string>('region', '')
+function SummonerProvider({ children }: AuthProviderProps) {
+  const [summoner, setSummoner] = useState<Summoner | null>(null)
+  const [name, setName] = usePersistedState<string | null>('name', null)
+  const [region, setRegion] = usePersistedState<string | null>('region', null)
+
+
+  useEffect(() => {
+    if (!summoner) {
+      getSummoner()
+    }
+  }, [name, region])
+
+  async function getSummoner() {
+    try {
+      if (!name || !region) return
+      const res = await new Riot(region).getSummonerByName(name)
+      setSummoner(res)
+    } catch (e) {
+      if (e instanceof AxiosError) {
+        console.error({ ...e })
+      }
+    }
+
+  }
 
   return (
     <SummonerContext.Provider value={{
@@ -42,6 +64,6 @@ function useSummoner() {
 }
 
 export {
-  AuthProvider,
+  SummonerProvider,
   useSummoner
 }

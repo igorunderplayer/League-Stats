@@ -1,12 +1,15 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useSummoner } from '../hooks/summoner';
 import Riot from '../services/riot';
+import themes from '../themes';
 
 export default function InsertName() {
   const { name, region, setName, setRegion } = useSummoner()
 
+
   async function handleOnPress() {
     try {
+      if (!name || !region) return
       const summoner = await new Riot(region).getSummonerByName(name)
 
       alert(summoner.name)
@@ -24,6 +27,7 @@ export default function InsertName() {
       <View style={styles.inputsContainer}>
 
         <TextInput
+          value={region || ''}
           onChangeText={(text) => setRegion(text)}
           style={{
             borderRightWidth: 1,
@@ -34,6 +38,7 @@ export default function InsertName() {
         />
 
         <TextInput
+          value={name || ''}
           onChangeText={(text) => setName(text)}
           style={{
             width: '85%',
@@ -57,7 +62,7 @@ export default function InsertName() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: themes.dark.background,
     alignItems: 'center',
     justifyContent: 'center',
   },

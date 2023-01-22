@@ -1,24 +1,13 @@
+import { SummonerProvider } from './src/hooks/summoner'
+import { Routes } from './src/routes'
+
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
-import InsertName from './src/screens/InsertName';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <InsertName />
-      <StatusBar style="auto" />
-    </View>
-  );
+    <SummonerProvider>
+      <Routes />
+      <StatusBar style='inverted' />
+    </SummonerProvider>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: '#fff'
-  }
-});

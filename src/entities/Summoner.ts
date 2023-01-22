@@ -7,13 +7,13 @@ export default class Summoner {
   revisionDate: number
   summonerLevel: number
 
-  constructor(id: string, accountId: string, puuid: string, name: string, profileIconId: number, revisionDate: number, summonerLevel: number) {
-    this.id = id
-    this.accountId = accountId
-    this.puuid = puuid
-    this.name = name
-    this.profileIconId = profileIconId
-    this.revisionDate = revisionDate
-    this.summonerLevel = summonerLevel
+  constructor(data: any = {}) {
+    this.id = data.id
+    this.accountId = data.accountId
+    this.puuid = data.puuid
+    this.name = data.name
+    this.profileIconId = data.profileIconId
+    this.revisionDate = data.revisionDate
+    this.summonerLevel = data.summonerLevel
   }
 }

@@ -3,9 +3,9 @@ export default class Account {
   public gameName: string
   public tagLine: string
 
-  constructor(puuid: string, gameName: string, tagLine: string) {
-    this.puuid = puuid
-    this.gameName = gameName
-    this.tagLine = tagLine
+  constructor(data: any = {}) {
+    this.puuid = data.puuid
+    this.gameName = data.gameName
+    this.tagLine = data.tagLine
   }
 }

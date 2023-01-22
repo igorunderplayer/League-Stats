@@ -22,6 +22,7 @@ export default function usePersistedState<T>(key: string, defaultValue: T): [T, 
           const storedValueObject = JSON.parse(storedValue) as T
           setValue(storedValueObject)
         } catch {
+          console.log('a')
           setValue(storedValue as T)
         }
       })
