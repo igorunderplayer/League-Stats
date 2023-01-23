@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import colors from '../../colors'
 import ChampionMastery from '../../entities/ChampionMastery'
 import { useSummoner } from '../../hooks/summoner'
 import Riot from '../../services/riot'
 import ChampionMasteryCard from '../ChampionMastery'
 
+import { MaterialIcons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
+
 const MasteriesCard: React.FC = () => {
+  const navigation = useNavigation()
   const { region, summoner } = useSummoner()
 
   const [maestries, setMaestries] = useState<ChampionMastery[]>([])
@@ -24,7 +28,13 @@ const MasteriesCard: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Melhores campeões</Text>
+
+      <TouchableOpacity style={styles.cardHeader} onPress={() => navigation.navigate('bestChampions')} >
+        <Text style={styles.title}>Melhores campeões</Text>
+
+        <MaterialIcons name="chevron-right" size={28} color='#fff' />
+
+      </TouchableOpacity>
 
       <View style={styles.maestries}>
         {maestries.map(mastery => (<ChampionMasteryCard key={mastery.championId} mastery={mastery} />))}
@@ -42,6 +52,15 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     backgroundColor: '#ffffff05',
     alignItems: 'center'
+  },
+  cardHeader: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 12,
+    borderRadius: 12,
+    backgroundColor: '#ffffff05'
   },
   maestries: {
     width: '95%'

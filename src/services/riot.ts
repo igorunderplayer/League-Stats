@@ -32,4 +32,9 @@ export default class Riot {
       return masteries
     }
   }
+
+  async getFreeChampionsIdRotation(): Promise<number[]> {
+    const res = await this.api.get(`/lol/platform/v3/champion-rotations`)
+    return res.data.freeChampionIds
+  }
 }

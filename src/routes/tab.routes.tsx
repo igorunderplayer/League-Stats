@@ -7,10 +7,19 @@ import { MaterialIcons } from '@expo/vector-icons'
 import themes from '../themes'
 import colors from '../colors'
 import Home from '../screens/Home'
+import { TouchableOpacity, Text } from 'react-native'
+import { useSummoner } from '../hooks/summoner'
 
 const Tab = createBottomTabNavigator()
 
 export default function TabRoutes() {
+
+  const { resetSummoner } = useSummoner()
+
+  function exitSummoner() {
+    resetSummoner()
+  }
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -25,7 +34,12 @@ export default function TabRoutes() {
         tabBarLabelStyle: {
           paddingBottom: 6
         },
-        tabBarActiveTintColor: themes.dark.primary
+        tabBarActiveTintColor: themes.dark.primary,
+        headerRight: () => (
+          <TouchableOpacity onPress={exitSummoner}>
+            <Text style={{ color: '#fff' }}>Sair</Text>
+          </TouchableOpacity>
+        )
       }}
     >
 

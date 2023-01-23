@@ -11,6 +11,7 @@ type SummonerContextData = {
   summoner?: Summoner
   setName: React.Dispatch<React.SetStateAction<string>>
   setRegion: React.Dispatch<React.SetStateAction<string>>
+  resetSummoner: () => Promise<void>
 }
 
 type AuthProviderProps = {
@@ -41,7 +42,12 @@ function SummonerProvider({ children }: AuthProviderProps) {
         console.error({ ...e })
       }
     }
+  }
 
+  async function resetSummoner() {
+    setSummoner(null)
+    setName(null)
+    setRegion(null)
   }
 
   return (
@@ -50,7 +56,8 @@ function SummonerProvider({ children }: AuthProviderProps) {
       name,
       region,
       setName,
-      setRegion
+      setRegion,
+      resetSummoner
     }}>
       {children}
     </SummonerContext.Provider>

@@ -1,18 +1,26 @@
+import { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useSummoner } from '../hooks/summoner';
 import Riot from '../services/riot';
 import themes from '../themes';
 
 export default function InsertName() {
-  const { name, region, setName, setRegion } = useSummoner()
+  const { setName, setRegion } = useSummoner()
+
+  const [typingName, setTypingName] = useState('')
+  const [typingRegion, setTypingRegion] = useState('')
+
 
 
   async function handleOnPress() {
     try {
-      if (!name || !region) return
-      const summoner = await new Riot(region).getSummonerByName(name)
+      const summoner = await new Riot(typingRegion).getSummonerByName(typingName)
 
       alert(summoner.name)
+
+      setName(typingName)
+      setRegion(typingRegion)
+
 
     } catch (e) {
       alert('Não foi possivel recuperar a conta, certifique-se que digitou corretamente')
@@ -27,8 +35,8 @@ export default function InsertName() {
       <View style={styles.inputsContainer}>
 
         <TextInput
-          value={region || ''}
-          onChangeText={(text) => setRegion(text)}
+          value={typingRegion}
+          onChangeText={(text) => setTypingRegion(text)}
           style={{
             borderRightWidth: 1,
             borderColor: '#fff',
@@ -38,8 +46,8 @@ export default function InsertName() {
         />
 
         <TextInput
-          value={name || ''}
-          onChangeText={(text) => setName(text)}
+          value={typingName}
+          onChangeText={(text) => setTypingName(text)}
           style={{
             width: '85%',
             padding: 8

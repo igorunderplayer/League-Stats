@@ -4,6 +4,8 @@ import colors from '../../colors'
 import ChampionMastery from '../../entities/ChampionMastery'
 import { useSummoner } from '../../hooks/summoner'
 
+import { getLocales } from 'expo-localization'
+
 import champions from '../../champions.json'
 
 type Props = {
@@ -14,6 +16,8 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
   const { summoner } = useSummoner()
 
   const [champion, setChampion] = useState<any>({})
+
+  const [locale] = getLocales()
 
   useEffect(() => {
     const values = Object.values(champions.data)
@@ -44,7 +48,7 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
           }}
         />
 
-        <Text style={styles.subText}>{mastery.championPoints} pontos</Text>
+        <Text style={styles.subText}>{mastery.championPoints.toString().replace(/\B(?=(\d{3})+(?!\d))/g, locale.digitGroupingSeparator ?? '')} pontos</Text>
 
       </View>
 
@@ -73,9 +77,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   championIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 48 / 2
+    width: 64,
+    height: 64,
+    borderRadius: 64 / 2
   },
   basicInfo: {
     flexDirection: 'row'
