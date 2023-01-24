@@ -5,6 +5,15 @@ import { RIOT_API_KEY } from '@env'
 import Summoner from '../entities/Summoner'
 import ChampionMastery from '../entities/ChampionMastery'
 
+interface GetMatchesOptions {
+  startTime?: number
+  endTime?: number
+  queue?: number
+  type?: string
+  start?: number
+  count?: number
+}
+
 export default class Riot {
   api: AxiosInstance
   
@@ -36,5 +45,31 @@ export default class Riot {
   async getFreeChampionsIdRotation(): Promise<number[]> {
     const res = await this.api.get(`/lol/platform/v3/champion-rotations`)
     return res.data.freeChampionIds
+  }
+
+  async getMatchesByPuuid(puuid: string, options: GetMatchesOptions = {}): Promise<string[]> {
+    const params = new URLSearchParams()
+
+    for(const option in options) {
+      const value = options[option as keyof GetMatchesOptions]
+
+      if (!value) continue
+
+      params.append(option, value.toString())
+    }
+
+    const res = await this.api.get(`/lol/match/v5/matches/by-puuid/${puuid}/ids?${params.toString()}`, {
+      baseURL: `https://americas.api.riotgames.com`,
+    })
+
+    return res.data
+  }
+
+  async getMatchById(matchId: string) {
+    const res = await this.api.get(`/lol/match/v5/matches/${matchId}`, {
+      baseURL: `https://americas.api.riotgames.com`,
+    })
+
+    return res.data
   }
 }

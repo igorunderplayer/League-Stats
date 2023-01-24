@@ -5,6 +5,8 @@ import themes from '../themes';
 export default function TestScreen() {
   const { summoner } = useSummoner()
 
+  console.log(summoner)
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Hello?</Text>

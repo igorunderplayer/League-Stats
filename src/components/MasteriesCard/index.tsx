@@ -24,8 +24,6 @@ const MasteriesCard: React.FC = () => {
       })
   }, [])
 
-  console.log(maestries)
-
   return (
     <View style={styles.container}>
 
