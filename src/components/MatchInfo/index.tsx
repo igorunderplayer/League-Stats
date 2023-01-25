@@ -17,6 +17,7 @@ interface Match {
   info: {
     gameMode: string
     participants: any[]
+    gameDuration: number
   }
 }
 
@@ -37,15 +38,15 @@ const MatchInfoCard: React.FC<Props> = ({ match }) => {
   const spell1 = spells.find(spell => spell.id == me.summoner1Id)
   const spell2 = spells.find(spell => spell.id == me.summoner2Id)
 
-
   const gameMode = {
     "ARAM": "ARAM",
-    "CLASSIC": "Normal"
+    "CLASSIC": "Normal",
+    "URF": "Ultra rapido e furioso"
   }
 
   return (
     <View style={styles.container}>
-      <View style={[styles.leftBar, { backgroundColor: me.win ? colors.softCyan : colors.softOrange }]} />
+      <View style={[styles.leftBar, { backgroundColor: me.win ? colors.softCyan : colors.softRed }]} />
 
       <View style={styles.basicInfo}>
         <Image
@@ -82,20 +83,45 @@ const MatchInfoCard: React.FC<Props> = ({ match }) => {
 
 
       <View style={{ alignItems: 'center' }}>
-        <Text style={[styles.name, styles.winStatus, { backgroundColor: me.win ? colors.softCyan : colors.softOrange }]}>{me.win ? 'VITÓRIA' : 'DERROTA'}</Text>
-        <Text style={styles.subText}>{gameMode[match.info.gameMode]}</Text>
+
+        <View style={[styles.name, styles.winStatus, { flexDirection: 'row', backgroundColor: '#ffffff05' }]}>
+          <Text style={{
+            fontWeight: me.win ? 'bold' : 'normal',
+            fontSize: 18,
+            color: me.win ? colors.softCyan : '#ffffff70'
+          }}> V </Text>
+
+          <Text style={{ color: '#fff', fontSize: 18 }}>/</Text>
+
+          <Text style={{
+            fontWeight: !me.win ? 'bold' : 'normal',
+            fontSize: 18,
+            color: !me.win ? colors.softRed : '#ffffff70'
+          }}> D </Text>
+        </View>
+
+        <Text style={[styles.subText, { fontWeight: 'bold', maxWidth: 96, textAlign: 'center' }]}>{gameMode[match.info.gameMode]}</Text>
+
+        <Text style={styles.subText}>{(match.info.gameDuration / 60).toFixed()} min</Text>
+
+
       </View>
 
 
       <View style={{ alignItems: 'center' }}>
-        <Text style={styles.name}>{me.kills} / {me.deaths} / {me.assists}</Text>
-        <Text style={styles.subText}>50 atuação em abates</Text>
+
+        <View style={{ flexDirection: 'row' }}>
+          <Text style={[styles.name, { color: colors.softCyan }]}>{me.kills}</Text>
+          <Text style={[styles.name]}> / </Text>
+          <Text style={[styles.name, { color: colors.softRed }]}>{me.deaths}</Text>
+          <Text style={[styles.name]}> / </Text>
+          <Text style={[styles.name, { color: colors.softOrange }]}>{me.assists}</Text>
+        </View>
+
+        <Text style={styles.subText}>50% atuação abates</Text>
         <Text style={styles.subText}>{me.totalMinionsKilled} CS</Text>
 
       </View>
-
-
-
     </View>
   )
 }
@@ -109,7 +135,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff05',
     alignItems: 'center',
     justifyContent: 'space-between',
-    width: '90  %'
+    width: '90%'
   },
   leftBar: {
     left: 0,
