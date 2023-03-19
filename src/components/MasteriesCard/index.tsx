@@ -45,7 +45,7 @@ const MasteriesCard: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '90%',
+    width: '95%',
     padding: 12,
     borderRadius: 12,
     backgroundColor: '#ffffff05',

@@ -52,7 +52,7 @@ const MatchInfoCard: React.FC<Props> = ({ match }) => {
         <Image
           style={{ width: 72, height: 72, borderTopLeftRadius: 12, borderTopRightRadius: 12, marginRight: 12 }}
           source={{
-            uri: `http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${me.championName}.png`
+            uri: `http://ddragon.leagueoflegends.com/cdn/13.5.1/img/champion/${me.championName}.png`
           }}
         />
 

@@ -1,16 +1,20 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useSummoner } from '../hooks/summoner';
 import Riot from '../services/riot';
 import themes from '../themes';
 
+const REGIONS = [
+  { name: 'BR', code: 'br1' },
+  { name: 'EUW', code: 'euw1' }
+]
+
 export default function Welcome() {
-  const { setName, setRegion } = useSummoner()
+  const { setName, setRegion, resetSummoner } = useSummoner()
 
   const [typingName, setTypingName] = useState('')
   const [typingRegion, setTypingRegion] = useState('BR1')
-
-
 
   async function handleOnPress() {
     try {
@@ -27,12 +31,17 @@ export default function Welcome() {
     }
   }
 
+  async function handleOnPressDelete() {
+    resetSummoner()
+    await AsyncStorage.clear()
+  }
+
   return (
     <View style={styles.container}>
 
       <View style={{ alignItems: 'center' }}>
         <Text style={styles.title}>Bem vindo</Text>
-        <Text style={styles.subTitle}>Antes de começarmos... preenca os campos abaixo com as informações</Text>
+        <Text style={styles.subTitle}>Antes de começarmos... preencha os campos abaixo com as informações</Text>
       </View>
 
 
@@ -62,6 +71,10 @@ export default function Welcome() {
 
       <TouchableOpacity onPress={handleOnPress} style={styles.button}>
         <Text style={styles.subTitle}>Continuar</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={handleOnPressDelete} style={styles.button}>
+        <Text style={styles.subTitle}>Delete data</Text>
       </TouchableOpacity>
 
     </View>

@@ -1,9 +1,9 @@
 import axios, { AxiosInstance } from 'axios'
-import Account from '../entities/Account'
 
 import { RIOT_API_KEY } from '@env'
 import Summoner from '../entities/Summoner'
 import ChampionMastery from '../entities/ChampionMastery'
+import { LeagueEntry } from '../@types/riot'
 
 interface GetMatchesOptions {
   startTime?: number
@@ -31,6 +31,11 @@ export default class Riot {
   async getSummonerByName(name: string) {
     const res = await this.api.get(`/lol/summoner/v4/summoners/by-name/${name}`)
     return new Summoner(res.data)
+  }
+
+  async getSummonerLeague(summonerId: string) {
+    const res = await this.api.get<LeagueEntry[]>(`/lol/league/v4/entries/by-summoner/${summonerId}`)
+    return res.data
   }
 
   async getSummonerChampionsMasteries(summonerId: string) {

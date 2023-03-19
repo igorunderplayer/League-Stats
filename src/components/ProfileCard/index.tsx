@@ -20,7 +20,7 @@ const ProfileCard: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '90%',
+    width: '95%',
     padding: 12,
     borderRadius: 12,
     flexDirection: 'row',

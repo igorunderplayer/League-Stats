@@ -1,9 +1,10 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { useEffect } from 'react'
-import { StyleSheet, Text, Image, View } from 'react-native'
+import { StyleSheet, Text, Image, View, ScrollView } from 'react-native'
 import colors from '../colors'
 import MasteriesCard from '../components/MasteriesCard'
 import ProfileCard from '../components/ProfileCard'
+import LeaguesInfoCard from '../components/LeagueInfosCard'
 import { useSummoner } from '../hooks/summoner'
 import Riot from '../services/riot'
 import themes from '../themes'
@@ -27,11 +28,15 @@ export default function ProfileRoutes() {
 
 function Profile() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={{
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 8
+    }}>
       <ProfileCard />
-
+      <LeaguesInfoCard />
       <MasteriesCard />
-    </View>
+    </ScrollView>
   )
 }
 
@@ -39,8 +44,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: themes.dark.background,
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
+    paddingVertical: 12 
   },
   text: {
     color: colors.white

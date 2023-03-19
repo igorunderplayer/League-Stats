@@ -21,9 +21,9 @@ type AuthProviderProps = {
 export const SummonerContext = createContext({} as SummonerContextData);
 
 function SummonerProvider({ children }: AuthProviderProps) {
-  const [summoner, setSummoner] = useState<Summoner | null>(null)
-  const [name, setName] = usePersistedState<string | null>('name', null)
-  const [region, setRegion] = usePersistedState<string | null>('region', null)
+  const [summoner, setSummoner] = useState<Summoner>()
+  const [name, setName] = usePersistedState<string>('name')
+  const [region, setRegion] = usePersistedState<string>('region')
 
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function SummonerProvider({ children }: AuthProviderProps) {
 
   async function getSummoner() {
     try {
-      if (!name || !region) return
+      if (!name?.length || !region?.length) return
       const res = await new Riot(region).getSummonerByName(name)
       setSummoner(res)
     } catch (e) {
@@ -45,9 +45,9 @@ function SummonerProvider({ children }: AuthProviderProps) {
   }
 
   async function resetSummoner() {
-    setSummoner(null)
-    setName(null)
-    setRegion(null)
+    setSummoner(undefined)
+    setName('')
+    setRegion('')
   }
 
   return (

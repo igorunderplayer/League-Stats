@@ -1,19 +1,13 @@
 {
   "type": "champion",
   "format": "standAloneComplex",
-  "version": "13.1.1",
+  "version": "13.5.1",
   "data": {
     "Aatrox": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Aatrox",
       "key": "266",
       "name": "Aatrox",
-      "info": {
-        "attack": 8,
-        "defense": 4,
-        "magic": 3,
-        "difficulty": 4
-      },
       "image": {
         "full": "Aatrox.png",
         "sprite": "champion0.png",
@@ -23,10 +17,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Blood Well",
       "stats": {
         "hp": 650,
@@ -52,16 +43,10 @@
       }
     },
     "Ahri": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Ahri",
       "key": "103",
       "name": "Ahri",
-      "info": {
-        "attack": 3,
-        "defense": 4,
-        "magic": 8,
-        "difficulty": 5
-      },
       "image": {
         "full": "Ahri.png",
         "sprite": "champion0.png",
@@ -71,18 +56,15 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Assassin"
-      ],
+      "tags": ["Mage", "Assassin"],
       "partype": "Mana",
       "stats": {
-        "hp": 570,
+        "hp": 590,
         "hpperlevel": 96,
         "mp": 418,
         "mpperlevel": 25,
         "movespeed": 330,
-        "armor": 18,
+        "armor": 21,
         "armorperlevel": 4.7,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
@@ -100,16 +82,10 @@
       }
     },
     "Akali": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Akali",
       "key": "84",
       "name": "Akali",
-      "info": {
-        "attack": 5,
-        "defense": 3,
-        "magic": 8,
-        "difficulty": 7
-      },
       "image": {
         "full": "Akali.png",
         "sprite": "champion0.png",
@@ -119,9 +95,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin"
-      ],
+      "tags": ["Assassin"],
       "partype": "Energy",
       "stats": {
         "hp": 570,
@@ -147,16 +121,10 @@
       }
     },
     "Akshan": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Akshan",
       "key": "166",
       "name": "Akshan",
-      "info": {
-        "attack": 0,
-        "defense": 0,
-        "magic": 0,
-        "difficulty": 0
-      },
       "image": {
         "full": "Akshan.png",
         "sprite": "champion0.png",
@@ -166,10 +134,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 630,
@@ -195,16 +160,10 @@
       }
     },
     "Alistar": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Alistar",
       "key": "12",
       "name": "Alistar",
-      "info": {
-        "attack": 6,
-        "defense": 9,
-        "magic": 5,
-        "difficulty": 7
-      },
       "image": {
         "full": "Alistar.png",
         "sprite": "champion0.png",
@@ -214,10 +173,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Support"
-      ],
+      "tags": ["Tank", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 670,
@@ -243,16 +199,10 @@
       }
     },
     "Amumu": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Amumu",
       "key": "32",
       "name": "Amumu",
-      "info": {
-        "attack": 2,
-        "defense": 6,
-        "magic": 8,
-        "difficulty": 3
-      },
       "image": {
         "full": "Amumu.png",
         "sprite": "champion0.png",
@@ -262,19 +212,16 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Mage"
-      ],
+      "tags": ["Tank", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 685,
-        "hpperlevel": 100,
+        "hpperlevel": 94,
         "mp": 285,
         "mpperlevel": 40,
         "movespeed": 335,
         "armor": 30,
-        "armorperlevel": 4.2,
+        "armorperlevel": 4,
         "spellblock": 32,
         "spellblockperlevel": 2.05,
         "attackrange": 125,
@@ -291,16 +238,10 @@
       }
     },
     "Anivia": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Anivia",
       "key": "34",
       "name": "Anivia",
-      "info": {
-        "attack": 1,
-        "defense": 4,
-        "magic": 10,
-        "difficulty": 10
-      },
       "image": {
         "full": "Anivia.png",
         "sprite": "champion0.png",
@@ -310,19 +251,16 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 550,
-        "hpperlevel": 96,
+        "hpperlevel": 92,
         "mp": 495,
         "mpperlevel": 45,
         "movespeed": 325,
         "armor": 21,
-        "armorperlevel": 5.2,
+        "armorperlevel": 4.9,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
         "attackrange": 600,
@@ -339,16 +277,10 @@
       }
     },
     "Annie": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Annie",
       "key": "1",
       "name": "Annie",
-      "info": {
-        "attack": 2,
-        "defense": 3,
-        "magic": 10,
-        "difficulty": 6
-      },
       "image": {
         "full": "Annie.png",
         "sprite": "champion0.png",
@@ -358,18 +290,16 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
-        "hp": 594,
+        "hp": 560,
         "hpperlevel": 102,
         "mp": 418,
         "mpperlevel": 25,
         "movespeed": 335,
         "armor": 19,
-        "armorperlevel": 5.2,
+        "armorperlevel": 4.7,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
         "attackrange": 625,
@@ -386,16 +316,10 @@
       }
     },
     "Aphelios": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Aphelios",
       "key": "523",
       "name": "Aphelios",
-      "info": {
-        "attack": 6,
-        "defense": 2,
-        "magic": 1,
-        "difficulty": 10
-      },
       "image": {
         "full": "Aphelios.png",
         "sprite": "champion0.png",
@@ -405,9 +329,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 580,
@@ -433,16 +355,10 @@
       }
     },
     "Ashe": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Ashe",
       "key": "22",
       "name": "Ashe",
-      "info": {
-        "attack": 7,
-        "defense": 3,
-        "magic": 2,
-        "difficulty": 4
-      },
       "image": {
         "full": "Ashe.png",
         "sprite": "champion0.png",
@@ -452,16 +368,13 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Support"
-      ],
+      "tags": ["Marksman", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 640,
         "hpperlevel": 101,
         "mp": 280,
-        "mpperlevel": 32,
+        "mpperlevel": 35,
         "movespeed": 325,
         "armor": 26,
         "armorperlevel": 4.6,
@@ -471,7 +384,7 @@
         "hpregen": 3.5,
         "hpregenperlevel": 0.55,
         "mpregen": 7,
-        "mpregenperlevel": 0.4,
+        "mpregenperlevel": 0.65,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 59,
@@ -481,16 +394,10 @@
       }
     },
     "AurelionSol": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "AurelionSol",
       "key": "136",
       "name": "Aurelion Sol",
-      "info": {
-        "attack": 2,
-        "defense": 3,
-        "magic": 8,
-        "difficulty": 7
-      },
       "image": {
         "full": "AurelionSol.png",
         "sprite": "champion0.png",
@@ -500,44 +407,36 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
-        "hp": 645,
-        "hpperlevel": 106,
-        "mp": 350,
-        "mpperlevel": 50,
-        "movespeed": 325,
-        "armor": 19,
-        "armorperlevel": 4.8,
+        "hp": 620,
+        "hpperlevel": 95,
+        "mp": 530,
+        "mpperlevel": 40,
+        "movespeed": 335,
+        "armor": 22,
+        "armorperlevel": 4.3,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
         "attackrange": 550,
-        "hpregen": 7,
-        "hpregenperlevel": 0.6,
-        "mpregen": 6,
-        "mpregenperlevel": 0.8,
+        "hpregen": 5.5,
+        "hpregenperlevel": 0.55,
+        "mpregen": 8,
+        "mpregenperlevel": 0.75,
         "crit": 0,
         "critperlevel": 0,
-        "attackdamage": 57,
+        "attackdamage": 55,
         "attackdamageperlevel": 3.2,
-        "attackspeedperlevel": 1.36,
+        "attackspeedperlevel": 1.5,
         "attackspeed": 0.625
       }
     },
     "Azir": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Azir",
       "key": "268",
       "name": "Azir",
-      "info": {
-        "attack": 6,
-        "defense": 3,
-        "magic": 8,
-        "difficulty": 9
-      },
       "image": {
         "full": "Azir.png",
         "sprite": "champion0.png",
@@ -547,19 +446,16 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Marksman"
-      ],
+      "tags": ["Mage", "Marksman"],
       "partype": "Mana",
       "stats": {
-        "hp": 622,
+        "hp": 550,
         "hpperlevel": 119,
-        "mp": 480,
-        "mpperlevel": 21,
+        "mp": 320,
+        "mpperlevel": 40,
         "movespeed": 335,
         "armor": 19,
-        "armorperlevel": 4.2,
+        "armorperlevel": 5,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
         "attackrange": 525,
@@ -570,22 +466,16 @@
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 52,
-        "attackdamageperlevel": 2.8,
-        "attackspeedperlevel": 3,
+        "attackdamageperlevel": 3.5,
+        "attackspeedperlevel": 5,
         "attackspeed": 0.625
       }
     },
     "Bard": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Bard",
       "key": "432",
       "name": "Bard",
-      "info": {
-        "attack": 4,
-        "defense": 4,
-        "magic": 5,
-        "difficulty": 9
-      },
       "image": {
         "full": "Bard.png",
         "sprite": "champion0.png",
@@ -595,10 +485,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 630,
@@ -624,16 +511,10 @@
       }
     },
     "Belveth": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Belveth",
       "key": "200",
       "name": "Bel'Veth",
-      "info": {
-        "attack": 4,
-        "defense": 2,
-        "magic": 7,
-        "difficulty": 10
-      },
       "image": {
         "full": "Belveth.png",
         "sprite": "champion0.png",
@@ -643,9 +524,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter"
-      ],
+      "tags": ["Fighter"],
       "partype": "",
       "stats": {
         "hp": 610,
@@ -671,16 +550,10 @@
       }
     },
     "Blitzcrank": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Blitzcrank",
       "key": "53",
       "name": "Blitzcrank",
-      "info": {
-        "attack": 4,
-        "defense": 8,
-        "magic": 5,
-        "difficulty": 4
-      },
       "image": {
         "full": "Blitzcrank.png",
         "sprite": "champion0.png",
@@ -690,10 +563,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 633,
@@ -719,16 +589,10 @@
       }
     },
     "Brand": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Brand",
       "key": "63",
       "name": "Brand",
-      "info": {
-        "attack": 2,
-        "defense": 2,
-        "magic": 9,
-        "difficulty": 4
-      },
       "image": {
         "full": "Brand.png",
         "sprite": "champion0.png",
@@ -738,9 +602,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 590,
@@ -766,16 +628,10 @@
       }
     },
     "Braum": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Braum",
       "key": "201",
       "name": "Braum",
-      "info": {
-        "attack": 3,
-        "defense": 9,
-        "magic": 4,
-        "difficulty": 3
-      },
       "image": {
         "full": "Braum.png",
         "sprite": "champion0.png",
@@ -785,10 +641,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Tank"
-      ],
+      "tags": ["Support", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -814,16 +667,10 @@
       }
     },
     "Caitlyn": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Caitlyn",
       "key": "51",
       "name": "Caitlyn",
-      "info": {
-        "attack": 8,
-        "defense": 2,
-        "magic": 2,
-        "difficulty": 6
-      },
       "image": {
         "full": "Caitlyn.png",
         "sprite": "champion0.png",
@@ -833,17 +680,15 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 580,
         "hpperlevel": 107,
         "mp": 315,
-        "mpperlevel": 35,
+        "mpperlevel": 40,
         "movespeed": 325,
-        "armor": 28,
+        "armor": 27,
         "armorperlevel": 4.7,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
@@ -851,26 +696,20 @@
         "hpregen": 3.5,
         "hpregenperlevel": 0.55,
         "mpregen": 7.4,
-        "mpregenperlevel": 0.55,
+        "mpregenperlevel": 0.7,
         "crit": 0,
         "critperlevel": 0,
-        "attackdamage": 62,
+        "attackdamage": 60,
         "attackdamageperlevel": 3.8,
         "attackspeedperlevel": 4,
         "attackspeed": 0.681
       }
     },
     "Camille": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Camille",
       "key": "164",
       "name": "Camille",
-      "info": {
-        "attack": 8,
-        "defense": 6,
-        "magic": 3,
-        "difficulty": 4
-      },
       "image": {
         "full": "Camille.png",
         "sprite": "champion0.png",
@@ -880,10 +719,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 646,
@@ -909,16 +745,10 @@
       }
     },
     "Cassiopeia": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Cassiopeia",
       "key": "69",
       "name": "Cassiopeia",
-      "info": {
-        "attack": 2,
-        "defense": 3,
-        "magic": 9,
-        "difficulty": 10
-      },
       "image": {
         "full": "Cassiopeia.png",
         "sprite": "champion0.png",
@@ -928,9 +758,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 630,
@@ -956,16 +784,10 @@
       }
     },
     "Chogath": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Chogath",
       "key": "31",
       "name": "Cho'Gath",
-      "info": {
-        "attack": 3,
-        "defense": 7,
-        "magic": 7,
-        "difficulty": 5
-      },
       "image": {
         "full": "Chogath.png",
         "sprite": "champion0.png",
@@ -975,10 +797,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Mage"
-      ],
+      "tags": ["Tank", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 644,
@@ -987,7 +806,7 @@
         "mpperlevel": 60,
         "movespeed": 345,
         "armor": 38,
-        "armorperlevel": 4.7,
+        "armorperlevel": 5,
         "spellblock": 32,
         "spellblockperlevel": 2.05,
         "attackrange": 125,
@@ -1004,16 +823,10 @@
       }
     },
     "Corki": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Corki",
       "key": "42",
       "name": "Corki",
-      "info": {
-        "attack": 8,
-        "defense": 3,
-        "magic": 6,
-        "difficulty": 6
-      },
       "image": {
         "full": "Corki.png",
         "sprite": "champion0.png",
@@ -1023,9 +836,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 588,
@@ -1051,16 +862,10 @@
       }
     },
     "Darius": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Darius",
       "key": "122",
       "name": "Darius",
-      "info": {
-        "attack": 9,
-        "defense": 5,
-        "magic": 1,
-        "difficulty": 2
-      },
       "image": {
         "full": "Darius.png",
         "sprite": "champion0.png",
@@ -1070,10 +875,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 652,
@@ -1099,16 +901,10 @@
       }
     },
     "Diana": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Diana",
       "key": "131",
       "name": "Diana",
-      "info": {
-        "attack": 7,
-        "defense": 6,
-        "magic": 8,
-        "difficulty": 4
-      },
       "image": {
         "full": "Diana.png",
         "sprite": "champion0.png",
@@ -1118,10 +914,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Mage"
-      ],
+      "tags": ["Fighter", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 640,
@@ -1147,16 +940,10 @@
       }
     },
     "Draven": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Draven",
       "key": "119",
       "name": "Draven",
-      "info": {
-        "attack": 9,
-        "defense": 3,
-        "magic": 1,
-        "difficulty": 8
-      },
       "image": {
         "full": "Draven.png",
         "sprite": "champion0.png",
@@ -1166,9 +953,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 675,
@@ -1194,16 +979,10 @@
       }
     },
     "DrMundo": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "DrMundo",
       "key": "36",
       "name": "Dr. Mundo",
-      "info": {
-        "attack": 5,
-        "defense": 7,
-        "magic": 6,
-        "difficulty": 5
-      },
       "image": {
         "full": "DrMundo.png",
         "sprite": "champion0.png",
@@ -1213,10 +992,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "None",
       "stats": {
         "hp": 613,
@@ -1242,16 +1018,10 @@
       }
     },
     "Ekko": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Ekko",
       "key": "245",
       "name": "Ekko",
-      "info": {
-        "attack": 5,
-        "defense": 3,
-        "magic": 7,
-        "difficulty": 8
-      },
       "image": {
         "full": "Ekko.png",
         "sprite": "champion0.png",
@@ -1261,10 +1031,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 655,
@@ -1290,16 +1057,10 @@
       }
     },
     "Elise": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Elise",
       "key": "60",
       "name": "Elise",
-      "info": {
-        "attack": 6,
-        "defense": 5,
-        "magic": 7,
-        "difficulty": 9
-      },
       "image": {
         "full": "Elise.png",
         "sprite": "champion0.png",
@@ -1309,10 +1070,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Fighter"
-      ],
+      "tags": ["Mage", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 650,
@@ -1338,16 +1096,10 @@
       }
     },
     "Evelynn": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Evelynn",
       "key": "28",
       "name": "Evelynn",
-      "info": {
-        "attack": 4,
-        "defense": 2,
-        "magic": 7,
-        "difficulty": 10
-      },
       "image": {
         "full": "Evelynn.png",
         "sprite": "champion0.png",
@@ -1357,10 +1109,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Mage"
-      ],
+      "tags": ["Assassin", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 642,
@@ -1386,16 +1135,10 @@
       }
     },
     "Ezreal": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Ezreal",
       "key": "81",
       "name": "Ezreal",
-      "info": {
-        "attack": 7,
-        "defense": 2,
-        "magic": 6,
-        "difficulty": 7
-      },
       "image": {
         "full": "Ezreal.png",
         "sprite": "champion0.png",
@@ -1405,10 +1148,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Mage"
-      ],
+      "tags": ["Marksman", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -1424,7 +1164,7 @@
         "hpregen": 4,
         "hpregenperlevel": 0.65,
         "mpregen": 8.5,
-        "mpregenperlevel": 0.65,
+        "mpregenperlevel": 1,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 60,
@@ -1434,16 +1174,10 @@
       }
     },
     "Fiddlesticks": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Fiddlesticks",
       "key": "9",
       "name": "Fiddlesticks",
-      "info": {
-        "attack": 2,
-        "defense": 3,
-        "magic": 9,
-        "difficulty": 9
-      },
       "image": {
         "full": "Fiddlesticks.png",
         "sprite": "champion1.png",
@@ -1453,10 +1187,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 650,
@@ -1482,16 +1213,10 @@
       }
     },
     "Fiora": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Fiora",
       "key": "114",
       "name": "Fiora",
-      "info": {
-        "attack": 10,
-        "defense": 4,
-        "magic": 2,
-        "difficulty": 3
-      },
       "image": {
         "full": "Fiora.png",
         "sprite": "champion1.png",
@@ -1501,10 +1226,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 620,
@@ -1530,16 +1252,10 @@
       }
     },
     "Fizz": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Fizz",
       "key": "105",
       "name": "Fizz",
-      "info": {
-        "attack": 6,
-        "defense": 4,
-        "magic": 7,
-        "difficulty": 6
-      },
       "image": {
         "full": "Fizz.png",
         "sprite": "champion1.png",
@@ -1549,10 +1265,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 640,
@@ -1578,16 +1291,10 @@
       }
     },
     "Galio": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Galio",
       "key": "3",
       "name": "Galio",
-      "info": {
-        "attack": 1,
-        "defense": 10,
-        "magic": 6,
-        "difficulty": 5
-      },
       "image": {
         "full": "Galio.png",
         "sprite": "champion1.png",
@@ -1597,10 +1304,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Mage"
-      ],
+      "tags": ["Tank", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 632,
@@ -1626,16 +1330,10 @@
       }
     },
     "Gangplank": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Gangplank",
       "key": "41",
       "name": "Gangplank",
-      "info": {
-        "attack": 7,
-        "defense": 6,
-        "magic": 4,
-        "difficulty": 9
-      },
       "image": {
         "full": "Gangplank.png",
         "sprite": "champion1.png",
@@ -1645,9 +1343,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter"
-      ],
+      "tags": ["Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -1667,22 +1363,16 @@
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 64,
-        "attackdamageperlevel": 4,
+        "attackdamageperlevel": 3.7,
         "attackspeedperlevel": 3.2,
         "attackspeed": 0.658
       }
     },
     "Garen": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Garen",
       "key": "86",
       "name": "Garen",
-      "info": {
-        "attack": 7,
-        "defense": 7,
-        "magic": 1,
-        "difficulty": 5
-      },
       "image": {
         "full": "Garen.png",
         "sprite": "champion1.png",
@@ -1692,10 +1382,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "None",
       "stats": {
         "hp": 690,
@@ -1721,16 +1408,10 @@
       }
     },
     "Gnar": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Gnar",
       "key": "150",
       "name": "Gnar",
-      "info": {
-        "attack": 6,
-        "defense": 5,
-        "magic": 5,
-        "difficulty": 8
-      },
       "image": {
         "full": "Gnar.png",
         "sprite": "champion1.png",
@@ -1740,10 +1421,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Rage",
       "stats": {
         "hp": 540,
@@ -1769,16 +1447,10 @@
       }
     },
     "Gragas": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Gragas",
       "key": "79",
       "name": "Gragas",
-      "info": {
-        "attack": 4,
-        "defense": 7,
-        "magic": 6,
-        "difficulty": 5
-      },
       "image": {
         "full": "Gragas.png",
         "sprite": "champion1.png",
@@ -1788,10 +1460,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Mage"
-      ],
+      "tags": ["Fighter", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 670,
@@ -1817,16 +1486,10 @@
       }
     },
     "Graves": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Graves",
       "key": "104",
       "name": "Graves",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 3,
-        "difficulty": 3
-      },
       "image": {
         "full": "Graves.png",
         "sprite": "champion1.png",
@@ -1836,9 +1499,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 625,
@@ -1864,16 +1525,10 @@
       }
     },
     "Gwen": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Gwen",
       "key": "887",
       "name": "Gwen",
-      "info": {
-        "attack": 7,
-        "defense": 4,
-        "magic": 5,
-        "difficulty": 5
-      },
       "image": {
         "full": "Gwen.png",
         "sprite": "champion1.png",
@@ -1883,10 +1538,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 620,
@@ -1912,16 +1564,10 @@
       }
     },
     "Hecarim": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Hecarim",
       "key": "120",
       "name": "Hecarim",
-      "info": {
-        "attack": 8,
-        "defense": 6,
-        "magic": 4,
-        "difficulty": 6
-      },
       "image": {
         "full": "Hecarim.png",
         "sprite": "champion1.png",
@@ -1931,10 +1577,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 625,
@@ -1960,16 +1603,10 @@
       }
     },
     "Heimerdinger": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Heimerdinger",
       "key": "74",
       "name": "Heimerdinger",
-      "info": {
-        "attack": 2,
-        "defense": 6,
-        "magic": 8,
-        "difficulty": 8
-      },
       "image": {
         "full": "Heimerdinger.png",
         "sprite": "champion1.png",
@@ -1979,10 +1616,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 558,
@@ -2008,16 +1642,10 @@
       }
     },
     "Illaoi": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Illaoi",
       "key": "420",
       "name": "Illaoi",
-      "info": {
-        "attack": 8,
-        "defense": 6,
-        "magic": 3,
-        "difficulty": 4
-      },
       "image": {
         "full": "Illaoi.png",
         "sprite": "champion1.png",
@@ -2027,10 +1655,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 656,
@@ -2056,16 +1681,10 @@
       }
     },
     "Irelia": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Irelia",
       "key": "39",
       "name": "Irelia",
-      "info": {
-        "attack": 7,
-        "defense": 4,
-        "magic": 5,
-        "difficulty": 5
-      },
       "image": {
         "full": "Irelia.png",
         "sprite": "champion1.png",
@@ -2075,10 +1694,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 590,
@@ -2104,16 +1720,10 @@
       }
     },
     "Ivern": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Ivern",
       "key": "427",
       "name": "Ivern",
-      "info": {
-        "attack": 3,
-        "defense": 5,
-        "magic": 7,
-        "difficulty": 7
-      },
       "image": {
         "full": "Ivern.png",
         "sprite": "champion1.png",
@@ -2123,10 +1733,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 655,
@@ -2152,16 +1759,10 @@
       }
     },
     "Janna": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Janna",
       "key": "40",
       "name": "Janna",
-      "info": {
-        "attack": 3,
-        "defense": 5,
-        "magic": 7,
-        "difficulty": 7
-      },
       "image": {
         "full": "Janna.png",
         "sprite": "champion1.png",
@@ -2171,10 +1772,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -2200,16 +1798,10 @@
       }
     },
     "JarvanIV": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "JarvanIV",
       "key": "59",
       "name": "Jarvan IV",
-      "info": {
-        "attack": 6,
-        "defense": 8,
-        "magic": 3,
-        "difficulty": 5
-      },
       "image": {
         "full": "JarvanIV.png",
         "sprite": "champion1.png",
@@ -2219,10 +1811,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 640,
@@ -2230,7 +1819,7 @@
         "mp": 300,
         "mpperlevel": 55,
         "movespeed": 340,
-        "armor": 34,
+        "armor": 36,
         "armorperlevel": 4.8,
         "spellblock": 32,
         "spellblockperlevel": 2.05,
@@ -2248,16 +1837,10 @@
       }
     },
     "Jax": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Jax",
       "key": "24",
       "name": "Jax",
-      "info": {
-        "attack": 7,
-        "defense": 5,
-        "magic": 7,
-        "difficulty": 5
-      },
       "image": {
         "full": "Jax.png",
         "sprite": "champion1.png",
@@ -2267,14 +1850,11 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
-        "hp": 685,
-        "hpperlevel": 99,
+        "hp": 665,
+        "hpperlevel": 100,
         "mp": 339,
         "mpperlevel": 52,
         "movespeed": 350,
@@ -2296,16 +1876,10 @@
       }
     },
     "Jayce": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Jayce",
       "key": "126",
       "name": "Jayce",
-      "info": {
-        "attack": 8,
-        "defense": 4,
-        "magic": 3,
-        "difficulty": 7
-      },
       "image": {
         "full": "Jayce.png",
         "sprite": "champion1.png",
@@ -2315,10 +1889,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Marksman"
-      ],
+      "tags": ["Fighter", "Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 590,
@@ -2344,16 +1915,10 @@
       }
     },
     "Jhin": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Jhin",
       "key": "202",
       "name": "Jhin",
-      "info": {
-        "attack": 10,
-        "defense": 2,
-        "magic": 6,
-        "difficulty": 6
-      },
       "image": {
         "full": "Jhin.png",
         "sprite": "champion1.png",
@@ -2363,10 +1928,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Mage"
-      ],
+      "tags": ["Marksman", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 655,
@@ -2392,16 +1954,10 @@
       }
     },
     "Jinx": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Jinx",
       "key": "222",
       "name": "Jinx",
-      "info": {
-        "attack": 9,
-        "defense": 2,
-        "magic": 4,
-        "difficulty": 6
-      },
       "image": {
         "full": "Jinx.png",
         "sprite": "champion1.png",
@@ -2411,15 +1967,13 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 630,
         "hpperlevel": 100,
-        "mp": 245,
-        "mpperlevel": 45,
+        "mp": 260,
+        "mpperlevel": 50,
         "movespeed": 325,
         "armor": 26,
         "armorperlevel": 4.7,
@@ -2434,21 +1988,15 @@
         "critperlevel": 0,
         "attackdamage": 59,
         "attackdamageperlevel": 3.4,
-        "attackspeedperlevel": 1,
+        "attackspeedperlevel": 1.36,
         "attackspeed": 0.625
       }
     },
     "Kaisa": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Kaisa",
       "key": "145",
       "name": "Kai'Sa",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 3,
-        "difficulty": 6
-      },
       "image": {
         "full": "Kaisa.png",
         "sprite": "champion1.png",
@@ -2458,15 +2006,13 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 670,
         "hpperlevel": 102,
-        "mp": 344.88,
-        "mpperlevel": 38,
+        "mp": 345,
+        "mpperlevel": 40,
         "movespeed": 335,
         "armor": 28,
         "armorperlevel": 4.2,
@@ -2476,7 +2022,7 @@
         "hpregen": 3.5,
         "hpregenperlevel": 0.55,
         "mpregen": 8.2,
-        "mpregenperlevel": 0.45,
+        "mpregenperlevel": 0.7,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 59,
@@ -2486,16 +2032,10 @@
       }
     },
     "Kalista": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Kalista",
       "key": "429",
       "name": "Kalista",
-      "info": {
-        "attack": 8,
-        "defense": 2,
-        "magic": 4,
-        "difficulty": 7
-      },
       "image": {
         "full": "Kalista.png",
         "sprite": "champion1.png",
@@ -2505,9 +2045,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 574,
@@ -2533,16 +2071,10 @@
       }
     },
     "Karma": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Karma",
       "key": "43",
       "name": "Karma",
-      "info": {
-        "attack": 1,
-        "defense": 7,
-        "magic": 8,
-        "difficulty": 5
-      },
       "image": {
         "full": "Karma.png",
         "sprite": "champion1.png",
@@ -2552,10 +2084,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 604,
@@ -2581,16 +2110,10 @@
       }
     },
     "Karthus": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Karthus",
       "key": "30",
       "name": "Karthus",
-      "info": {
-        "attack": 2,
-        "defense": 2,
-        "magic": 10,
-        "difficulty": 7
-      },
       "image": {
         "full": "Karthus.png",
         "sprite": "champion1.png",
@@ -2600,9 +2123,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 620,
@@ -2628,16 +2149,10 @@
       }
     },
     "Kassadin": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Kassadin",
       "key": "38",
       "name": "Kassadin",
-      "info": {
-        "attack": 3,
-        "defense": 5,
-        "magic": 8,
-        "difficulty": 8
-      },
       "image": {
         "full": "Kassadin.png",
         "sprite": "champion1.png",
@@ -2647,10 +2162,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Mage"
-      ],
+      "tags": ["Assassin", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 646,
@@ -2676,16 +2188,10 @@
       }
     },
     "Katarina": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Katarina",
       "key": "55",
       "name": "Katarina",
-      "info": {
-        "attack": 4,
-        "defense": 3,
-        "magic": 9,
-        "difficulty": 8
-      },
       "image": {
         "full": "Katarina.png",
         "sprite": "champion1.png",
@@ -2695,10 +2201,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Mage"
-      ],
+      "tags": ["Assassin", "Mage"],
       "partype": "None",
       "stats": {
         "hp": 672,
@@ -2724,16 +2227,10 @@
       }
     },
     "Kayle": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Kayle",
       "key": "10",
       "name": "Kayle",
-      "info": {
-        "attack": 6,
-        "defense": 6,
-        "magic": 7,
-        "difficulty": 7
-      },
       "image": {
         "full": "Kayle.png",
         "sprite": "champion1.png",
@@ -2743,10 +2240,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Support"
-      ],
+      "tags": ["Fighter", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 670,
@@ -2772,16 +2266,10 @@
       }
     },
     "Kayn": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Kayn",
       "key": "141",
       "name": "Kayn",
-      "info": {
-        "attack": 10,
-        "defense": 6,
-        "magic": 1,
-        "difficulty": 8
-      },
       "image": {
         "full": "Kayn.png",
         "sprite": "champion1.png",
@@ -2791,10 +2279,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 655,
@@ -2820,16 +2305,10 @@
       }
     },
     "Kennen": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Kennen",
       "key": "85",
       "name": "Kennen",
-      "info": {
-        "attack": 6,
-        "defense": 4,
-        "magic": 7,
-        "difficulty": 4
-      },
       "image": {
         "full": "Kennen.png",
         "sprite": "champion1.png",
@@ -2839,10 +2318,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Marksman"
-      ],
+      "tags": ["Mage", "Marksman"],
       "partype": "Energy",
       "stats": {
         "hp": 611,
@@ -2868,16 +2344,10 @@
       }
     },
     "Khazix": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Khazix",
       "key": "121",
       "name": "Kha'Zix",
-      "info": {
-        "attack": 9,
-        "defense": 4,
-        "magic": 3,
-        "difficulty": 6
-      },
       "image": {
         "full": "Khazix.png",
         "sprite": "champion2.png",
@@ -2887,9 +2357,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin"
-      ],
+      "tags": ["Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 643,
@@ -2915,16 +2383,10 @@
       }
     },
     "Kindred": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Kindred",
       "key": "203",
       "name": "Kindred",
-      "info": {
-        "attack": 8,
-        "defense": 2,
-        "magic": 2,
-        "difficulty": 4
-      },
       "image": {
         "full": "Kindred.png",
         "sprite": "champion2.png",
@@ -2934,9 +2396,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -2962,16 +2422,10 @@
       }
     },
     "Kled": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Kled",
       "key": "240",
       "name": "Kled",
-      "info": {
-        "attack": 8,
-        "defense": 2,
-        "magic": 2,
-        "difficulty": 7
-      },
       "image": {
         "full": "Kled.png",
         "sprite": "champion2.png",
@@ -2981,10 +2435,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Courage",
       "stats": {
         "hp": 410,
@@ -3010,16 +2461,10 @@
       }
     },
     "KogMaw": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "KogMaw",
       "key": "96",
       "name": "Kog'Maw",
-      "info": {
-        "attack": 8,
-        "defense": 2,
-        "magic": 5,
-        "difficulty": 6
-      },
       "image": {
         "full": "KogMaw.png",
         "sprite": "champion2.png",
@@ -3029,10 +2474,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Mage"
-      ],
+      "tags": ["Marksman", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 635,
@@ -3058,16 +2500,10 @@
       }
     },
     "KSante": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "KSante",
       "key": "897",
       "name": "K'Sante",
-      "info": {
-        "attack": 8,
-        "defense": 8,
-        "magic": 7,
-        "difficulty": 9
-      },
       "image": {
         "full": "KSante.png",
         "sprite": "champion2.png",
@@ -3077,10 +2513,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -3106,16 +2539,10 @@
       }
     },
     "Leblanc": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Leblanc",
       "key": "7",
       "name": "LeBlanc",
-      "info": {
-        "attack": 1,
-        "defense": 4,
-        "magic": 10,
-        "difficulty": 9
-      },
       "image": {
         "full": "Leblanc.png",
         "sprite": "champion2.png",
@@ -3125,10 +2552,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Mage"
-      ],
+      "tags": ["Assassin", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 598,
@@ -3143,8 +2567,8 @@
         "attackrange": 525,
         "hpregen": 7.5,
         "hpregenperlevel": 0.55,
-        "mpregen": 6,
-        "mpregenperlevel": 0.8,
+        "mpregen": 8,
+        "mpregenperlevel": 1,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 55,
@@ -3154,16 +2578,10 @@
       }
     },
     "LeeSin": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "LeeSin",
       "key": "64",
       "name": "Lee Sin",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 3,
-        "difficulty": 6
-      },
       "image": {
         "full": "LeeSin.png",
         "sprite": "champion2.png",
@@ -3173,10 +2591,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Energy",
       "stats": {
         "hp": 645,
@@ -3202,16 +2617,10 @@
       }
     },
     "Leona": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Leona",
       "key": "89",
       "name": "Leona",
-      "info": {
-        "attack": 4,
-        "defense": 8,
-        "magic": 3,
-        "difficulty": 4
-      },
       "image": {
         "full": "Leona.png",
         "sprite": "champion2.png",
@@ -3221,10 +2630,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Support"
-      ],
+      "tags": ["Tank", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 646,
@@ -3250,16 +2656,10 @@
       }
     },
     "Lillia": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Lillia",
       "key": "876",
       "name": "Lillia",
-      "info": {
-        "attack": 0,
-        "defense": 2,
-        "magic": 10,
-        "difficulty": 8
-      },
       "image": {
         "full": "Lillia.png",
         "sprite": "champion2.png",
@@ -3269,10 +2669,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Mage"
-      ],
+      "tags": ["Fighter", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 605,
@@ -3298,16 +2695,10 @@
       }
     },
     "Lissandra": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Lissandra",
       "key": "127",
       "name": "Lissandra",
-      "info": {
-        "attack": 2,
-        "defense": 5,
-        "magic": 8,
-        "difficulty": 6
-      },
       "image": {
         "full": "Lissandra.png",
         "sprite": "champion2.png",
@@ -3317,9 +2708,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 620,
@@ -3345,16 +2734,10 @@
       }
     },
     "Lucian": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Lucian",
       "key": "236",
       "name": "Lucian",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 3,
-        "difficulty": 6
-      },
       "image": {
         "full": "Lucian.png",
         "sprite": "champion2.png",
@@ -3364,15 +2747,13 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 641,
         "hpperlevel": 100,
-        "mp": 349,
-        "mpperlevel": 38,
+        "mp": 320,
+        "mpperlevel": 43,
         "movespeed": 335,
         "armor": 28,
         "armorperlevel": 4.2,
@@ -3381,8 +2762,8 @@
         "attackrange": 500,
         "hpregen": 3.75,
         "hpregenperlevel": 0.65,
-        "mpregen": 8.18,
-        "mpregenperlevel": 0.7,
+        "mpregen": 7,
+        "mpregenperlevel": 0.8,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 60,
@@ -3392,16 +2773,10 @@
       }
     },
     "Lulu": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Lulu",
       "key": "117",
       "name": "Lulu",
-      "info": {
-        "attack": 4,
-        "defense": 5,
-        "magic": 7,
-        "difficulty": 5
-      },
       "image": {
         "full": "Lulu.png",
         "sprite": "champion2.png",
@@ -3411,10 +2786,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 595,
@@ -3440,16 +2812,10 @@
       }
     },
     "Lux": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Lux",
       "key": "99",
       "name": "Lux",
-      "info": {
-        "attack": 2,
-        "defense": 4,
-        "magic": 9,
-        "difficulty": 5
-      },
       "image": {
         "full": "Lux.png",
         "sprite": "champion2.png",
@@ -3459,10 +2825,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 560,
@@ -3488,16 +2851,10 @@
       }
     },
     "Malphite": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Malphite",
       "key": "54",
       "name": "Malphite",
-      "info": {
-        "attack": 5,
-        "defense": 9,
-        "magic": 7,
-        "difficulty": 2
-      },
       "image": {
         "full": "Malphite.png",
         "sprite": "champion2.png",
@@ -3507,10 +2864,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 644,
@@ -3536,16 +2890,10 @@
       }
     },
     "Malzahar": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Malzahar",
       "key": "90",
       "name": "Malzahar",
-      "info": {
-        "attack": 2,
-        "defense": 2,
-        "magic": 9,
-        "difficulty": 6
-      },
       "image": {
         "full": "Malzahar.png",
         "sprite": "champion2.png",
@@ -3555,10 +2903,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Assassin"
-      ],
+      "tags": ["Mage", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 580,
@@ -3584,16 +2929,10 @@
       }
     },
     "Maokai": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Maokai",
       "key": "57",
       "name": "Maokai",
-      "info": {
-        "attack": 3,
-        "defense": 8,
-        "magic": 6,
-        "difficulty": 3
-      },
       "image": {
         "full": "Maokai.png",
         "sprite": "champion2.png",
@@ -3603,10 +2942,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Mage"
-      ],
+      "tags": ["Tank", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 635,
@@ -3632,16 +2968,10 @@
       }
     },
     "MasterYi": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "MasterYi",
       "key": "11",
       "name": "Master Yi",
-      "info": {
-        "attack": 10,
-        "defense": 4,
-        "magic": 2,
-        "difficulty": 4
-      },
       "image": {
         "full": "MasterYi.png",
         "sprite": "champion2.png",
@@ -3651,10 +2981,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 669,
@@ -3680,16 +3007,10 @@
       }
     },
     "MissFortune": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "MissFortune",
       "key": "21",
       "name": "Miss Fortune",
-      "info": {
-        "attack": 8,
-        "defense": 2,
-        "magic": 5,
-        "difficulty": 1
-      },
       "image": {
         "full": "MissFortune.png",
         "sprite": "champion2.png",
@@ -3699,15 +3020,13 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 640,
         "hpperlevel": 103,
         "mp": 300,
-        "mpperlevel": 35,
+        "mpperlevel": 40,
         "movespeed": 325,
         "armor": 28,
         "armorperlevel": 4.2,
@@ -3716,8 +3035,8 @@
         "attackrange": 550,
         "hpregen": 3.75,
         "hpregenperlevel": 0.65,
-        "mpregen": 8.05,
-        "mpregenperlevel": 0.65,
+        "mpregen": 8,
+        "mpregenperlevel": 0.8,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 52,
@@ -3727,16 +3046,10 @@
       }
     },
     "MonkeyKing": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "MonkeyKing",
       "key": "62",
       "name": "Wukong",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 2,
-        "difficulty": 3
-      },
       "image": {
         "full": "MonkeyKing.png",
         "sprite": "champion2.png",
@@ -3746,10 +3059,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -3775,16 +3085,10 @@
       }
     },
     "Mordekaiser": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Mordekaiser",
       "key": "82",
       "name": "Mordekaiser",
-      "info": {
-        "attack": 4,
-        "defense": 6,
-        "magic": 7,
-        "difficulty": 4
-      },
       "image": {
         "full": "Mordekaiser.png",
         "sprite": "champion2.png",
@@ -3794,9 +3098,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter"
-      ],
+      "tags": ["Fighter"],
       "partype": "Shield",
       "stats": {
         "hp": 645,
@@ -3822,16 +3124,10 @@
       }
     },
     "Morgana": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Morgana",
       "key": "25",
       "name": "Morgana",
-      "info": {
-        "attack": 1,
-        "defense": 6,
-        "magic": 8,
-        "difficulty": 1
-      },
       "image": {
         "full": "Morgana.png",
         "sprite": "champion2.png",
@@ -3841,10 +3137,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 630,
@@ -3870,16 +3163,10 @@
       }
     },
     "Nami": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Nami",
       "key": "267",
       "name": "Nami",
-      "info": {
-        "attack": 4,
-        "defense": 3,
-        "magic": 7,
-        "difficulty": 5
-      },
       "image": {
         "full": "Nami.png",
         "sprite": "champion2.png",
@@ -3889,10 +3176,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 560,
@@ -3918,16 +3202,10 @@
       }
     },
     "Nasus": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Nasus",
       "key": "75",
       "name": "Nasus",
-      "info": {
-        "attack": 7,
-        "defense": 5,
-        "magic": 6,
-        "difficulty": 6
-      },
       "image": {
         "full": "Nasus.png",
         "sprite": "champion2.png",
@@ -3937,10 +3215,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 631,
@@ -3966,16 +3241,10 @@
       }
     },
     "Nautilus": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Nautilus",
       "key": "111",
       "name": "Nautilus",
-      "info": {
-        "attack": 4,
-        "defense": 6,
-        "magic": 6,
-        "difficulty": 6
-      },
       "image": {
         "full": "Nautilus.png",
         "sprite": "champion2.png",
@@ -3985,10 +3254,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Support"
-      ],
+      "tags": ["Tank", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 646,
@@ -4014,16 +3280,10 @@
       }
     },
     "Neeko": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Neeko",
       "key": "518",
       "name": "Neeko",
-      "info": {
-        "attack": 1,
-        "defense": 1,
-        "magic": 9,
-        "difficulty": 5
-      },
       "image": {
         "full": "Neeko.png",
         "sprite": "champion2.png",
@@ -4033,10 +3293,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -4062,16 +3319,10 @@
       }
     },
     "Nidalee": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Nidalee",
       "key": "76",
       "name": "Nidalee",
-      "info": {
-        "attack": 5,
-        "defense": 4,
-        "magic": 7,
-        "difficulty": 8
-      },
       "image": {
         "full": "Nidalee.png",
         "sprite": "champion2.png",
@@ -4081,10 +3332,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Mage"
-      ],
+      "tags": ["Assassin", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -4110,16 +3358,10 @@
       }
     },
     "Nilah": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Nilah",
       "key": "895",
       "name": "Nilah",
-      "info": {
-        "attack": 8,
-        "defense": 4,
-        "magic": 4,
-        "difficulty": 10
-      },
       "image": {
         "full": "Nilah.png",
         "sprite": "champion2.png",
@@ -4129,10 +3371,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -4158,16 +3397,10 @@
       }
     },
     "Nocturne": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Nocturne",
       "key": "56",
       "name": "Nocturne",
-      "info": {
-        "attack": 9,
-        "defense": 5,
-        "magic": 2,
-        "difficulty": 4
-      },
       "image": {
         "full": "Nocturne.png",
         "sprite": "champion2.png",
@@ -4177,10 +3410,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 655,
@@ -4206,16 +3436,10 @@
       }
     },
     "Nunu": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Nunu",
       "key": "20",
       "name": "Nunu & Willump",
-      "info": {
-        "attack": 4,
-        "defense": 6,
-        "magic": 7,
-        "difficulty": 4
-      },
       "image": {
         "full": "Nunu.png",
         "sprite": "champion2.png",
@@ -4225,10 +3449,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -4254,16 +3475,10 @@
       }
     },
     "Olaf": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Olaf",
       "key": "2",
       "name": "Olaf",
-      "info": {
-        "attack": 9,
-        "defense": 5,
-        "magic": 3,
-        "difficulty": 3
-      },
       "image": {
         "full": "Olaf.png",
         "sprite": "champion2.png",
@@ -4273,10 +3488,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 645,
@@ -4302,16 +3514,10 @@
       }
     },
     "Orianna": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Orianna",
       "key": "61",
       "name": "Orianna",
-      "info": {
-        "attack": 4,
-        "defense": 3,
-        "magic": 9,
-        "difficulty": 7
-      },
       "image": {
         "full": "Orianna.png",
         "sprite": "champion3.png",
@@ -4321,10 +3527,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -4332,7 +3535,7 @@
         "mp": 418,
         "mpperlevel": 25,
         "movespeed": 325,
-        "armor": 17,
+        "armor": 20,
         "armorperlevel": 4.2,
         "spellblock": 26,
         "spellblockperlevel": 1.3,
@@ -4350,16 +3553,10 @@
       }
     },
     "Ornn": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Ornn",
       "key": "516",
       "name": "Ornn",
-      "info": {
-        "attack": 5,
-        "defense": 9,
-        "magic": 3,
-        "difficulty": 5
-      },
       "image": {
         "full": "Ornn.png",
         "sprite": "champion3.png",
@@ -4369,10 +3566,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 660,
@@ -4398,16 +3592,10 @@
       }
     },
     "Pantheon": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Pantheon",
       "key": "80",
       "name": "Pantheon",
-      "info": {
-        "attack": 9,
-        "defense": 4,
-        "magic": 3,
-        "difficulty": 4
-      },
       "image": {
         "full": "Pantheon.png",
         "sprite": "champion3.png",
@@ -4417,10 +3605,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 650,
@@ -4433,7 +3618,7 @@
         "spellblock": 28,
         "spellblockperlevel": 2.05,
         "attackrange": 175,
-        "hpregen": 7.5,
+        "hpregen": 6,
         "hpregenperlevel": 0.65,
         "mpregen": 7.35,
         "mpregenperlevel": 0.45,
@@ -4442,20 +3627,14 @@
         "attackdamage": 64,
         "attackdamageperlevel": 3.3,
         "attackspeedperlevel": 2.95,
-        "attackspeed": 0.644
+        "attackspeed": 0.658
       }
     },
     "Poppy": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Poppy",
       "key": "78",
       "name": "Poppy",
-      "info": {
-        "attack": 6,
-        "defense": 7,
-        "magic": 2,
-        "difficulty": 6
-      },
       "image": {
         "full": "Poppy.png",
         "sprite": "champion3.png",
@@ -4465,10 +3644,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -4494,16 +3670,10 @@
       }
     },
     "Pyke": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Pyke",
       "key": "555",
       "name": "Pyke",
-      "info": {
-        "attack": 9,
-        "defense": 3,
-        "magic": 1,
-        "difficulty": 7
-      },
       "image": {
         "full": "Pyke.png",
         "sprite": "champion3.png",
@@ -4513,10 +3683,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Assassin"
-      ],
+      "tags": ["Support", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 670,
@@ -4542,16 +3709,10 @@
       }
     },
     "Qiyana": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Qiyana",
       "key": "246",
       "name": "Qiyana",
-      "info": {
-        "attack": 0,
-        "defense": 2,
-        "magic": 4,
-        "difficulty": 8
-      },
       "image": {
         "full": "Qiyana.png",
         "sprite": "champion3.png",
@@ -4561,10 +3722,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 590,
@@ -4590,16 +3748,10 @@
       }
     },
     "Quinn": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Quinn",
       "key": "133",
       "name": "Quinn",
-      "info": {
-        "attack": 9,
-        "defense": 4,
-        "magic": 2,
-        "difficulty": 5
-      },
       "image": {
         "full": "Quinn.png",
         "sprite": "champion3.png",
@@ -4609,10 +3761,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 603,
@@ -4638,16 +3787,10 @@
       }
     },
     "Rakan": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Rakan",
       "key": "497",
       "name": "Rakan",
-      "info": {
-        "attack": 2,
-        "defense": 4,
-        "magic": 8,
-        "difficulty": 5
-      },
       "image": {
         "full": "Rakan.png",
         "sprite": "champion3.png",
@@ -4657,9 +3800,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support"
-      ],
+      "tags": ["Support"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -4685,16 +3826,10 @@
       }
     },
     "Rammus": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Rammus",
       "key": "33",
       "name": "Rammus",
-      "info": {
-        "attack": 4,
-        "defense": 10,
-        "magic": 5,
-        "difficulty": 5
-      },
       "image": {
         "full": "Rammus.png",
         "sprite": "champion3.png",
@@ -4704,18 +3839,15 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
-        "hp": 614,
+        "hp": 675,
         "hpperlevel": 94,
         "mp": 310,
         "mpperlevel": 33,
         "movespeed": 335,
-        "armor": 36,
+        "armor": 40,
         "armorperlevel": 5.5,
         "spellblock": 32,
         "spellblockperlevel": 2.05,
@@ -4726,23 +3858,17 @@
         "mpregenperlevel": 0.5,
         "crit": 0,
         "critperlevel": 0,
-        "attackdamage": 53,
-        "attackdamageperlevel": 3.5,
+        "attackdamage": 55,
+        "attackdamageperlevel": 2.75,
         "attackspeedperlevel": 2.215,
         "attackspeed": 0.656
       }
     },
     "RekSai": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "RekSai",
       "key": "421",
       "name": "Rek'Sai",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 2,
-        "difficulty": 3
-      },
       "image": {
         "full": "RekSai.png",
         "sprite": "champion3.png",
@@ -4752,9 +3878,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter"
-      ],
+      "tags": ["Fighter"],
       "partype": "Rage",
       "stats": {
         "hp": 640,
@@ -4780,16 +3904,10 @@
       }
     },
     "Rell": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Rell",
       "key": "526",
       "name": "Rell",
-      "info": {
-        "attack": 0,
-        "defense": 0,
-        "magic": 0,
-        "difficulty": 0
-      },
       "image": {
         "full": "Rell.png",
         "sprite": "champion3.png",
@@ -4799,10 +3917,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Support"
-      ],
+      "tags": ["Tank", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 610,
@@ -4828,16 +3943,10 @@
       }
     },
     "Renata": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Renata",
       "key": "888",
       "name": "Renata Glasc",
-      "info": {
-        "attack": 2,
-        "defense": 6,
-        "magic": 9,
-        "difficulty": 8
-      },
       "image": {
         "full": "Renata.png",
         "sprite": "champion3.png",
@@ -4847,10 +3956,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 545,
@@ -4876,16 +3982,10 @@
       }
     },
     "Renekton": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Renekton",
       "key": "58",
       "name": "Renekton",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 2,
-        "difficulty": 3
-      },
       "image": {
         "full": "Renekton.png",
         "sprite": "champion3.png",
@@ -4895,10 +3995,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Fury",
       "stats": {
         "hp": 660,
@@ -4924,16 +4021,10 @@
       }
     },
     "Rengar": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Rengar",
       "key": "107",
       "name": "Rengar",
-      "info": {
-        "attack": 7,
-        "defense": 4,
-        "magic": 2,
-        "difficulty": 8
-      },
       "image": {
         "full": "Rengar.png",
         "sprite": "champion3.png",
@@ -4943,10 +4034,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Ferocity",
       "stats": {
         "hp": 620,
@@ -4972,16 +4060,10 @@
       }
     },
     "Riven": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Riven",
       "key": "92",
       "name": "Riven",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 1,
-        "difficulty": 8
-      },
       "image": {
         "full": "Riven.png",
         "sprite": "champion3.png",
@@ -4991,10 +4073,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "None",
       "stats": {
         "hp": 630,
@@ -5020,16 +4099,10 @@
       }
     },
     "Rumble": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Rumble",
       "key": "68",
       "name": "Rumble",
-      "info": {
-        "attack": 3,
-        "defense": 6,
-        "magic": 8,
-        "difficulty": 10
-      },
       "image": {
         "full": "Rumble.png",
         "sprite": "champion3.png",
@@ -5039,10 +4112,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Mage"
-      ],
+      "tags": ["Fighter", "Mage"],
       "partype": "Heat",
       "stats": {
         "hp": 659,
@@ -5068,16 +4138,10 @@
       }
     },
     "Ryze": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Ryze",
       "key": "13",
       "name": "Ryze",
-      "info": {
-        "attack": 2,
-        "defense": 2,
-        "magic": 10,
-        "difficulty": 7
-      },
       "image": {
         "full": "Ryze.png",
         "sprite": "champion3.png",
@@ -5087,10 +4151,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Fighter"
-      ],
+      "tags": ["Mage", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 645,
@@ -5100,7 +4161,7 @@
         "movespeed": 340,
         "armor": 22,
         "armorperlevel": 4.2,
-        "spellblock": 36,
+        "spellblock": 32,
         "spellblockperlevel": 1.3,
         "attackrange": 550,
         "hpregen": 8,
@@ -5116,16 +4177,10 @@
       }
     },
     "Samira": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Samira",
       "key": "360",
       "name": "Samira",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 3,
-        "difficulty": 6
-      },
       "image": {
         "full": "Samira.png",
         "sprite": "champion3.png",
@@ -5135,9 +4190,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -5163,16 +4216,10 @@
       }
     },
     "Sejuani": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Sejuani",
       "key": "113",
       "name": "Sejuani",
-      "info": {
-        "attack": 5,
-        "defense": 7,
-        "magic": 6,
-        "difficulty": 4
-      },
       "image": {
         "full": "Sejuani.png",
         "sprite": "champion3.png",
@@ -5182,10 +4229,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 630,
@@ -5211,16 +4255,10 @@
       }
     },
     "Senna": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Senna",
       "key": "235",
       "name": "Senna",
-      "info": {
-        "attack": 7,
-        "defense": 2,
-        "magic": 6,
-        "difficulty": 7
-      },
       "image": {
         "full": "Senna.png",
         "sprite": "champion3.png",
@@ -5230,10 +4268,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Support"
-      ],
+      "tags": ["Marksman", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 530,
@@ -5249,7 +4284,7 @@
         "hpregen": 3.5,
         "hpregenperlevel": 0.55,
         "mpregen": 11.5,
-        "mpregenperlevel": 0.4,
+        "mpregenperlevel": 0.7,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 50,
@@ -5259,16 +4294,10 @@
       }
     },
     "Seraphine": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Seraphine",
       "key": "147",
       "name": "Seraphine",
-      "info": {
-        "attack": 0,
-        "defense": 0,
-        "magic": 0,
-        "difficulty": 0
-      },
       "image": {
         "full": "Seraphine.png",
         "sprite": "champion3.png",
@@ -5278,10 +4307,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 570,
@@ -5307,16 +4333,10 @@
       }
     },
     "Sett": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Sett",
       "key": "875",
       "name": "Sett",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 1,
-        "difficulty": 2
-      },
       "image": {
         "full": "Sett.png",
         "sprite": "champion3.png",
@@ -5326,10 +4346,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Grit",
       "stats": {
         "hp": 670,
@@ -5355,16 +4372,10 @@
       }
     },
     "Shaco": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Shaco",
       "key": "35",
       "name": "Shaco",
-      "info": {
-        "attack": 8,
-        "defense": 4,
-        "magic": 6,
-        "difficulty": 9
-      },
       "image": {
         "full": "Shaco.png",
         "sprite": "champion3.png",
@@ -5374,9 +4385,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin"
-      ],
+      "tags": ["Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 630,
@@ -5402,16 +4411,10 @@
       }
     },
     "Shen": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Shen",
       "key": "98",
       "name": "Shen",
-      "info": {
-        "attack": 3,
-        "defense": 9,
-        "magic": 3,
-        "difficulty": 4
-      },
       "image": {
         "full": "Shen.png",
         "sprite": "champion3.png",
@@ -5421,9 +4424,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank"
-      ],
+      "tags": ["Tank"],
       "partype": "Energy",
       "stats": {
         "hp": 610,
@@ -5449,16 +4450,10 @@
       }
     },
     "Shyvana": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Shyvana",
       "key": "102",
       "name": "Shyvana",
-      "info": {
-        "attack": 8,
-        "defense": 6,
-        "magic": 3,
-        "difficulty": 4
-      },
       "image": {
         "full": "Shyvana.png",
         "sprite": "champion3.png",
@@ -5468,10 +4463,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Fury",
       "stats": {
         "hp": 665,
@@ -5497,16 +4489,10 @@
       }
     },
     "Singed": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Singed",
       "key": "27",
       "name": "Singed",
-      "info": {
-        "attack": 4,
-        "defense": 8,
-        "magic": 7,
-        "difficulty": 5
-      },
       "image": {
         "full": "Singed.png",
         "sprite": "champion3.png",
@@ -5516,10 +4502,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 650,
@@ -5545,16 +4528,10 @@
       }
     },
     "Sion": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Sion",
       "key": "14",
       "name": "Sion",
-      "info": {
-        "attack": 5,
-        "defense": 9,
-        "magic": 3,
-        "difficulty": 5
-      },
       "image": {
         "full": "Sion.png",
         "sprite": "champion3.png",
@@ -5564,10 +4541,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 655,
@@ -5593,16 +4567,10 @@
       }
     },
     "Sivir": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Sivir",
       "key": "15",
       "name": "Sivir",
-      "info": {
-        "attack": 9,
-        "defense": 3,
-        "magic": 1,
-        "difficulty": 4
-      },
       "image": {
         "full": "Sivir.png",
         "sprite": "champion3.png",
@@ -5612,15 +4580,13 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
         "hpperlevel": 104,
         "mp": 340,
-        "mpperlevel": 40,
+        "mpperlevel": 45,
         "movespeed": 335,
         "armor": 26,
         "armorperlevel": 4.45,
@@ -5640,16 +4606,10 @@
       }
     },
     "Skarner": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Skarner",
       "key": "72",
       "name": "Skarner",
-      "info": {
-        "attack": 7,
-        "defense": 6,
-        "magic": 5,
-        "difficulty": 5
-      },
       "image": {
         "full": "Skarner.png",
         "sprite": "champion3.png",
@@ -5659,10 +4619,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 650,
@@ -5688,16 +4645,10 @@
       }
     },
     "Sona": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Sona",
       "key": "37",
       "name": "Sona",
-      "info": {
-        "attack": 5,
-        "defense": 2,
-        "magic": 8,
-        "difficulty": 4
-      },
       "image": {
         "full": "Sona.png",
         "sprite": "champion3.png",
@@ -5707,10 +4658,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 550,
@@ -5736,16 +4684,10 @@
       }
     },
     "Soraka": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Soraka",
       "key": "16",
       "name": "Soraka",
-      "info": {
-        "attack": 2,
-        "defense": 5,
-        "magic": 7,
-        "difficulty": 3
-      },
       "image": {
         "full": "Soraka.png",
         "sprite": "champion4.png",
@@ -5755,10 +4697,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 605,
@@ -5784,16 +4723,10 @@
       }
     },
     "Swain": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Swain",
       "key": "50",
       "name": "Swain",
-      "info": {
-        "attack": 2,
-        "defense": 6,
-        "magic": 9,
-        "difficulty": 8
-      },
       "image": {
         "full": "Swain.png",
         "sprite": "champion4.png",
@@ -5803,10 +4736,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Fighter"
-      ],
+      "tags": ["Mage", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 595,
@@ -5832,16 +4762,10 @@
       }
     },
     "Sylas": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Sylas",
       "key": "517",
       "name": "Sylas",
-      "info": {
-        "attack": 3,
-        "defense": 4,
-        "magic": 8,
-        "difficulty": 5
-      },
       "image": {
         "full": "Sylas.png",
         "sprite": "champion4.png",
@@ -5851,10 +4775,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Assassin"
-      ],
+      "tags": ["Mage", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 575,
@@ -5880,16 +4801,10 @@
       }
     },
     "Syndra": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Syndra",
       "key": "134",
       "name": "Syndra",
-      "info": {
-        "attack": 2,
-        "defense": 3,
-        "magic": 9,
-        "difficulty": 8
-      },
       "image": {
         "full": "Syndra.png",
         "sprite": "champion4.png",
@@ -5899,9 +4814,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 563,
@@ -5927,16 +4840,10 @@
       }
     },
     "TahmKench": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "TahmKench",
       "key": "223",
       "name": "Tahm Kench",
-      "info": {
-        "attack": 3,
-        "defense": 9,
-        "magic": 6,
-        "difficulty": 5
-      },
       "image": {
         "full": "TahmKench.png",
         "sprite": "champion4.png",
@@ -5946,10 +4853,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Tank"
-      ],
+      "tags": ["Support", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 640,
@@ -5975,16 +4879,10 @@
       }
     },
     "Taliyah": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Taliyah",
       "key": "163",
       "name": "Taliyah",
-      "info": {
-        "attack": 1,
-        "defense": 7,
-        "magic": 8,
-        "difficulty": 5
-      },
       "image": {
         "full": "Taliyah.png",
         "sprite": "champion4.png",
@@ -5994,10 +4892,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 550,
@@ -6023,16 +4918,10 @@
       }
     },
     "Talon": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Talon",
       "key": "91",
       "name": "Talon",
-      "info": {
-        "attack": 9,
-        "defense": 3,
-        "magic": 1,
-        "difficulty": 7
-      },
       "image": {
         "full": "Talon.png",
         "sprite": "champion4.png",
@@ -6042,9 +4931,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin"
-      ],
+      "tags": ["Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 658,
@@ -6070,16 +4957,10 @@
       }
     },
     "Taric": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Taric",
       "key": "44",
       "name": "Taric",
-      "info": {
-        "attack": 4,
-        "defense": 8,
-        "magic": 5,
-        "difficulty": 3
-      },
       "image": {
         "full": "Taric.png",
         "sprite": "champion4.png",
@@ -6089,10 +4970,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Fighter"
-      ],
+      "tags": ["Support", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 645,
@@ -6118,16 +4996,10 @@
       }
     },
     "Teemo": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Teemo",
       "key": "17",
       "name": "Teemo",
-      "info": {
-        "attack": 5,
-        "defense": 3,
-        "magic": 7,
-        "difficulty": 6
-      },
       "image": {
         "full": "Teemo.png",
         "sprite": "champion4.png",
@@ -6137,10 +5009,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 598,
@@ -6166,16 +5035,10 @@
       }
     },
     "Thresh": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Thresh",
       "key": "412",
       "name": "Thresh",
-      "info": {
-        "attack": 5,
-        "defense": 6,
-        "magic": 6,
-        "difficulty": 7
-      },
       "image": {
         "full": "Thresh.png",
         "sprite": "champion4.png",
@@ -6185,10 +5048,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Fighter"
-      ],
+      "tags": ["Support", "Fighter"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -6214,16 +5074,10 @@
       }
     },
     "Tristana": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Tristana",
       "key": "18",
       "name": "Tristana",
-      "info": {
-        "attack": 9,
-        "defense": 3,
-        "magic": 5,
-        "difficulty": 4
-      },
       "image": {
         "full": "Tristana.png",
         "sprite": "champion4.png",
@@ -6233,10 +5087,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 670,
@@ -6262,16 +5113,10 @@
       }
     },
     "Trundle": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Trundle",
       "key": "48",
       "name": "Trundle",
-      "info": {
-        "attack": 7,
-        "defense": 6,
-        "magic": 2,
-        "difficulty": 5
-      },
       "image": {
         "full": "Trundle.png",
         "sprite": "champion4.png",
@@ -6281,10 +5126,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 686,
@@ -6310,16 +5152,10 @@
       }
     },
     "Tryndamere": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Tryndamere",
       "key": "23",
       "name": "Tryndamere",
-      "info": {
-        "attack": 10,
-        "defense": 5,
-        "magic": 2,
-        "difficulty": 5
-      },
       "image": {
         "full": "Tryndamere.png",
         "sprite": "champion4.png",
@@ -6329,14 +5165,11 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Fury",
       "stats": {
         "hp": 696,
-        "hpperlevel": 112,
+        "hpperlevel": 115,
         "mp": 100,
         "mpperlevel": 0,
         "movespeed": 345,
@@ -6352,22 +5185,16 @@
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 72,
-        "attackdamageperlevel": 3.7,
+        "attackdamageperlevel": 4,
         "attackspeedperlevel": 2.9,
         "attackspeed": 0.67
       }
     },
     "TwistedFate": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "TwistedFate",
       "key": "4",
       "name": "Twisted Fate",
-      "info": {
-        "attack": 6,
-        "defense": 2,
-        "magic": 6,
-        "difficulty": 9
-      },
       "image": {
         "full": "TwistedFate.png",
         "sprite": "champion4.png",
@@ -6377,9 +5204,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 604,
@@ -6405,16 +5230,10 @@
       }
     },
     "Twitch": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Twitch",
       "key": "29",
       "name": "Twitch",
-      "info": {
-        "attack": 9,
-        "defense": 2,
-        "magic": 3,
-        "difficulty": 6
-      },
       "image": {
         "full": "Twitch.png",
         "sprite": "champion4.png",
@@ -6424,15 +5243,12 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 682,
         "hpperlevel": 100,
-        "mp": 287.2,
+        "mp": 300,
         "mpperlevel": 40,
         "movespeed": 330,
         "armor": 27,
@@ -6443,7 +5259,7 @@
         "hpregen": 3.75,
         "hpregenperlevel": 0.6,
         "mpregen": 7.25,
-        "mpregenperlevel": 0.45,
+        "mpregenperlevel": 0.7,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 59,
@@ -6453,16 +5269,10 @@
       }
     },
     "Udyr": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Udyr",
       "key": "77",
       "name": "Udyr",
-      "info": {
-        "attack": 8,
-        "defense": 7,
-        "magic": 4,
-        "difficulty": 7
-      },
       "image": {
         "full": "Udyr.png",
         "sprite": "champion4.png",
@@ -6472,18 +5282,15 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 664,
-        "hpperlevel": 98,
+        "hpperlevel": 92,
         "mp": 271,
         "mpperlevel": 50,
         "movespeed": 350,
-        "armor": 34,
+        "armor": 31,
         "armorperlevel": 4.7,
         "spellblock": 32,
         "spellblockperlevel": 2.05,
@@ -6501,16 +5308,10 @@
       }
     },
     "Urgot": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Urgot",
       "key": "6",
       "name": "Urgot",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 3,
-        "difficulty": 8
-      },
       "image": {
         "full": "Urgot.png",
         "sprite": "champion4.png",
@@ -6520,10 +5321,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 655,
@@ -6549,16 +5347,10 @@
       }
     },
     "Varus": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Varus",
       "key": "110",
       "name": "Varus",
-      "info": {
-        "attack": 7,
-        "defense": 3,
-        "magic": 4,
-        "difficulty": 2
-      },
       "image": {
         "full": "Varus.png",
         "sprite": "champion4.png",
@@ -6568,10 +5360,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Mage"
-      ],
+      "tags": ["Marksman", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -6597,16 +5386,10 @@
       }
     },
     "Vayne": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Vayne",
       "key": "67",
       "name": "Vayne",
-      "info": {
-        "attack": 10,
-        "defense": 1,
-        "magic": 1,
-        "difficulty": 8
-      },
       "image": {
         "full": "Vayne.png",
         "sprite": "champion4.png",
@@ -6616,10 +5399,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman",
-        "Assassin"
-      ],
+      "tags": ["Marksman", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 550,
@@ -6645,16 +5425,10 @@
       }
     },
     "Veigar": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Veigar",
       "key": "45",
       "name": "Veigar",
-      "info": {
-        "attack": 2,
-        "defense": 2,
-        "magic": 10,
-        "difficulty": 7
-      },
       "image": {
         "full": "Veigar.png",
         "sprite": "champion4.png",
@@ -6664,9 +5438,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 575,
@@ -6692,16 +5464,10 @@
       }
     },
     "Velkoz": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Velkoz",
       "key": "161",
       "name": "Vel'Koz",
-      "info": {
-        "attack": 2,
-        "defense": 2,
-        "magic": 10,
-        "difficulty": 8
-      },
       "image": {
         "full": "Velkoz.png",
         "sprite": "champion4.png",
@@ -6711,9 +5477,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 590,
@@ -6739,16 +5503,10 @@
       }
     },
     "Vex": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Vex",
       "key": "711",
       "name": "Vex",
-      "info": {
-        "attack": 0,
-        "defense": 0,
-        "magic": 0,
-        "difficulty": 0
-      },
       "image": {
         "full": "Vex.png",
         "sprite": "champion4.png",
@@ -6758,9 +5516,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 590,
@@ -6786,16 +5542,10 @@
       }
     },
     "Vi": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Vi",
       "key": "254",
       "name": "Vi",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 3,
-        "difficulty": 4
-      },
       "image": {
         "full": "Vi.png",
         "sprite": "champion4.png",
@@ -6805,10 +5555,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 655,
@@ -6834,16 +5581,10 @@
       }
     },
     "Viego": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Viego",
       "key": "234",
       "name": "Viego",
-      "info": {
-        "attack": 6,
-        "defense": 4,
-        "magic": 2,
-        "difficulty": 5
-      },
       "image": {
         "full": "Viego.png",
         "sprite": "champion4.png",
@@ -6853,10 +5594,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "None",
       "stats": {
         "hp": 630,
@@ -6882,16 +5620,10 @@
       }
     },
     "Viktor": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Viktor",
       "key": "112",
       "name": "Viktor",
-      "info": {
-        "attack": 2,
-        "defense": 4,
-        "magic": 10,
-        "difficulty": 9
-      },
       "image": {
         "full": "Viktor.png",
         "sprite": "champion4.png",
@@ -6901,9 +5633,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 600,
@@ -6929,16 +5659,10 @@
       }
     },
     "Vladimir": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Vladimir",
       "key": "8",
       "name": "Vladimir",
-      "info": {
-        "attack": 2,
-        "defense": 6,
-        "magic": 8,
-        "difficulty": 7
-      },
       "image": {
         "full": "Vladimir.png",
         "sprite": "champion4.png",
@@ -6948,9 +5672,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Crimson Rush",
       "stats": {
         "hp": 607,
@@ -6976,16 +5698,10 @@
       }
     },
     "Volibear": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Volibear",
       "key": "106",
       "name": "Volibear",
-      "info": {
-        "attack": 7,
-        "defense": 7,
-        "magic": 4,
-        "difficulty": 3
-      },
       "image": {
         "full": "Volibear.png",
         "sprite": "champion4.png",
@@ -6995,10 +5711,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 650,
@@ -7024,16 +5737,10 @@
       }
     },
     "Warwick": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Warwick",
       "key": "19",
       "name": "Warwick",
-      "info": {
-        "attack": 9,
-        "defense": 5,
-        "magic": 3,
-        "difficulty": 3
-      },
       "image": {
         "full": "Warwick.png",
         "sprite": "champion4.png",
@@ -7043,10 +5750,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 620,
@@ -7072,16 +5776,10 @@
       }
     },
     "Xayah": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Xayah",
       "key": "498",
       "name": "Xayah",
-      "info": {
-        "attack": 10,
-        "defense": 6,
-        "magic": 1,
-        "difficulty": 5
-      },
       "image": {
         "full": "Xayah.png",
         "sprite": "champion4.png",
@@ -7091,9 +5789,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 660,
@@ -7109,7 +5805,7 @@
         "hpregen": 3.25,
         "hpregenperlevel": 0.75,
         "mpregen": 8.25,
-        "mpregenperlevel": 0.75,
+        "mpregenperlevel": 0.8,
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 60,
@@ -7119,16 +5815,10 @@
       }
     },
     "Xerath": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Xerath",
       "key": "101",
       "name": "Xerath",
-      "info": {
-        "attack": 1,
-        "defense": 3,
-        "magic": 10,
-        "difficulty": 8
-      },
       "image": {
         "full": "Xerath.png",
         "sprite": "champion4.png",
@@ -7138,9 +5828,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 596,
@@ -7166,16 +5854,10 @@
       }
     },
     "XinZhao": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "XinZhao",
       "key": "5",
       "name": "Xin Zhao",
-      "info": {
-        "attack": 8,
-        "defense": 6,
-        "magic": 3,
-        "difficulty": 2
-      },
       "image": {
         "full": "XinZhao.png",
         "sprite": "champion5.png",
@@ -7185,10 +5867,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Mana",
       "stats": {
         "hp": 640,
@@ -7214,16 +5893,10 @@
       }
     },
     "Yasuo": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Yasuo",
       "key": "157",
       "name": "Yasuo",
-      "info": {
-        "attack": 8,
-        "defense": 4,
-        "magic": 4,
-        "difficulty": 10
-      },
       "image": {
         "full": "Yasuo.png",
         "sprite": "champion5.png",
@@ -7233,10 +5906,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Assassin"
-      ],
+      "tags": ["Fighter", "Assassin"],
       "partype": "Flow",
       "stats": {
         "hp": 590,
@@ -7262,16 +5932,10 @@
       }
     },
     "Yone": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Yone",
       "key": "777",
       "name": "Yone",
-      "info": {
-        "attack": 8,
-        "defense": 4,
-        "magic": 4,
-        "difficulty": 8
-      },
       "image": {
         "full": "Yone.png",
         "sprite": "champion5.png",
@@ -7281,10 +5945,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin",
-        "Fighter"
-      ],
+      "tags": ["Assassin", "Fighter"],
       "partype": "Flow",
       "stats": {
         "hp": 620,
@@ -7310,16 +5971,10 @@
       }
     },
     "Yorick": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Yorick",
       "key": "83",
       "name": "Yorick",
-      "info": {
-        "attack": 6,
-        "defense": 6,
-        "magic": 4,
-        "difficulty": 6
-      },
       "image": {
         "full": "Yorick.png",
         "sprite": "champion5.png",
@@ -7329,10 +5984,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Fighter",
-        "Tank"
-      ],
+      "tags": ["Fighter", "Tank"],
       "partype": "Mana",
       "stats": {
         "hp": 650,
@@ -7358,16 +6010,10 @@
       }
     },
     "Yuumi": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Yuumi",
       "key": "350",
       "name": "Yuumi",
-      "info": {
-        "attack": 5,
-        "defense": 1,
-        "magic": 8,
-        "difficulty": 2
-      },
       "image": {
         "full": "Yuumi.png",
         "sprite": "champion5.png",
@@ -7377,45 +6023,36 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
-        "hp": 550,
-        "hpperlevel": 84,
-        "mp": 400,
+        "hp": 500,
+        "hpperlevel": 69,
+        "mp": 440,
         "mpperlevel": 45,
         "movespeed": 330,
         "armor": 25,
         "armorperlevel": 4.2,
         "spellblock": 25,
         "spellblockperlevel": 1.1,
-        "attackrange": 500,
-        "hpregen": 7,
+        "attackrange": 425,
+        "hpregen": 5,
         "hpregenperlevel": 0.55,
         "mpregen": 10,
         "mpregenperlevel": 0.4,
         "crit": 0,
         "critperlevel": 0,
-        "attackdamage": 55,
+        "attackdamage": 49,
         "attackdamageperlevel": 3.1,
         "attackspeedperlevel": 1,
         "attackspeed": 0.625
       }
     },
     "Zac": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Zac",
       "key": "154",
       "name": "Zac",
-      "info": {
-        "attack": 3,
-        "defense": 7,
-        "magic": 7,
-        "difficulty": 8
-      },
       "image": {
         "full": "Zac.png",
         "sprite": "champion5.png",
@@ -7425,10 +6062,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Tank",
-        "Fighter"
-      ],
+      "tags": ["Tank", "Fighter"],
       "partype": "None",
       "stats": {
         "hp": 685,
@@ -7454,16 +6088,10 @@
       }
     },
     "Zed": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Zed",
       "key": "238",
       "name": "Zed",
-      "info": {
-        "attack": 9,
-        "defense": 2,
-        "magic": 1,
-        "difficulty": 7
-      },
       "image": {
         "full": "Zed.png",
         "sprite": "champion5.png",
@@ -7473,9 +6101,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Assassin"
-      ],
+      "tags": ["Assassin"],
       "partype": "Energy",
       "stats": {
         "hp": 654,
@@ -7485,7 +6111,7 @@
         "movespeed": 345,
         "armor": 32,
         "armorperlevel": 4.7,
-        "spellblock": 32,
+        "spellblock": 29,
         "spellblockperlevel": 2.05,
         "attackrange": 125,
         "hpregen": 7,
@@ -7501,16 +6127,10 @@
       }
     },
     "Zeri": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Zeri",
       "key": "221",
       "name": "Zeri",
-      "info": {
-        "attack": 8,
-        "defense": 5,
-        "magic": 3,
-        "difficulty": 6
-      },
       "image": {
         "full": "Zeri.png",
         "sprite": "champion5.png",
@@ -7520,9 +6140,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Marksman"
-      ],
+      "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
         "hp": 630,
@@ -7548,16 +6166,10 @@
       }
     },
     "Ziggs": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Ziggs",
       "key": "115",
       "name": "Ziggs",
-      "info": {
-        "attack": 2,
-        "defense": 4,
-        "magic": 9,
-        "difficulty": 4
-      },
       "image": {
         "full": "Ziggs.png",
         "sprite": "champion5.png",
@@ -7567,9 +6179,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage"
-      ],
+      "tags": ["Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 606,
@@ -7595,16 +6205,10 @@
       }
     },
     "Zilean": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Zilean",
       "key": "26",
       "name": "Zilean",
-      "info": {
-        "attack": 2,
-        "defense": 5,
-        "magic": 8,
-        "difficulty": 6
-      },
       "image": {
         "full": "Zilean.png",
         "sprite": "champion5.png",
@@ -7614,10 +6218,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Support",
-        "Mage"
-      ],
+      "tags": ["Support", "Mage"],
       "partype": "Mana",
       "stats": {
         "hp": 574,
@@ -7643,16 +6244,10 @@
       }
     },
     "Zoe": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Zoe",
       "key": "142",
       "name": "Zoe",
-      "info": {
-        "attack": 1,
-        "defense": 7,
-        "magic": 8,
-        "difficulty": 5
-      },
       "image": {
         "full": "Zoe.png",
         "sprite": "champion5.png",
@@ -7662,10 +6257,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 630,
@@ -7691,16 +6283,10 @@
       }
     },
     "Zyra": {
-      "version": "13.1.1",
+      "version": "13.5.1",
       "id": "Zyra",
       "key": "143",
       "name": "Zyra",
-      "info": {
-        "attack": 4,
-        "defense": 3,
-        "magic": 8,
-        "difficulty": 7
-      },
       "image": {
         "full": "Zyra.png",
         "sprite": "champion5.png",
@@ -7710,10 +6296,7 @@
         "w": 48,
         "h": 48
       },
-      "tags": [
-        "Mage",
-        "Support"
-      ],
+      "tags": ["Mage", "Support"],
       "partype": "Mana",
       "stats": {
         "hp": 574,

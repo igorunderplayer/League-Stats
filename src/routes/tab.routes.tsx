@@ -44,14 +44,10 @@ export default function TabRoutes() {
     >
 
       <Tab.Screen
-        name='test'
-        component={TestScreen}
-      />
-
-      <Tab.Screen
         name='Home'
         component={Home}
         options={{
+          title: 'Início',
           tabBarIcon: ({ color, size }) => {
             return <MaterialIcons name="home" size={size} color={color} />
           }
@@ -62,6 +58,7 @@ export default function TabRoutes() {
         name='History'
         component={History}
         options={{
+          title: 'Histórico',
           tabBarIcon: ({ color, size }) => {
             return <MaterialIcons name="history" size={size} color={color} />
           }
@@ -72,6 +69,7 @@ export default function TabRoutes() {
         name="Profile"
         component={Profile}
         options={{
+          title: 'Perfil',
           tabBarIcon: ({ color, size }) => {
             return <MaterialIcons name="person" size={size} color={color} />
           }
