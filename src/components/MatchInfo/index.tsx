@@ -1,35 +1,24 @@
-import { useEffect, useState } from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { useCallback, useEffect, useState } from 'react'
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import { Match } from '../../@types/riot'
 import colors from '../../colors'
 import { useSummoner } from '../../hooks/summoner'
 
 import runes from '../../runes.json'
 import spells from '../../spells.json'
+import SimpleKDA from '../SimpleKDA'
 
-interface MatchParticipant {
-
-}
-
-interface Match {
-  metadata: {
-    matchId: string
-  },
-  info: {
-    gameMode: string
-    participants: any[]
-    gameDuration: number
-  }
-}
 
 type Props = {
   match: Match
+  onClick: (match: Match) => unknown
 }
 
-const MatchInfoCard: React.FC<Props> = ({ match }) => {
+const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
 
   const { summoner } = useSummoner()
 
-  const me = match.info.participants.find(p => p.puuid == summoner?.puuid)
+  const me = match.info.participants.find(p => p.puuid == summoner?.puuid)!
 
   const primaryMainRune = me.perks.styles[0].selections[0].perk
 
@@ -44,8 +33,12 @@ const MatchInfoCard: React.FC<Props> = ({ match }) => {
     "URF": "Ultra rapido e furioso"
   }
 
+  const handleOnClick = useCallback(() => {
+    onClick(match)
+  }, [])
+
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={handleOnClick}>
       <View style={[styles.leftBar, { backgroundColor: me.win ? colors.softCyan : colors.softRed }]} />
 
       <View style={styles.basicInfo}>
@@ -110,19 +103,13 @@ const MatchInfoCard: React.FC<Props> = ({ match }) => {
 
       <View style={{ alignItems: 'center' }}>
 
-        <View style={{ flexDirection: 'row' }}>
-          <Text style={[styles.name, { color: colors.softCyan }]}>{me.kills}</Text>
-          <Text style={[styles.name]}> / </Text>
-          <Text style={[styles.name, { color: colors.softRed }]}>{me.deaths}</Text>
-          <Text style={[styles.name]}> / </Text>
-          <Text style={[styles.name, { color: colors.softOrange }]}>{me.assists}</Text>
-        </View>
+        <SimpleKDA kills={me.kills} deaths={me.deaths} assists={me.assists} />
 
         <Text style={styles.subText}>50% atuação abates</Text>
         <Text style={styles.subText}>{me.totalMinionsKilled} CS</Text>
 
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 

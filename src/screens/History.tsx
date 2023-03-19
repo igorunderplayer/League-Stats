@@ -1,15 +1,48 @@
-import { useEffect, useState } from 'react'
+import { CompositeNavigationProp, RouteProp, useNavigation } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { useCallback, useEffect, useState } from 'react'
 import { StyleSheet, View, Text, FlatList } from 'react-native'
+import { Match } from '../@types/riot'
 import MatchInfoCard from '../components/MatchInfo'
 import { useSummoner } from '../hooks/summoner'
 import Riot from '../services/riot'
 import themes from '../themes'
+import MatchInfo from './MatchInfo'
 
-export default function History() {
+type HistoryStackParamList = {
+  historyDefault: undefined,
+  matchInfo: {
+    matchId: string
+  }
+}
+
+const Stack = createNativeStackNavigator<HistoryStackParamList>()
+
+export default function HistoryRouter() {
+  return (
+    <View style={{ flex: 1, backgroundColor: themes.dark.background }}>
+      <Stack.Navigator initialRouteName='historyDefault' screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="historyDefault" component={History} />
+
+        <Stack.Screen name="matchInfo" component={MatchInfo} />
+      </Stack.Navigator>
+    </View>
+  );
+}
+
+
+function History() {
+  const navigation = useNavigation()
   const { region, summoner } = useSummoner()
   const [matches, setMatches] = useState<any[]>([])
 
   const [loading, setLoading] = useState(true)
+
+  const handleOnClickMatch = useCallback((match: Match) => {
+    navigation.navigate('matchInfo', {
+      matchId: match.metadata.matchId
+    })
+  }, [])
 
   useEffect(() => {
     if (!region || !summoner) return
@@ -61,7 +94,7 @@ export default function History() {
         contentContainerStyle={styles.matchListContainer}
         keyExtractor={(item) => item.metadata.matchId}
         data={matches}
-        renderItem={({ item }) => <MatchInfoCard match={item} />}
+        renderItem={({ item }) => <MatchInfoCard match={item} onClick={handleOnClickMatch} />}
         onEndReached={loadMoreMatches}
       />
 

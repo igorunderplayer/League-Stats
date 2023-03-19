@@ -21,3 +21,80 @@ export interface MiniSeries {
   target:int	
   wins:int
 }
+
+export interface Match {
+  metadata: {
+    matchId: string
+  },
+  info: {
+    platformId: string
+    gameMode: string
+    participants: MatchParticipant[]
+    gameDuration: number
+    teams: MatchTeam[]
+  }
+}
+
+export interface MatchTeam {
+  teamId: number
+  win: boolean
+}
+
+export interface MatchParticipant {
+  // basic
+  puuid: string
+  summonerName: string
+  championName: string
+  champLevel: number
+  role: string
+  teamId: number
+
+  // kda
+  assists: number
+  deaths: number
+  kills: number
+
+  // items
+  item0: number
+  item1: number
+  item2: number
+  item3: number
+  item4: number
+  item5: number
+  item6: number
+  itemsPurchased: number
+
+  summoner1Id: number // spell 1
+  summoner2Id: number // spell 2
+
+  win: boolean
+
+  perks: ParticipantPerks
+
+  totalMinionsKilled: number
+  visionScore: number
+}
+
+export interface ParticipantPerks {
+  statPerks: PerksStats
+  styles: PerkStyle[]
+}
+
+export interface PerksStats {
+  defense: number
+  flex: number
+  offense: number
+}
+
+export interface PerkStyle {
+  description: string
+  selections: PerkStyleSelection[]
+  style: number
+}
+
+export interface PerkStyleSelection {
+  perk: number
+  var1: number
+  var2: number
+  var3: number
+}
