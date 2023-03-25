@@ -17,7 +17,6 @@ const LeagueInfosCard: React.FC = () => {
     if (!region || !summoner) return
     new Riot(region).getSummonerLeague(summoner?.id)
       .then(leagues => {
-        console.log(leagues)
         setLeagues(leagues)
       })
   }, [])
