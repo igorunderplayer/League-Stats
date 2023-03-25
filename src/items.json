@@ -1,6 +1,6 @@
 {
   "type": "item",
-  "version": "13.5.1",
+  "version": "13.6.1",
   "basic": {
     "name": "",
     "rune": { "isrune": false, "tier": 1, "type": "red" },
@@ -594,7 +594,6 @@
         "3191",
         "3108",
         "3113",
-        "3115",
         "3116",
         "3145",
         "3152",
@@ -789,7 +788,7 @@
         "h": 48
       },
       "gold": { "base": 450, "purchasable": true, "total": 450, "sell": 180 },
-      "tags": ["Damage", "Lane"],
+      "tags": ["Damage", "OnHit", "Lane"],
       "maps": { "11": true, "12": false, "21": false, "22": false },
       "stats": { "FlatPhysicalDamageMod": 7 }
     },
@@ -2278,7 +2277,13 @@
         "h": 48
       },
       "gold": { "base": 850, "purchasable": true, "total": 2600, "sell": 1820 },
-      "tags": ["Damage", "CriticalStrike", "AttackSpeed", "NonbootsMovement"],
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "AttackSpeed",
+        "OnHit",
+        "NonbootsMovement"
+      ],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": {
         "FlatPhysicalDamageMod": 20,
@@ -2653,7 +2658,13 @@
         "h": 48
       },
       "gold": { "base": 200, "purchasable": true, "total": 3400, "sell": 2380 },
-      "tags": ["Damage", "LifeSteal", "CooldownReduction", "AbilityHaste"],
+      "tags": [
+        "Damage",
+        "LifeSteal",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatPhysicalDamageMod": 65, "PercentLifeStealMod": 0.1 },
       "depth": 3
@@ -2723,7 +2734,7 @@
         "h": 48
       },
       "gold": { "base": 325, "purchasable": true, "total": 1200, "sell": 840 },
-      "tags": ["Damage"],
+      "tags": ["Damage", "OnHit"],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatPhysicalDamageMod": 25 },
       "depth": 2
@@ -3109,7 +3120,7 @@
       "colloq": ";",
       "plaintext": "Increases Ability Power and Cooldown Reduction",
       "from": ["1052"],
-      "into": ["3100", "3102", "6653", "3157", "4628", "4629", "4636"],
+      "into": ["3100", "3102", "3115", "6653", "3157", "4628", "4629", "4636"],
       "image": {
         "full": "3108.png",
         "sprite": "item1.png",
@@ -3142,15 +3153,7 @@
         "h": 48
       },
       "gold": { "base": 400, "purchasable": true, "total": 2300, "sell": 1610 },
-      "tags": [
-        "Health",
-        "Armor",
-        "Aura",
-        "Active",
-        "CooldownReduction",
-        "NonbootsMovement",
-        "AbilityHaste"
-      ],
+      "tags": ["Health", "Aura", "Active", "CooldownReduction", "AbilityHaste"],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatHPPoolMod": 400 },
       "depth": 3
@@ -3263,10 +3266,10 @@
     },
     "3115": {
       "name": "Nashor's Tooth",
-      "description": "<mainText><stats><attention>100</attention> Ability Power<br><attention>50%</attention> Attack Speed</stats><br><li><passive>Icathian Bite:</passive> Attacks apply magic damage <OnHit>On-Hit</OnHit>.</mainText><br>",
+      "description": "<mainText><stats><attention>100</attention> Ability Power<br><attention>50%</attention> Attack Speed<br><attention>15</attention> Ability Haste</stats><br><li><passive>Icathian Bite:</passive> Attacks apply magic damage <OnHit>On-Hit</OnHit>.</mainText><br>",
       "colloq": ";",
       "plaintext": "Increases Attack Speed, Ability Power, and Cooldown Reduction",
-      "from": ["1043", "1026", "1052"],
+      "from": ["1043", "1026", "3108"],
       "image": {
         "full": "3115.png",
         "sprite": "item1.png",
@@ -3276,8 +3279,8 @@
         "w": 48,
         "h": 48
       },
-      "gold": { "base": 715, "purchasable": true, "total": 3000, "sell": 2100 },
-      "tags": ["AttackSpeed", "SpellDamage", "OnHit"],
+      "gold": { "base": 450, "purchasable": true, "total": 3200, "sell": 2240 },
+      "tags": ["AttackSpeed", "SpellDamage", "OnHit", "AbilityHaste"],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatMagicDamageMod": 100, "PercentAttackSpeedMod": 0.5 },
       "depth": 3
@@ -3622,7 +3625,13 @@
         "h": 48
       },
       "gold": { "base": 800, "purchasable": true, "total": 3000, "sell": 2100 },
-      "tags": ["Damage", "Active", "NonbootsMovement", "ArmorPenetration"],
+      "tags": [
+        "Damage",
+        "Active",
+        "NonbootsMovement",
+        "ArmorPenetration",
+        "AbilityHaste"
+      ],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatPhysicalDamageMod": 55 },
       "effect": {
@@ -5288,6 +5297,8 @@
       "gold": { "base": 1100, "purchasable": true, "total": 1100, "sell": 770 },
       "tags": [
         "Health",
+        "Damage",
+        "SpellDamage",
         "Vision",
         "Active",
         "CooldownReduction",
@@ -5559,7 +5570,7 @@
         "h": 48
       },
       "gold": { "base": 750, "purchasable": true, "total": 2500, "sell": 1750 },
-      "tags": ["Health", "SpellDamage", "CooldownReduction"],
+      "tags": ["Health", "SpellDamage", "ManaRegen", "CooldownReduction"],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatHPPoolMod": 200, "FlatMagicDamageMod": 40 },
       "depth": 3
@@ -5834,7 +5845,14 @@
         "h": 48
       },
       "gold": { "base": 700, "purchasable": true, "total": 3000, "sell": 2100 },
-      "tags": ["Health", "Armor", "CooldownReduction", "Slow", "AbilityHaste"],
+      "tags": [
+        "Health",
+        "Armor",
+        "CooldownReduction",
+        "Slow",
+        "OnHit",
+        "AbilityHaste"
+      ],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatHPPoolMod": 400, "FlatArmorMod": 50 },
       "depth": 3
@@ -5952,7 +5970,7 @@
         "h": 48
       },
       "gold": { "base": 300, "purchasable": true, "total": 1300, "sell": 910 },
-      "tags": ["Damage", "AttackSpeed"],
+      "tags": ["Damage", "AttackSpeed", "OnHit"],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatPhysicalDamageMod": 30, "PercentAttackSpeedMod": 0.15 },
       "depth": 2
@@ -6006,7 +6024,13 @@
         "h": 48
       },
       "gold": { "base": 625, "purchasable": true, "total": 3400, "sell": 2380 },
-      "tags": ["Damage", "CriticalStrike", "AttackSpeed", "ArmorPenetration"],
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "AttackSpeed",
+        "OnHit",
+        "ArmorPenetration"
+      ],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": {
         "FlatPhysicalDamageMod": 65,
@@ -6064,7 +6088,13 @@
         "h": 48
       },
       "gold": { "base": 825, "purchasable": true, "total": 3400, "sell": 2380 },
-      "tags": ["Damage", "CriticalStrike", "CooldownReduction", "AbilityHaste"],
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "CooldownReduction",
+        "OnHit",
+        "AbilityHaste"
+      ],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatPhysicalDamageMod": 60, "FlatCritChanceMod": 0.2 },
       "effect": {
@@ -6380,7 +6410,14 @@
         "h": 48
       },
       "gold": { "base": 0, "purchasable": false, "total": 3000, "sell": 2100 },
-      "tags": ["Health", "Armor", "CooldownReduction", "Slow", "AbilityHaste"],
+      "tags": [
+        "Health",
+        "Armor",
+        "CooldownReduction",
+        "Slow",
+        "OnHit",
+        "AbilityHaste"
+      ],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatHPPoolMod": 550, "FlatArmorMod": 70 },
       "depth": 4
@@ -6436,7 +6473,13 @@
         "h": 48
       },
       "gold": { "base": 0, "purchasable": false, "total": 3400, "sell": 2380 },
-      "tags": ["Damage", "CriticalStrike", "AttackSpeed", "ArmorPenetration"],
+      "tags": [
+        "Damage",
+        "CriticalStrike",
+        "AttackSpeed",
+        "OnHit",
+        "ArmorPenetration"
+      ],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": {
         "FlatPhysicalDamageMod": 85,
@@ -6888,7 +6931,7 @@
         "h": 48
       },
       "gold": { "base": 0, "purchasable": false, "total": 2500, "sell": 1750 },
-      "tags": ["Health", "SpellDamage", "CooldownReduction"],
+      "tags": ["Health", "SpellDamage", "ManaRegen", "CooldownReduction"],
       "maps": { "11": true, "12": true, "21": true, "22": false },
       "stats": { "FlatHPPoolMod": 300, "FlatMagicDamageMod": 70 },
       "depth": 4

@@ -32,7 +32,7 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
         <Image
           style={styles.championIcon}
           source={{
-            uri: `http://ddragon.leagueoflegends.com/cdn/13.5.1/img/champion/${champion.id}.png`
+            uri: `http://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/${champion.id}.png`
           }}
         />
 

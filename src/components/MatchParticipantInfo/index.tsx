@@ -46,7 +46,7 @@ const MatchParticipantInfo: React.FC<Props> = ({ match, participant }) => {
           <Image
             style={{ width: 48, height: 48, borderTopLeftRadius: 12, borderTopRightRadius: 12, marginRight: 12 }}
             source={{
-              uri: `http://ddragon.leagueoflegends.com/cdn/13.5.1/img/champion/${participant.championName}.png`
+              uri: `http://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/${participant.championName}.png`
             }}
           />
 

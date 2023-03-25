@@ -73,7 +73,7 @@ const ChampionItem = ({ item }: ItemProps) => {
       <Image
         style={{ width: 48, height: 48 }}
         source={{
-          uri: `http://ddragon.leagueoflegends.com/cdn/13.5.1/img/champion/${item.id}.png`
+          uri: `http://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/${item.id}.png`
         }}
       />
 
