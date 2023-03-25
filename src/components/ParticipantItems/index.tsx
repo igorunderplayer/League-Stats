@@ -2,17 +2,18 @@ import { View, StyleSheet, Image } from 'react-native'
 import colors from '../../colors'
 
 type Props = {
-  items: number[]
+  items: { item: number, slot: number }[]
 }
 
 const ParticipantItems: React.FC<Props> = ({ items }) => {
   return (
     <View style={styles.container}>
-      { items.map(item => (
+      { items.map((item, index) => (
         <Image
+          key={item.slot}
           style={styles.image}
           source={{
-            uri: `http://ddragon.leagueoflegends.com/cdn/13.6.1/img/item/${item}.png`
+            uri: `http://ddragon.leagueoflegends.com/cdn/13.6.1/img/item/${item.item}.png`
           }}
         />
       )) }
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    maxWidth: 112,
+    maxWidth: 78,
     gap: 2,
     margin: 2 
   },

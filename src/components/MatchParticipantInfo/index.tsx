@@ -1,15 +1,12 @@
-import { useEffect, useState } from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 import { Match, MatchParticipant } from '../../@types/riot'
-import colors from '../../colors'
-import Summoner from '../../entities/Summoner'
-import { useSummoner } from '../../hooks/summoner'
-import Riot from '../../services/riot'
+
+import ParticipantItems from '../ParticipantItems'
+import SimpleKDA from '../SimpleKDA'
 
 import spells from '../../spells.json'
 import runes from '../../runes.json'
-import SimpleKDA from '../SimpleKDA'
-import ParticipantItems from '../ParticipantItems'
+import colors from '../../colors'
 
 
 type Props = {
@@ -17,25 +14,26 @@ type Props = {
   participant: MatchParticipant
 }
 
+const nameFilter = {
+  'FiddleSticks': 'Fiddlesticks',
+}
+
 const MatchParticipantInfo: React.FC<Props> = ({ match, participant }) => {
-  const { region } = useSummoner()
-  const [summoner, setSummoner] = useState<Summoner>({} as Summoner)
-
-  useEffect(() => {
-    if(!region) return
-    new Riot(match.info.platformId).getSummonerByName(participant.summonerName)
-      .then(summonerData => {
-        setSummoner(summonerData)
-      })
-
-  }, [])
-
   const primaryMainRune = participant.perks.styles[0].selections[0].perk
-
   const runeIconPath = runes.find(rune => rune.id == primaryMainRune)?.icon.toLowerCase() ?? ''
 
   const spell1 = spells.find(spell => spell.id == participant.summoner1Id)
   const spell2 = spells.find(spell => spell.id == participant.summoner2Id)
+
+  const csScore = participant.totalMinionsKilled + participant.neutralMinionsKilled
+
+  const formatter = new Intl.NumberFormat('en-US',{ notation: 'compact' })
+  const totalGold = formatter.format(participant.goldEarned)
+
+  // For some reason there are some champs that come with wrong formatting
+  const nameFiltered = !nameFilter[participant.championName as keyof typeof nameFilter] ?
+    participant.championName :
+    nameFilter[participant.championName as keyof typeof nameFilter]
 
   return (
     <View style={styles.container}>
@@ -46,11 +44,9 @@ const MatchParticipantInfo: React.FC<Props> = ({ match, participant }) => {
           <Image
             style={{ width: 48, height: 48, borderTopLeftRadius: 12, borderTopRightRadius: 12, marginRight: 12 }}
             source={{
-              uri: `http://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/${participant.championName}.png`
+              uri: `http://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/${nameFiltered}.png`
             }}
           />
-
-          
 
           <View style={{ flexDirection: 'row' }}>
             <Image
@@ -81,9 +77,10 @@ const MatchParticipantInfo: React.FC<Props> = ({ match, participant }) => {
           </View>
         </View>
 
-        <Text style={styles.text}>
-            {participant.role == 'SUPPORT' ? `${participant.visionScore} vis.` : `${participant.totalMinionsKilled} CS`}
-          </Text>
+        <Text style={styles.text}>{totalGold} ouro</Text>
+        <Text style={styles.text}>{csScore} CS</Text>
+        <Text style={styles.text}>{participant.visionScore} vis.</Text>
+
 
       </View>
 
@@ -93,13 +90,13 @@ const MatchParticipantInfo: React.FC<Props> = ({ match, participant }) => {
         <SimpleKDA kills={participant.kills} deaths={participant.deaths} assists={participant.assists} textSize={14} bold={false} />
 
         <ParticipantItems items={[
-          participant.item0,
-          participant.item1,
-          participant.item2,
-          participant.item3,
-          participant.item4,
-          participant.item5,
-          participant.item6
+          { item: participant.item0, slot: 0 },
+          { item: participant.item1, slot: 1 },
+          { item: participant.item2, slot: 2 },
+          { item: participant.item3, slot: 3 },
+          { item: participant.item4, slot: 4 },
+          { item: participant.item5, slot: 5 },
+          { item: participant.item6, slot: 6 },
         ]}/>
 
       </View>
@@ -112,7 +109,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#ffffff05',
     borderRadius: 12,
-    padding: 8
+    padding: 8,
+    justifyContent: 'space-evenly'
   },
   basicImageInfos: {
     flexDirection: 'column'

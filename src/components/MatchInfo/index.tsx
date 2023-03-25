@@ -27,6 +27,15 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
   const spell1 = spells.find(spell => spell.id == me.summoner1Id)
   const spell2 = spells.find(spell => spell.id == me.summoner2Id)
 
+  const myTeam = match.info.teams.find(team => team.teamId == me.teamId)
+
+  const myTeamKills = match.info.participants
+    .filter(participant => participant.teamId == myTeam?.teamId)
+    .reduce((prev, curr) => prev + curr.kills, 0)
+
+
+  const combatScore = ((me.kills + me.assists) / myTeamKills * 100)
+
   const gameMode = {
     "ARAM": "ARAM",
     "CLASSIC": "Normal",
@@ -105,8 +114,8 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
 
         <SimpleKDA kills={me.kills} deaths={me.deaths} assists={me.assists} />
 
-        <Text style={styles.subText}>50% atuação abates</Text>
-        <Text style={styles.subText}>{me.totalMinionsKilled} CS</Text>
+        <Text style={styles.subText}>{isNaN(combatScore) ? 0 : combatScore.toFixed(1)}% atuação em abates</Text>
+        <Text style={styles.subText}>{me.totalMinionsKilled + me.neutralMinionsKilled} CS</Text>
 
       </View>
     </TouchableOpacity>

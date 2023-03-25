@@ -72,7 +72,11 @@ export interface MatchParticipant {
   perks: ParticipantPerks
 
   totalMinionsKilled: number
+  neutralMinionsKilled: number
   visionScore: number
+
+  goldEarned: number
+  goldSpent: number
 }
 
 export interface ParticipantPerks {

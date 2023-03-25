@@ -1,16 +1,16 @@
-import { useRoute } from '@react-navigation/native';
-import { useEffect, useState } from 'react';
+import { useNavigation, useRoute } from '@react-navigation/native'
+import { useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
-import { Match } from '../@types/riot';
-import colors from '../colors';
-import FreeChampionsRotation from '../components/FreeChampionsRotation';
-import MatchParticipantInfo from '../components/MatchParticipantInfo';
-import { useSummoner } from '../hooks/summoner';
-import Riot from '../services/riot';
-import themes from '../themes';
+import { Match } from '../@types/riot'
+import colors from '../colors'
+import MatchParticipantInfo from '../components/MatchParticipantInfo'
+import { useSummoner } from '../hooks/summoner'
+import Riot from '../services/riot'
+import themes from '../themes'
 
 export default function MatchInfo() {
   const route = useRoute()
+  const navigation = useNavigation()
   const { summoner, region } = useSummoner()
 
   const [match, setMatch] = useState<Match>()
@@ -45,7 +45,7 @@ export default function MatchInfo() {
   if(!match) return <View style={styles.container}></View>
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ alignItems: 'center' }}>
+    <ScrollView style={styles.container} contentContainerStyle={{ alignItems: 'center', justifyContent: 'center' }}>
 
       <View style={{ flexDirection: 'row', gap: 6 }}>
 
@@ -90,7 +90,8 @@ const styles = StyleSheet.create({
     padding: 8
   },
   team: {
-    gap: 4
+    gap: 4,
+    flex: 1
   },
   heading: {
     flexDirection: 'row',
