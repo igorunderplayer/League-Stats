@@ -44,7 +44,6 @@ export default function Welcome() {
         alert('Update not available')
       }
     } catch (error) {
-      // You can also add an alert() to see the error message in case of an error when fetching updates.
       alert(`Error fetching latest Expo update: ${error}`)
     }
   }
@@ -56,8 +55,6 @@ export default function Welcome() {
         <Text style={styles.title}>Bem vindo</Text>
         <Text style={styles.subTitle}>Antes de começarmos... preencha os campos abaixo com as informações</Text>
       </View>
-
-
 
       <View style={styles.inputsContainer}>
 
@@ -87,7 +84,7 @@ export default function Welcome() {
       </TouchableOpacity>
 
       <TouchableOpacity onPress={handleFetchUpdates} style={styles.button}>
-        <Text style={styles.subTitle}>Check for updates</Text>
+        <Text style={styles.subTitle}>Check updates</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={handleOnPressDelete} style={styles.button}>
