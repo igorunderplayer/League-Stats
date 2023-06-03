@@ -9,7 +9,7 @@ const SummonerIcon: React.FC<Props> = ({ summonerIconId = 0 }) => {
   return (
     <Image
       source={{
-        uri: `http://ddragon.leagueoflegends.com/cdn/13.6.1/img/profileicon/${summonerIconId}.png`
+        uri: `http://ddragon.leagueoflegends.com/cdn/13.11.1/img/profileicon/${summonerIconId}.png`
       }}
       style={styles.image}
     />

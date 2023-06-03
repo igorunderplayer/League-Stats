@@ -1,15 +1,15 @@
 {
   "type": "champion",
   "format": "standAloneComplex",
-  "version": "13.6.1",
+  "version": "13.11.1",
   "data": {
     "Aatrox": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Aatrox",
       "key": "266",
       "name": "Aatrox",
-      "title": "the Darkin Blade",
-      "blurb": "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find...",
+      "title": "a Espada Darkin",
+      "blurb": "Antes defensores honrados de Shurima contra o temido Vazio, Aatrox e seus irmãos acabaram se tornando uma ameaça ainda maior para Runeterra, e a única coisa capaz de derrotá-los foi um tipo de feitiçaria mortal e traiçoeira. Mas após séculos de...",
       "info": { "attack": 8, "defense": 4, "magic": 3, "difficulty": 4 },
       "image": {
         "full": "Aatrox.png",
@@ -21,7 +21,7 @@
         "h": 48
       },
       "tags": ["Fighter", "Tank"],
-      "partype": "Blood Well",
+      "partype": "Poço de Sangue",
       "stats": {
         "hp": 650,
         "hpperlevel": 114,
@@ -46,12 +46,12 @@
       }
     },
     "Ahri": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Ahri",
       "key": "103",
       "name": "Ahri",
-      "title": "the Nine-Tailed Fox",
-      "blurb": "Innately connected to the magic of the spirit realm, Ahri is a fox-like vastaya who can manipulate her prey's emotions and consume their essence—receiving flashes of their memory and insight from each soul she consumes. Once a powerful yet wayward...",
+      "title": "a Raposa de Nove Caudas",
+      "blurb": "A ligação de Ahri com a magia do mundo espiritual é inata. Ela é uma vastaya com traços de raposa, capaz de manipular as emoções de sua presa e consumir sua essência, devorando também as memórias e as percepções de cada alma absorvida. Outrora uma...",
       "info": { "attack": 3, "defense": 4, "magic": 8, "difficulty": 5 },
       "image": {
         "full": "Ahri.png",
@@ -88,12 +88,12 @@
       }
     },
     "Akali": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Akali",
       "key": "84",
       "name": "Akali",
-      "title": "the Rogue Assassin",
-      "blurb": "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one...",
+      "title": "a Assassina Renegada",
+      "blurb": "Abandonando a Ordem Kinkou e seu título de Punho das Sombras, Akali agora ataca sozinha, pronta para ser a arma mortal que seu povo precisa. Embora ela mantenha tudo o que aprendeu com seu mestre Shen, ela se comprometeu a defender Ionia de seus...",
       "info": { "attack": 5, "defense": 3, "magic": 8, "difficulty": 7 },
       "image": {
         "full": "Akali.png",
@@ -105,7 +105,7 @@
         "h": 48
       },
       "tags": ["Assassin"],
-      "partype": "Energy",
+      "partype": "Energia",
       "stats": {
         "hp": 570,
         "hpperlevel": 119,
@@ -130,12 +130,12 @@
       }
     },
     "Akshan": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Akshan",
       "key": "166",
       "name": "Akshan",
-      "title": "the Rogue Sentinel",
-      "blurb": "Raising an eyebrow in the face of danger, Akshan fights evil with dashing charisma, righteous vengeance, and a conspicuous lack of shirts. He is highly skilled in the art of stealth combat, able to evade the eyes of his enemies and reappear when they...",
+      "title": "o Sentinela Rebelde",
+      "blurb": "Akshan ri da cara do perigo, lutando contra o mal com carisma, determinação e desejo de vingança, mas, estranhamente, sem vestir uma camisa sequer. É extremamente habilidoso na arte do combate furtivo, capaz de sumir da vista dos inimigos e reaparecer...",
       "info": { "attack": 0, "defense": 0, "magic": 0, "difficulty": 0 },
       "image": {
         "full": "Akshan.png",
@@ -172,12 +172,12 @@
       }
     },
     "Alistar": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Alistar",
       "key": "12",
       "name": "Alistar",
-      "title": "the Minotaur",
-      "blurb": "Always a mighty warrior with a fearsome reputation, Alistar seeks revenge for the death of his clan at the hands of the Noxian empire. Though he was enslaved and forced into the life of a gladiator, his unbreakable will was what kept him from truly...",
+      "title": "o Minotauro",
+      "blurb": "Um poderoso guerreiro com uma temível reputação, Alistar busca vingança por seu clã, morto pelas mãos do império de Noxus. Apesar de ter sido escravizado e forçado a uma vida de gladiador, sua vontade indestrutível o impediu de se tornar uma fera de...",
       "info": { "attack": 6, "defense": 9, "magic": 5, "difficulty": 7 },
       "image": {
         "full": "Alistar.png",
@@ -191,12 +191,12 @@
       "tags": ["Tank", "Support"],
       "partype": "Mana",
       "stats": {
-        "hp": 670,
+        "hp": 685,
         "hpperlevel": 120,
         "mp": 350,
         "mpperlevel": 40,
         "movespeed": 330,
-        "armor": 44,
+        "armor": 47,
         "armorperlevel": 4.7,
         "spellblock": 32,
         "spellblockperlevel": 2.05,
@@ -214,12 +214,12 @@
       }
     },
     "Amumu": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Amumu",
       "key": "32",
       "name": "Amumu",
-      "title": "the Sad Mummy",
-      "blurb": "Legend claims that Amumu is a lonely and melancholy soul from ancient Shurima, roaming the world in search of a friend. Doomed by an ancient curse to remain alone forever, his touch is death, his affection ruin. Those who claim to have seen him describe...",
+      "title": "a Múmia Triste",
+      "blurb": "Reza a lenda que Amumu é uma alma solitária e melancólica da antiga Shurima que vaga sem rumo pelo mundo em busca de um amigo. Amaldiçoado por um feitiço ancestral para permanecer só pela eternidade, seu toque traz a morte e sua afeição, a ruína...",
       "info": { "attack": 2, "defense": 6, "magic": 8, "difficulty": 3 },
       "image": {
         "full": "Amumu.png",
@@ -256,12 +256,12 @@
       }
     },
     "Anivia": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Anivia",
       "key": "34",
       "name": "Anivia",
-      "title": "the Cryophoenix",
-      "blurb": "Anivia is a benevolent winged spirit who endures endless cycles of life, death, and rebirth to protect the Freljord. A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to thwart any who dare disturb her homeland...",
+      "title": "a Criofênix",
+      "blurb": "Anivia é um espírito alado e benevolente que suporta infinitos ciclos de vida, morte e renascimento para proteger Freljord. Uma semideusa nascida de ventos impiedosos e frios brutais, ela carrega esses poderes elementais para perseguir qualquer um que...",
       "info": { "attack": 1, "defense": 4, "magic": 10, "difficulty": 10 },
       "image": {
         "full": "Anivia.png",
@@ -298,12 +298,12 @@
       }
     },
     "Annie": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Annie",
       "key": "1",
       "name": "Annie",
-      "title": "the Dark Child",
-      "blurb": "Dangerous, yet disarmingly precocious, Annie is a child mage with immense pyromantic power. Even in the shadows of the mountains north of Noxus, she is a magical outlier. Her natural affinity for fire manifested early in life through unpredictable...",
+      "title": "a Criança Sombria",
+      "blurb": "Perigosa, mas adoravelmente precoce, Annie é uma pequena maga com imenso poder piromaníaco. Mesmo isolada nas sombras das montanhas ao norte de Noxus, ela causa estranhamento com sua magia. Sua afinidade natural com o fogo já era evidente desde a...",
       "info": { "attack": 2, "defense": 3, "magic": 10, "difficulty": 6 },
       "image": {
         "full": "Annie.png",
@@ -340,12 +340,12 @@
       }
     },
     "Aphelios": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Aphelios",
       "key": "523",
       "name": "Aphelios",
-      "title": "the Weapon of the Faithful",
-      "blurb": "Emerging from moonlight's shadow with weapons drawn, Aphelios kills the enemies of his faith in brooding silence—speaking only through the certainty of his aim, and the firing of each gun. Though fueled by a poison that renders him mute, he is guided by...",
+      "title": "a Arma dos Devotos",
+      "blurb": "Emergindo da sombra do luar com suas armas em mãos, Aphelios abate os inimigos de sua fé em absoluto silêncio, comunicando-se apenas pela destreza de sua mira e pelo disparo de cada arma. Embora viva sob o efeito de um veneno que o emudeceu, ele é...",
       "info": { "attack": 6, "defense": 2, "magic": 1, "difficulty": 10 },
       "image": {
         "full": "Aphelios.png",
@@ -382,12 +382,12 @@
       }
     },
     "Ashe": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Ashe",
       "key": "22",
       "name": "Ashe",
-      "title": "the Frost Archer",
-      "blurb": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice...",
+      "title": "a Arqueira do Gelo",
+      "blurb": "A mãe de guerra Glacinata da tribo de Avarosa, Ashe comanda a horda mais populosa do norte. Estoica, inteligente e idealista, mesmo que desconfortável com seu papel de liderança, ela canaliza as magias ancestrais de sua linhagem para empunhar um arco de...",
       "info": { "attack": 7, "defense": 3, "magic": 2, "difficulty": 4 },
       "image": {
         "full": "Ashe.png",
@@ -424,12 +424,12 @@
       }
     },
     "AurelionSol": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "AurelionSol",
       "key": "136",
       "name": "Aurelion Sol",
-      "title": "The Star Forger",
-      "blurb": "Aurelion Sol once graced the vast emptiness of the cosmos with celestial wonders of his own devising. Now, he is forced to wield his awesome power at the behest of a space-faring empire that tricked him into servitude. Desiring a return to his...",
+      "title": "o Forjador de Estrelas",
+      "blurb": "Aurelion Sol costumava agraciar a vasta imensidão vazia dos cosmos com maravilhas celestiais concebidas por ele mesmo. Agora, ele é forçado a usar seu incrível poder a mando de um império espacial remoto que o enganou e o mantém sob servidão. Desejando...",
       "info": { "attack": 2, "defense": 3, "magic": 8, "difficulty": 7 },
       "image": {
         "full": "AurelionSol.png",
@@ -444,12 +444,12 @@
       "partype": "Mana",
       "stats": {
         "hp": 620,
-        "hpperlevel": 95,
+        "hpperlevel": 90,
         "mp": 530,
         "mpperlevel": 40,
         "movespeed": 335,
         "armor": 22,
-        "armorperlevel": 4.3,
+        "armorperlevel": 4,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
         "attackrange": 550,
@@ -466,12 +466,12 @@
       }
     },
     "Azir": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Azir",
       "key": "268",
       "name": "Azir",
-      "title": "the Emperor of the Sands",
-      "blurb": "Azir was a mortal emperor of Shurima in a far distant age, a proud man who stood at the cusp of immortality. His hubris saw him betrayed and murdered at the moment of his greatest triumph, but now, millennia later, he has been reborn as an Ascended...",
+      "title": "o Imperador das Areias",
+      "blurb": "Azir foi um imperador mortal de Shurima em uma era muito antiga e um homem orgulhoso que esteve a um passo da imortalidade. Sua insolência fez com que fosse traído e assassinado no momento de seu maior triunfo, mas agora, milênios depois, ele renasceu...",
       "info": { "attack": 6, "defense": 3, "magic": 8, "difficulty": 9 },
       "image": {
         "full": "Azir.png",
@@ -490,7 +490,7 @@
         "mp": 320,
         "mpperlevel": 40,
         "movespeed": 335,
-        "armor": 19,
+        "armor": 22,
         "armorperlevel": 5,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
@@ -503,17 +503,17 @@
         "critperlevel": 0,
         "attackdamage": 52,
         "attackdamageperlevel": 3.5,
-        "attackspeedperlevel": 5,
+        "attackspeedperlevel": 6,
         "attackspeed": 0.625
       }
     },
     "Bard": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Bard",
       "key": "432",
-      "name": "Bard",
-      "title": "the Wandering Caretaker",
-      "blurb": "A traveler from beyond the stars, Bard is an agent of serendipity who fights to maintain a balance where life can endure the indifference of chaos. Many Runeterrans sing songs that ponder his extraordinary nature, yet they all agree that the cosmic...",
+      "name": "Bardo",
+      "title": "o Protetor Andarilho",
+      "blurb": "Viajante de galáxias distantes, Bardo é um agente do acaso que luta para manter um equilíbrio em que a vida possa suportar a indiferença do caos. Muitos habitantes de Runeterra entoam canções que louvam sua extraordinária índole, mas todos concordam que...",
       "info": { "attack": 4, "defense": 4, "magic": 5, "difficulty": 9 },
       "image": {
         "full": "Bard.png",
@@ -550,12 +550,12 @@
       }
     },
     "Belveth": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Belveth",
       "key": "200",
       "name": "Bel'Veth",
-      "title": "the Empress of the Void",
-      "blurb": "A nightmarish empress created from the raw material of an entire devoured city, Bel'Veth is the end of Runeterra itself... and the beginning of a monstrous reality of her own design. Driven by epochs of repurposed history, knowledge, and memories from...",
+      "title": "a Imperatriz do Vazio",
+      "blurb": "Bel'Veth, uma imperatriz tenebrosa nascida da essência de uma cidade devorada, é o fim da própria Runeterra... E o início de uma realidade monstruosa criada à sua imagem. Guiada por eras de história, conhecimento e lembranças adaptadas do mundo superior...",
       "info": { "attack": 4, "defense": 2, "magic": 7, "difficulty": 10 },
       "image": {
         "full": "Belveth.png",
@@ -586,18 +586,18 @@
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 60,
-        "attackdamageperlevel": 1.7,
+        "attackdamageperlevel": 1.5,
         "attackspeedperlevel": 0,
         "attackspeed": 0.85
       }
     },
     "Blitzcrank": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Blitzcrank",
       "key": "53",
       "name": "Blitzcrank",
-      "title": "the Great Steam Golem",
-      "blurb": "Blitzcrank is an enormous, near-indestructible automaton from Zaun, originally built to dispose of hazardous waste. However, he found this primary purpose too restricting, and modified his own form to better serve the fragile people of the Sump...",
+      "title": "o Grande Golem a Vapor",
+      "blurb": "Blitzcrank é um autômato enorme e praticamente indestrutível de Zaun, construído originalmente para lidar com lixo tóxico. No entanto, ele achou seu propósito principal muito restritivo e modificou sua própria forma para ajudar as pessoas menos...",
       "info": { "attack": 4, "defense": 8, "magic": 5, "difficulty": 4 },
       "image": {
         "full": "Blitzcrank.png",
@@ -634,12 +634,12 @@
       }
     },
     "Brand": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Brand",
       "key": "63",
       "name": "Brand",
-      "title": "the Burning Vengeance",
-      "blurb": "Once a tribesman of the icy Freljord named Kegan Rodhe, the creature known as Brand is a lesson in the temptation of greater power. Seeking one of the legendary World Runes, Kegan betrayed his companions and seized it for himself—and, in an instant, the...",
+      "title": "a Vingança Flamejante",
+      "blurb": "A criatura conhecida como Brand já se chamou Kegan Rodhe, um membro da gélida Freljord, e é hoje uma lição do que a tentação por poderes maiores pode fazer. Enquanto buscava uma das lendárias Runas Globais, Kegan traiu seus companheiros e a pegou para...",
       "info": { "attack": 2, "defense": 2, "magic": 9, "difficulty": 4 },
       "image": {
         "full": "Brand.png",
@@ -676,12 +676,12 @@
       }
     },
     "Braum": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Braum",
       "key": "201",
       "name": "Braum",
-      "title": "the Heart of the Freljord",
-      "blurb": "Blessed with massive biceps and an even bigger heart, Braum is a beloved hero of the Freljord. Every mead hall north of Frostheld toasts his legendary strength, said to have felled a forest of oaks in a single night, and punched an entire mountain into...",
+      "title": "o Coração de Freljord",
+      "blurb": "Abençoado com bíceps gigantescos e um coração maior ainda, Braum é um amado herói de Freljord. Cada salão de hidromel ao norte de Frostheld brinda sua força lendária que teria derrubado uma floresta de carvalhos em uma única noite e demolido uma...",
       "info": { "attack": 3, "defense": 9, "magic": 4, "difficulty": 3 },
       "image": {
         "full": "Braum.png",
@@ -718,12 +718,12 @@
       }
     },
     "Caitlyn": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Caitlyn",
       "key": "51",
       "name": "Caitlyn",
-      "title": "the Sheriff of Piltover",
-      "blurb": "Renowned as its finest peacekeeper, Caitlyn is also Piltover's best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner's more impetuous nature. Even though she carries a...",
+      "title": "a Xerife de Piltover",
+      "blurb": "Conhecida como sua melhor pacificadora, Caitlyn também é a melhor escolha de Piltover para livrar a cidade de seus elementos criminosos elusivos. É comum que ela faça dupla com Vi, agindo como um contraponto de calmaria para a natureza impetuosa de sua...",
       "info": { "attack": 8, "defense": 2, "magic": 2, "difficulty": 6 },
       "image": {
         "full": "Caitlyn.png",
@@ -760,12 +760,12 @@
       }
     },
     "Camille": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Camille",
       "key": "164",
       "name": "Camille",
-      "title": "the Steel Shadow",
-      "blurb": "Weaponized to operate outside the boundaries of the law, Camille is the Principal Intelligencer of Clan Ferros—an elegant and elite agent who ensures the Piltover machine and its Zaunite underbelly runs smoothly. Adaptable and precise, she views sloppy...",
+      "title": "a Sombra de Aço",
+      "blurb": "Munida para agir além dos limites da lei, Camille é a chefe de inteligência do Clã Ferros e uma elegante agente de elite, responsável pelo bom funcionamento da máquina de Piltover e de Zaun, seu submundo. Adaptável e precisa, ela vê técnicas medíocres...",
       "info": { "attack": 8, "defense": 6, "magic": 3, "difficulty": 4 },
       "image": {
         "full": "Camille.png",
@@ -802,12 +802,12 @@
       }
     },
     "Cassiopeia": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Cassiopeia",
       "key": "69",
       "name": "Cassiopeia",
-      "title": "the Serpent's Embrace",
-      "blurb": "Cassiopeia is a deadly creature bent on manipulating others to her sinister will. Youngest and most beautiful daughter of the noble Du Couteau family of Noxus, she ventured deep into the crypts beneath Shurima in search of ancient power. There, she was...",
+      "title": "o Abraço da Serpente",
+      "blurb": "Cassiopeia é uma criatura mortal dedicada a manipular os outros para fazer suas vontades sinistras. A mais bela e mais nova filha da nobre família Du Couteau de Noxus aventurou-se pelas criptas profundas sob Shurima em busca de poderes ancestrais. Lá...",
       "info": { "attack": 2, "defense": 3, "magic": 9, "difficulty": 10 },
       "image": {
         "full": "Cassiopeia.png",
@@ -844,12 +844,12 @@
       }
     },
     "Chogath": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Chogath",
       "key": "31",
       "name": "Cho'Gath",
-      "title": "the Terror of the Void",
-      "blurb": "From the moment Cho'Gath first emerged into the harsh light of Runeterra's sun, the beast was driven by the most pure and insatiable hunger. A perfect expression of the Void's desire to consume all life, Cho'Gath's complex biology quickly converts...",
+      "title": "o Terror do Vazio",
+      "blurb": "A partir do momento em que Cho'Gath emergiu da terra para a luz do sol ofuscante de Runeterra, a besta foi motivada por pura fome insaciável. A mais perfeita expressão do desejo do Vazio de consumir toda a vida, a biologia complexa de Cho'Gath...",
       "info": { "attack": 3, "defense": 7, "magic": 7, "difficulty": 5 },
       "image": {
         "full": "Chogath.png",
@@ -886,12 +886,12 @@
       }
     },
     "Corki": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Corki",
       "key": "42",
       "name": "Corki",
-      "title": "the Daring Bombardier",
-      "blurb": "The yordle pilot Corki loves two things above all others: flying, and his glamorous mustache... though not necessarily in that order. After leaving Bandle City, he settled in Piltover and fell in love with the wondrous machines he found there. He...",
+      "title": "o Bombardeiro Ousado",
+      "blurb": "Corki, o piloto yordle, ama duas coisas acima de qualquer outra: voar e seu glamoroso bigode... não necessariamente nessa ordem. Depois de deixar Bandópolis, ele se estabeleceu em Piltover e se apaixonou pelas máquinas maravilhosas que encontrou por lá...",
       "info": { "attack": 8, "defense": 3, "magic": 6, "difficulty": 6 },
       "image": {
         "full": "Corki.png",
@@ -928,12 +928,12 @@
       }
     },
     "Darius": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Darius",
       "key": "122",
       "name": "Darius",
-      "title": "the Hand of Noxus",
-      "blurb": "There is no greater symbol of Noxian might than Darius, the nation's most feared and battle-hardened commander. Rising from humble origins to become the Hand of Noxus, he cleaves through the empire's enemies—many of them Noxians themselves. Knowing that...",
+      "title": "a Mão de Noxus",
+      "blurb": "Não há símbolo maior do poder de Noxus do que Darius, o mais temido e experiente comandante da nação. Vindo de origens humildes para se tornar a Mão de Noxus, ele corta seu caminho através dos inimigos do império; muitos dos quais são, inclusive...",
       "info": { "attack": 9, "defense": 5, "magic": 1, "difficulty": 2 },
       "image": {
         "full": "Darius.png",
@@ -970,12 +970,12 @@
       }
     },
     "Diana": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Diana",
       "key": "131",
       "name": "Diana",
-      "title": "Scorn of the Moon",
-      "blurb": "Bearing her crescent moonblade, Diana fights as a warrior of the Lunari—a faith all but quashed in the lands around Mount Targon. Clad in shimmering armor the color of winter snow at night, she is a living embodiment of the silver moon's power. Imbued...",
+      "title": "o Escárnio da Lua",
+      "blurb": "Empunhando sua espada lunar crescente, Diana luta como uma guerreira dos Lunari, um credo quase extinto nas terras ao redor do Monte Targon. Vestida com uma armadura brilhante da cor da neve de inverno noturna, ela é a personificação do poder da lua...",
       "info": { "attack": 7, "defense": 6, "magic": 8, "difficulty": 4 },
       "image": {
         "full": "Diana.png",
@@ -1012,12 +1012,12 @@
       }
     },
     "Draven": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Draven",
       "key": "119",
       "name": "Draven",
-      "title": "the Glorious Executioner",
-      "blurb": "In Noxus, warriors known as Reckoners face one another in arenas where blood is spilled and strength tested—but none has ever been as celebrated as Draven. A former soldier, he found that the crowds uniquely appreciated his flair for the dramatic, and...",
+      "title": "o Carrasco de Noxus",
+      "blurb": "Em Noxus, guerreiros conhecidos como Desafiadores lutam um contra o outro em uma arena onde sangue é derramado e a força é testada, mas nenhum foi tão celebrado como Draven. Antes um soldado, ele descobriu que as multidões apreciavam seu instinto pelo...",
       "info": { "attack": 9, "defense": 3, "magic": 1, "difficulty": 8 },
       "image": {
         "full": "Draven.png",
@@ -1054,12 +1054,12 @@
       }
     },
     "DrMundo": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "DrMundo",
       "key": "36",
       "name": "Dr. Mundo",
-      "title": "the Madman of Zaun",
-      "blurb": "Utterly mad, tragically homicidal, and horrifyingly purple, Dr. Mundo is what keeps many of Zaun's citizens indoors on particularly dark nights. Now a self-proclaimed physician, he was once a patient of Zaun's most infamous asylum. After \"curing\" the...",
+      "title": "o Louco de Zaun",
+      "blurb": "Completamente maluco, tragicamente perigoso e terrivelmente roxo, Dr. Mundo é o que mantém muitos zaunitas dentro de casa nas noites mais escuras. Hoje se diz médico, mas ele já foi um paciente do manicômio mais infame de Zaun. Após ''curar'' toda a...",
       "info": { "attack": 5, "defense": 7, "magic": 6, "difficulty": 5 },
       "image": {
         "full": "DrMundo.png",
@@ -1071,7 +1071,7 @@
         "h": 48
       },
       "tags": ["Fighter", "Tank"],
-      "partype": "None",
+      "partype": "Nenhum",
       "stats": {
         "hp": 613,
         "hpperlevel": 103,
@@ -1096,12 +1096,12 @@
       }
     },
     "Ekko": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Ekko",
       "key": "245",
       "name": "Ekko",
-      "title": "the Boy Who Shattered Time",
-      "blurb": "A prodigy from the rough streets of Zaun, Ekko manipulates time to twist any situation to his advantage. Using his own invention, the Zero Drive, he explores the branching possibilities of reality to craft the perfect moment. Though he revels in this...",
+      "title": "o Rapaz que Estilhaçou o Tempo",
+      "blurb": "Um prodígio das ruas violentas de Zaun, Ekko manipula o tempo para reverter qualquer situação a seu favor. Usando sua própria invenção, o Revo-Z, ele explora as possíveis bifurcações da realidade para criar o momento perfeito. Embora valorize muito sua...",
       "info": { "attack": 5, "defense": 3, "magic": 7, "difficulty": 8 },
       "image": {
         "full": "Ekko.png",
@@ -1138,12 +1138,12 @@
       }
     },
     "Elise": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Elise",
       "key": "60",
       "name": "Elise",
-      "title": "the Spider Queen",
-      "blurb": "Elise is a deadly predator who dwells in a shuttered, lightless palace, deep within the oldest city of Noxus. Once mortal, she was the mistress of a powerful house, but the bite of a vile demigod transformed her into something beautiful, yet utterly...",
+      "title": "a Aranha Rainha",
+      "blurb": "Elise é uma predadora mortal que vive em um palácio escuro e reservado nas profundezas da cidade mais antiga de Noxus. Ela já foi mortal um dia, dama de uma família antes poderosa, mas a mordida de uma aranha peçonhenta a transformou em algo belo...",
       "info": { "attack": 6, "defense": 5, "magic": 7, "difficulty": 9 },
       "image": {
         "full": "Elise.png",
@@ -1180,12 +1180,12 @@
       }
     },
     "Evelynn": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Evelynn",
       "key": "28",
       "name": "Evelynn",
-      "title": "Agony's Embrace",
-      "blurb": "Within the dark seams of Runeterra, the demon Evelynn searches for her next victim. She lures in prey with the voluptuous façade of a human female, but once a person succumbs to her charms, Evelynn's true form is unleashed. She then subjects her victim...",
+      "title": "o Abraço da Agonia",
+      "blurb": "Nas ruelas sombrias de Runeterra, a criatura demoníaca Evelynn busca sua próxima vítima. Ela atrai presas com sua voluptuosa aparência de fêmea humana, mas assim que a vítima sucumbe ao seu charme, a verdadeira forma de Evelynn é revelada. A criatura...",
       "info": { "attack": 4, "defense": 2, "magic": 7, "difficulty": 10 },
       "image": {
         "full": "Evelynn.png",
@@ -1222,12 +1222,12 @@
       }
     },
     "Ezreal": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Ezreal",
       "key": "81",
       "name": "Ezreal",
-      "title": "the Prodigal Explorer",
-      "blurb": "A dashing adventurer, unknowingly gifted in the magical arts, Ezreal raids long-lost catacombs, tangles with ancient curses, and overcomes seemingly impossible odds with ease. His courage and bravado knowing no bounds, he prefers to improvise his way...",
+      "title": "o Explorador Pródigo",
+      "blurb": "Um aventureiro arrojado, com um talento nato nas artes mágicas, Ezreal desbrava catacumbas soterradas, envolve-se com antigas maldições e supera com facilidade as situações mais improváveis. Sua coragem e ousadia não têm limites e ele prefere resolver...",
       "info": { "attack": 7, "defense": 2, "magic": 6, "difficulty": 7 },
       "image": {
         "full": "Ezreal.png",
@@ -1257,19 +1257,19 @@
         "mpregenperlevel": 1,
         "crit": 0,
         "critperlevel": 0,
-        "attackdamage": 60,
+        "attackdamage": 62,
         "attackdamageperlevel": 2.5,
         "attackspeedperlevel": 2.5,
         "attackspeed": 0.625
       }
     },
     "Fiddlesticks": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Fiddlesticks",
       "key": "9",
       "name": "Fiddlesticks",
-      "title": "the Ancient Fear",
-      "blurb": "Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe...",
+      "title": "o Terror Ancestral",
+      "blurb": "Algo despertou em Runeterra. Algo ancestral. Algo terrível. O eterno terror conhecido como Fiddlesticks vaga pelos confins do mundo mortal, atraído por áreas dominadas por uma paranoia palpável, onde se alimenta de vítimas apavoradas. Com sua foice...",
       "info": { "attack": 2, "defense": 3, "magic": 9, "difficulty": 9 },
       "image": {
         "full": "Fiddlesticks.png",
@@ -1306,12 +1306,12 @@
       }
     },
     "Fiora": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Fiora",
       "key": "114",
       "name": "Fiora",
-      "title": "the Grand Duelist",
-      "blurb": "The most feared duelist in all Valoran, Fiora is as renowned for her brusque manner and cunning mind as she is for the speed of her bluesteel rapier. Born to House Laurent in the kingdom of Demacia, Fiora took control of the family from her father in...",
+      "title": "a Grande Duelista",
+      "blurb": "A duelista mais temida de toda Valoran, Fiora é renomada tanto por suas maneiras bruscas e perspicácia quanto pela velocidade de sua rapieira de aço. Nascida na Casa Laurent no reino de Demacia, Fiora tomou o controle da família de seu pai no rastro de...",
       "info": { "attack": 10, "defense": 4, "magic": 2, "difficulty": 3 },
       "image": {
         "full": "Fiora.png",
@@ -1348,12 +1348,12 @@
       }
     },
     "Fizz": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Fizz",
       "key": "105",
       "name": "Fizz",
-      "title": "the Tidal Trickster",
-      "blurb": "Fizz is an amphibious yordle, who dwells among the reefs surrounding Bilgewater. He often retrieves and returns the tithes cast into the sea by superstitious captains, but even the saltiest of sailors know better than to cross him—for many are the tales...",
+      "title": "o Trapaceiro das Marés",
+      "blurb": "Fizz é um yordle anfíbio que vive entre os recifes que rodeiam Águas de Sentina. É comum que ele busque e devolva os dízimos jogados no mar por capitães supersticiosos, mas mesmo o mais velho dos marinheiros sabe que não é uma boa ideia irritá-lo. São...",
       "info": { "attack": 6, "defense": 4, "magic": 7, "difficulty": 6 },
       "image": {
         "full": "Fizz.png",
@@ -1390,12 +1390,12 @@
       }
     },
     "Galio": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Galio",
       "key": "3",
       "name": "Galio",
-      "title": "the Colossus",
-      "blurb": "Outside the gleaming city of Demacia, the stone colossus Galio keeps vigilant watch. Built as a bulwark against enemy mages, he often stands motionless for decades until the presence of powerful magic stirs him to life. Once activated, Galio makes the...",
+      "title": "o Colosso",
+      "blurb": "Do lado de fora da reluzente cidade de Demacia, Galio, o colosso de pedra, vigia com zelo. Construído como bastião contra magos inimigos, ele geralmente permanece imóvel por décadas até que a presença de uma magia poderosa o desperte. Uma vez ativado...",
       "info": { "attack": 1, "defense": 10, "magic": 6, "difficulty": 5 },
       "image": {
         "full": "Galio.png",
@@ -1432,12 +1432,12 @@
       }
     },
     "Gangplank": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Gangplank",
       "key": "41",
       "name": "Gangplank",
-      "title": "the Saltwater Scourge",
-      "blurb": "As unpredictable as he is brutal, the dethroned reaver king Gangplank is feared far and wide. Once, he ruled the port city of Bilgewater, and while his reign is over, there are those who believe this has only made him more dangerous. Gangplank would see...",
+      "title": "o Terror dos Doze Mares",
+      "blurb": "Tão inesperado quanto brutal, o autointitulado Rei dos Ladrões conhecido como Gangplank é temido por todos os mares. Ele já reinou na cidade portuária de Águas de Sentina e, apesar de seu reinado ter terminado, existem aqueles que acreditam que isso só...",
       "info": { "attack": 7, "defense": 6, "magic": 4, "difficulty": 9 },
       "image": {
         "full": "Gangplank.png",
@@ -1474,12 +1474,12 @@
       }
     },
     "Garen": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Garen",
       "key": "86",
       "name": "Garen",
-      "title": "The Might of Demacia",
-      "blurb": "A proud and noble warrior, Garen fights as one of the Dauntless Vanguard. He is popular among his fellows, and respected well enough by his enemies—not least as a scion of the prestigious Crownguard family, entrusted with defending Demacia and its...",
+      "title": "o Poder de Demacia",
+      "blurb": "Um guerreiro nobre e orgulhoso, Garen faz parte da Vanguarda Destemida. Popular entre seus companheiros e respeitado o suficiente por seus inimigos, sua reputação é nada mais do que o esperado de um herdeiro da prestigiosa família Stemmaguarda...",
       "info": { "attack": 7, "defense": 7, "magic": 1, "difficulty": 5 },
       "image": {
         "full": "Garen.png",
@@ -1491,14 +1491,14 @@
         "h": 48
       },
       "tags": ["Fighter", "Tank"],
-      "partype": "None",
+      "partype": "Nenhum",
       "stats": {
         "hp": 690,
         "hpperlevel": 98,
         "mp": 0,
         "mpperlevel": 0,
         "movespeed": 340,
-        "armor": 36,
+        "armor": 38,
         "armorperlevel": 4.2,
         "spellblock": 32,
         "spellblockperlevel": 1.55,
@@ -1509,19 +1509,19 @@
         "mpregenperlevel": 0,
         "crit": 0,
         "critperlevel": 0,
-        "attackdamage": 66,
+        "attackdamage": 69,
         "attackdamageperlevel": 4.5,
         "attackspeedperlevel": 3.65,
         "attackspeed": 0.625
       }
     },
     "Gnar": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Gnar",
       "key": "150",
       "name": "Gnar",
-      "title": "the Missing Link",
-      "blurb": "Gnar is a primeval yordle whose playful antics can erupt into a toddler's outrage in an instant, transforming him into a massive beast bent on destruction. Frozen in True Ice for millennia, the curious creature broke free and now hops about a changed...",
+      "title": "o Yordle Pré-Histórico",
+      "blurb": "Gnar é um yordle primitivo cujas artimanhas brincalhonas podem irromper em uma raiva infantil em um instante, transformando-o em uma besta gigantesca determinada a destruir. Congelada em Gelo Verdadeiro por milênios, essa criatura curiosa se libertou e...",
       "info": { "attack": 6, "defense": 5, "magic": 5, "difficulty": 8 },
       "image": {
         "full": "Gnar.png",
@@ -1533,7 +1533,7 @@
         "h": 48
       },
       "tags": ["Fighter", "Tank"],
-      "partype": "Rage",
+      "partype": "Fúria",
       "stats": {
         "hp": 540,
         "hpperlevel": 79,
@@ -1558,12 +1558,12 @@
       }
     },
     "Gragas": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Gragas",
       "key": "79",
       "name": "Gragas",
-      "title": "the Rabble Rouser",
-      "blurb": "Equal parts jolly and imposing, Gragas is a massive, rowdy brewmaster on his own quest for the perfect pint of ale. Hailing from parts unknown, he now searches for rare ingredients among the unblemished wastes of the Freljord, trying each recipe as he...",
+      "title": "o Badernista",
+      "blurb": "Igualmente alegre e imponente, Gragas é um gigante e arruaceiro mestre-cervejeiro em uma busca pessoal pelo mais perfeito caneco de cerveja. Vindo de partes desconhecidas, ele busca por ingredientes raros entre a vastidão intocada de Freljord, testando...",
       "info": { "attack": 4, "defense": 7, "magic": 6, "difficulty": 5 },
       "image": {
         "full": "Gragas.png",
@@ -1600,12 +1600,12 @@
       }
     },
     "Graves": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Graves",
       "key": "104",
       "name": "Graves",
-      "title": "the Outlaw",
-      "blurb": "Malcolm Graves is a renowned mercenary, gambler, and thief—a wanted man in every city and empire he has visited. Even though he has an explosive temper, he possesses a strict sense of criminal honor, often enforced at the business end of his...",
+      "title": "o Foragido",
+      "blurb": "Malcolm Graves, mercenário, apostador e bandido de renome, é um homem procurado em cada uma das cidades e impérios que visitou. Apesar do seu temperamento explosivo, ele é dono de uma noção rigorosa de honra entre criminosos, normalmente aplicada com o...",
       "info": { "attack": 8, "defense": 5, "magic": 3, "difficulty": 3 },
       "image": {
         "full": "Graves.png",
@@ -1642,12 +1642,12 @@
       }
     },
     "Gwen": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Gwen",
       "key": "887",
       "name": "Gwen",
-      "title": "The Hallowed Seamstress",
-      "blurb": "A former doll transformed and brought to life by magic, Gwen wields the very tools that once created her. She carries the weight of her maker's love with every step, taking nothing for granted. At her command is the Hallowed Mist, an ancient and...",
+      "title": "A Costureira Encantada",
+      "blurb": "Uma boneca que ganhou vida por magia, Gwen empunha as mesmas ferramentas que um dia a criaram. Valorizando todo instante, ela carrega a força do amor de sua criadora a cada passo e comanda a Névoa Sagrada, uma magia protetora ancestral que abençoou a...",
       "info": { "attack": 7, "defense": 4, "magic": 5, "difficulty": 5 },
       "image": {
         "full": "Gwen.png",
@@ -1684,12 +1684,12 @@
       }
     },
     "Hecarim": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Hecarim",
       "key": "120",
       "name": "Hecarim",
-      "title": "the Shadow of War",
-      "blurb": "Hecarim is a spectral fusion of man and beast, cursed to ride down the souls of the living for all eternity. When the Blessed Isles fell into shadow, this proud knight was obliterated by the destructive energies of the Ruination, along with all his...",
+      "title": "a Sombra da Guerra",
+      "blurb": "Hecarim é a fusão espectral de homem e animal, amaldiçoado a cavalgar entre as almas dos vivos por toda a eternidade. Quando as Ilhas das Bênçãos caíram nas sombras, esse cavaleiro orgulhoso foi obliterado pelas energias destrutivas da Ruína, junto com...",
       "info": { "attack": 8, "defense": 6, "magic": 4, "difficulty": 6 },
       "image": {
         "full": "Hecarim.png",
@@ -1726,12 +1726,12 @@
       }
     },
     "Heimerdinger": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Heimerdinger",
       "key": "74",
       "name": "Heimerdinger",
-      "title": "the Revered Inventor",
-      "blurb": "A brilliant yet eccentric yordle scientist, Professor Cecil B. Heimerdinger is one of the most innovative and esteemed inventors Piltover has ever known. Relentless in his work to the point of neurotic obsession, he thrives on answering the universe's...",
+      "title": "o Inventor Idolatrado",
+      "blurb": "Um cientista brilhante, mesmo que excêntrico, o Professor Cecil B. Heimerdinger é um dos inventores mais inovadores e estimados que Piltover já conheceu. Incansável em seu trabalho ao ponto da obsessão neurótica, ele busca responder as questões mais...",
       "info": { "attack": 2, "defense": 6, "magic": 8, "difficulty": 8 },
       "image": {
         "full": "Heimerdinger.png",
@@ -1768,12 +1768,12 @@
       }
     },
     "Illaoi": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Illaoi",
       "key": "420",
       "name": "Illaoi",
-      "title": "the Kraken Priestess",
-      "blurb": "Illaoi's powerful physique is dwarfed only by her indomitable faith. As the prophet of the Great Kraken, she uses a huge, golden idol to rip her foes' spirits from their bodies and shatter their perception of reality. All who challenge the “Truth Bearer...",
+      "title": "a Sacerdotisa Cráquem",
+      "blurb": "O poderoso porte físico de Illaoi só perde para sua fé indomável. Como profetisa do Grande Cráquem, ela usa um gigantesco totem dourado para arrancar o espírito de seus inimigos de seus corpos e estilhaçar a sua percepção da realidade. Todos os que...",
       "info": { "attack": 8, "defense": 6, "magic": 3, "difficulty": 4 },
       "image": {
         "full": "Illaoi.png",
@@ -1810,12 +1810,12 @@
       }
     },
     "Irelia": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Irelia",
       "key": "39",
       "name": "Irelia",
-      "title": "the Blade Dancer",
-      "blurb": "The Noxian occupation of Ionia produced many heroes, none more unlikely than young Irelia of Navori. Trained in the ancient dances of her province, she adapted her art for war, using the graceful and carefully practised movements to levitate a host of...",
+      "title": "a Dançarina das Lâminas",
+      "blurb": "A ocupação noxiana de Ionia produziu muitos heróis, mas nenhum era mais improvável do que a jovem Irelia de Navori. Treinada nas antigas danças de Ionia, ela adaptou sua arte à guerra, usando movimentos graciosos e cuidadosamente executados para levitar...",
       "info": { "attack": 7, "defense": 4, "magic": 5, "difficulty": 5 },
       "image": {
         "full": "Irelia.png",
@@ -1852,12 +1852,12 @@
       }
     },
     "Ivern": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Ivern",
       "key": "427",
       "name": "Ivern",
-      "title": "the Green Father",
-      "blurb": "Ivern Bramblefoot, known to many as the Green Father, is a peculiar half man, half tree who roams Runeterra's forests, cultivating life everywhere he goes. He knows the secrets of the natural world, and holds deep friendships with all things that grow...",
+      "title": "o Pai do Verde",
+      "blurb": "Ivern Bramblefoot, conhecido por muitos como o Protetor Verde, é um peculiar meio-homem, meio-árvore que vagueia pelas florestas de Runeterra, cultivando vida por onde ele passa. Ele conhece os segredos do mundo natural, e cultiva amizades profundas com...",
       "info": { "attack": 3, "defense": 5, "magic": 7, "difficulty": 7 },
       "image": {
         "full": "Ivern.png",
@@ -1894,12 +1894,12 @@
       }
     },
     "Janna": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Janna",
       "key": "40",
       "name": "Janna",
-      "title": "the Storm's Fury",
-      "blurb": "Armed with the power of Runeterra's gales, Janna is a mysterious, elemental wind spirit who protects the dispossessed of Zaun. Some believe she was brought into existence by the pleas of Runeterra's sailors who prayed for fair winds as they navigated...",
+      "title": "a Fúria da Tormenta",
+      "blurb": "Armada com o poder das ventanias de Runeterra, Janna é um misterioso e elemental espírito de vento que protege os desfavorecidos de Zaun. Alguns acreditam que Janna surgiu a partir dos clamores dos marinheiros de Runeterra, que rezavam por ventos mais...",
       "info": { "attack": 3, "defense": 5, "magic": 7, "difficulty": 7 },
       "image": {
         "full": "Janna.png",
@@ -1936,12 +1936,12 @@
       }
     },
     "JarvanIV": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "JarvanIV",
       "key": "59",
       "name": "Jarvan IV",
-      "title": "the Exemplar of Demacia",
-      "blurb": "Prince Jarvan, scion of the Lightshield dynasty, is heir apparent to the throne of Demacia. Raised to be a paragon of his nation's greatest virtues, he is forced to balance the heavy expectations placed upon him with his own desire to fight on the front...",
+      "title": "o Exemplo de Demacia",
+      "blurb": "O Príncipe Jarvan, descendente da Dinastia Lumescudo, é o atual herdeiro do trono de Demacia. Criado para ser um exemplo das grandes virtudes de sua nação, ele é forçado a equilibrar as grandes expectativas colocadas sobre ele com seu próprio desejo de...",
       "info": { "attack": 6, "defense": 8, "magic": 3, "difficulty": 5 },
       "image": {
         "full": "JarvanIV.png",
@@ -1972,18 +1972,18 @@
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 64,
-        "attackdamageperlevel": 3.4,
+        "attackdamageperlevel": 3,
         "attackspeedperlevel": 2.5,
         "attackspeed": 0.658
       }
     },
     "Jax": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Jax",
       "key": "24",
       "name": "Jax",
-      "title": "Grandmaster at Arms",
-      "blurb": "Unmatched in both his skill with unique armaments and his biting sarcasm, Jax is the last known weapons master of Icathia. After his homeland was laid low by its own hubris in unleashing the Void, Jax and his kind vowed to protect what little remained...",
+      "title": "o Grão-Mestre das Armas",
+      "blurb": "Incomparável tanto por suas habilidades com armamentos incomuns quanto pelo seu sarcasmo mordaz, Jax é o último mestre de armas de Icathia conhecido. Depois de sua terra natal ter sido derrotada por sua própria arrogância ao libertar o Vazio, Jax e seu...",
       "info": { "attack": 7, "defense": 5, "magic": 7, "difficulty": 5 },
       "image": {
         "full": "Jax.png",
@@ -2020,12 +2020,12 @@
       }
     },
     "Jayce": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Jayce",
       "key": "126",
       "name": "Jayce",
-      "title": "the Defender of Tomorrow",
-      "blurb": "Jayce is a brilliant inventor who has pledged his life to the defense of Piltover and its unyielding pursuit of progress. With his transforming hextech hammer in hand, Jayce uses his strength, courage, and considerable intelligence to protect his...",
+      "title": "o Defensor do Amanhã",
+      "blurb": "Jayce é um brilhante inventor que dedicou sua vida a defender Piltover e sua implacável busca pelo progresso. Com seu martelo hextech transformador em mãos, Jayce usa sua força, coragem e considerável inteligência para proteger sua cidade natal. Embora...",
       "info": { "attack": 8, "defense": 4, "magic": 3, "difficulty": 7 },
       "image": {
         "full": "Jayce.png",
@@ -2062,12 +2062,12 @@
       }
     },
     "Jhin": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Jhin",
       "key": "202",
       "name": "Jhin",
-      "title": "the Virtuoso",
-      "blurb": "Jhin is a meticulous criminal psychopath who believes murder is art. Once an Ionian prisoner, but freed by shadowy elements within Ionia's ruling council, the serial killer now works as their cabal's assassin. Using his gun as his paintbrush, Jhin...",
+      "title": "o Virtuoso",
+      "blurb": "Jhin é um meticuloso psicopata criminoso que acredita que o assassinato é uma arte. Outrora um prisioneiro ioniano, mas libertado por membros obscuros do conselho regimental de Ionia, o assassino serial agora trabalha como assassino de seu conluio...",
       "info": { "attack": 10, "defense": 2, "magic": 6, "difficulty": 6 },
       "image": {
         "full": "Jhin.png",
@@ -2104,12 +2104,12 @@
       }
     },
     "Jinx": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Jinx",
       "key": "222",
       "name": "Jinx",
-      "title": "the Loose Cannon",
-      "blurb": "A manic and impulsive criminal from Zaun, Jinx lives to wreak havoc without care for the consequences. With an arsenal of deadly weapons, she unleashes the loudest blasts and brightest explosions to leave a trail of mayhem and panic in her wake. Jinx...",
+      "title": "o Gatilho Desenfreado",
+      "blurb": "Uma criminosa impulsiva e maníaca de Zaun, Jinx vive para disseminar o caos sem se preocupar com as consequências. Com um arsenal de armas mortais, ela detona as explosões mais altas e mais luminosas para deixar um rastro de destruição e pânico por onde...",
       "info": { "attack": 9, "defense": 2, "magic": 4, "difficulty": 6 },
       "image": {
         "full": "Jinx.png",
@@ -2140,18 +2140,18 @@
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 59,
-        "attackdamageperlevel": 3.4,
-        "attackspeedperlevel": 1.36,
+        "attackdamageperlevel": 3.15,
+        "attackspeedperlevel": 1,
         "attackspeed": 0.625
       }
     },
     "Kaisa": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Kaisa",
       "key": "145",
       "name": "Kai'Sa",
-      "title": "Daughter of the Void",
-      "blurb": "Claimed by the Void when she was only a child, Kai'Sa managed to survive through sheer tenacity and strength of will. Her experiences have made her a deadly hunter and, to some, the harbinger of a future they would rather not live to see. Having entered...",
+      "title": "a Filha do Vazio",
+      "blurb": "Capturada pelo Vazio quando era apenas uma criança, Kai'Sa conseguiu sobreviver por pura persistência e força de vontade. Suas experiências fizeram dela uma caçadora mortal e, para alguns, o prenúncio de um futuro que seria melhor não viver para ver...",
       "info": { "attack": 8, "defense": 5, "magic": 3, "difficulty": 6 },
       "image": {
         "full": "Kaisa.png",
@@ -2188,12 +2188,12 @@
       }
     },
     "Kalista": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Kalista",
       "key": "429",
       "name": "Kalista",
-      "title": "the Spear of Vengeance",
-      "blurb": "A specter of wrath and retribution, Kalista is the undying spirit of vengeance, an armored nightmare summoned from the Shadow Isles to hunt deceivers and traitors. The betrayed may cry out in blood to be avenged, but Kalista only answers those willing...",
+      "title": "a Lança da Vingança",
+      "blurb": "Um espectro de ira e retaliação, Kalista é o espírito imortal da vingança, um pesadelo blindado invocado da Ilhas das Sombras para caçar desertores e traidores. Os traídos podem clamar em sangue para serem vingados, mas Kalista apenas responde àqueles...",
       "info": { "attack": 8, "defense": 2, "magic": 4, "difficulty": 7 },
       "image": {
         "full": "Kalista.png",
@@ -2207,7 +2207,7 @@
       "tags": ["Marksman"],
       "partype": "Mana",
       "stats": {
-        "hp": 574,
+        "hp": 600,
         "hpperlevel": 114,
         "mp": 300,
         "mpperlevel": 45,
@@ -2217,25 +2217,25 @@
         "spellblock": 30,
         "spellblockperlevel": 1.3,
         "attackrange": 525,
-        "hpregen": 3.75,
-        "hpregenperlevel": 0.55,
+        "hpregen": 4,
+        "hpregenperlevel": 0.75,
         "mpregen": 6.3,
         "mpregenperlevel": 0.4,
         "crit": 0,
         "critperlevel": 0,
-        "attackdamage": 66,
-        "attackdamageperlevel": 3.5,
+        "attackdamage": 61,
+        "attackdamageperlevel": 3.25,
         "attackspeedperlevel": 4.5,
         "attackspeed": 0.694
       }
     },
     "Karma": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Karma",
       "key": "43",
       "name": "Karma",
-      "title": "the Enlightened One",
-      "blurb": "No mortal exemplifies the spiritual traditions of Ionia more than Karma. She is the living embodiment of an ancient soul reincarnated countless times, carrying all her accumulated memories into each new life, and blessed with power that few can...",
+      "title": "a Iluminada",
+      "blurb": "Nenhum mortal representa melhor as tradições espirituais de Ionia do que Karma. Ela é a incorporação de uma alma reencarnada inúmeras vezes, que leva todas as memórias acumuladas para cada nova vida e que foi agraciada com um poder que poucos...",
       "info": { "attack": 1, "defense": 7, "magic": 8, "difficulty": 5 },
       "image": {
         "full": "Karma.png",
@@ -2272,12 +2272,12 @@
       }
     },
     "Karthus": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Karthus",
       "key": "30",
       "name": "Karthus",
-      "title": "the Deathsinger",
-      "blurb": "The harbinger of oblivion, Karthus is an undying spirit whose haunting songs are a prelude to the horror of his nightmarish appearance. The living fear the eternity of undeath, but Karthus sees only beauty and purity in its embrace, a perfect union of...",
+      "title": "a Voz Mortal",
+      "blurb": "Sendo o presságio do fim, Karthus é um espírito imortal cujas canções assombradoras são um prelúdio para o terror de sua aparição horripilante. Os vivos temem a eternidade dos mortos-vivos, mas Karthus vê apenas beleza e pureza em seu abraço, uma união...",
       "info": { "attack": 2, "defense": 2, "magic": 10, "difficulty": 7 },
       "image": {
         "full": "Karthus.png",
@@ -2314,12 +2314,12 @@
       }
     },
     "Kassadin": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Kassadin",
       "key": "38",
       "name": "Kassadin",
-      "title": "the Void Walker",
-      "blurb": "Cutting a burning swath through the darkest places of the world, Kassadin knows his days are numbered. A widely traveled Shuriman guide and adventurer, he had chosen to raise a family among the peaceful southern tribes—until the day his village was...",
+      "title": "o Andarilho do Vazio",
+      "blurb": "Cortando uma trilha de fogo pelos lugares mais sombrios do mundo, Kassadin sabe que seus dias estão contados. Outrora um aventureiro e guia shurimane, ele escolheu criar uma família perto das tribos pacíficas do sul, até o dia em que sua vila foi...",
       "info": { "attack": 3, "defense": 5, "magic": 8, "difficulty": 8 },
       "image": {
         "full": "Kassadin.png",
@@ -2356,12 +2356,12 @@
       }
     },
     "Katarina": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Katarina",
       "key": "55",
       "name": "Katarina",
-      "title": "the Sinister Blade",
-      "blurb": "Decisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber. Eldest daughter to the legendary General Du Couteau, she made her talents known with swift kills against unsuspecting enemies. Her fiery ambition has driven...",
+      "title": "a Lâmina Sinistra",
+      "blurb": "Decisiva em seus julgamentos e letal em combate, Katarina é a assassina de maior calibre de Noxus. Filha mais velha do lendário General Du Couteau, Katarina é reconhecida por seus assassinatos eficientes contra inimigos desavisados. Sua ambição ardente...",
       "info": { "attack": 4, "defense": 3, "magic": 9, "difficulty": 8 },
       "image": {
         "full": "Katarina.png",
@@ -2373,7 +2373,7 @@
         "h": 48
       },
       "tags": ["Assassin", "Mage"],
-      "partype": "None",
+      "partype": "Nenhum",
       "stats": {
         "hp": 672,
         "hpperlevel": 108,
@@ -2398,12 +2398,12 @@
       }
     },
     "Kayle": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Kayle",
       "key": "10",
       "name": "Kayle",
-      "title": "the Righteous",
-      "blurb": "Born to a Targonian Aspect at the height of the Rune Wars, Kayle honored her mother's legacy by fighting for justice on wings of divine flame. She and her twin sister Morgana were the protectors of Demacia for many years—until Kayle became disillusioned...",
+      "title": "a Justa",
+      "blurb": "Nascida de um Aspecto targonense no auge das Guerras Rúnicas, Kayle honrava o legado de sua mãe lutando por justiça com asas de chamas divinas. Ela e sua irmã gêmea, Morgana, foram as protetoras de Demacia por muitos anos, até Kayle se desiludir com as...",
       "info": { "attack": 6, "defense": 6, "magic": 7, "difficulty": 7 },
       "image": {
         "full": "Kayle.png",
@@ -2440,12 +2440,12 @@
       }
     },
     "Kayn": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Kayn",
       "key": "141",
       "name": "Kayn",
-      "title": "the Shadow Reaper",
-      "blurb": "A peerless practitioner of lethal shadow magic, Shieda Kayn battles to achieve his true destiny—to one day lead the Order of Shadow into a new era of Ionian supremacy. He wields the sentient darkin weapon Rhaast, undeterred by its creeping corruption of...",
+      "title": "o Ceifador das Sombras",
+      "blurb": "Inigualável praticante da letal magia sombria, Shieda Kayn luta para alcançar seu verdadeiro destino: um dia comandar a Ordem das Sombras rumo a uma nova era de supremacia ioniana. Indiferente à maquiavélica degradação que ela causa em seu corpo e mente...",
       "info": { "attack": 10, "defense": 6, "magic": 1, "difficulty": 8 },
       "image": {
         "full": "Kayn.png",
@@ -2482,12 +2482,12 @@
       }
     },
     "Kennen": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Kennen",
       "key": "85",
       "name": "Kennen",
-      "title": "the Heart of the Tempest",
-      "blurb": "More than just the lightning-quick enforcer of Ionian balance, Kennen is the only yordle member of the Kinkou. Despite his small, furry stature, he is eager to take on any threat with a whirling storm of shuriken and boundless enthusiasm. Alongside his...",
+      "title": "o Coração da Tempestade",
+      "blurb": "Mais do que um protetor rápido como um raio do equilíbrio ioniano, Kennen é o único yordle membro da Kinkou. Apesar da sua estatura pequena e peluda, ele anseia por ir contra qualquer ameaça com uma tempestade desenfreada de shurikens e entusiasmo sem...",
       "info": { "attack": 6, "defense": 4, "magic": 7, "difficulty": 4 },
       "image": {
         "full": "Kennen.png",
@@ -2499,7 +2499,7 @@
         "h": 48
       },
       "tags": ["Mage", "Marksman"],
-      "partype": "Energy",
+      "partype": "Energia",
       "stats": {
         "hp": 611,
         "hpperlevel": 98,
@@ -2524,12 +2524,12 @@
       }
     },
     "Khazix": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Khazix",
       "key": "121",
       "name": "Kha'Zix",
-      "title": "the Voidreaver",
-      "blurb": "The Void grows, and the Void adapts—in none of its myriad spawn are these truths more apparent than Kha'Zix. Evolution drives the core of this mutating horror, born to survive and to slay the strong. Where it struggles to do so, it grows new, more...",
+      "title": "o Ceifador do Vazio",
+      "blurb": "O Vazio cresce e o Vazio se adapta, e nenhuma de suas outras criaturas incorpora isso tão bem quanto Kha'Zix. A evolução é o que impulsiona a essência desse horror mutável, nascido para sobreviver e destruir os mais fortes. Qualquer momento de...",
       "info": { "attack": 9, "defense": 4, "magic": 3, "difficulty": 6 },
       "image": {
         "full": "Khazix.png",
@@ -2566,12 +2566,12 @@
       }
     },
     "Kindred": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Kindred",
       "key": "203",
       "name": "Kindred",
-      "title": "The Eternal Hunters",
-      "blurb": "Separate, but never parted, Kindred represents the twin essences of death. Lamb's bow offers a swift release from the mortal realm for those who accept their fate. Wolf hunts down those who run from their end, delivering violent finality within his...",
+      "title": "os Caçadores Eternos",
+      "blurb": "Distintos, mas nunca separados, os Kindred representam as essências gêmeas da morte. O arco da Ovelha propicia uma rápida transição do mundo mortal para aqueles que aceitam seu destino. O Lobo caça aqueles que fogem de seu fim, entregando-lhes a...",
       "info": { "attack": 8, "defense": 2, "magic": 2, "difficulty": 4 },
       "image": {
         "full": "Kindred.png",
@@ -2586,7 +2586,7 @@
       "partype": "Mana",
       "stats": {
         "hp": 610,
-        "hpperlevel": 99,
+        "hpperlevel": 104,
         "mp": 300,
         "mpperlevel": 35,
         "movespeed": 325,
@@ -2602,18 +2602,18 @@
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 65,
-        "attackdamageperlevel": 2.5,
+        "attackdamageperlevel": 3.25,
         "attackspeedperlevel": 3.5,
         "attackspeed": 0.625
       }
     },
     "Kled": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Kled",
       "key": "240",
       "name": "Kled",
-      "title": "the Cantankerous Cavalier",
-      "blurb": "A warrior as fearless as he is ornery, the yordle Kled embodies the furious bravado of Noxus. He is an icon beloved by the empire's soldiers, distrusted by its officers, and loathed by the nobility. Many claim Kled has fought in every campaign the...",
+      "title": "o Cavaleiro Intratável",
+      "blurb": "Um guerreiro tão destemido quanto irascível, o yordle Kled representa a bravata furiosa de Noxus. Ele é um ícone amado pelos soldados do império, rejeitado por seus oficiais e abominado pela nobreza. Muitos dizem que Kled lutou em cada batalha que as...",
       "info": { "attack": 8, "defense": 2, "magic": 2, "difficulty": 7 },
       "image": {
         "full": "Kled.png",
@@ -2625,7 +2625,7 @@
         "h": 48
       },
       "tags": ["Fighter", "Tank"],
-      "partype": "Courage",
+      "partype": "Coragem",
       "stats": {
         "hp": 410,
         "hpperlevel": 84,
@@ -2650,12 +2650,12 @@
       }
     },
     "KogMaw": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "KogMaw",
       "key": "96",
       "name": "Kog'Maw",
-      "title": "the Mouth of the Abyss",
-      "blurb": "Belched forth from a rotting Void incursion deep in the wastelands of Icathia, Kog'Maw is an inquisitive yet putrid creature with a caustic, gaping mouth. This particular Void-spawn needs to gnaw and drool on anything within reach to truly understand it...",
+      "title": "a Boca do Abismo",
+      "blurb": "Vomitado para fora de uma aparição podre do Vazio nas profundezas das terras desertas de Icathia, Kog'Maw é uma criatura inquisitiva e pútrida com uma boca cáustica gigantesca. Essa criatura do Vazio em particular precisa morder e babar em qualquer...",
       "info": { "attack": 8, "defense": 2, "magic": 5, "difficulty": 6 },
       "image": {
         "full": "KogMaw.png",
@@ -2692,12 +2692,12 @@
       }
     },
     "KSante": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "KSante",
       "key": "897",
       "name": "K'Sante",
-      "title": "the Pride of Nazumah",
-      "blurb": "Defiant and courageous, K'Sante battles colossal beasts and ruthless Ascended to protect his home of Nazumah, a coveted oasis amid the sands of Shurima. But after a falling-out with his former partner, K'Sante realizes that in order to become a warrior...",
+      "title": "o Orgulho de Nazumah.",
+      "blurb": "Corajoso e desafiador, K'Sante enfrenta feras colossais e Ascendentes cruéis para proteger seu lar, Nazumah — um cobiçado oásis no meio das areias de Shurima. Entretanto, após uma desavença com seu antigo parceiro, K'Sante entendeu que, para se tornar...",
       "info": { "attack": 8, "defense": 8, "magic": 7, "difficulty": 9 },
       "image": {
         "full": "KSante.png",
@@ -2734,12 +2734,12 @@
       }
     },
     "Leblanc": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Leblanc",
       "key": "7",
       "name": "LeBlanc",
-      "title": "the Deceiver",
-      "blurb": "Mysterious even to other members of the Black Rose cabal, LeBlanc is but one of many names for a pale woman who has manipulated people and events since the earliest days of Noxus. Using her magic to mirror herself, the sorceress can appear to anyone...",
+      "title": "a Farsante",
+      "blurb": "Misteriosa mesmo para os outros membros da Rosa Negra, LeBlanc é somente um dos muitos nomes de uma mulher pálida que tem manipulado pessoas e eventos desde os primeiros dias de Noxus. Usando sua magia para espelhar a si mesma, a feiticeira pode...",
       "info": { "attack": 1, "defense": 4, "magic": 10, "difficulty": 9 },
       "image": {
         "full": "Leblanc.png",
@@ -2776,12 +2776,12 @@
       }
     },
     "LeeSin": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "LeeSin",
       "key": "64",
       "name": "Lee Sin",
-      "title": "the Blind Monk",
-      "blurb": "A master of Ionia's ancient martial arts, Lee Sin is a principled fighter who channels the essence of the dragon spirit to face any challenge. Though he lost his sight many years ago, the warrior-monk has devoted his life to protecting his homeland...",
+      "title": "o Monge Cego",
+      "blurb": "Um mestre das artes marciais ancestrais de Ionia, Lee Sin é um lutador de princípios fortes que canaliza a essência do espírito do dragão para enfrentar qualquer desafio. Apesar de ter perdido a visão há muitos anos, o monge guerreiro dedicou sua vida a...",
       "info": { "attack": 8, "defense": 5, "magic": 3, "difficulty": 6 },
       "image": {
         "full": "LeeSin.png",
@@ -2793,14 +2793,14 @@
         "h": 48
       },
       "tags": ["Fighter", "Assassin"],
-      "partype": "Energy",
+      "partype": "Energia",
       "stats": {
         "hp": 645,
         "hpperlevel": 105,
         "mp": 200,
         "mpperlevel": 0,
         "movespeed": 345,
-        "armor": 36,
+        "armor": 34,
         "armorperlevel": 4.9,
         "spellblock": 32,
         "spellblockperlevel": 2.05,
@@ -2811,19 +2811,19 @@
         "mpregenperlevel": 0,
         "crit": 0,
         "critperlevel": 0,
-        "attackdamage": 68,
+        "attackdamage": 66,
         "attackdamageperlevel": 3.7,
         "attackspeedperlevel": 3,
         "attackspeed": 0.651
       }
     },
     "Leona": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Leona",
       "key": "89",
       "name": "Leona",
-      "title": "the Radiant Dawn",
-      "blurb": "Imbued with the fire of the sun, Leona is a holy warrior of the Solari who defends Mount Targon with her Zenith Blade and the Shield of Daybreak. Her skin shimmers with starfire while her eyes burn with the power of the celestial Aspect within her...",
+      "title": "a Alvorada Radiante",
+      "blurb": "Impregnada pelas chamas do sol, Leona é uma guerreira sagrada de Solari que defende o Monte Targon com sua Lâmina Zênite e a Proteção da Aurora. Sua pele brilha com fogo solar enquanto seus olhos queimam com o poder do Aspecto celestial que nela existe...",
       "info": { "attack": 4, "defense": 8, "magic": 3, "difficulty": 4 },
       "image": {
         "full": "Leona.png",
@@ -2860,12 +2860,12 @@
       }
     },
     "Lillia": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Lillia",
       "key": "876",
       "name": "Lillia",
-      "title": "the Bashful Bloom",
-      "blurb": "Intensely shy, the fae fawn Lillia skittishly wanders Ionia's forests. Hiding just out of sight of mortals—whose mysterious natures have long captivated, but intimidated, her—Lillia hopes to discover why their dreams no longer reach the ancient Dreaming...",
+      "title": "o Florir Receoso",
+      "blurb": "Extremamente tímida, Lillia, a faunesa feérica, percorre saltitante as florestas de Ionia. Sempre escondida a pouca distância dos humanos — cuja misteriosa natureza lhe causa fascínio e, ao mesmo tempo, receio — Lillia espera descobrir por que os sonhos...",
       "info": { "attack": 0, "defense": 2, "magic": 10, "difficulty": 8 },
       "image": {
         "full": "Lillia.png",
@@ -2902,12 +2902,12 @@
       }
     },
     "Lissandra": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Lissandra",
       "key": "127",
       "name": "Lissandra",
-      "title": "the Ice Witch",
-      "blurb": "Lissandra's magic twists the pure power of ice into something dark and terrible. With the force of her black ice, she does more than freeze—she impales and crushes those who oppose her. To the terrified denizens of the north, she is known only as ''The...",
+      "title": "a Bruxa Gélida",
+      "blurb": "A magia de Lissandra transforma o poder bruto do gelo em algo sombrio e terrível. Com a força do seu gelo sombrio, ela faz mais do que congelar — ela perfura e destrói todos que se opões a ela. Entre os aterrorizados habitantes do norte, ela é conhecida...",
       "info": { "attack": 2, "defense": 5, "magic": 8, "difficulty": 6 },
       "image": {
         "full": "Lissandra.png",
@@ -2944,12 +2944,12 @@
       }
     },
     "Lucian": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Lucian",
       "key": "236",
       "name": "Lucian",
-      "title": "the Purifier",
-      "blurb": "Lucian, a Sentinel of Light, is a grim hunter of undying spirits, pursuing them relentlessly and annihilating them with his twin relic pistols. After the wraith Thresh slew his wife, Lucian embarked on the path of vengeance—but even with her return to...",
+      "title": "o Purificador",
+      "blurb": "Lucian, um Sentinela da Luz, é um caçador de espíritos imortais que usa suas pistolas relicárias para persegui-los implacavelmente e, por fim, aniquilá-los. Após o assassinato de sua esposa pelas mãos do espectro Thresh, Lucian embarcou em uma jornada...",
       "info": { "attack": 8, "defense": 5, "magic": 3, "difficulty": 6 },
       "image": {
         "full": "Lucian.png",
@@ -2986,12 +2986,12 @@
       }
     },
     "Lulu": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Lulu",
       "key": "117",
       "name": "Lulu",
-      "title": "the Fae Sorceress",
-      "blurb": "The yordle mage Lulu is known for conjuring dreamlike illusions and fanciful creatures as she roams Runeterra with her fairy companion Pix. Lulu shapes reality on a whim, warping the fabric of the world, and what she views as the constraints of this...",
+      "title": "a Fada Feiticeira",
+      "blurb": "A maga yordle Lulu é conhecida por conjurar ilusões de sonhos e criaturas fantasiosas enquanto vaga por Runeterra com seu silfo companheiro, Pix. Lulu transforma a realidade por capricho, distorcendo o que ela vê como restrições desse banal reino físico...",
       "info": { "attack": 4, "defense": 5, "magic": 7, "difficulty": 5 },
       "image": {
         "full": "Lulu.png",
@@ -3028,12 +3028,12 @@
       }
     },
     "Lux": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Lux",
       "key": "99",
       "name": "Lux",
-      "title": "the Lady of Luminosity",
-      "blurb": "Luxanna Crownguard hails from Demacia, an insular realm where magical abilities are viewed with fear and suspicion. Able to bend light to her will, she grew up dreading discovery and exile, and was forced to keep her power secret, in order to preserve...",
+      "title": "a Dama da Luz",
+      "blurb": "Luxanna Stemmaguarda nasceu em Demacia, um reino insular onde habilidades mágicas são vistas com medo e desconfiança. Capaz de dobrar a luz à sua vontade, ela cresceu temendo ser descoberta e exilada, e foi forçada a manter seus poderes em segredo a fim...",
       "info": { "attack": 2, "defense": 4, "magic": 9, "difficulty": 5 },
       "image": {
         "full": "Lux.png",
@@ -3070,12 +3070,12 @@
       }
     },
     "Malphite": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Malphite",
       "key": "54",
       "name": "Malphite",
-      "title": "Shard of the Monolith",
-      "blurb": "A massive creature of living stone, Malphite struggles to impose blessed order on a chaotic world. Birthed as a servitor-shard to an otherworldly obelisk known as the Monolith, he used his tremendous elemental strength to maintain and protect his...",
+      "title": "o Fragmento do Monolito",
+      "blurb": "Uma criatura gigantesca de pedra viva, Malphite pena para impor ordem abençoada em um mundo caótico. Nascido como um fragmento servil de um obelisco de outro mundo conhecido como Monolito, ele usou sua tremenda força elemental para manter e proteger seu...",
       "info": { "attack": 5, "defense": 9, "magic": 7, "difficulty": 2 },
       "image": {
         "full": "Malphite.png",
@@ -3112,12 +3112,12 @@
       }
     },
     "Malzahar": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Malzahar",
       "key": "90",
       "name": "Malzahar",
-      "title": "the Prophet of the Void",
-      "blurb": "A zealous seer dedicated to the unification of all life, Malzahar truly believes the newly emergent Void to be the path to Runeterra's salvation. In the desert wastes of Shurima, he followed the voices that whispered in his mind, all the way to ancient...",
+      "title": "o Profeta do Vazio",
+      "blurb": "Um vidente fanático dedicado à unificação de toda a vida, Malzahar realmente acredita que o Vazio que recém surgiu é o caminho para a salvação de Runeterra. Na desolação do deserto de Shurima, ele seguiu as vozes que sussurravam em sua mente por todo o...",
       "info": { "attack": 2, "defense": 2, "magic": 9, "difficulty": 6 },
       "image": {
         "full": "Malzahar.png",
@@ -3154,12 +3154,12 @@
       }
     },
     "Maokai": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Maokai",
       "key": "57",
       "name": "Maokai",
-      "title": "the Twisted Treant",
-      "blurb": "Maokai is a rageful, towering treant who fights the unnatural horrors of the Shadow Isles. He was twisted into a force of vengeance after a magical cataclysm destroyed his home, surviving undeath only through the Waters of Life infused within his...",
+      "title": "o Ente Sinistro",
+      "blurb": "Maokai é um grande ente enfurecido que luta contra os terrores sobrenaturais da Ilhas das Sombras. Ele se transformou em uma força vingativa depois que um cataclisma mágico destruiu seu lar, sobrevivendo apenas através das Águas da Vida que estão...",
       "info": { "attack": 3, "defense": 8, "magic": 6, "difficulty": 3 },
       "image": {
         "full": "Maokai.png",
@@ -3196,12 +3196,12 @@
       }
     },
     "MasterYi": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "MasterYi",
       "key": "11",
       "name": "Master Yi",
-      "title": "the Wuju Bladesman",
-      "blurb": "Master Yi has tempered his body and sharpened his mind, so that thought and action have become almost as one. Though he chooses to enter into violence only as a last resort, the grace and speed of his blade ensures resolution is always swift. As one of...",
+      "title": "o Espadachim Wuju",
+      "blurb": "Master Yi treinou seu corpo e afiou sua mente para que pensamento e ação se tornassem quase um só. Embora ele prefira recorrer à violência como último recurso, a leveza e a velocidade de sua espada garantem uma resolução sempre veloz. Como um dos...",
       "info": { "attack": 10, "defense": 4, "magic": 2, "difficulty": 4 },
       "image": {
         "full": "MasterYi.png",
@@ -3238,12 +3238,12 @@
       }
     },
     "Milio": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Milio",
       "key": "902",
       "name": "Milio",
-      "title": "The Gentle Flame",
-      "blurb": "Milio is a warmhearted boy from Ixtal who has, despite his young age, mastered the fire axiom and discovered something new: soothing fire. With this newfound power, Milio plans to help his family escape their exile by joining the Yun Tal—just like his...",
+      "title": "A Chama Gentil",
+      "blurb": "Milio é um menino de Ixtal com um coração enorme e caloroso. Apesar da pouca idade, dominou o axioma do fogo e descobriu algo novo: o fogo tranquilizante. Com esse novo poder, Milio quer ajudar sua família a escapar do exílio unindo-se aos Yun Tal, a...",
       "info": { "attack": 2, "defense": 4, "magic": 8, "difficulty": 5 },
       "image": {
         "full": "Milio.png",
@@ -3280,12 +3280,12 @@
       }
     },
     "MissFortune": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "MissFortune",
       "key": "21",
       "name": "Miss Fortune",
-      "title": "the Bounty Hunter",
-      "blurb": "A Bilgewater captain famed for her looks but feared for her ruthlessness, Sarah Fortune paints a stark figure among the hardened criminals of the port city. As a child, she witnessed the reaver king Gangplank murder her family—an act she brutally...",
+      "title": "a Caçadora de Recompensas",
+      "blurb": "Uma capitã de Águas de Sentina famosa por sua aparência e impiedade, Sarah Fortune chama atenção entre os criminosos calejados da cidade portuária. Ainda criança, ela viu o Rei dos Ladrões, Gangplank, assassinar sua família, um crime do qual ela se...",
       "info": { "attack": 8, "defense": 2, "magic": 5, "difficulty": 1 },
       "image": {
         "full": "MissFortune.png",
@@ -3322,12 +3322,12 @@
       }
     },
     "MonkeyKing": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "MonkeyKing",
       "key": "62",
       "name": "Wukong",
-      "title": "the Monkey King",
-      "blurb": "Wukong is a vastayan trickster who uses his strength, agility, and intelligence to confuse his opponents and gain the upper hand. After finding a lifelong friend in the warrior known as Master Yi, Wukong became the last student of the ancient martial...",
+      "title": "o Macaco Rei",
+      "blurb": "Wukong é um trapaceiro vastaya que usa sua força, agilidade e inteligência para confundir os oponentes e deixar a situação a seu favor. Depois de encontrar uma eterna amizade no guerreiro conhecido como Master Yi, Wukong se tornou o último aprendiz da...",
       "info": { "attack": 8, "defense": 5, "magic": 2, "difficulty": 3 },
       "image": {
         "full": "MonkeyKing.png",
@@ -3357,19 +3357,19 @@
         "mpregenperlevel": 0.65,
         "crit": 0,
         "critperlevel": 0,
-        "attackdamage": 68,
+        "attackdamage": 66,
         "attackdamageperlevel": 3.5,
         "attackspeedperlevel": 3,
         "attackspeed": 0.69
       }
     },
     "Mordekaiser": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Mordekaiser",
       "key": "82",
       "name": "Mordekaiser",
-      "title": "the Iron Revenant",
-      "blurb": "Twice slain and thrice born, Mordekaiser is a brutal warlord from a foregone epoch who uses his necromantic sorcery to bind souls into an eternity of servitude. Few now remain who remember his earlier conquests, or know the true extent of his powers—but...",
+      "title": "o Revenã de Ferro",
+      "blurb": "Morto e renascido duas vezes, Mordekaiser é um cruel comandante de uma época perdida. Ele usa a arte da necromancia para aprisionar almas e torná-las submissas pela eternidade. Hoje em dia, poucos se lembram das primeiras conquistas ou conhecem a real...",
       "info": { "attack": 4, "defense": 6, "magic": 7, "difficulty": 4 },
       "image": {
         "full": "Mordekaiser.png",
@@ -3381,7 +3381,7 @@
         "h": 48
       },
       "tags": ["Fighter"],
-      "partype": "Shield",
+      "partype": "Escudo",
       "stats": {
         "hp": 645,
         "hpperlevel": 104,
@@ -3406,12 +3406,12 @@
       }
     },
     "Morgana": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Morgana",
       "key": "25",
       "name": "Morgana",
-      "title": "the Fallen",
-      "blurb": "Conflicted between her celestial and mortal natures, Morgana bound her wings to embrace humanity, and inflicts her pain and bitterness upon the dishonest and the corrupt. She rejects laws and traditions she believes are unjust, and fights for truth from...",
+      "title": "a Caída",
+      "blurb": "Dividida entre sua natureza mortal e celestial, Morgana prendeu as asas para preservar sua humanidade e inflige sua dor e amargura nos desonestos e corruptos. Ela rejeita as leis e tradições que considera injustas e luta pela verdade nas sombras de...",
       "info": { "attack": 1, "defense": 6, "magic": 8, "difficulty": 1 },
       "image": {
         "full": "Morgana.png",
@@ -3448,12 +3448,12 @@
       }
     },
     "Nami": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Nami",
       "key": "267",
       "name": "Nami",
-      "title": "the Tidecaller",
-      "blurb": "A headstrong young vastaya of the seas, Nami was the first of the Marai tribe to leave the waves and venture onto dry land, when their ancient accord with the Targonians was broken. With no other option, she took it upon herself to complete the sacred...",
+      "title": "a Conjuradora das Marés",
+      "blurb": "Uma jovem e obstinada vastaya dos mares, Nami é uma das primeiras integrantes da tribo Marai a sair das ondas e se aventurar na terra seca, onde seus antigos acordos com os targonianos foram quebrados. Com nenhuma outra opção, ela decidiu que seria ela...",
       "info": { "attack": 4, "defense": 3, "magic": 7, "difficulty": 5 },
       "image": {
         "full": "Nami.png",
@@ -3490,12 +3490,12 @@
       }
     },
     "Nasus": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Nasus",
       "key": "75",
       "name": "Nasus",
-      "title": "the Curator of the Sands",
-      "blurb": "Nasus is an imposing, jackal-headed Ascended being from ancient Shurima, a heroic figure regarded as a demigod by the people of the desert. Fiercely intelligent, he was a guardian of knowledge and peerless strategist whose wisdom guided the ancient...",
+      "title": "o Curador das Areias",
+      "blurb": "Nasus é um majestoso Ascendente com cabeça de chacal da antiga Shurima; uma figura heroica considerada semideus pelo povo do deserto. Ferozmente inteligente, ele foi um guardião do conhecimento e estrategista sem igual cuja sabedoria guiou o antigo...",
       "info": { "attack": 7, "defense": 5, "magic": 6, "difficulty": 6 },
       "image": {
         "full": "Nasus.png",
@@ -3532,12 +3532,12 @@
       }
     },
     "Nautilus": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Nautilus",
       "key": "111",
       "name": "Nautilus",
-      "title": "the Titan of the Depths",
-      "blurb": "A lonely legend as old as the first piers sunk in Bilgewater, the armored goliath known as Nautilus roams the dark waters off the coast of the Blue Flame Isles. Driven by a forgotten betrayal, he strikes without warning, swinging his enormous anchor to...",
+      "title": "o Titã das Profundezas",
+      "blurb": "O golias armadurado conhecido como Nautilus, uma lenda solitária, tão velha quantos as primeiras docas que afundaram em Águas de Sentina, vaga pelas águas escuras da costa das Ilhas da Chama Azul. Levado por uma traição esquecida, ele ataca sem aviso...",
       "info": { "attack": 4, "defense": 6, "magic": 6, "difficulty": 6 },
       "image": {
         "full": "Nautilus.png",
@@ -3574,12 +3574,12 @@
       }
     },
     "Neeko": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Neeko",
       "key": "518",
       "name": "Neeko",
-      "title": "the Curious Chameleon",
-      "blurb": "Hailing from a long lost tribe of vastaya, Neeko can blend into any crowd by borrowing the appearances of others, even absorbing something of their emotional state to tell friend from foe in an instant. No one is ever sure where—or who—Neeko might be...",
+      "title": "a Camaleoa Curiosa",
+      "blurb": "Nativa de uma tribo vastaya há muito esquecida, Neeko consegue se misturar em qualquer multidão, assumindo a aparência dos outros e até mesmo absorvendo parte de seu estado emocional para identificar de imediato quem é amigo ou inimigo. Nunca se sabe...",
       "info": { "attack": 1, "defense": 1, "magic": 9, "difficulty": 5 },
       "image": {
         "full": "Neeko.png",
@@ -3616,12 +3616,12 @@
       }
     },
     "Nidalee": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Nidalee",
       "key": "76",
       "name": "Nidalee",
-      "title": "the Bestial Huntress",
-      "blurb": "Raised in the deepest jungle, Nidalee is a master tracker who can shapeshift into a ferocious cougar at will. Neither wholly woman nor beast, she viciously defends her territory from any and all trespassers, with carefully placed traps and deft spear...",
+      "title": "a Caçadora Bestial",
+      "blurb": "Criada na mais profunda das selvas, Nidalee é uma rastreadora especialista que pode se transformar em um puma à sua vontade. Nem animal nem mulher, ela defende com ferocidade seu território de todo e qualquer invasor, com armadilhas cuidadosamente...",
       "info": { "attack": 5, "defense": 4, "magic": 7, "difficulty": 8 },
       "image": {
         "full": "Nidalee.png",
@@ -3640,8 +3640,8 @@
         "mp": 295,
         "mpperlevel": 45,
         "movespeed": 335,
-        "armor": 28,
-        "armorperlevel": 4.7,
+        "armor": 32,
+        "armorperlevel": 5,
         "spellblock": 30,
         "spellblockperlevel": 1.3,
         "attackrange": 525,
@@ -3658,12 +3658,12 @@
       }
     },
     "Nilah": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Nilah",
       "key": "895",
       "name": "Nilah",
-      "title": "the Joy Unbound",
-      "blurb": "Nilah is an ascetic warrior from a distant land, seeking the world's deadliest, most titanic opponents so that she might challenge and destroy them. Having won her power through an encounter with the long-imprisoned demon of joy, she has no emotions...",
+      "title": "a Alegria Irrestrita",
+      "blurb": "Nilah, uma guerreira asceta de uma terra distante, busca os oponentes mais gigantescos e mortais do mundo para poder desafiá-los e destruí-los. Tendo conquistado seu poder após enfrentar o demônio da alegria, que estava aprisionado há muito tempo, ela...",
       "info": { "attack": 8, "defense": 4, "magic": 4, "difficulty": 10 },
       "image": {
         "full": "Nilah.png",
@@ -3700,12 +3700,12 @@
       }
     },
     "Nocturne": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Nocturne",
       "key": "56",
       "name": "Nocturne",
-      "title": "the Eternal Nightmare",
-      "blurb": "A demonic amalgamation drawn from the nightmares that haunt every sentient mind, the thing known as Nocturne has become a primordial force of pure evil. It is liquidly chaotic in aspect, a faceless shadow with cold eyes and armed with wicked-looking...",
+      "title": "o Eterno Pesadelo",
+      "blurb": "Uma fusão demoníaca provinda dos pesadelos que assombram todas as mentes sencientes, a coisa conhecida como Nocturne se tornou uma força primordial de puro terror. De aspecto caótico e líquido, ele é uma sombra sem rosto com olhos frios e armada com...",
       "info": { "attack": 9, "defense": 5, "magic": 2, "difficulty": 4 },
       "image": {
         "full": "Nocturne.png",
@@ -3742,12 +3742,12 @@
       }
     },
     "Nunu": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Nunu",
       "key": "20",
-      "name": "Nunu & Willump",
-      "title": "the Boy and His Yeti",
-      "blurb": "Once upon a time, there was a boy who wanted to prove he was a hero by slaying a fearsome monster—only to discover that the beast, a lonely and magical yeti, merely needed a friend. Bound together by ancient power and a shared love of snowballs, Nunu...",
+      "name": "Nunu e Willump",
+      "title": "o Garoto e seu Yeti",
+      "blurb": "Era uma vez um garoto que queria provar a todos que poderia ser um herói indo matar um terrível monstro... mas que no fim descobriu que esse monstro era um solitário yeti mágico que só queria um amigo. Unidos por um antigo poder e compartilhando um amor...",
       "info": { "attack": 4, "defense": 6, "magic": 7, "difficulty": 4 },
       "image": {
         "full": "Nunu.png",
@@ -3784,12 +3784,12 @@
       }
     },
     "Olaf": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Olaf",
       "key": "2",
       "name": "Olaf",
-      "title": "the Berserker",
-      "blurb": "An unstoppable force of destruction, the axe-wielding Olaf wants nothing but to die in glorious combat. Hailing from the brutal Freljordian peninsula of Lokfar, he once received a prophecy foretelling his peaceful passing—a coward's fate, and a great...",
+      "title": "o Berserker",
+      "blurb": "Uma força desenfreada de destruição, Olaf e seus machados não querem nada além de morrer em um combate glorioso. Vindo da brutal península de Freljord, Lokfar, ele recebeu uma profecia que dizia que ele teria uma morte pacífica: o destino de um covarde...",
       "info": { "attack": 9, "defense": 5, "magic": 3, "difficulty": 3 },
       "image": {
         "full": "Olaf.png",
@@ -3826,12 +3826,12 @@
       }
     },
     "Orianna": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Orianna",
       "key": "61",
       "name": "Orianna",
-      "title": "the Lady of Clockwork",
-      "blurb": "Once a curious girl of flesh and blood, Orianna is now a technological marvel comprised entirely of clockwork. She became gravely ill after an accident in the lower districts of Zaun, and her failing body had to be replaced with exquisite artifice...",
+      "title": "a Donzela Mecânica",
+      "blurb": "Orianna já foi uma menina curiosa de carne e osso, mas agora é uma maravilha tecnológica composta inteiramente de engrenagens. Ela ficou terrivelmente doente depois de um acidente em um dos distritos inferiores de Zaun e seu corpo enfraquecido teve que...",
       "info": { "attack": 4, "defense": 3, "magic": 9, "difficulty": 7 },
       "image": {
         "full": "Orianna.png",
@@ -3868,12 +3868,12 @@
       }
     },
     "Ornn": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Ornn",
       "key": "516",
       "name": "Ornn",
-      "title": "The Fire below the Mountain",
-      "blurb": "Ornn is the Freljordian spirit of forging and craftsmanship. He works in the solitude of a massive smithy, hammered out from the lava caverns beneath the volcano Hearth-Home. There he stokes bubbling cauldrons of molten rock to purify ores and fashion...",
+      "title": "O Fogo sob a Montanha",
+      "blurb": "Ornn é o espírito Freljordano da forja e da artesania. Ele trabalha na solidão de uma enorme fornalha, construída a marteladas por entre as cavernas de lava do vulcão Pedra-Lar. Lá, ele aquece caldeirões de pedra fundida para purificar metais e forjar...",
       "info": { "attack": 5, "defense": 9, "magic": 3, "difficulty": 5 },
       "image": {
         "full": "Ornn.png",
@@ -3910,12 +3910,12 @@
       }
     },
     "Pantheon": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Pantheon",
       "key": "80",
       "name": "Pantheon",
-      "title": "the Unbreakable Spear",
-      "blurb": "Once an unwilling host to the Aspect of War, Atreus survived when the celestial power within him was slain, refusing to succumb to a blow that tore stars from the heavens. In time, he learned to embrace the power of his own mortality, and the stubborn...",
+      "title": "a Lança Indestrutível",
+      "blurb": "Antes um relutante portador do Aspecto da Guerra, Atreus conseguiu sobreviver quando o poder celestial dentro dele foi morto, recusando-se a sucumbir a um golpe que arrancou estrelas do céu. Com o tempo, ele aprendeu a usar o poder de sua própria...",
       "info": { "attack": 9, "defense": 4, "magic": 3, "difficulty": 4 },
       "image": {
         "full": "Pantheon.png",
@@ -3952,12 +3952,12 @@
       }
     },
     "Poppy": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Poppy",
       "key": "78",
       "name": "Poppy",
-      "title": "Keeper of the Hammer",
-      "blurb": "Runeterra has no shortage of valiant champions, but few are as tenacious as Poppy. Bearing the legendary hammer of Orlon, a weapon twice her size, this determined yordle has spent untold years searching in secret for the fabled “Hero of Demacia,” said...",
+      "title": "a Guardiã do Martelo",
+      "blurb": "Runeterra não está em falta de campeões valentes, mas poucos são tão tenazes quanto Poppy. Carregando o lendário martelo de Orlon, uma arma que tem o dobro de seu tamanho, essa yordle determinada tem passado muitos anos procurando em segredo pelo...",
       "info": { "attack": 6, "defense": 7, "magic": 2, "difficulty": 6 },
       "image": {
         "full": "Poppy.png",
@@ -3994,12 +3994,12 @@
       }
     },
     "Pyke": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Pyke",
       "key": "555",
       "name": "Pyke",
-      "title": "the Bloodharbor Ripper",
-      "blurb": "A renowned harpooner from the slaughter docks of Bilgewater, Pyke should have met his death in the belly of a gigantic jaull-fish… and yet, he returned. Now, stalking the dank alleys and backways of his former hometown, he uses his new supernatural...",
+      "title": "o Estripador das Águas Sangrentas",
+      "blurb": "Um arpoador renomado vindo das Docas da Matança nas Águas de Sentina, Pyke deveria ter encontrado sua morte na barriga de um gigante Peixe-Jaula... mas, ainda assim, ele retornou. Agora, vagando pelos becos úmidos de sua cidade natal, ele usa seus novos...",
       "info": { "attack": 9, "defense": 3, "magic": 1, "difficulty": 7 },
       "image": {
         "full": "Pyke.png",
@@ -4036,12 +4036,12 @@
       }
     },
     "Qiyana": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Qiyana",
       "key": "246",
       "name": "Qiyana",
-      "title": "Empress of the Elements",
-      "blurb": "In the jungle city of Ixaocan, Qiyana plots her own ruthless path to the high seat of the Yun Tal. Last in line to succeed her parents, she faces those who stand in her way with brash confidence and unprecedented mastery over elemental magic. With the...",
+      "title": "a Imperatriz dos Elementos",
+      "blurb": "Na cidade-selva de Ixaocan, Qiyana planeja seu próprio e implacável caminho até o trono de Yun Tal. Última na fila para suceder seus pais, ela enfrenta qualquer um no seu caminho com uma confiança impetuosa e domínio sem precedentes sobre a magia...",
       "info": { "attack": 0, "defense": 2, "magic": 4, "difficulty": 8 },
       "image": {
         "full": "Qiyana.png",
@@ -4078,12 +4078,12 @@
       }
     },
     "Quinn": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Quinn",
       "key": "133",
       "name": "Quinn",
-      "title": "Demacia's Wings",
-      "blurb": "Quinn is an elite ranger-knight of Demacia, who undertakes dangerous missions deep in enemy territory. She and her legendary eagle, Valor, share an unbreakable bond, and their foes are often slain before they realize they are fighting not one, but two...",
+      "title": "as Asas de Demacia",
+      "blurb": "Quinn é uma cavaleira patrulheira de elite de Demacia que cumpre missões perigosas no coração do território inimigo. Ela e sua águia lendária, Valor, possuem um vínculo inquebrável e seus inimigos muitas vezes são mortos antes de notarem que não estão...",
       "info": { "attack": 9, "defense": 4, "magic": 2, "difficulty": 5 },
       "image": {
         "full": "Quinn.png",
@@ -4120,12 +4120,12 @@
       }
     },
     "Rakan": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Rakan",
       "key": "497",
       "name": "Rakan",
-      "title": "The Charmer",
-      "blurb": "As mercurial as he is charming, Rakan is an infamous vastayan troublemaker and the greatest battle-dancer in Lhotlan tribal history. To the humans of the Ionian highlands, his name has long been synonymous with wild festivals, uncontrollable parties...",
+      "title": "O Charmoso",
+      "blurb": "Inconsistente e charmoso, Rakan é um conhecido encrenqueiro vastaya e o melhor dançarino de batalha da história da tribo Lhotlan. Para os humanos das montanhas de Ionia, seu nome sempre foi sinônimo de festivais mirabolantes, festas agitadas e música...",
       "info": { "attack": 2, "defense": 4, "magic": 8, "difficulty": 5 },
       "image": {
         "full": "Rakan.png",
@@ -4144,8 +4144,8 @@
         "mp": 315,
         "mpperlevel": 50,
         "movespeed": 335,
-        "armor": 32,
-        "armorperlevel": 5.1,
+        "armor": 30,
+        "armorperlevel": 4.9,
         "spellblock": 32,
         "spellblockperlevel": 2.05,
         "attackrange": 300,
@@ -4162,12 +4162,12 @@
       }
     },
     "Rammus": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Rammus",
       "key": "33",
       "name": "Rammus",
-      "title": "the Armordillo",
-      "blurb": "Idolized by many, dismissed by some, mystifying to all, the curious being Rammus is an enigma. Protected by a spiked shell, he inspires increasingly disparate theories on his origin wherever he goes—from demigod, to sacred oracle, to a mere beast...",
+      "title": "o Tatu Blindado",
+      "blurb": "Idolatrado por muitos, dispensado por alguns e misterioso para todos, Rammus é um ser curioso e enigmático. Protegido por um casco espetado, ele inspira teorias cada vez mais divergentes sobre sua origem por onde quer que passe — de semideus, a oráculo...",
       "info": { "attack": 4, "defense": 10, "magic": 5, "difficulty": 5 },
       "image": {
         "full": "Rammus.png",
@@ -4204,12 +4204,12 @@
       }
     },
     "RekSai": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "RekSai",
       "key": "421",
       "name": "Rek'Sai",
-      "title": "the Void Burrower",
-      "blurb": "An apex predator, Rek'Sai is a merciless Void-spawn that tunnels beneath the ground to ambush and devour unsuspecting prey. Her insatiable hunger has laid waste to entire regions of the once-great empire of Shurima—merchants, traders, even armed...",
+      "title": "a Escavadora do Vazio",
+      "blurb": "A predadora perfeita, Rek'Sai é uma criatura do Vazio sem piedade que anda por túneis no subsolo para emboscar e devorar vítimas desavisadas. Sua fome insaciável já destruiu regiões inteiras do outrora gigantesco império de Shurima. Mercadores...",
       "info": { "attack": 8, "defense": 5, "magic": 2, "difficulty": 3 },
       "image": {
         "full": "RekSai.png",
@@ -4221,7 +4221,7 @@
         "h": 48
       },
       "tags": ["Fighter"],
-      "partype": "Rage",
+      "partype": "Fúria",
       "stats": {
         "hp": 640,
         "hpperlevel": 99,
@@ -4246,12 +4246,12 @@
       }
     },
     "Rell": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Rell",
       "key": "526",
       "name": "Rell",
-      "title": "the Iron Maiden",
-      "blurb": "The product of brutal experimentation at the hands of the Black Rose, Rell is a defiant, living weapon determined to topple Noxus. Her childhood was one of misery and horror, enduring unspeakable procedures to perfect and weaponize her magical control...",
+      "title": "a Dama de Ferro",
+      "blurb": "Produto de um experimento brutal nas mãos da Rosa Negra, Rell é uma arma humana rebelde que está determinada a destruir Noxus. Sua infância foi repleta de sofrimento e horror; a jovem teve que suportar procedimentos indescritíveis para aperfeiçoar e...",
       "info": { "attack": 0, "defense": 0, "magic": 0, "difficulty": 0 },
       "image": {
         "full": "Rell.png",
@@ -4269,11 +4269,11 @@
         "hpperlevel": 104,
         "mp": 350,
         "mpperlevel": 45,
-        "movespeed": 335,
+        "movespeed": 330,
         "armor": 32,
-        "armorperlevel": 4.2,
+        "armorperlevel": 3,
         "spellblock": 32,
-        "spellblockperlevel": 2.05,
+        "spellblockperlevel": 1,
         "attackrange": 175,
         "hpregen": 7,
         "hpregenperlevel": 0.55,
@@ -4283,17 +4283,17 @@
         "critperlevel": 0,
         "attackdamage": 55,
         "attackdamageperlevel": 3,
-        "attackspeedperlevel": 2,
-        "attackspeed": 0.55
+        "attackspeedperlevel": 1.5,
+        "attackspeed": 0.625
       }
     },
     "Renata": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Renata",
       "key": "888",
       "name": "Renata Glasc",
-      "title": "the Chem-Baroness",
-      "blurb": "Renata Glasc rose from the ashes of her childhood home with nothing but her name and her parents' alchemical research. In the decades since, she has become Zaun's wealthiest chem-baron, a business magnate who built her power by tying everyone's...",
+      "title": "a Baronesa da Química",
+      "blurb": "Renata Glasc emergiu das cinzas de seu antigo lar com nada além da pesquisa alquímica de seus pais e seu próprio nome. Décadas se passaram, e ela se tornou a Baronesa da Química mais rica de Zaun, uma magnata que consolidou seu poder ligando os...",
       "info": { "attack": 2, "defense": 6, "magic": 9, "difficulty": 8 },
       "image": {
         "full": "Renata.png",
@@ -4330,12 +4330,12 @@
       }
     },
     "Renekton": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Renekton",
       "key": "58",
       "name": "Renekton",
-      "title": "the Butcher of the Sands",
-      "blurb": "Renekton is a terrifying, rage-fueled Ascended being from the scorched deserts of Shurima. Once, he was his empire's most esteemed warrior, leading the nation's armies to countless victories. However, after the empire's fall, Renekton was entombed...",
+      "title": "o Carniceiro das Areias",
+      "blurb": "Renekton é um aterrorizante e furioso ser Ascendente dos desertos escaldantes de Shurima. Ele já foi o guerreiro mais estimado de todo o seu império, levando os exércitos da nação a inúmeras vitórias. No entanto, após a queda do império, Renekton foi...",
       "info": { "attack": 8, "defense": 5, "magic": 2, "difficulty": 3 },
       "image": {
         "full": "Renekton.png",
@@ -4347,7 +4347,7 @@
         "h": 48
       },
       "tags": ["Fighter", "Tank"],
-      "partype": "Fury",
+      "partype": "Fúria",
       "stats": {
         "hp": 660,
         "hpperlevel": 111,
@@ -4372,12 +4372,12 @@
       }
     },
     "Rengar": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Rengar",
       "key": "107",
       "name": "Rengar",
-      "title": "the Pridestalker",
-      "blurb": "Rengar is a ferocious vastayan trophy hunter who lives for the thrill of tracking down and killing dangerous creatures. He scours the world for the most fearsome beasts he can find, especially seeking any trace of Kha'Zix, the void creature who...",
+      "title": "o Acossador da Alcateia",
+      "blurb": "Rengar é um feroz caçador de troféus vastaya que gosta da emoção proporcionada pela caça e pelo abate de criaturas perigosas. Ele vasculha o mundo em busca das feras mais perigosas que pode encontrar, procurando principalmente por Kha'Zix, a criatura do...",
       "info": { "attack": 7, "defense": 4, "magic": 2, "difficulty": 8 },
       "image": {
         "full": "Rengar.png",
@@ -4389,7 +4389,7 @@
         "h": 48
       },
       "tags": ["Assassin", "Fighter"],
-      "partype": "Ferocity",
+      "partype": "Ferocidade",
       "stats": {
         "hp": 620,
         "hpperlevel": 104,
@@ -4414,12 +4414,12 @@
       }
     },
     "Riven": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Riven",
       "key": "92",
       "name": "Riven",
-      "title": "the Exile",
-      "blurb": "Once a swordmaster in the warhosts of Noxus, Riven is an expatriate in a land she previously tried to conquer. She rose through the ranks on the strength of her conviction and brutal efficiency, and was rewarded with a legendary runic blade and a...",
+      "title": "a Exilada",
+      "blurb": "Outrora mestra das espadas nos esquadrões de Noxus, agora Riven é uma expatriada em uma terra que um dia já tentou conquistar. Depois de alcançar os altos escalões do exército usando a força de sua convicção e sua brutal eficiência, ela foi recompensada...",
       "info": { "attack": 8, "defense": 5, "magic": 1, "difficulty": 8 },
       "image": {
         "full": "Riven.png",
@@ -4431,7 +4431,7 @@
         "h": 48
       },
       "tags": ["Fighter", "Assassin"],
-      "partype": "None",
+      "partype": "Nenhum",
       "stats": {
         "hp": 630,
         "hpperlevel": 100,
@@ -4456,12 +4456,12 @@
       }
     },
     "Rumble": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Rumble",
       "key": "68",
       "name": "Rumble",
-      "title": "the Mechanized Menace",
-      "blurb": "Rumble is a young inventor with a temper. Using nothing more than his own two hands and a heap of scrap, the feisty yordle constructed a colossal mech suit outfitted with an arsenal of electrified harpoons and incendiary rockets. Though others may scoff...",
+      "title": "a Ameaça Mecânica",
+      "blurb": "Rumble é um jovem inventor irritadiço. Usando nada além de suas próprias mãos e uma pilha de sucata, o yordle briguento construiu um mecha colossal montado com um arsenal de arpões eletrificados e foguetes incendiários. Apesar de outros rirem de suas...",
       "info": { "attack": 3, "defense": 6, "magic": 8, "difficulty": 10 },
       "image": {
         "full": "Rumble.png",
@@ -4473,7 +4473,7 @@
         "h": 48
       },
       "tags": ["Fighter", "Mage"],
-      "partype": "Heat",
+      "partype": "de Aquecimento",
       "stats": {
         "hp": 659,
         "hpperlevel": 99,
@@ -4498,12 +4498,12 @@
       }
     },
     "Ryze": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Ryze",
       "key": "13",
       "name": "Ryze",
-      "title": "the Rune Mage",
-      "blurb": "Widely considered one of the most adept sorcerers on Runeterra, Ryze is an ancient, hard-bitten archmage with an impossibly heavy burden to bear. Armed with immense arcane power and a boundless constitution, he tirelessly hunts for World Runes—fragments...",
+      "title": "o Mago Rúnico",
+      "blurb": "Considerado pela grande maioria como o mago mais habilidoso de Runeterra, Ryze é um arquimago ancião e amargo que carrega um enorme peso. Dotado de um enorme poder arcano e de uma notável estrutura física, ele busca incansavelmente pelas Runas Globais...",
       "info": { "attack": 2, "defense": 2, "magic": 10, "difficulty": 7 },
       "image": {
         "full": "Ryze.png",
@@ -4540,12 +4540,12 @@
       }
     },
     "Samira": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Samira",
       "key": "360",
       "name": "Samira",
-      "title": "the Desert Rose",
-      "blurb": "Samira stares death in the eye with unyielding confidence, seeking thrill wherever she goes. After her Shuriman home was destroyed as a child, Samira found her true calling in Noxus, where she built a reputation as a stylish daredevil taking on...",
+      "title": "a Rosa do Deserto",
+      "blurb": "Samira encara a morte nos olhos com confiança inabalável, procurando diversão e adrenalina aonde quer que vá. Depois que seu lar em Shurima foi destruído quando ainda era criança, ela encontrou sua verdadeira vocação em Noxus, onde conquistou fama como...",
       "info": { "attack": 8, "defense": 5, "magic": 3, "difficulty": 6 },
       "image": {
         "full": "Samira.png",
@@ -4582,12 +4582,12 @@
       }
     },
     "Sejuani": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Sejuani",
       "key": "113",
       "name": "Sejuani",
-      "title": "Fury of the North",
-      "blurb": "Sejuani is the brutal, unforgiving Iceborn warmother of the Winter's Claw, one of the most feared tribes of the Freljord. Her people's survival is a constant, desperate battle against the elements, forcing them to raid Noxians, Demacians, and Avarosans...",
+      "title": "a Fúria do Norte",
+      "blurb": "Sejuani é a mãe de guerra Glacinata brutal e implacável da Garra do Inverno, uma das tribos mais temidas de Freljord. A sobrevivência de seu povo é uma batalha constante e desesperada contra os elementos, forçando-os a pilhar noxianos, demacianos e...",
       "info": { "attack": 5, "defense": 7, "magic": 6, "difficulty": 4 },
       "image": {
         "full": "Sejuani.png",
@@ -4624,12 +4624,12 @@
       }
     },
     "Senna": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Senna",
       "key": "235",
       "name": "Senna",
-      "title": "the Redeemer",
-      "blurb": "Cursed from childhood to be haunted by the supernatural Black Mist, Senna joined a sacred order known as the Sentinels of Light, and fiercely fought back—only to be killed, her soul imprisoned in a lantern by the cruel wraith Thresh. But refusing to...",
+      "title": "A Redentora",
+      "blurb": "Amaldiçoada desde a infância a ser perseguida pelo fenômeno sobrenatural da Névoa Negra, Senna se juntou à ordem dos Sentinelas da Luz e lutou bravamente contra seu destino. Ela acabou sendo morta e teve sua alma aprisionada em uma lanterna pelo cruel...",
       "info": { "attack": 7, "defense": 2, "magic": 6, "difficulty": 7 },
       "image": {
         "full": "Senna.png",
@@ -4666,12 +4666,12 @@
       }
     },
     "Seraphine": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Seraphine",
       "key": "147",
       "name": "Seraphine",
-      "title": "the Starry-Eyed Songstress",
-      "blurb": "Born in Piltover to Zaunite parents, Seraphine can hear the souls of others—the world sings to her, and she sings back. Though these sounds overwhelmed her in her youth, she now draws on them for inspiration, turning the chaos into a symphony. She...",
+      "title": "a Cantora Sonhadora",
+      "blurb": "Nascida em Piltover e filha de zaunitas, Seraphine é capaz de ouvir a alma das pessoas. O mundo canta para ela, e ela canta em resposta. Esses sons a perturbavam quando era mais jovem, mas hoje ela os usa como inspiração, transformando o caos em uma...",
       "info": { "attack": 0, "defense": 0, "magic": 0, "difficulty": 0 },
       "image": {
         "full": "Seraphine.png",
@@ -4708,12 +4708,12 @@
       }
     },
     "Sett": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Sett",
       "key": "875",
       "name": "Sett",
-      "title": "the Boss",
-      "blurb": "A leader of Ionia's growing criminal underworld, Sett rose to prominence in the wake of the war with Noxus. Though he began as a humble challenger in the fighting pits of Navori, he quickly gained notoriety for his savage strength, and his ability to...",
+      "title": "o Chefe",
+      "blurb": "Líder de parte do próspero submundo do crime em Ionia, Sett deve todo o seu sucesso à guerra contra Noxus. Mesmo estreando como um simples desafiante nas arenas de combate em Navori, ele logo conquistou notoriedade com sua força bruta e capacidade de...",
       "info": { "attack": 8, "defense": 5, "magic": 1, "difficulty": 2 },
       "image": {
         "full": "Sett.png",
@@ -4725,7 +4725,7 @@
         "h": 48
       },
       "tags": ["Fighter", "Tank"],
-      "partype": "Grit",
+      "partype": "Ousadia",
       "stats": {
         "hp": 670,
         "hpperlevel": 114,
@@ -4750,12 +4750,12 @@
       }
     },
     "Shaco": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Shaco",
       "key": "35",
       "name": "Shaco",
-      "title": "the Demon Jester",
-      "blurb": "Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in murder and mayhem. Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only in the misery of the poor souls...",
+      "title": "o Bufão Demoníaco",
+      "blurb": "Criado anos atrás como um brinquedo para um príncipe solitário, Shaco, a marionete encantada, agora se deleita com assassinatos e desordem. Corrompido por magia das trevas e pela perda de seu dono querido, o boneco que já fora gentil agora encontra...",
       "info": { "attack": 8, "defense": 4, "magic": 6, "difficulty": 9 },
       "image": {
         "full": "Shaco.png",
@@ -4792,12 +4792,12 @@
       }
     },
     "Shen": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Shen",
       "key": "98",
       "name": "Shen",
-      "title": "the Eye of Twilight",
-      "blurb": "Among the secretive, Ionian warriors known as the Kinkou, Shen serves as their leader, the Eye of Twilight. He longs to remain free from the confusion of emotion, prejudice, and ego, and walks the unseen path of dispassionate judgment between the spirit...",
+      "title": "o Olho do Crepúsculo",
+      "blurb": "Para os guerreiros ionianos sigilosos conhecidos como Kinkou, Shen, o Olho do Crepúsculo, é um líder. Ele busca permanecer livre da confusão das emoções, preconceito ou ego, caminhando pelo caminho nunca visto do julgamento imparcial entre o reino dos...",
       "info": { "attack": 3, "defense": 9, "magic": 3, "difficulty": 4 },
       "image": {
         "full": "Shen.png",
@@ -4809,7 +4809,7 @@
         "h": 48
       },
       "tags": ["Tank"],
-      "partype": "Energy",
+      "partype": "Energia",
       "stats": {
         "hp": 610,
         "hpperlevel": 99,
@@ -4834,12 +4834,12 @@
       }
     },
     "Shyvana": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Shyvana",
       "key": "102",
       "name": "Shyvana",
-      "title": "the Half-Dragon",
-      "blurb": "Shyvana is a creature with the magic of a rune shard burning within her heart. Though she often appears humanoid, she can take her true form as a fearsome dragon, incinerating her foes with fiery breath. Having saved the life of the crown prince Jarvan...",
+      "title": "a Meio-Dragão",
+      "blurb": "Shyvana é uma criatura com a mágica de um fragmento de runa queimando em seu coração. Apesar de normalmente parecer humanoide, ela pode mudar para sua forma verdadeira de um temível dragão, incinerando seus inimigos com seu sopro de chamas. Depois de...",
       "info": { "attack": 8, "defense": 6, "magic": 3, "difficulty": 4 },
       "image": {
         "full": "Shyvana.png",
@@ -4851,7 +4851,7 @@
         "h": 48
       },
       "tags": ["Fighter", "Tank"],
-      "partype": "Fury",
+      "partype": "Fúria",
       "stats": {
         "hp": 665,
         "hpperlevel": 109,
@@ -4876,12 +4876,12 @@
       }
     },
     "Singed": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Singed",
       "key": "27",
       "name": "Singed",
-      "title": "the Mad Chemist",
-      "blurb": "Singed is a Zaunite alchemist of unmatched intellect, who has devoted his life to pushing the boundaries of knowledge—with no price, even his own sanity, too high to pay. Is there a method to his madness? His concoctions rarely fail, but it appears to...",
+      "title": "o Químico Louco",
+      "blurb": "Singed é um alquimista zaunita de intelecto inigualável, que devotou sua vida a ultrapassar os limites do conhecimento; e nenhum preço, nem sua própria sanidade, é alto demais. Existe cura para sua loucura? Suas misturas raramente falham, mas, para...",
       "info": { "attack": 4, "defense": 8, "magic": 7, "difficulty": 5 },
       "image": {
         "full": "Singed.png",
@@ -4918,12 +4918,12 @@
       }
     },
     "Sion": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Sion",
       "key": "14",
       "name": "Sion",
-      "title": "The Undead Juggernaut",
-      "blurb": "A war hero from a bygone era, Sion was revered in Noxus for choking the life out of a Demacian king with his bare hands—but, denied oblivion, he was resurrected to serve his empire even in death. His indiscriminate slaughter claimed all who stood in his...",
+      "title": "o Colosso Morto-Vivo",
+      "blurb": "Um herói de guerra de uma era passada, Sion era reverenciado em Noxus por ter estrangulado a vida de um rei demaciano com suas próprias mãos. Mas o esquecimento lhe foi negado quando foi ressuscitado para servir seu império, mesmo na sua morte. Seu...",
       "info": { "attack": 5, "defense": 9, "magic": 3, "difficulty": 5 },
       "image": {
         "full": "Sion.png",
@@ -4960,12 +4960,12 @@
       }
     },
     "Sivir": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Sivir",
       "key": "15",
       "name": "Sivir",
-      "title": "the Battle Mistress",
-      "blurb": "Sivir is a renowned fortune hunter and mercenary captain who plies her trade in the deserts of Shurima. Armed with her legendary jeweled crossblade, she has fought and won countless battles for those who can afford her exorbitant price. Known for her...",
+      "title": "a Mestra da Batalha",
+      "blurb": "Sivir é uma renomada caçadora de recompensas e capitã mercenária que manipula o comércio nos desertos de Shurima. Armada com sua lendária lâmina em cruz adornada, ela lutou e venceu incontáveis batalhas por aqueles que podem pagar seu preço exorbitante...",
       "info": { "attack": 9, "defense": 3, "magic": 1, "difficulty": 4 },
       "image": {
         "full": "Sivir.png",
@@ -5002,12 +5002,12 @@
       }
     },
     "Skarner": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Skarner",
       "key": "72",
       "name": "Skarner",
-      "title": "the Crystal Vanguard",
-      "blurb": "Skarner is an immense crystalline scorpion from a hidden valley in Shurima. Part of the ancient Brackern race, Skarner and his kin are known for their great wisdom and deep connection to the land, as their souls are fused with powerful life crystals...",
+      "title": "a Vanguarda de Cristal",
+      "blurb": "Skarner é um imenso escorpião cristalino de um vale escondido de Shurima. Parte da antiga raça dos Brackern, Skarner e seus semelhantes são conhecidos por seu grande conhecimento e profunda conexão com a terra, pois suas almas são infundidas com...",
       "info": { "attack": 7, "defense": 6, "magic": 5, "difficulty": 5 },
       "image": {
         "full": "Skarner.png",
@@ -5044,12 +5044,12 @@
       }
     },
     "Sona": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Sona",
       "key": "37",
       "name": "Sona",
-      "title": "Maven of the Strings",
-      "blurb": "Sona is Demacia's foremost virtuoso of the stringed etwahl, speaking only through her graceful chords and vibrant arias. This genteel manner has endeared her to the highborn, though others suspect her spellbinding melodies to actually emanate magic—a...",
+      "title": "a Mestra das Cordas",
+      "blurb": "Sona é um dos maiores prodígios em etwahl de cordas em Demacia, falando somente através de seus acordes graciosos e de suas árias vibrantes. Seu comportamento refinado cativou os nobres, apesar de muitos suspeitarem que suas melodias fascinantes...",
       "info": { "attack": 5, "defense": 2, "magic": 8, "difficulty": 4 },
       "image": {
         "full": "Sona.png",
@@ -5086,12 +5086,12 @@
       }
     },
     "Soraka": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Soraka",
       "key": "16",
       "name": "Soraka",
-      "title": "the Starchild",
-      "blurb": "A wanderer from the celestial dimensions beyond Mount Targon, Soraka gave up her immortality to protect the mortal races from their own more violent instincts. She endeavors to spread the virtues of compassion and mercy to everyone she meets—even...",
+      "title": "a Filha das Estrelas",
+      "blurb": "Uma andarilha vinda de dimensões celestiais além do Monte Targon, Soraka desistiu de sua imortalidade para proteger as raças mortais de seus instintos mais violentos. Ela pretende espalhar as virtudes da compaixão e da misericórdia a todos que encontra...",
       "info": { "attack": 2, "defense": 5, "magic": 7, "difficulty": 3 },
       "image": {
         "full": "Soraka.png",
@@ -5128,12 +5128,12 @@
       }
     },
     "Swain": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Swain",
       "key": "50",
       "name": "Swain",
-      "title": "the Noxian Grand General",
-      "blurb": "Jericho Swain is the visionary ruler of Noxus, an expansionist nation that reveres only strength. Though he was cast down and crippled in the Ionian wars, his left arm severed, he seized control of the empire with ruthless determination… and a new...",
+      "title": "o Grande General Noxiano",
+      "blurb": "Jericho Swain é o líder visionário de Noxus, uma nação expansionista que venera apenas a força. Apesar de ter sido abatido e mutilado nas guerras ionianas, onde perdeu o braço esquerdo, ele tomou o controle do império com uma determinação implacável...",
       "info": { "attack": 2, "defense": 6, "magic": 9, "difficulty": 8 },
       "image": {
         "full": "Swain.png",
@@ -5170,12 +5170,12 @@
       }
     },
     "Sylas": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Sylas",
       "key": "517",
       "name": "Sylas",
-      "title": "the Unshackled",
-      "blurb": "Raised in one of Demacia's lesser quarters, Sylas of Dregbourne has come to symbolize the darker side of the Great City. As a boy, his ability to root out hidden sorcery caught the attention of the notorious mageseekers, who eventually imprisoned him...",
+      "title": "o Abjugado",
+      "blurb": "Criado em um dos bairros mais pobres de Demacia, Sylas de Dregbourne se tornou o símbolo do lado mais sombrio da Grande Cidade. Quando criança, sua habilidade de identificar magia chamou a atenção de importantes caçadores de magos, que depois o...",
       "info": { "attack": 3, "defense": 4, "magic": 8, "difficulty": 5 },
       "image": {
         "full": "Sylas.png",
@@ -5212,12 +5212,12 @@
       }
     },
     "Syndra": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Syndra",
       "key": "134",
       "name": "Syndra",
-      "title": "the Dark Sovereign",
-      "blurb": "Syndra is a fearsome Ionian mage with incredible power at her command. As a child, she disturbed the village elders with her reckless and wild magic. She was sent away to be taught greater control, but eventually discovered her supposed mentor was...",
+      "title": "a Soberana Sombria",
+      "blurb": "Syndra é uma temida maga ioniana com um poder incrível ao seu dispor. Quando criança, ela causava pavor nos anciões da aldeia com sua magia imprudente e indomada. Mandada embora para aprender a controlar seus poderes, ela terminou descobrindo que seu...",
       "info": { "attack": 2, "defense": 3, "magic": 9, "difficulty": 8 },
       "image": {
         "full": "Syndra.png",
@@ -5254,12 +5254,12 @@
       }
     },
     "TahmKench": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "TahmKench",
       "key": "223",
       "name": "Tahm Kench",
-      "title": "The River King",
-      "blurb": "Known by many names throughout history, the demon Tahm Kench travels the waterways of Runeterra, feeding his insatiable appetite with the misery of others. Though he may appear singularly charming and proud, he swaggers through the physical realm like a...",
+      "title": "o Rei do Rio",
+      "blurb": "Conhecido por muitos nomes ao longo da história, Tahm Kench viaja pelas águas de Runeterra alimentando seu insaciável apetite com o sofrimento alheio. Apesar de parecer particularmente encantador e orgulhoso, ele vaga pelo reino físico como um andarilho...",
       "info": { "attack": 3, "defense": 9, "magic": 6, "difficulty": 5 },
       "image": {
         "full": "TahmKench.png",
@@ -5296,12 +5296,12 @@
       }
     },
     "Taliyah": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Taliyah",
       "key": "163",
       "name": "Taliyah",
-      "title": "the Stoneweaver",
-      "blurb": "Taliyah is a nomadic mage from Shurima, torn between teenage wonder and adult responsibility. She has crossed nearly all of Valoran on a journey to learn the true nature of her growing powers, though more recently she has returned to protect her tribe...",
+      "title": "a Tecelã de Pedras",
+      "blurb": "Taliyah é uma maga nômade de Shurima, dividida entre sua empolgação juvenil e suas grandes responsabilidades. Ela cruzou quase toda Valoran em uma jornada para conhecer a verdadeira natureza de seus próprios poderes, apesar de ter retornado recentemente...",
       "info": { "attack": 1, "defense": 7, "magic": 8, "difficulty": 5 },
       "image": {
         "full": "Taliyah.png",
@@ -5338,12 +5338,12 @@
       }
     },
     "Talon": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Talon",
       "key": "91",
       "name": "Talon",
-      "title": "the Blade's Shadow",
-      "blurb": "Talon is the knife in the darkness, a merciless killer able to strike without warning and escape before any alarm is raised. He carved out a dangerous reputation on the brutal streets of Noxus, where he was forced to fight, kill, and steal to survive...",
+      "title": "a Sombra da Lâmina",
+      "blurb": "Talon é a adaga na escuridão, um assassino impiedoso capaz de atacar sem aviso e escapar antes que qualquer alarme soe. Ele construiu uma reputação perigosa nas ruas brutais de Noxus, onde foi forçado a lutar, matar e roubar para sobreviver. Adotado...",
       "info": { "attack": 9, "defense": 3, "magic": 1, "difficulty": 7 },
       "image": {
         "full": "Talon.png",
@@ -5380,12 +5380,12 @@
       }
     },
     "Taric": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Taric",
       "key": "44",
       "name": "Taric",
-      "title": "the Shield of Valoran",
-      "blurb": "Taric is the Aspect of the Protector, wielding incredible power as Runeterra's guardian of life, love, and beauty. Shamed by a dereliction of duty and exiled from his homeland Demacia, Taric ascended Mount Targon to find redemption, only to discover a...",
+      "title": "o Escudo de Valoran",
+      "blurb": "Taric é o Aspecto do Protetor, portando um incrível poder como o guardião da vida, do amor e da beleza de Runeterra. Punido por faltar ao cumprimento de seu dever e exilado de Demacia, sua terra natal, Taric subiu o Monte Targon em busca de redenção...",
       "info": { "attack": 4, "defense": 8, "magic": 5, "difficulty": 3 },
       "image": {
         "full": "Taric.png",
@@ -5422,12 +5422,12 @@
       }
     },
     "Teemo": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Teemo",
       "key": "17",
       "name": "Teemo",
-      "title": "the Swift Scout",
-      "blurb": "Undeterred by even the most dangerous and threatening of obstacles, Teemo scouts the world with boundless enthusiasm and a cheerful spirit. A yordle with an unwavering sense of morality, he takes pride in following the Bandle Scout's Code, sometimes...",
+      "title": "o Explorador Veloz",
+      "blurb": "Indiferente até aos obstáculos mais perigosos e ameaçadores, Teemo vasculha o mundo com infinito entusiasmo e animação. Um yordle com uma inabalável moral que se orgulha de seguir o Código dos Escoteiros de Bandópolis, às vezes com tanta dedicação que...",
       "info": { "attack": 5, "defense": 3, "magic": 7, "difficulty": 6 },
       "image": {
         "full": "Teemo.png",
@@ -5464,12 +5464,12 @@
       }
     },
     "Thresh": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Thresh",
       "key": "412",
       "name": "Thresh",
-      "title": "the Chain Warden",
-      "blurb": "Sadistic and cunning, Thresh is an ambitious and restless spirit of the Shadow Isles. Once the custodian of countless arcane secrets, he was undone by a power greater than life or death, and now sustains himself by tormenting and breaking others with...",
+      "title": "o Guardião das Correntes",
+      "blurb": "Sádico e astuto, Thresh é um espírito ambicioso e incansável das Ilhas das Sombras. Ele já foi guardião de incontáveis segredos arcanos, mas acabou sucumbindo a poderes maiores do que a vida e a morte. Agora, Thresh vive atormentando e corrompendo...",
       "info": { "attack": 5, "defense": 6, "magic": 6, "difficulty": 7 },
       "image": {
         "full": "Thresh.png",
@@ -5506,12 +5506,12 @@
       }
     },
     "Tristana": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Tristana",
       "key": "18",
       "name": "Tristana",
-      "title": "the Yordle Gunner",
-      "blurb": "While many other yordles channel their energy into discovery, invention, or just plain mischief-making, Tristana was always inspired by the adventures of great warriors. She had heard much about Runeterra, its factions, and its wars, and believed her...",
+      "title": "a Artilheira Yordle",
+      "blurb": "Apesar de muitos outros yordles focarem sua energia em descobertas, invenções ou simplesmente travessuras, Tristana sempre se inspirou nas aventuras de grandes guerreiros. Ela ouviu muito sobre Runeterra, suas facções e suas guerras, e acreditava que...",
       "info": { "attack": 9, "defense": 3, "magic": 5, "difficulty": 4 },
       "image": {
         "full": "Tristana.png",
@@ -5548,12 +5548,12 @@
       }
     },
     "Trundle": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Trundle",
       "key": "48",
       "name": "Trundle",
-      "title": "the Troll King",
-      "blurb": "Trundle is a hulking and devious troll with a particularly vicious streak, and there is nothing he cannot bludgeon into submission—not even the Freljord itself. Fiercely territorial, he chases down anyone foolish enough to enter his domain. Then, his...",
+      "title": "o Rei dos Trolls",
+      "blurb": "Trundle é um troll gigantesco e traiçoeiro com uma tendência particularmente perversa, e não há nada que ele não possa submeter a cacetadas, nem mesmo a própria Freljord. Violentamente territorial, ele persegue qualquer um tolo o suficiente de entrar em...",
       "info": { "attack": 7, "defense": 6, "magic": 2, "difficulty": 5 },
       "image": {
         "full": "Trundle.png",
@@ -5569,7 +5569,7 @@
       "stats": {
         "hp": 686,
         "hpperlevel": 110,
-        "mp": 281,
+        "mp": 340,
         "mpperlevel": 45,
         "movespeed": 350,
         "armor": 37,
@@ -5586,16 +5586,16 @@
         "attackdamage": 68,
         "attackdamageperlevel": 3,
         "attackspeedperlevel": 2.9,
-        "attackspeed": 0.6
+        "attackspeed": 0.67
       }
     },
     "Tryndamere": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Tryndamere",
       "key": "23",
       "name": "Tryndamere",
-      "title": "the Barbarian King",
-      "blurb": "Fueled by unbridled fury and rage, Tryndamere once carved his way through the Freljord, openly challenging the greatest warriors of the north to prepare himself for even darker days ahead. The wrathful barbarian has long sought revenge for the...",
+      "title": "o Rei Bárbaro",
+      "blurb": "Carregado por fúria e raiva desenfreadas, Tryndamere galgou seu caminho através de Freljord, desafiando abertamente os maiores guerreiros do norte em preparo para os dias sombrios que virão. O bárbaro furioso já procurou por vingança pela aniquilação de...",
       "info": { "attack": 10, "defense": 5, "magic": 2, "difficulty": 5 },
       "image": {
         "full": "Tryndamere.png",
@@ -5607,7 +5607,7 @@
         "h": 48
       },
       "tags": ["Fighter", "Assassin"],
-      "partype": "Fury",
+      "partype": "Fúria",
       "stats": {
         "hp": 696,
         "hpperlevel": 115,
@@ -5632,12 +5632,12 @@
       }
     },
     "TwistedFate": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "TwistedFate",
       "key": "4",
       "name": "Twisted Fate",
-      "title": "the Card Master",
-      "blurb": "Twisted Fate is an infamous cardsharp and swindler who has gambled and charmed his way across much of the known world, earning the enmity and admiration of the rich and foolish alike. He rarely takes things seriously, greeting each day with a mocking...",
+      "title": "o Mestre das Cartas",
+      "blurb": "Twisted Fate é um infame trapaceiro que apostou e encantou tudo em seu caminho por boa parte do mundo, conquistando a inimizade e admiração tanto de ricos quanto tolos. Ele raramente leva coisas a sério, saudando cada dia com um sorriso zombeteiro e...",
       "info": { "attack": 6, "defense": 2, "magic": 6, "difficulty": 9 },
       "image": {
         "full": "TwistedFate.png",
@@ -5674,12 +5674,12 @@
       }
     },
     "Twitch": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Twitch",
       "key": "29",
       "name": "Twitch",
-      "title": "the Plague Rat",
-      "blurb": "A Zaunite plague rat by birth, but a connoisseur of filth by passion, Twitch is not afraid to get his paws dirty. Aiming a chem-powered crossbow at the gilded heart of Piltover, he has vowed to show those in the city above just how filthy they really...",
+      "title": "o Semeador da Peste",
+      "blurb": "Um rato zaunita empesteado de nascença e um apreciador da imundície por paixão, Twitch não tem medo de sujar as patas. Mirando com uma balestra embebida em químicos no centro do coração dourado de Piltover, ele jurou mostrar àqueles na cidade de cima...",
       "info": { "attack": 9, "defense": 2, "magic": 3, "difficulty": 6 },
       "image": {
         "full": "Twitch.png",
@@ -5716,12 +5716,12 @@
       }
     },
     "Udyr": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Udyr",
       "key": "77",
       "name": "Udyr",
-      "title": "the Spirit Walker",
-      "blurb": "The most powerful spirit walker alive, Udyr communes with all the spirits of the Freljord, whether by empathically understanding their needs, or by channeling and transforming their ethereal energy into his own primal fighting style. He seeks balance...",
+      "title": "o Andarilho Espiritual",
+      "blurb": "Udyr, o mais poderoso andarilho espiritual vivo, comunga com todos os espíritos de Freljord, seja compreendendo empaticamente suas necessidades, ou canalizando e transformando a energia etérea deles em seu próprio estilo de luta primevo. Ele busca o...",
       "info": { "attack": 8, "defense": 7, "magic": 4, "difficulty": 7 },
       "image": {
         "full": "Udyr.png",
@@ -5758,12 +5758,12 @@
       }
     },
     "Urgot": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Urgot",
       "key": "6",
       "name": "Urgot",
-      "title": "the Dreadnought",
-      "blurb": "Once a powerful Noxian headsman, Urgot was betrayed by the empire for which he had killed so many. Bound in iron chains, he was forced to learn the true meaning of strength in the Dredge—a prison mine deep beneath Zaun. Emerging in a disaster that...",
+      "title": "o Encouraçado",
+      "blurb": "Na época em que era um poderoso carrasco noxiano, Urgot foi traído pelo império para o qual havia tirado tantas vidas. Aprisionado em correntes de ferro, ele foi forçado a aprender o verdadeiro significado da força na Draga — uma mina carcerária nas...",
       "info": { "attack": 8, "defense": 5, "magic": 3, "difficulty": 8 },
       "image": {
         "full": "Urgot.png",
@@ -5800,12 +5800,12 @@
       }
     },
     "Varus": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Varus",
       "key": "110",
       "name": "Varus",
-      "title": "the Arrow of Retribution",
-      "blurb": "One of the ancient darkin, Varus was a deadly killer who loved to torment his foes, driving them almost to insanity before delivering the killing arrow. He was imprisoned at the end of the Great Darkin War, but escaped centuries later in the remade...",
+      "title": "a Flecha da Vingança",
+      "blurb": "Um dos antigos darkin, Varus era um assassino mortal que amava atormentar seus inimigos, levando-os quase à insanidade antes de disparar a flecha mortal. Ele foi aprisionado no final da Grande Guerra dos Darkin, mas fugiu, séculos depois, na carne...",
       "info": { "attack": 7, "defense": 3, "magic": 4, "difficulty": 2 },
       "image": {
         "full": "Varus.png",
@@ -5842,12 +5842,12 @@
       }
     },
     "Vayne": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Vayne",
       "key": "67",
       "name": "Vayne",
-      "title": "the Night Hunter",
-      "blurb": "Shauna Vayne is a deadly, remorseless Demacian monster hunter, who has dedicated her life to finding and destroying the demon that murdered her family. Armed with a wrist-mounted crossbow and a heart full of vengeance, she is only truly happy when...",
+      "title": "a Caçadora Noturna",
+      "blurb": "Shauna Vayne é uma caçadora de monstros demaciana mortal e implacável que dedicou sua vida a encontrar e destruir o monstro que assassinou sua família. Armada com uma balestra em seu pulso e com um coração cheio de vingança, ela só é realmente feliz...",
       "info": { "attack": 10, "defense": 1, "magic": 1, "difficulty": 8 },
       "image": {
         "full": "Vayne.png",
@@ -5884,12 +5884,12 @@
       }
     },
     "Veigar": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Veigar",
       "key": "45",
       "name": "Veigar",
-      "title": "the Tiny Master of Evil",
-      "blurb": "An enthusiastic master of dark sorcery, Veigar has embraced powers that few mortals dare approach. As a free-spirited inhabitant of Bandle City, he longed to push beyond the limitations of yordle magic, and turned instead to arcane texts that had been...",
+      "title": "o Pequeno Mestre do Mal",
+      "blurb": "Veigar, um mestre entusiasta da feitiçaria das trevas, aderiu a poderes dos quais poucos mortais se aproximam. Um habitante inconformado de Bandópolis, ele desejava ultrapassar as limitações da magia yordle, se voltando, então, para os textos arcanos...",
       "info": { "attack": 2, "defense": 2, "magic": 10, "difficulty": 7 },
       "image": {
         "full": "Veigar.png",
@@ -5926,12 +5926,12 @@
       }
     },
     "Velkoz": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Velkoz",
       "key": "161",
       "name": "Vel'Koz",
-      "title": "the Eye of the Void",
-      "blurb": "It is unclear if Vel'Koz was the first Void-spawn to emerge on Runeterra, but there has certainly never been another to match his level of cruel, calculating sentience. While his kin devour or defile everything around them, he seeks instead to...",
+      "title": "o Olho do Vazio",
+      "blurb": "Não é claro se Vel'Koz foi a primeira criatura do Vazio a aparecer em Runeterra, mas certamente nunca houve outra que se igualasse ao seu nível de compreensão cruel e calculista. Enquanto sua raça devora ou perverte tudo ao seu redor, ele busca, em vez...",
       "info": { "attack": 2, "defense": 2, "magic": 10, "difficulty": 8 },
       "image": {
         "full": "Velkoz.png",
@@ -5968,12 +5968,12 @@
       }
     },
     "Vex": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Vex",
       "key": "711",
       "name": "Vex",
-      "title": "the Gloomist",
-      "blurb": "In the black heart of the Shadow Isles, a lone yordle trudges through the spectral fog, content in its murky misery. With an endless supply of teen angst and a powerful shadow in tow, Vex lives in her own self-made slice of gloom, far from the revolting...",
+      "title": "a Melancolista",
+      "blurb": "Em meio à escuridão das Ilhas das Sombras, uma solitária yordle se move com pesar, abrindo caminho pela névoa espectral, satisfeita em viver nas trevas. Com uma poderosa sombra no seu encalço e uma fonte inesgotável de mazelas nas costas, Vex vive num...",
       "info": { "attack": 0, "defense": 0, "magic": 0, "difficulty": 0 },
       "image": {
         "full": "Vex.png",
@@ -6010,12 +6010,12 @@
       }
     },
     "Vi": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Vi",
       "key": "254",
       "name": "Vi",
-      "title": "the Piltover Enforcer",
-      "blurb": "Once a criminal from the mean streets of Zaun, Vi is a hotheaded, impulsive, and fearsome woman with only a very loose respect for authority figures. Growing up all but alone, Vi developed finely honed survival instincts as well as a wickedly abrasive...",
+      "title": "a Defensora de Piltover",
+      "blurb": "Antiga criminosa das ruas violentas de Zaun, Vi é uma mulher temível, impulsiva e explosiva que tem muito pouco respeito por autoridades. Após ter crescido completamente só, Vi desenvolveu instintos de sobrevivência extremamente certeiros e um senso de...",
       "info": { "attack": 8, "defense": 5, "magic": 3, "difficulty": 4 },
       "image": {
         "full": "Vi.png",
@@ -6052,12 +6052,12 @@
       }
     },
     "Viego": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Viego",
       "key": "234",
       "name": "Viego",
-      "title": "The Ruined King",
-      "blurb": "Once ruler of a long-lost kingdom, Viego perished over a thousand years ago when his attempt to bring his wife back from the dead triggered the magical catastrophe known as the Ruination. Transformed into a powerful, unliving wraith tortured by an...",
+      "title": "O Rei Destruído",
+      "blurb": "Outrora regente de um reino perdido, Viego morreu há mais de um milênio, quando uma tentativa de trazer sua esposa de volta à vida culminou em uma catástrofe mágica conhecida como \"a Ruína\". Transformado em um poderoso espectro morto-vivo, e sempre...",
       "info": { "attack": 6, "defense": 4, "magic": 2, "difficulty": 5 },
       "image": {
         "full": "Viego.png",
@@ -6069,7 +6069,7 @@
         "h": 48
       },
       "tags": ["Assassin", "Fighter"],
-      "partype": "None",
+      "partype": "Nenhum",
       "stats": {
         "hp": 630,
         "hpperlevel": 109,
@@ -6094,12 +6094,12 @@
       }
     },
     "Viktor": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Viktor",
       "key": "112",
       "name": "Viktor",
-      "title": "the Machine Herald",
-      "blurb": "The herald of a new age of technology, Viktor has devoted his life to the advancement of humankind. An idealist who seeks to lift the people of Zaun to a new level of understanding, he believes that only by embracing a glorious evolution of technology...",
+      "title": "o Arauto das Máquinas",
+      "blurb": "Viktor, o arauto de uma nova era de tecnologia, devotou sua vida ao avanço da humanidade. Um idealista que busca elevar o povo de Zaun a um novo nível de compreensão, ele acredita que somente ao aceitar a evolução gloriosa da tecnologia será possível...",
       "info": { "attack": 2, "defense": 4, "magic": 10, "difficulty": 9 },
       "image": {
         "full": "Viktor.png",
@@ -6136,12 +6136,12 @@
       }
     },
     "Vladimir": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Vladimir",
       "key": "8",
       "name": "Vladimir",
-      "title": "the Crimson Reaper",
-      "blurb": "A fiend with a thirst for mortal blood, Vladimir has influenced the affairs of Noxus since the empire's earliest days. In addition to unnaturally extending his life, his mastery of hemomancy allows him to control the minds and bodies of others as easily...",
+      "title": "o Sanguinário Escarlate",
+      "blurb": "Um demônio sedento pelo sangue dos mortais, Vladimir tem influenciado os acontecimentos de Noxus desde os primórdios do império. Além de ter estendido sua vida por meios não naturais, sua maestria em hemomancia o permite controlar as mentes e corpos de...",
       "info": { "attack": 2, "defense": 6, "magic": 8, "difficulty": 7 },
       "image": {
         "full": "Vladimir.png",
@@ -6153,7 +6153,7 @@
         "h": 48
       },
       "tags": ["Mage"],
-      "partype": "Crimson Rush",
+      "partype": "Ímpeto Vermelho",
       "stats": {
         "hp": 607,
         "hpperlevel": 110,
@@ -6178,12 +6178,12 @@
       }
     },
     "Volibear": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Volibear",
       "key": "106",
       "name": "Volibear",
-      "title": "the Relentless Storm",
-      "blurb": "To those who still revere him, the Volibear is the storm made manifest. Destructive, wild, and stubbornly resolute, he existed before mortals walked the Freljord's tundra, and is fiercely protective of the lands that he and his demi-god kin created...",
+      "title": "a Tempestade Implacável",
+      "blurb": "Para aqueles que ainda o veneram, Volibear é a forma manifestada da tempestade. Destrutivo, selvagem e implacavelmente obstinado, ele já existia antes mesmo que os mortais andassem sobre a tundra de Freljord, protegendo as terras que ele e seus irmãos...",
       "info": { "attack": 7, "defense": 7, "magic": 4, "difficulty": 3 },
       "image": {
         "full": "Volibear.png",
@@ -6220,12 +6220,12 @@
       }
     },
     "Warwick": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Warwick",
       "key": "19",
       "name": "Warwick",
-      "title": "the Uncaged Wrath of Zaun",
-      "blurb": "Warwick is a monster who hunts the gray alleys of Zaun. Transformed by agonizing experiments, his body is fused with an intricate system of chambers and pumps, machinery filling his veins with alchemical rage. Bursting out of the shadows, he preys upon...",
+      "title": "a Ira Desimpedida de Zaun",
+      "blurb": "Warwick é um monstro que caça pelas ruas cinzentas de Zaun. Transformado a partir de experimentos agonizantes, seu corpo agora é fundido a um sistema complexo de câmaras e bombas, um maquinário que enche suas veias com fúria química. Ele persegue os...",
       "info": { "attack": 9, "defense": 5, "magic": 3, "difficulty": 3 },
       "image": {
         "full": "Warwick.png",
@@ -6262,12 +6262,12 @@
       }
     },
     "Xayah": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Xayah",
       "key": "498",
       "name": "Xayah",
-      "title": "the Rebel",
-      "blurb": "Deadly and precise, Xayah is a vastayan revolutionary waging a personal war to save her people. She uses her speed, guile, and razor-sharp feather blades to cut down anyone who stands in her way. Xayah fights alongside her partner and lover, Rakan, to...",
+      "title": "a Rebelde",
+      "blurb": "Mortal e precisa, Xayah é uma vastaya revolucionária que trava sua própria batalha para salvar seu povo. Ela usa sua agilidade, malícia e plumas afiadas para retalhar qualquer um que atrapalhe seu caminho. Xayah luta ao lado de seu parceiro e amante...",
       "info": { "attack": 10, "defense": 6, "magic": 1, "difficulty": 5 },
       "image": {
         "full": "Xayah.png",
@@ -6304,12 +6304,12 @@
       }
     },
     "Xerath": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Xerath",
       "key": "101",
       "name": "Xerath",
-      "title": "the Magus Ascendant",
-      "blurb": "Xerath is an Ascended Magus of ancient Shurima, a being of arcane energy writhing in the broken shards of a magical sarcophagus. For millennia, he was trapped beneath the desert sands, but the rise of Shurima freed him from his ancient prison. Driven...",
+      "title": "o Mago Ascendente",
+      "blurb": "Xerath é um mago Ascendente da antiga Shurima, um ser de energia arcana que existe em meio a estilhaços de um sarcófago mágico. Por milênios, ele ficou enclausurado debaixo das areias do deserto, mas o ressurgimento de Shurima o libertou de sua antiga...",
       "info": { "attack": 1, "defense": 3, "magic": 10, "difficulty": 8 },
       "image": {
         "full": "Xerath.png",
@@ -6346,12 +6346,12 @@
       }
     },
     "XinZhao": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "XinZhao",
       "key": "5",
       "name": "Xin Zhao",
-      "title": "the Seneschal of Demacia",
-      "blurb": "Xin Zhao is a resolute warrior loyal to the ruling Lightshield dynasty. Once condemned to the fighting pits of Noxus, he survived countless gladiatorial bouts, but after being freed by Demacian forces, he swore his life and allegiance to these brave...",
+      "title": "o Senescal de Demacia",
+      "blurb": "Xin Zhao é um guerreiro determinado, leal à dinastia Lumescudo. No passado, ele foi condenado a lutar como gladiador em Noxus, e sobreviveu à incontáveis lutas, mas depois de ser libertado por forças demacianas, ele prometeu sua vida e lealdade aos seus...",
       "info": { "attack": 8, "defense": 6, "magic": 3, "difficulty": 2 },
       "image": {
         "full": "XinZhao.png",
@@ -6388,12 +6388,12 @@
       }
     },
     "Yasuo": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Yasuo",
       "key": "157",
       "name": "Yasuo",
-      "title": "the Unforgiven",
-      "blurb": "An Ionian of deep resolve, Yasuo is an agile swordsman who wields the air itself against his enemies. As a proud young man, he was falsely accused of murdering his master—unable to prove his innocence, he was forced to slay his own brother in self...",
+      "title": "o Imperdoável",
+      "blurb": "Yasuo, um ioniano extremamente determinado, é também um ágil espadachim que usa o próprio ar como arma para enfrentar seus inimigos. Quando jovem, ele teve seu orgulho ferido ao ser acusado injustamente do assassinato de seu mestre — sem conseguir...",
       "info": { "attack": 8, "defense": 4, "magic": 4, "difficulty": 10 },
       "image": {
         "full": "Yasuo.png",
@@ -6405,10 +6405,10 @@
         "h": 48
       },
       "tags": ["Fighter", "Assassin"],
-      "partype": "Flow",
+      "partype": "Fluxo",
       "stats": {
         "hp": 590,
-        "hpperlevel": 101,
+        "hpperlevel": 110,
         "mp": 100,
         "mpperlevel": 0,
         "movespeed": 345,
@@ -6430,12 +6430,12 @@
       }
     },
     "Yone": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Yone",
       "key": "777",
       "name": "Yone",
-      "title": "the Unforgotten",
-      "blurb": "In life, he was Yone—half-brother of Yasuo, and renowned student of his village's sword school. But upon his death at the hands of his brother, he found himself hunted by a malevolent entity of the spirit realm, and was forced to slay it with its own...",
+      "title": "o Inesquecido",
+      "blurb": "Em vida, ele foi Yone; meio-irmão de Yasuo e um respeitado aluno da escola de espadachins de seu vilarejo. Mas, ao morrer pelas mãos do irmão, ele se viu perseguido por uma entidade maligna do reino espiritual e foi forçado a exterminá-la com sua...",
       "info": { "attack": 8, "defense": 4, "magic": 4, "difficulty": 8 },
       "image": {
         "full": "Yone.png",
@@ -6447,14 +6447,14 @@
         "h": 48
       },
       "tags": ["Assassin", "Fighter"],
-      "partype": "Flow",
+      "partype": "Fluxo",
       "stats": {
         "hp": 620,
-        "hpperlevel": 99,
+        "hpperlevel": 105,
         "mp": 500,
         "mpperlevel": 0,
         "movespeed": 345,
-        "armor": 28,
+        "armor": 30,
         "armorperlevel": 4.6,
         "spellblock": 32,
         "spellblockperlevel": 2.05,
@@ -6472,12 +6472,12 @@
       }
     },
     "Yorick": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Yorick",
       "key": "83",
       "name": "Yorick",
-      "title": "Shepherd of Souls",
-      "blurb": "The last survivor of a long-forgotten religious order, Yorick is both blessed and cursed with power over the dead. Trapped on the Shadow Isles, his only companions are the rotting corpses and shrieking spirits that he gathers to him. Yorick's monstrous...",
+      "title": "o Pastor de Almas",
+      "blurb": "Último sobrevivente de uma ordem religiosa há muito esquecida, Yorick é ao mesmo tempo abençoado e amaldiçoado pelo poder que exerce sobre os mortos. Preso nas Ilhas das Sombras, suas únicas companhias são os defuntos e espíritos atormentados que ele...",
       "info": { "attack": 6, "defense": 6, "magic": 4, "difficulty": 6 },
       "image": {
         "full": "Yorick.png",
@@ -6514,12 +6514,12 @@
       }
     },
     "Yuumi": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Yuumi",
       "key": "350",
       "name": "Yuumi",
-      "title": "the Magical Cat",
-      "blurb": "A magical cat from Bandle City, Yuumi was once the familiar of a yordle enchantress, Norra. When her master mysteriously disappeared, Yuumi became the Keeper of Norra's sentient Book of Thresholds, traveling through portals in its pages to search for...",
+      "title": "a Gata Mágica",
+      "blurb": "Uma gata mágica de Bandópolis, Yuumi já foi a mascote de uma feiticeira yordle chamada Norra. Mas quando sua mestra desapareceu misteriosamente, Yuumi se tornou a Guardiã do Livro dos Portais de Norra, viajando à procura dela através dos portais nas...",
       "info": { "attack": 5, "defense": 1, "magic": 8, "difficulty": 2 },
       "image": {
         "full": "Yuumi.png",
@@ -6556,12 +6556,12 @@
       }
     },
     "Zac": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Zac",
       "key": "154",
       "name": "Zac",
-      "title": "the Secret Weapon",
-      "blurb": "Zac is the product of a toxic spill that ran through a chemtech seam and pooled in an isolated cavern deep in Zaun's Sump. Despite such humble origins, Zac has grown from primordial ooze into a thinking being who dwells in the city's pipes, occasionally...",
+      "title": "a Arma Secreta",
+      "blurb": "Zac é produto de um derramamento tóxico que percorreu um tubo quimtec e se armazenou em uma caverna isolada no Sumidouro de Zaun. Apesar de suas origens humildes, Zac deixou de ser uma lama qualquer e se tornou um ser pensante que mora nos encanamentos...",
       "info": { "attack": 3, "defense": 7, "magic": 7, "difficulty": 8 },
       "image": {
         "full": "Zac.png",
@@ -6573,7 +6573,7 @@
         "h": 48
       },
       "tags": ["Tank", "Fighter"],
-      "partype": "None",
+      "partype": "Nenhum",
       "stats": {
         "hp": 685,
         "hpperlevel": 109,
@@ -6598,12 +6598,12 @@
       }
     },
     "Zed": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Zed",
       "key": "238",
       "name": "Zed",
-      "title": "the Master of Shadows",
-      "blurb": "Utterly ruthless and without mercy, Zed is the leader of the Order of Shadow, an organization he created with the intent of militarizing Ionia's magical and martial traditions to drive out Noxian invaders. During the war, desperation led him to unlock...",
+      "title": "o Mestre das Sombras",
+      "blurb": "Absolutamente impiedoso e implacável, Zed é o líder da Ordem das Sombras; uma organização criada com a intenção de militarizar as tradições marciais e mágicas de Ionia para expulsar os invasores noxianos. Durante a guerra, o desespero o levou a libertar...",
       "info": { "attack": 9, "defense": 2, "magic": 1, "difficulty": 7 },
       "image": {
         "full": "Zed.png",
@@ -6615,7 +6615,7 @@
         "h": 48
       },
       "tags": ["Assassin"],
-      "partype": "Energy",
+      "partype": "Energia",
       "stats": {
         "hp": 654,
         "hpperlevel": 99,
@@ -6640,12 +6640,12 @@
       }
     },
     "Zeri": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Zeri",
       "key": "221",
       "name": "Zeri",
-      "title": "The Spark of Zaun",
-      "blurb": "A headstrong, spirited young woman from Zaun's working-class, Zeri channels her electric magic to charge herself and her custom-crafted gun. Her volatile power mirrors her emotions, its sparks reflecting her lightning-fast approach to life. Deeply...",
+      "title": "A Faísca de Zaun",
+      "blurb": "Uma jovem obstinada e vivaz da classe operária de Zaun, Zeri canaliza magia elétrica para carregar a si mesma e a uma arma personalizada. O poder volátil espelha o que ela sente, as centelhas refletindo o estilo de vida ultrarrápido dela. Profundamente...",
       "info": { "attack": 8, "defense": 5, "magic": 3, "difficulty": 6 },
       "image": {
         "full": "Zeri.png",
@@ -6660,7 +6660,7 @@
       "partype": "Mana",
       "stats": {
         "hp": 630,
-        "hpperlevel": 115,
+        "hpperlevel": 110,
         "mp": 250,
         "mpperlevel": 45,
         "movespeed": 330,
@@ -6682,12 +6682,12 @@
       }
     },
     "Ziggs": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Ziggs",
       "key": "115",
       "name": "Ziggs",
-      "title": "the Hexplosives Expert",
-      "blurb": "With a love of big bombs and short fuses, the yordle Ziggs is an explosive force of nature. As an inventor's assistant in Piltover, he was bored by his predictable life and befriended a mad, blue-haired bomber named Jinx. After a wild night on the town...",
+      "title": "o Especialista em Hexplosivos",
+      "blurb": "O yordle Ziggs, amante de grandes bombas e pavios curtos, é uma força explosiva da natureza. Já entediado com sua vida previsível como assistente de um inventor de Piltover, ele fez amizade com uma bombardeira louca de cabelo azul chamada Jinx. Depois...",
       "info": { "attack": 2, "defense": 4, "magic": 9, "difficulty": 4 },
       "image": {
         "full": "Ziggs.png",
@@ -6724,12 +6724,12 @@
       }
     },
     "Zilean": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Zilean",
       "key": "26",
       "name": "Zilean",
-      "title": "the Chronokeeper",
-      "blurb": "Once a powerful Icathian mage, Zilean became obsessed with the passage of time after witnessing his homeland's destruction by the Void. Unable to spare even a minute to grieve the catastrophic loss, he called upon ancient temporal magic to divine all...",
+      "title": "o Guardião do Tempo",
+      "blurb": "Outrora um poderoso mago icathiano, Zilean se obcecou com a passagem do tempo depois de testemunhar a destruição de sua terra natal pelo Vazio. Sem conseguir gastar um minuto que fosse para lamentar a perda catastrófica, ele invocou uma antiga magia...",
       "info": { "attack": 2, "defense": 5, "magic": 8, "difficulty": 6 },
       "image": {
         "full": "Zilean.png",
@@ -6766,12 +6766,12 @@
       }
     },
     "Zoe": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Zoe",
       "key": "142",
       "name": "Zoe",
-      "title": "the Aspect of Twilight",
-      "blurb": "As the embodiment of mischief, imagination, and change, Zoe acts as the cosmic messenger of Targon, heralding major events that reshape worlds. Her mere presence warps the arcane mathematics governing realities, sometimes causing cataclysms without...",
+      "title": "o Aspecto do Crepúsculo",
+      "blurb": "Como a personificação da travessura, imaginação e mudança, Zoe atua como a mensageira cósmica de Targon, anunciando a chegada de grandes eventos que redefinem mundos. Sua mera presença altera a matemática arcana que governa as realidades, às vezes...",
       "info": { "attack": 1, "defense": 7, "magic": 8, "difficulty": 5 },
       "image": {
         "full": "Zoe.png",
@@ -6808,12 +6808,12 @@
       }
     },
     "Zyra": {
-      "version": "13.6.1",
+      "version": "13.11.1",
       "id": "Zyra",
       "key": "143",
       "name": "Zyra",
-      "title": "Rise of the Thorns",
-      "blurb": "Born in an ancient, sorcerous catastrophe, Zyra is the wrath of nature given form—an alluring hybrid of plant and human, kindling new life with every step. She views the many mortals of Valoran as little more than prey for her seeded progeny, and thinks...",
+      "title": "a Ascensão dos Espinhos",
+      "blurb": "Nascida em uma antiga catástrofe mágica, Zyra é a fúria da natureza em forma física e uma sedutora criatura híbrida entre planta e humana, que faz surgir a vida a cada passo que dá. Ela vê os muitos mortais de Valoran como nada além de presas para suas...",
       "info": { "attack": 4, "defense": 3, "magic": 8, "difficulty": 7 },
       "image": {
         "full": "Zyra.png",
