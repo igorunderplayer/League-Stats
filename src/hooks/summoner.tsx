@@ -37,6 +37,8 @@ function SummonerProvider({ children }: AuthProviderProps) {
       if (!name?.length || !region?.length) return
       const res = await new Riot(region).getSummonerByName(name)
       setSummoner(res)
+      
+      console.log('Summoner updated successfully', res)
     } catch (e) {
       if (e instanceof AxiosError) {
         console.error({ ...e })

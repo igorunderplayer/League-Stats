@@ -1,14 +1,10 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import * as Updates from 'expo-updates'
+import { useState } from 'react'
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { useSummoner } from '../hooks/summoner';
-import Riot from '../services/riot';
-import themes from '../themes';
-
-const REGIONS = [
-  { name: 'BR', code: 'br1' },
-  { name: 'EUW', code: 'euw1' }
-]
+import { useSummoner } from '../hooks/summoner'
+import Riot from '../services/riot'
+import themes from '../themes'
 
 export default function Welcome() {
   const { setName, setRegion, resetSummoner } = useSummoner()
@@ -34,6 +30,23 @@ export default function Welcome() {
   async function handleOnPressDelete() {
     resetSummoner()
     await AsyncStorage.clear()
+  }
+
+  async function handleFetchUpdates() {
+    try {
+      const update = await Updates.checkForUpdateAsync()
+
+      if (update.isAvailable) {
+        alert('Update available')
+        await Updates.fetchUpdateAsync();
+        await Updates.reloadAsync();
+      } else {
+        alert('Update not available')
+      }
+    } catch (error) {
+      // You can also add an alert() to see the error message in case of an error when fetching updates.
+      alert(`Error fetching latest Expo update: ${error}`)
+    }
   }
 
   return (
@@ -71,6 +84,10 @@ export default function Welcome() {
 
       <TouchableOpacity onPress={handleOnPress} style={styles.button}>
         <Text style={styles.subTitle}>Continuar</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={handleFetchUpdates} style={styles.button}>
+        <Text style={styles.subTitle}>Check for updates</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={handleOnPressDelete} style={styles.button}>

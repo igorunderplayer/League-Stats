@@ -11,9 +11,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -33,7 +30,14 @@
       }
     },
     "plugins": [
-      "expo-localization"
-    ]
+      "expo-localization",
+      "expo-updates"
+    ],
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f045a167-a0c2-4fa8-b3d5-92888ff774c3"
+    }
   }
 }
