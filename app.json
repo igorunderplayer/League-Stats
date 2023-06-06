@@ -11,9 +11,8 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
+
     "ios": {
       "supportsTablet": true
     },
@@ -29,15 +28,13 @@
         "projectId": "f045a167-a0c2-4fa8-b3d5-92888ff774c3"
       }
     },
-    "plugins": [
-      "expo-localization",
-      "expo-updates"
-    ],
+    "plugins": ["expo-localization", "expo-updates"],
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/f045a167-a0c2-4fa8-b3d5-92888ff774c3"
+      "url": "https://u.expo.dev/f045a167-a0c2-4fa8-b3d5-92888ff774c3",
+      "fallbackToCacheTimeout": 60000
     }
   }
 }
