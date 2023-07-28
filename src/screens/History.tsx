@@ -8,6 +8,7 @@ import { useSummoner } from '../hooks/summoner'
 import Riot from '../services/riot'
 import themes from '../themes'
 import MatchInfo from './MatchInfo'
+import riot from '../services/riot'
 
 type HistoryStackParamList = {
   historyDefault: undefined,
@@ -48,7 +49,6 @@ function History() {
     if (!region || !summoner) return
 
     try {
-      const riot = new Riot(region)
       riot.getMatchesByPuuid(summoner.puuid, { count: 10 })
         .then(async (data) => {
           const matches = await Promise.all(data.map(async matchId => {
@@ -69,7 +69,6 @@ function History() {
     setLoading(true)
 
     try {
-      const riot = new Riot(region)
       const more = await riot.getMatchesByPuuid(summoner.puuid, {
         count: 10,
         start: matches.length

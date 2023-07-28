@@ -1,27 +1,20 @@
-import * as Updates from 'expo-updates'
-
 import { useEffect } from 'react'
-
 import { SummonerProvider } from './src/hooks/summoner'
 import { Routes } from './src/routes'
 
 import { StatusBar } from 'expo-status-bar'
+import riot from './src/services/riot'
 
 export default function App() {
-  useEffect(() => {
-    return Updates.addListener((event) => {
-      if (event.type === Updates.UpdateEventType.UPDATE_AVAILABLE) {
-        alert('An update is available. Restart the app to continue')
-        Updates.reloadAsync()
-      }
-    })
-  }, [])
 
+  useEffect(() => {
+    riot.ddragon.getOrFetchVersions()
+  }, [])
 
   return (
     <SummonerProvider>
       <Routes />
-      <StatusBar style='inverted' />
+      <StatusBar style='auto' />
     </SummonerProvider>
-  )
+  )  
 }

@@ -3,6 +3,7 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-nativ
 import { useSummoner } from '../hooks/summoner';
 import Riot from '../services/riot';
 import themes from '../themes';
+import riot from '../services/riot';
 
 export default function InsertName() {
   const { setName, setRegion } = useSummoner()
@@ -14,7 +15,7 @@ export default function InsertName() {
 
   async function handleOnPress() {
     try {
-      const summoner = await new Riot(typingRegion).getSummonerByName(typingName)
+      const summoner = await riot.getSummonerByName(typingName)
 
       alert(summoner.name)
 

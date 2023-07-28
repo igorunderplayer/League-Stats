@@ -8,6 +8,7 @@ import ChampionMasteryCard from '../ChampionMastery'
 
 import { MaterialIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
+import riot from '../../services/riot'
 
 const MasteriesCard: React.FC = () => {
   const navigation = useNavigation()
@@ -17,10 +18,10 @@ const MasteriesCard: React.FC = () => {
 
   useEffect(() => {
     if (!region || !summoner) return
-    new Riot(region).getSummonerChampionsMasteries(summoner?.id)
+    riot.getSummonerChampionsMasteries(summoner?.id)
       .then(maestries => {
         if (!maestries) return
-        setMaestries(maestries?.slice(0, 5))
+        setMaestries(maestries.sort((x, y) => y.championLevel - x.championLevel)?.slice(0, 5))
       })
   }, [])
 

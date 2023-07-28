@@ -2,12 +2,14 @@ import { View, Text, StyleSheet } from 'react-native'
 import colors from '../../colors'
 import { useSummoner } from '../../hooks/summoner'
 import SummonerIcon from '../SummonerIcon'
+import riot from '../../services/riot'
 
 const ProfileCard: React.FC = () => {
   const { summoner } = useSummoner()
+
   return (
     <View style={styles.container}>
-      <SummonerIcon summonerIconId={summoner?.profileIconId} />
+      <SummonerIcon iconId={summoner?.profileIconId} />
 
       <View style={styles.textInfo}>
         <Text style={styles.name}>{summoner?.name}</Text>

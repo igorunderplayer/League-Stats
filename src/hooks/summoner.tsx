@@ -1,8 +1,8 @@
 import { AxiosError } from 'axios'
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react'
 import Summoner from '../entities/Summoner'
-import Riot from '../services/riot'
 import usePersistedState from './usePersistedState'
+import riot from '../services/riot'
 
 
 type SummonerContextData = {
@@ -14,19 +14,20 @@ type SummonerContextData = {
   resetSummoner: () => Promise<void>
 }
 
-type AuthProviderProps = {
+type SummonerProviderProps = {
   children: ReactNode;
 }
 
 export const SummonerContext = createContext({} as SummonerContextData);
 
-function SummonerProvider({ children }: AuthProviderProps) {
+function SummonerProvider({ children }: SummonerProviderProps) {
   const [summoner, setSummoner] = useState<Summoner>()
   const [name, setName] = usePersistedState<string>('name')
   const [region, setRegion] = usePersistedState<string>('region')
 
 
   useEffect(() => {
+    console.log('aaaa')
     if (!summoner) {
       getSummoner()
     }
@@ -35,7 +36,7 @@ function SummonerProvider({ children }: AuthProviderProps) {
   async function getSummoner() {
     try {
       if (!name?.length || !region?.length) return
-      const res = await new Riot(region).getSummonerByName(name)
+      const res = await riot.getSummonerByName(name, region)
       setSummoner(res)
       
       console.log('Summoner updated successfully', res)

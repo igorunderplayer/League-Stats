@@ -11,12 +11,14 @@ const LeagueInfo: React.FC<Props> = ({ league }) => {
 
   const winrate = (league.wins / (league.wins + league.losses) * 100).toFixed(1)
 
+  console.log(league)
+
   return (
     <View style={styles.container}>
       <Image
         style={styles.leagueIcon}
         source={{
-          uri: `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-${league.tier.toLowerCase()}.png`
+          uri: `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-${league.tier?.toLowerCase()}.png`
         }}
       />
       <View style={styles.leagueInfo}>

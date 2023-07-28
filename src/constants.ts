@@ -1,7 +1,7 @@
 export const LeagueQueueNames = {
   RANKED_SOLO_5x5: 'Ranqueada Solo',
   RANKED_FLEX_SR: ' Ranqueada Flex'
-}
+} as const
 
 export const LeagueTierNames = {
   IRON: 'Ferro',
@@ -11,6 +11,6 @@ export const LeagueTierNames = {
   PLATINUM: 'Platina',
   DIAMOND: 'Diamante',
   MASTER: 'Mestre',
-  GRANDMASTER: 'Grande-Mestre',
+  GRANDMASTER: 'Grão-Mestre',
   CHALLENGER: 'Desafiante'
-}
+} as const

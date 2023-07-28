@@ -1,15 +1,18 @@
 import React from 'react'
-import { View, Image, StyleSheet } from 'react-native'
+import { Image, StyleSheet } from 'react-native'
+import riot from '../../services/riot'
 
 type Props = {
-  summonerIconId?: number
+  iconId?: number
 }
 
-const SummonerIcon: React.FC<Props> = ({ summonerIconId = 0 }) => {
+const SummonerIcon: React.FC<Props> = ({ iconId = 0 }) => {
+  const uri = riot.ddragon.getIcon(iconId)
+
   return (
     <Image
       source={{
-        uri: `http://ddragon.leagueoflegends.com/cdn/13.11.1/img/profileicon/${summonerIconId}.png`
+        uri
       }}
       style={styles.image}
     />

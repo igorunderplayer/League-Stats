@@ -1,10 +1,10 @@
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import * as Updates from 'expo-updates'
 import { useState } from 'react'
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TextInput, ToastAndroid, TouchableOpacity, View } from 'react-native'
 import { useSummoner } from '../hooks/summoner'
 import Riot from '../services/riot'
 import themes from '../themes'
+import riot from '../services/riot'
 
 export default function Welcome() {
   const { setName, setRegion, resetSummoner } = useSummoner()
@@ -13,39 +13,23 @@ export default function Welcome() {
   const [typingRegion, setTypingRegion] = useState('BR1')
 
   async function handleOnPress() {
+    ToastAndroid.show(`Searching for ${typingName}...`, ToastAndroid.SHORT)
     try {
-      const summoner = await new Riot(typingRegion).getSummonerByName(typingName)
+      const summoner = await riot.getSummonerByName(typingName, typingRegion.toLowerCase())
 
-      alert(summoner.name)
+      ToastAndroid.show(`Found summoner with name ${summoner.name}!`, ToastAndroid.SHORT)
 
-      setName(typingName)
       setRegion(typingRegion)
-
-
+      setName(typingName)
     } catch (e) {
       alert('Não foi possivel recuperar a conta, certifique-se que digitou corretamente')
+      console.log(e)
     }
   }
 
   async function handleOnPressDelete() {
     resetSummoner()
     await AsyncStorage.clear()
-  }
-
-  async function handleFetchUpdates() {
-    try {
-      const update = await Updates.checkForUpdateAsync()
-
-      if (update.isAvailable) {
-        alert('Update available')
-        await Updates.fetchUpdateAsync();
-        await Updates.reloadAsync();
-      } else {
-        alert('Update not available')
-      }
-    } catch (error) {
-      alert(`Error fetching latest Expo update: ${error}`)
-    }
   }
 
   return (
@@ -81,10 +65,6 @@ export default function Welcome() {
 
       <TouchableOpacity onPress={handleOnPress} style={styles.button}>
         <Text style={styles.subTitle}>Continuar</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={handleFetchUpdates} style={styles.button}>
-        <Text style={styles.subTitle}>Check updates</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={handleOnPressDelete} style={styles.button}>

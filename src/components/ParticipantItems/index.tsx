@@ -13,7 +13,7 @@ const ParticipantItems: React.FC<Props> = ({ items }) => {
           key={item.slot}
           style={styles.image}
           source={{
-            uri: `http://ddragon.leagueoflegends.com/cdn/13.11.1/img/item/${item.item}.png`
+            uri: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/item/${item.item}.png`
           }}
         />
       )) }

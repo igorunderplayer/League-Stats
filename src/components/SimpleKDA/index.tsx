@@ -12,11 +12,21 @@ type Props = {
 const SimpleKDA: React.FC<Props> = ({ kills, deaths, assists, textSize = 16, bold = true }) => {
   return (
     <View style={styles.container}>
-      <Text style={[styles.text, { color: colors.softCyan, fontSize: textSize, fontWeight: !bold ? 'normal' : 'bold' }]}>{kills}</Text>
+      <Text style={[styles.text, { color: colors.softCyan, fontSize: textSize, fontWeight: !bold ? 'normal' : 'bold' }]}>
+        {kills}
+      </Text>
+
       <Text style={[styles.text]}> / </Text>
-      <Text style={[styles.text, { color: colors.softRed, fontSize: textSize, fontWeight: !bold ? 'normal' : 'bold'  }]}>{deaths}</Text>
+
+      <Text style={[styles.text, { color: colors.softRed, fontSize: textSize, fontWeight: !bold ? 'normal' : 'bold'  }]}>
+        {deaths}
+      </Text>
+
       <Text style={[styles.text]}> / </Text>
-      <Text style={[styles.text, { color: colors.softOrange, fontSize: textSize, fontWeight: !bold ? 'normal' : 'bold'  }]}>{assists}</Text>
+
+      <Text style={[styles.text, { color: colors.softOrange, fontSize: textSize, fontWeight: !bold ? 'normal' : 'bold'  }]}>
+        {assists}
+      </Text>
     </View>
   )
 }

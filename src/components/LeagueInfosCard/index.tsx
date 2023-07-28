@@ -4,20 +4,19 @@ import { View, Text, StyleSheet } from 'react-native'
 import { LeagueEntry } from '../../@types/riot'
 import colors from '../../colors'
 import { useSummoner } from '../../hooks/summoner'
-import Riot from '../../services/riot'
 import LeagueInfo from '../LeagueInfo'
+import riot from '../../services/riot'
 
 const LeagueInfosCard: React.FC = () => {
-  const navigation = useNavigation()
   const { region, summoner } = useSummoner()
 
   const [leagues, setLeagues] = useState<LeagueEntry[]>([])
 
   useEffect(() => {
     if (!region || !summoner) return
-    new Riot(region).getSummonerLeague(summoner?.id)
+    riot.getSummonerLeague(summoner?.id)
       .then(leagues => {
-        setLeagues(leagues)
+        setLeagues(leagues.filter(l => l.queueType != 'CHERRY'))
       })
   }, [])
 

@@ -1,19 +1,15 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { useEffect } from 'react'
-import { StyleSheet, Text, Image, View, ScrollView } from 'react-native'
+import { StyleSheet, View, ScrollView } from 'react-native'
 import colors from '../colors'
 import MasteriesCard from '../components/MasteriesCard'
 import ProfileCard from '../components/ProfileCard'
 import LeaguesInfoCard from '../components/LeagueInfosCard'
-import { useSummoner } from '../hooks/summoner'
-import Riot from '../services/riot'
 import themes from '../themes'
 import BestChampions from './BestChampions'
 
 const Stack = createNativeStackNavigator()
 
 export default function ProfileRoutes() {
-  const { region, summoner } = useSummoner()
 
   return (
     <View style={{ flex: 1, backgroundColor: themes.dark.background }}>

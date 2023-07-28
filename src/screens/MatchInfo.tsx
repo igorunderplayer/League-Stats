@@ -5,8 +5,8 @@ import { Match } from '../@types/riot'
 import colors from '../colors'
 import MatchParticipantInfo from '../components/MatchParticipantInfo'
 import { useSummoner } from '../hooks/summoner'
-import Riot from '../services/riot'
 import themes from '../themes'
+import riot from '../services/riot'
 
 export default function MatchInfo() {
   const route = useRoute()
@@ -17,7 +17,7 @@ export default function MatchInfo() {
 
   useEffect(() => {
     if (!region || !summoner) return
-    new Riot(region).getMatchById(route.params?.matchId)
+    riot.getMatchById(route.params?.matchId)
       .then(match => {
         setMatch(match)
       })

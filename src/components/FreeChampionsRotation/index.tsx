@@ -1,19 +1,14 @@
 import { useEffect, useState } from 'react'
 import { View, Text, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native'
-
 import * as Linking from 'expo-linking'
-
 import { useSummoner } from '../../hooks/summoner'
-import Riot from '../../services/riot'
-
 import allChampions from '../../champions.json'
 import colors from '../../colors'
-
 import { getLocales } from 'expo-localization'
+import riot from '../../services/riot'
 
 
 const FreeChampionsRotation: React.FC = () => {
-
   const { region, summoner } = useSummoner()
   const [champions, setChampions] = useState<any[]>([])
 
@@ -21,7 +16,7 @@ const FreeChampionsRotation: React.FC = () => {
   useEffect(() => {
     if (!region || !summoner) return
 
-    new Riot(region).getFreeChampionsIdRotation()
+    riot.getFreeChampionsIdRotation()
       .then(ids => {
         const champValues = Object.values(allChampions.data)
         const champions = ids.map(id => champValues.find(c => c.key == String(id)))
@@ -73,7 +68,7 @@ const ChampionItem = ({ item }: ItemProps) => {
       <Image
         style={{ width: 48, height: 48 }}
         source={{
-          uri: `http://ddragon.leagueoflegends.com/cdn/13.11.1/img/champion/${item.id}.png`
+          uri: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${item.id}.png`
         }}
       />
 

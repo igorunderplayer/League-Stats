@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 import colors from '../../colors'
 import ChampionMastery from '../../entities/ChampionMastery'
-import { useSummoner } from '../../hooks/summoner'
 
 import { getLocales } from 'expo-localization'
 
@@ -13,8 +12,6 @@ type Props = {
 }
 
 const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
-  const { summoner } = useSummoner()
-
   const [champion, setChampion] = useState<any>({})
 
   const [locale] = getLocales()
@@ -32,7 +29,7 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
         <Image
           style={styles.championIcon}
           source={{
-            uri: `http://ddragon.leagueoflegends.com/cdn/13.11.1/img/champion/${champion.id}.png`
+            uri: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${champion.id}.png`
           }}
         />
 

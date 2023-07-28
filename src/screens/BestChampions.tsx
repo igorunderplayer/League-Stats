@@ -7,6 +7,7 @@ import ChampionMastery from '../entities/ChampionMastery';
 import { useSummoner } from '../hooks/summoner';
 import Riot from '../services/riot';
 import themes from '../themes';
+import riot from '../services/riot';
 
 export default function BestChampions() {
   const navigation = useNavigation()
@@ -16,10 +17,10 @@ export default function BestChampions() {
 
   useEffect(() => {
     if (!region || !summoner) return
-    new Riot(region).getSummonerChampionsMasteries(summoner?.id)
+    riot.getSummonerChampionsMasteries(summoner?.id)
       .then(maestries => {
         if (!maestries) return
-        setMaestries(maestries)
+        setMaestries(maestries.sort((x, y) => y.championLevel - x.championLevel))
       })
   }, [])
 
