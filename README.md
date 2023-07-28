@@ -1,13 +1,34 @@
 # League Stats
 
-> ### Um aplicativo simples feito em react-native sobre league of legends
+League Stats is a mobile application about League of Legends
 
+## Requirements
 
-## TODO:
+- A riot application at https://developer.riotgames.com (or use a development api key)
+- [Node.js](https://nodejs.org) (>= 18 recommended)
+- [Expo](https://expo.dev/)
+- Yarn (recommended)
 
- - [ ] Write a better README
- - [ ] Better loading champions screen
+## Running yourself
 
- > - [ ] History screen
- - [ ] About match screen (players, items, objectives)
- - [ ] Interactable infos (can click on player to open his profile)
+- Clone and install the dependencies
+
+```sh
+# Clone this repository
+$ git clone https://github.com/igorunderplayer/League-Stats.git
+
+# Access the project directory
+$ cd League-Stats
+
+# Install dependencies
+$ yarn install
+
+# Run the application locally
+$ yarn start
+```
+
+- Create a .env file at the root of the application with the following contents:
+
+```
+RIOT_API_KEY= <Place here your riot api key>
+```
