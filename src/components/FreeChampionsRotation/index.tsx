@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react'
-import { View, Text, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native'
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native'
 import * as Linking from 'expo-linking'
 import { useSummoner } from '../../hooks/summoner'
 import allChampions from '../../champions.json'
@@ -7,30 +14,27 @@ import colors from '../../colors'
 import { getLocales } from 'expo-localization'
 import riot from '../../services/riot'
 
-
 const FreeChampionsRotation: React.FC = () => {
   const { region, summoner } = useSummoner()
   const [champions, setChampions] = useState<any[]>([])
 
-
   useEffect(() => {
     if (!region || !summoner) return
 
-    riot.getFreeChampionsIdRotation()
-      .then(ids => {
-        const champValues = Object.values(allChampions.data)
-        const champions = ids.map(id => champValues.find(c => c.key == String(id)))
-        setChampions(champions)
-      })
+    riot.getFreeChampionsIdRotation().then((ids) => {
+      const champValues = Object.values(allChampions.data)
+      const champions = ids.map((id) =>
+        champValues.find((c) => c.key == String(id)),
+      )
+      setChampions(champions)
+    })
   }, [])
 
   return (
     <View style={styles.container}>
-
       <View style={styles.cardHeader}>
         <Text style={styles.title}>Rotação de campeões</Text>
       </View>
-
 
       <FlatList
         style={styles.flatlist}
@@ -64,11 +68,10 @@ const ChampionItem = ({ item }: ItemProps) => {
 
   return (
     <TouchableOpacity style={styles.itemContainer} onPress={openChampionURL}>
-
       <Image
         style={{ width: 48, height: 48 }}
         source={{
-          uri: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${item.id}.png`
+          uri: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${item.id}.png`,
         }}
       />
 
@@ -83,7 +86,7 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 12,
     backgroundColor: '#ffffff05',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   cardHeader: {
     width: '100%',
@@ -96,10 +99,10 @@ const styles = StyleSheet.create({
     color: colors.white,
     alignSelf: 'flex-start',
     fontSize: 22,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   flatlist: {
-    width: '100%'
+    width: '100%',
   },
   itemContainer: {
     backgroundColor: '#ffffff05',
@@ -109,14 +112,14 @@ const styles = StyleSheet.create({
     marginVertical: 4,
     marginHorizontal: '2.5%',
     borderRadius: 12,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   championName: {
     padding: 8,
     color: colors.white,
     fontSize: 16,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 })
 
 export default FreeChampionsRotation

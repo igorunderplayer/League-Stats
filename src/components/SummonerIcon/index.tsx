@@ -12,7 +12,7 @@ const SummonerIcon: React.FC<Props> = ({ iconId = 0 }) => {
   return (
     <Image
       source={{
-        uri
+        uri,
       }}
       style={styles.image}
     />
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   image: {
     width: 56,
     height: 56,
-    borderRadius: 56 / 2
-  }
+    borderRadius: 56 / 2,
+  },
 })
 
 export default SummonerIcon

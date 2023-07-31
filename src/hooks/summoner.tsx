@@ -1,9 +1,14 @@
 import { AxiosError } from 'axios'
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react'
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from 'react'
 import Summoner from '../entities/Summoner'
 import usePersistedState from './usePersistedState'
 import riot from '../services/riot'
-
 
 type SummonerContextData = {
   name?: string
@@ -15,16 +20,15 @@ type SummonerContextData = {
 }
 
 type SummonerProviderProps = {
-  children: ReactNode;
+  children: ReactNode
 }
 
-export const SummonerContext = createContext({} as SummonerContextData);
+export const SummonerContext = createContext({} as SummonerContextData)
 
 function SummonerProvider({ children }: SummonerProviderProps) {
   const [summoner, setSummoner] = useState<Summoner>()
   const [name, setName] = usePersistedState<string>('name')
   const [region, setRegion] = usePersistedState<string>('region')
-
 
   useEffect(() => {
     console.log('aaaa')
@@ -38,7 +42,7 @@ function SummonerProvider({ children }: SummonerProviderProps) {
       if (!name?.length || !region?.length) return
       const res = await riot.getSummonerByName(name, region)
       setSummoner(res)
-      
+
       console.log('Summoner updated successfully', res)
     } catch (e) {
       if (e instanceof AxiosError) {
@@ -54,26 +58,25 @@ function SummonerProvider({ children }: SummonerProviderProps) {
   }
 
   return (
-    <SummonerContext.Provider value={{
-      summoner,
-      name,
-      region,
-      setName,
-      setRegion,
-      resetSummoner
-    }}>
+    <SummonerContext.Provider
+      value={{
+        summoner,
+        name,
+        region,
+        setName,
+        setRegion,
+        resetSummoner,
+      }}
+    >
       {children}
     </SummonerContext.Provider>
   )
 }
 
 function useSummoner() {
-  const context = useContext(SummonerContext);
+  const context = useContext(SummonerContext)
 
-  return context;
+  return context
 }
 
-export {
-  SummonerProvider,
-  useSummoner
-}
+export { SummonerProvider, useSummoner }

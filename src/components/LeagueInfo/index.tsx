@@ -8,8 +8,9 @@ type Props = {
 }
 
 const LeagueInfo: React.FC<Props> = ({ league }) => {
-
-  const winrate = (league.wins / (league.wins + league.losses) * 100).toFixed(1)
+  const winrate = ((league.wins / (league.wins + league.losses)) * 100).toFixed(
+    1,
+  )
 
   console.log(league)
 
@@ -18,16 +19,21 @@ const LeagueInfo: React.FC<Props> = ({ league }) => {
       <Image
         style={styles.leagueIcon}
         source={{
-          uri: `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-${league.tier?.toLowerCase()}.png`
+          uri: `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-${league.tier?.toLowerCase()}.png`,
         }}
       />
       <View style={styles.leagueInfo}>
         <Text style={styles.title}>
-          {`${LeagueTierNames[league.tier  as keyof typeof LeagueTierNames] ?? league.tier} ${league.rank}`}
+          {`${
+            LeagueTierNames[league.tier as keyof typeof LeagueTierNames] ??
+            league.tier
+          } ${league.rank}`}
         </Text>
 
         <Text style={styles.text}>
-          {LeagueQueueNames[league.queueType as keyof typeof LeagueQueueNames] ?? league.queueType}
+          {LeagueQueueNames[
+            league.queueType as keyof typeof LeagueQueueNames
+          ] ?? league.queueType}
         </Text>
 
         <Text></Text>
@@ -35,12 +41,21 @@ const LeagueInfo: React.FC<Props> = ({ league }) => {
         <Text style={styles.text}>Pontos de liga: {league.leaguePoints}</Text>
 
         <View style={styles.winrate}>
-          <Text style={styles.text}>Vitórias: <Text style={{ color: colors.softCyan, fontWeight: 'bold' }}>{league.wins}</Text></Text>
+          <Text style={styles.text}>
+            Vitórias:{' '}
+            <Text style={{ color: colors.softCyan, fontWeight: 'bold' }}>
+              {league.wins}
+            </Text>
+          </Text>
           <Text style={styles.text}>({winrate}%)</Text>
         </View>
 
-        <Text style={styles.text}>Derrotas: <Text style={{ color: colors.softRed, fontWeight: 'bold' }}>{league.losses}</Text></Text>
-
+        <Text style={styles.text}>
+          Derrotas:{' '}
+          <Text style={{ color: colors.softRed, fontWeight: 'bold' }}>
+            {league.losses}
+          </Text>
+        </Text>
       </View>
     </View>
   )
@@ -54,7 +69,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#ffffff05',
     alignItems: 'center',
-    gap: 12
+    gap: 12,
   },
   leagueInfo: {
     flexDirection: 'column',
@@ -62,21 +77,21 @@ const styles = StyleSheet.create({
   title: {
     color: colors.white,
     fontSize: 18,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   text: {
-    color: '#ffffff60'
+    color: '#ffffff60',
   },
   leagueIcon: {
     width: 256,
     height: 256,
     marginVertical: -64,
-    marginHorizontal: -72
+    marginHorizontal: -72,
   },
   winrate: {
     flexDirection: 'row',
-    gap: 12
-  }
+    gap: 12,
+  },
 })
 
 export default LeagueInfo

@@ -1,4 +1,8 @@
-import { CompositeNavigationProp, RouteProp, useNavigation } from '@react-navigation/native'
+import {
+  CompositeNavigationProp,
+  RouteProp,
+  useNavigation,
+} from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { useCallback, useEffect, useState } from 'react'
 import { StyleSheet, View, Text, FlatList } from 'react-native'
@@ -11,7 +15,7 @@ import MatchInfo from './MatchInfo'
 import riot from '../services/riot'
 
 type HistoryStackParamList = {
-  historyDefault: undefined,
+  historyDefault: undefined
   matchInfo: {
     matchId: string
   }
@@ -22,15 +26,17 @@ const Stack = createNativeStackNavigator<HistoryStackParamList>()
 export default function HistoryRouter() {
   return (
     <View style={{ flex: 1, backgroundColor: themes.dark.background }}>
-      <Stack.Navigator initialRouteName='historyDefault' screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="historyDefault" component={History} />
+      <Stack.Navigator
+        initialRouteName='historyDefault'
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name='historyDefault' component={History} />
 
-        <Stack.Screen name="matchInfo" component={MatchInfo} />
+        <Stack.Screen name='matchInfo' component={MatchInfo} />
       </Stack.Navigator>
     </View>
-  );
+  )
 }
-
 
 function History() {
   const navigation = useNavigation()
@@ -41,7 +47,7 @@ function History() {
 
   const handleOnClickMatch = useCallback((match: Match) => {
     navigation.navigate('matchInfo', {
-      matchId: match.metadata.matchId
+      matchId: match.metadata.matchId,
     })
   }, [])
 
@@ -49,12 +55,15 @@ function History() {
     if (!region || !summoner) return
 
     try {
-      riot.getMatchesByPuuid(summoner.puuid, { count: 10 })
+      riot
+        .getMatchesByPuuid(summoner.puuid, { count: 10 })
         .then(async (data) => {
-          const matches = await Promise.all(data.map(async matchId => {
-            const match = await riot.getMatchById(matchId)
-            return match
-          }))
+          const matches = await Promise.all(
+            data.map(async (matchId) => {
+              const match = await riot.getMatchById(matchId)
+              return match
+            }),
+          )
 
           setMatches(matches)
         })
@@ -69,17 +78,21 @@ function History() {
     setLoading(true)
 
     try {
-      const more = await riot.getMatchesByPuuid(summoner.puuid, {
-        count: 10,
-        start: matches.length
-      }).then(async (data) => {
-        return await Promise.all(data.map(async matchId => {
-          const match = await riot.getMatchById(matchId)
-          return match
-        }))
-      })
+      const more = await riot
+        .getMatchesByPuuid(summoner.puuid, {
+          count: 10,
+          start: matches.length,
+        })
+        .then(async (data) => {
+          return await Promise.all(
+            data.map(async (matchId) => {
+              const match = await riot.getMatchById(matchId)
+              return match
+            }),
+          )
+        })
 
-      setMatches(val => [...val, ...more])
+      setMatches((val) => [...val, ...more])
     } finally {
       setLoading(false)
     }
@@ -87,18 +100,18 @@ function History() {
 
   return (
     <View style={styles.container}>
-
       <FlatList
         style={styles.matchList}
         contentContainerStyle={styles.matchListContainer}
         keyExtractor={(item) => item.metadata.matchId}
         data={matches}
-        renderItem={({ item }) => <MatchInfoCard match={item} onClick={handleOnClickMatch} />}
+        renderItem={({ item }) => (
+          <MatchInfoCard match={item} onClick={handleOnClickMatch} />
+        )}
         onEndReached={loadMoreMatches}
       />
-
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -106,13 +119,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: themes.dark.background,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   matchList: {
-    width: '100%'
+    width: '100%',
   },
   matchListContainer: {
     alignItems: 'center',
-    justifyContent: 'space-between'
-  }
-});
+    justifyContent: 'space-between',
+  },
+})

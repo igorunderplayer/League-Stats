@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from 'axios';
+import axios, { AxiosInstance } from 'axios'
 
 interface DDragonCache {
   versions: {
@@ -15,19 +15,19 @@ class DDragon {
   #cache: DDragonCache = {
     versions: {
       gotAt: 0,
-      data: undefined 
-    }
+      data: undefined,
+    },
   }
 
   constructor() {
     this.api = axios.create({
       baseURL: this.#baseURL,
-   })
+    })
   }
 
   get versions() {
     const versions = this.#cache.versions.data
-    
+
     if (!versions) {
       this.fetchVersions()
       return null
@@ -39,7 +39,7 @@ class DDragon {
   getIcon(iconId: number) {
     const versions = this.versions
 
-    if (!versions) 
+    if (!versions)
       return this.#baseURL + `/cdn/13.14.1/img/profileicon/${iconId}.png`
 
     return this.#baseURL + `/cdn/${versions[0]}/img/profileicon/${iconId}.png`
@@ -51,7 +51,7 @@ class DDragon {
 
       this.#cache.versions = {
         gotAt: Date.now(),
-        data: versions
+        data: versions,
       }
 
       return versions

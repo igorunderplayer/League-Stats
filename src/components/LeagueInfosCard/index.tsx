@@ -14,23 +14,20 @@ const LeagueInfosCard: React.FC = () => {
 
   useEffect(() => {
     if (!region || !summoner) return
-    riot.getSummonerLeague(summoner?.id)
-      .then(leagues => {
-        setLeagues(leagues.filter(l => l.queueType != 'CHERRY'))
-      })
+    riot.getSummonerLeague(summoner?.id).then((leagues) => {
+      setLeagues(leagues.filter((l) => l.queueType != 'CHERRY'))
+    })
   }, [])
 
   if (!leagues?.length) return <></>
 
   return (
     <View style={styles.container}>
-
       <Text style={styles.title}>Classificação pessoal</Text>
-      
-      {leagues.map(league => (
+
+      {leagues.map((league) => (
         <LeagueInfo key={league.queueType} league={league} />
       ))}
-
     </View>
   )
 }
@@ -43,15 +40,15 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: '#ffffff05',
     alignItems: 'center',
-    gap: 12
+    gap: 12,
   },
   title: {
     color: colors.white,
     alignSelf: 'flex-start',
     fontSize: 22,
     fontWeight: 'bold',
-    padding: 8
-  }
+    padding: 8,
+  },
 })
 
 export default LeagueInfosCard

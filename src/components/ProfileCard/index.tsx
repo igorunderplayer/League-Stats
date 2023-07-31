@@ -15,7 +15,6 @@ const ProfileCard: React.FC = () => {
         <Text style={styles.name}>{summoner?.name}</Text>
         <Text style={styles.level}>Nível {summoner?.summonerLevel}</Text>
       </View>
-
     </View>
   )
 }
@@ -27,20 +26,20 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     flexDirection: 'row',
     backgroundColor: '#ffffff05',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   textInfo: {
     flexDirection: 'column',
-    padding: 12
+    padding: 12,
   },
   name: {
     color: colors.white,
     fontSize: 18,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   level: {
-    color: '#ffffff60'
-  }
+    color: '#ffffff60',
+  },
 })
 
 export default ProfileCard

@@ -6,7 +6,6 @@ import { StatusBar } from 'expo-status-bar'
 import riot from './src/services/riot'
 
 export default function App() {
-
   useEffect(() => {
     riot.ddragon.getOrFetchVersions()
   }, [])
@@ -16,5 +15,5 @@ export default function App() {
       <Routes />
       <StatusBar style='auto' />
     </SummonerProvider>
-  )  
+  )
 }

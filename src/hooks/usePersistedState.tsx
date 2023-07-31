@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
-
-export default function usePersistedState<T>(key: string, defaultValue: T = null as T): [T, React.Dispatch<React.SetStateAction<T>>] {
+export default function usePersistedState<T>(
+  key: string,
+  defaultValue: T = null as T,
+): [T, React.Dispatch<React.SetStateAction<T>>] {
   const [value, setValue] = useState<T>(defaultValue)
 
   function setItemInStorage(key: string, value: T) {
@@ -14,17 +16,16 @@ export default function usePersistedState<T>(key: string, defaultValue: T = null
   }
 
   useEffect(() => {
-    AsyncStorage.getItem(key)
-      .then(storedValue => {
-        if (storedValue == null) return setItemInStorage(key, defaultValue)
+    AsyncStorage.getItem(key).then((storedValue) => {
+      if (storedValue == null) return setItemInStorage(key, defaultValue)
 
-        try {
-          const storedValueObject = JSON.parse(storedValue) as T
-          setValue(storedValueObject)
-        } catch {
-          setValue(storedValue as T)
-        }
-      })
+      try {
+        const storedValueObject = JSON.parse(storedValue) as T
+        setValue(storedValueObject)
+      } catch {
+        setValue(storedValue as T)
+      }
+    })
   }, [])
 
   useEffect(() => {

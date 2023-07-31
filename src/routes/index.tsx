@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { useSummoner } from '../hooks/summoner'
-import InsertName from '../screens/InsertName'
 import TabRoutes from './tab.routes'
 import Welcome from '../screens/Welcome'
 

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
-import { useSummoner } from '../hooks/summoner';
-import themes from '../themes';
+import { useSummoner } from '../hooks/summoner'
+import themes from '../themes'
 
 export default function TestScreen() {
   const { summoner } = useSummoner()
@@ -12,9 +12,8 @@ export default function TestScreen() {
       <Text style={styles.text}>Invocador: {summoner?.name}</Text>
       <Text style={styles.text}>Nível: {summoner?.summonerLevel}</Text>
       <Text style={styles.text}>ID: {summoner?.id}</Text>
-
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -25,12 +24,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    color: '#fff'
+    color: '#fff',
   },
   inputsContainer: {
     backgroundColor: '#444',
     height: 48,
     width: 256,
-    flexDirection: 'row'
-  }
-});
+    flexDirection: 'row',
+  },
+})
