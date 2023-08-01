@@ -30,9 +30,15 @@ export default function HistoryRouter() {
         initialRouteName='historyDefault'
         screenOptions={{ headerShown: false }}
       >
-        <Stack.Screen name='historyDefault' component={History} />
+        <Stack.Screen
+          name='historyDefault'
+          component={History}
+        />
 
-        <Stack.Screen name='matchInfo' component={MatchInfo} />
+        <Stack.Screen
+          name='matchInfo'
+          component={MatchInfo}
+        />
       </Stack.Navigator>
     </View>
   )
@@ -106,7 +112,10 @@ function History() {
         keyExtractor={(item) => item.metadata.matchId}
         data={matches}
         renderItem={({ item }) => (
-          <MatchInfoCard match={item} onClick={handleOnClickMatch} />
+          <MatchInfoCard
+            match={item}
+            onClick={handleOnClickMatch}
+          />
         )}
         onEndReached={loadMoreMatches}
       />

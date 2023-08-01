@@ -23,7 +23,10 @@ const MasteryChartCard: React.FC<Props> = ({ region = '', name = '' }) => {
   }, [])
 
   return (
-    <TouchableOpacity style={styles.container} onPress={handleOnClick}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={handleOnClick}
+    >
       <Image
         resizeMode='center'
         style={styles.logo}
@@ -32,7 +35,11 @@ const MasteryChartCard: React.FC<Props> = ({ region = '', name = '' }) => {
 
       <Text style={styles.text}>Mastery Chart</Text>
 
-      <MaterialIcons name='chevron-right' size={28} color='#fff' />
+      <MaterialIcons
+        name='chevron-right'
+        size={28}
+        color='#fff'
+      />
     </TouchableOpacity>
   )
 }

@@ -67,7 +67,10 @@ const ChampionItem = ({ item }: ItemProps) => {
   }
 
   return (
-    <TouchableOpacity style={styles.itemContainer} onPress={openChampionURL}>
+    <TouchableOpacity
+      style={styles.itemContainer}
+      onPress={openChampionURL}
+    >
       <Image
         style={{ width: 48, height: 48 }}
         source={{

@@ -23,14 +23,21 @@ const LeagueOfGraphsCard: React.FC<Props> = ({ region = '', name = '' }) => {
   }, [])
 
   return (
-    <TouchableOpacity style={styles.container} onPress={handleOnClick}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={handleOnClick}
+    >
       <Image
         resizeMode='center'
         style={styles.logo}
         source={require('../../../assets/leagueofgraphslogo.png')}
       />
 
-      <MaterialIcons name='chevron-right' size={28} color='#fff' />
+      <MaterialIcons
+        name='chevron-right'
+        size={28}
+        color='#fff'
+      />
     </TouchableOpacity>
   )
 }

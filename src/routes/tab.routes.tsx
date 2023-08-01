@@ -47,7 +47,13 @@ export default function TabRoutes() {
         options={{
           title: 'Início',
           tabBarIcon: ({ color, size }) => {
-            return <MaterialIcons name='home' size={size} color={color} />
+            return (
+              <MaterialIcons
+                name='home'
+                size={size}
+                color={color}
+              />
+            )
           },
         }}
       />
@@ -58,7 +64,13 @@ export default function TabRoutes() {
         options={{
           title: 'Histórico',
           tabBarIcon: ({ color, size }) => {
-            return <MaterialIcons name='history' size={size} color={color} />
+            return (
+              <MaterialIcons
+                name='history'
+                size={size}
+                color={color}
+              />
+            )
           },
         }}
       />
@@ -69,7 +81,13 @@ export default function TabRoutes() {
         options={{
           title: 'Perfil',
           tabBarIcon: ({ color, size }) => {
-            return <MaterialIcons name='person' size={size} color={color} />
+            return (
+              <MaterialIcons
+                name='person'
+                size={size}
+                color={color}
+              />
+            )
           },
         }}
       />

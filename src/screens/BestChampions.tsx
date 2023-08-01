@@ -29,7 +29,10 @@ export default function BestChampions() {
 
       <ScrollView style={styles.maestries}>
         {maestries.map((mastery) => (
-          <ChampionMasteryCard key={mastery.championId} mastery={mastery} />
+          <ChampionMasteryCard
+            key={mastery.championId}
+            mastery={mastery}
+          />
         ))}
       </ScrollView>
     </View>

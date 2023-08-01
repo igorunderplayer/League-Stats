@@ -79,11 +79,17 @@ export default function Welcome() {
         />
       </View>
 
-      <TouchableOpacity onPress={handleOnPress} style={styles.button}>
+      <TouchableOpacity
+        onPress={handleOnPress}
+        style={styles.button}
+      >
         <Text style={styles.subTitle}>Continuar</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={handleOnPressDelete} style={styles.button}>
+      <TouchableOpacity
+        onPress={handleOnPressDelete}
+        style={styles.button}
+      >
         <Text style={styles.subTitle}>Delete data</Text>
       </TouchableOpacity>
     </View>

@@ -26,7 +26,10 @@ const LeagueInfosCard: React.FC = () => {
       <Text style={styles.title}>Classificação pessoal</Text>
 
       {leagues.map((league) => (
-        <LeagueInfo key={league.queueType} league={league} />
+        <LeagueInfo
+          key={league.queueType}
+          league={league}
+        />
       ))}
     </View>
   )

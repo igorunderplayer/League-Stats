@@ -36,12 +36,19 @@ const MasteriesCard: React.FC = () => {
       >
         <Text style={styles.title}>Melhores campeões</Text>
 
-        <MaterialIcons name='chevron-right' size={28} color='#fff' />
+        <MaterialIcons
+          name='chevron-right'
+          size={28}
+          color='#fff'
+        />
       </TouchableOpacity>
 
       <View style={styles.maestries}>
         {maestries.map((mastery) => (
-          <ChampionMasteryCard key={mastery.championId} mastery={mastery} />
+          <ChampionMasteryCard
+            key={mastery.championId}
+            mastery={mastery}
+          />
         ))}
       </View>
     </View>

@@ -20,9 +20,15 @@ export default function ProfileRoutes() {
         initialRouteName='profileDefault'
         screenOptions={{ headerShown: false }}
       >
-        <Stack.Screen name='profileDefault' component={Profile} />
+        <Stack.Screen
+          name='profileDefault'
+          component={Profile}
+        />
 
-        <Stack.Screen name='bestChampions' component={BestChampions} />
+        <Stack.Screen
+          name='bestChampions'
+          component={BestChampions}
+        />
       </Stack.Navigator>
     </View>
   )
@@ -40,12 +46,6 @@ function Profile() {
         gap: 8,
       }}
     >
-      <View style={styles.row}>
-        <OPGGCard region={region} name={name} />
-        <LeagueOfGraphsCard region={region} name={name} />
-        <MasteryChartCard region={region} name={name} />
-      </View>
-
       <ProfileCard />
       <LeaguesInfoCard />
       <MasteriesCard />

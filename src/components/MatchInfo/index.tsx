@@ -52,7 +52,10 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
   }, [])
 
   return (
-    <TouchableOpacity style={styles.container} onPress={handleOnClick}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={handleOnClick}
+    >
       <View
         style={[
           styles.leftBar,
@@ -150,7 +153,11 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
       </View>
 
       <View style={{ alignItems: 'center' }}>
-        <SimpleKDA kills={me.kills} deaths={me.deaths} assists={me.assists} />
+        <SimpleKDA
+          kills={me.kills}
+          deaths={me.deaths}
+          assists={me.assists}
+        />
 
         <Text style={styles.subText}>
           {isNaN(combatScore) ? 0 : combatScore.toFixed(1)}% atuação em abates

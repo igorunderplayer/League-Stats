@@ -17,13 +17,20 @@ const OPGGCard: React.FC<Props> = ({ region = '', name = '' }) => {
   }, [])
 
   return (
-    <TouchableOpacity style={styles.container} onPress={handleOnClick}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={handleOnClick}
+    >
       <Image
         style={styles.logo}
         resizeMode='center'
         source={require('../../../assets/opgglogo.png')}
       />
-      <MaterialIcons name='chevron-right' size={28} color='#fff' />
+      <MaterialIcons
+        name='chevron-right'
+        size={28}
+        color='#fff'
+      />
     </TouchableOpacity>
   )
 }
