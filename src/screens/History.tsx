@@ -1,15 +1,10 @@
-import {
-  CompositeNavigationProp,
-  RouteProp,
-  useNavigation,
-} from '@react-navigation/native'
+import React, { useCallback, useEffect, useState } from 'react'
+import { useNavigation } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { useCallback, useEffect, useState } from 'react'
-import { StyleSheet, View, Text, FlatList } from 'react-native'
+import { StyleSheet, View, FlatList } from 'react-native'
 import { Match } from '../@types/riot'
 import MatchInfoCard from '../components/MatchInfo'
 import { useSummoner } from '../hooks/summoner'
-import Riot from '../services/riot'
 import themes from '../themes'
 import MatchInfo from './MatchInfo'
 import riot from '../services/riot'

@@ -1,5 +1,5 @@
-import { useNavigation, useRoute } from '@react-navigation/native'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useRoute } from '@react-navigation/native'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import { Match } from '../@types/riot'
 import colors from '../colors'
@@ -10,9 +10,7 @@ import riot from '../services/riot'
 
 export default function MatchInfo() {
   const route = useRoute()
-  const navigation = useNavigation()
   const { summoner, region } = useSummoner()
-
   const [match, setMatch] = useState<Match>()
 
   useEffect(() => {

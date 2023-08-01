@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 import colors from '../../colors'
 import ChampionMastery from '../../entities/ChampionMastery'
@@ -11,14 +11,24 @@ type Props = {
   mastery: ChampionMastery
 }
 
+type Champion = {
+  name: string
+  key: string
+  id: string
+}
+
 const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
-  const [champion, setChampion] = useState<any>({})
+  const [champion, setChampion] = useState<Champion>({} as Champion)
 
   const [locale] = getLocales()
 
   useEffect(() => {
     const values = Object.values(champions.data)
-    setChampion(values.find((champ) => champ.key == String(mastery.championId)))
+    setChampion(
+      values.find(
+        (champ) => champ.key == String(mastery.championId),
+      ) as Champion,
+    )
   }, [])
 
   return (

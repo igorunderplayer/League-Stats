@@ -1,3 +1,4 @@
+import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { useSummoner } from '../hooks/summoner'
 import themes from '../themes'

@@ -1,3 +1,4 @@
+import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import colors from '../../colors'
 
@@ -10,9 +11,9 @@ type Props = {
 }
 
 const SimpleKDA: React.FC<Props> = ({
-  kills,
-  deaths,
-  assists,
+  kills = 0,
+  deaths = 0,
+  assists = 0,
   textSize = 16,
   bold = true,
 }) => {

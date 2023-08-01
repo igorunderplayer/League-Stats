@@ -1,3 +1,4 @@
+import React from 'react'
 import { View, StyleSheet, Image } from 'react-native'
 import colors from '../../colors'
 
@@ -8,7 +9,7 @@ type Props = {
 const ParticipantItems: React.FC<Props> = ({ items }) => {
   return (
     <View style={styles.container}>
-      {items.map((item, index) => (
+      {items.map((item) => (
         <Image
           key={item.slot}
           style={styles.image}

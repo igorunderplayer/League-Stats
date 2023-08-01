@@ -1,6 +1,6 @@
+import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Profile from '../screens/Profile'
-import TestScreen from '../screens/TestScreen'
 import History from '../screens/History'
 
 import { MaterialIcons } from '@expo/vector-icons'

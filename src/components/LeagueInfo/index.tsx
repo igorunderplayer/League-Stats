@@ -1,3 +1,4 @@
+import React from 'react'
 import { View, StyleSheet, Text, Image } from 'react-native'
 import { LeagueEntry } from '../../@types/riot'
 import colors from '../../colors'

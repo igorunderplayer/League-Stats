@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import {
   StyleSheet,
   Text,
@@ -7,7 +7,6 @@ import {
   View,
 } from 'react-native'
 import { useSummoner } from '../hooks/summoner'
-import Riot from '../services/riot'
 import themes from '../themes'
 import riot from '../services/riot'
 

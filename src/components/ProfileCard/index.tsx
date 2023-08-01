@@ -1,8 +1,8 @@
+import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import colors from '../../colors'
 import { useSummoner } from '../../hooks/summoner'
 import SummonerIcon from '../SummonerIcon'
-import riot from '../../services/riot'
 
 const ProfileCard: React.FC = () => {
   const { summoner } = useSummoner()

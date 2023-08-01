@@ -1,3 +1,4 @@
+import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { StyleSheet, View, ScrollView } from 'react-native'
 import colors from '../colors'
@@ -6,10 +7,6 @@ import ProfileCard from '../components/ProfileCard'
 import LeaguesInfoCard from '../components/LeagueInfosCard'
 import themes from '../themes'
 import BestChampions from './BestChampions'
-import OPGGCard from '../components/OPGGCard'
-import { useSummoner } from '../hooks/summoner'
-import LeagueOfGraphsCard from '../components/LeagueOfGraphsCard'
-import MasteryChartCard from '../components/MasteryChartCard'
 
 const Stack = createNativeStackNavigator()
 
@@ -35,8 +32,6 @@ export default function ProfileRoutes() {
 }
 
 function Profile() {
-  const { name, region } = useSummoner()
-
   return (
     <ScrollView
       style={styles.container}

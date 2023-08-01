@@ -1,5 +1,6 @@
+import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
-import { Match, MatchParticipant } from '../../@types/riot'
+import { MatchParticipant } from '../../@types/riot'
 
 import ParticipantItems from '../ParticipantItems'
 import SimpleKDA from '../SimpleKDA'
@@ -9,7 +10,6 @@ import runes from '../../runes.json'
 import colors from '../../colors'
 
 type Props = {
-  match: Match
   participant: MatchParticipant
 }
 
@@ -17,7 +17,7 @@ const nameFilter = {
   FiddleSticks: 'Fiddlesticks',
 }
 
-const MatchParticipantInfo: React.FC<Props> = ({ match, participant }) => {
+const MatchParticipantInfo: React.FC<Props> = ({ participant }) => {
   const primaryMainRune = participant.perks.styles[0].selections[0].perk
   const runeIconPath =
     runes.find((rune) => rune.id == primaryMainRune)?.icon.toLowerCase() ?? ''

@@ -1,5 +1,4 @@
-import { useNavigation } from '@react-navigation/native'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { LeagueEntry } from '../../@types/riot'
 import colors from '../../colors'

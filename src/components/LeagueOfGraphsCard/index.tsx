@@ -1,11 +1,5 @@
-import { useCallback } from 'react'
-import {
-  StyleSheet,
-  TouchableOpacity,
-  Text,
-  Image,
-  Linking,
-} from 'react-native'
+import React, { useCallback } from 'react'
+import { StyleSheet, TouchableOpacity, Image, Linking } from 'react-native'
 
 import { MaterialIcons } from '@expo/vector-icons'
 import colors from '../../colors'
