@@ -9,10 +9,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import { ChampionData } from '../../@types/riot'
-import colors from '../../colors'
-import { useSummoner } from '../../hooks/summoner'
-import riot from '../../services/riot'
+import { ChampionData } from '../../../@types/riot'
+import colors from '../../../colors'
+import { useSummoner } from '../../../hooks/summoner'
+import riot from '../../../services/riot'
 
 const FreeChampionsRotation: React.FC = () => {
   const { region, summoner } = useSummoner()

@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import FreeChampionsRotation from '../components/FreeChampionsRotation'
+import FreeChampionsRotation from '../components/cards/FreeChampionsRotation'
 import themes from '../themes'
 
 export default function Home() {

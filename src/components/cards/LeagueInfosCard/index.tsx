@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import { LeagueEntry } from '../../@types/riot'
-import colors from '../../colors'
-import { useSummoner } from '../../hooks/summoner'
-import LeagueInfo from '../LeagueInfo'
-import riot from '../../services/riot'
+import { StyleSheet, Text, View } from 'react-native'
+import { LeagueEntry } from '../../../@types/riot'
+import colors from '../../../colors'
+import { useSummoner } from '../../../hooks/summoner'
+import riot from '../../../services/riot'
+import LeagueInfo from '../../items/LeagueInfo'
 
 const LeagueInfosCard: React.FC = () => {
   const { region, summoner } = useSummoner()

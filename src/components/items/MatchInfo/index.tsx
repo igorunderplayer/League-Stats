@@ -1,15 +1,16 @@
 import React, { useCallback } from 'react'
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
-import { Match } from '../../@types/riot'
-import colors from '../../colors'
-import { useSummoner } from '../../hooks/summoner'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Match } from '../../../@types/riot'
+import colors from '../../../colors'
+import { useSummoner } from '../../../hooks/summoner'
 
-import runes from '../../runes.json'
-import spells from '../../spells.json'
-import SimpleKDA from '../SimpleKDA'
+import runes from '../../../runes.json'
+import spells from '../../../spells.json'
+import SimpleKDA from '../../generic/SimpleKDA'
 
 type Props = {
   match: Match
+  // eslint-disable-next-line no-unused-vars
   onClick: (match: Match) => unknown
 }
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import colors from '../colors'
-import ChampionMasteryCard from '../components/ChampionMastery'
+import ChampionMasteryCard from '../components/items/ChampionMastery'
 import ChampionMastery from '../entities/ChampionMastery'
 import { useSummoner } from '../hooks/summoner'
-import themes from '../themes'
 import riot from '../services/riot'
+import themes from '../themes'
 
 export default function BestChampions() {
   const { summoner, region } = useSummoner()

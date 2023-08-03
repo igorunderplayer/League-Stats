@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, StyleSheet, Image } from 'react-native'
-import colors from '../../colors'
+import { Image, StyleSheet, View } from 'react-native'
+import colors from '../../../colors'
 
 type Props = {
   items: { item: number; slot: number }[]

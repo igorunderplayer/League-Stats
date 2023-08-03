@@ -41,12 +41,10 @@ class Riot {
   }
 
   async getSummonerByName(name: string, region = this.defaultRegion) {
-    const res = await this.request({
+    const res = await this.request<Summoner>({
       url: `/lol/summoner/v4/summoners/by-name/${name}`,
       region,
     })
-
-    console.log(res.data)
 
     return new Summoner(res.data)
   }
@@ -85,6 +83,7 @@ class Riot {
     options: GetMatchesOptions = {},
     shard = this.defaultShard,
   ): Promise<string[]> {
+    console.log('Fetching matches for puuid: ', puuid)
     const params = new URLSearchParams()
 
     for (const option in options) {

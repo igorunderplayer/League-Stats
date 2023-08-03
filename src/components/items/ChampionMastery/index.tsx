@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
-import colors from '../../colors'
-import ChampionMastery from '../../entities/ChampionMastery'
+import colors from '../../../colors'
+import ChampionMastery from '../../../entities/ChampionMastery'
 
 import { getLocales } from 'expo-localization'
 
-import riot from '../../services/riot'
+import riot from '../../../services/riot'
 
 type Props = {
   mastery: ChampionMastery

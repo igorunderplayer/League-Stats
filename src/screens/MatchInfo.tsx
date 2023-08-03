@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
 import { useRoute } from '@react-navigation/native'
+import React, { useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import { Match } from '../@types/riot'
 import colors from '../colors'
-import MatchParticipantInfo from '../components/MatchParticipantInfo'
+import MatchParticipantInfo from '../components/items/MatchParticipantInfo'
 import { useSummoner } from '../hooks/summoner'
-import themes from '../themes'
 import riot from '../services/riot'
+import themes from '../themes'
 
 export default function MatchInfo() {
   const route = useRoute()

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import React, { useState } from 'react'
 import {
   StyleSheet,
   Text,
@@ -9,8 +9,8 @@ import {
   View,
 } from 'react-native'
 import { useSummoner } from '../hooks/summoner'
-import themes from '../themes'
 import riot from '../services/riot'
+import themes from '../themes'
 
 export default function Welcome() {
   const { setName, setRegion, resetSummoner } = useSummoner()
@@ -37,7 +37,7 @@ export default function Welcome() {
       alert(
         'Não foi possivel recuperar a conta, certifique-se que digitou corretamente',
       )
-      console.log(e)
+      console.error(e)
     }
   }
 

@@ -1,13 +1,13 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
-import { MatchParticipant } from '../../@types/riot'
+import { Image, StyleSheet, Text, View } from 'react-native'
+import { MatchParticipant } from '../../../@types/riot'
 
+import SimpleKDA from '../../generic/SimpleKDA'
 import ParticipantItems from '../ParticipantItems'
-import SimpleKDA from '../SimpleKDA'
 
-import spells from '../../spells.json'
-import runes from '../../runes.json'
-import colors from '../../colors'
+import colors from '../../../colors'
+import runes from '../../../runes.json'
+import spells from '../../../spells.json'
 
 type Props = {
   participant: MatchParticipant

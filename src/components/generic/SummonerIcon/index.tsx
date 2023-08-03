@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, StyleSheet } from 'react-native'
-import riot from '../../services/riot'
+import riot from '../../../services/riot'
 
 type Props = {
   iconId?: number

@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import colors from '../../colors'
+import { StyleSheet, Text, View } from 'react-native'
+import colors from '../../../colors'
 
 type Props = {
   kills: number

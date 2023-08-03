@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native'
 import { Match } from '../@types/riot'
 import colors from '../colors'
-import MatchInfoCard from '../components/MatchInfo'
+import MatchInfoCard from '../components/items/MatchInfo'
 import { useSummoner } from '../hooks/summoner'
 import riot from '../services/riot'
 import themes from '../themes'
@@ -47,8 +47,6 @@ function History() {
 
   const [loading, setLoading] = useState(true)
 
-  console.log(loading)
-
   const handleOnClickMatch = useCallback((match: Match) => {
     navigation.navigate('matchInfo', {
       matchId: match.metadata.matchId,
@@ -56,27 +54,30 @@ function History() {
   }, [])
 
   useEffect(() => {
-    if (!region || !summoner) return
+    loadMathes()
+  }, [])
 
+  async function loadMathes() {
+    if (!region || !summoner) return
     setLoading(true)
 
     try {
-      riot
+      const matches = await riot
         .getMatchesByPuuid(summoner.puuid, { count: 10 })
-        .then(async (data) => {
-          const matches = await Promise.all(
+        .then((data) => {
+          return Promise.all(
             data.map(async (matchId) => {
               const match = await riot.getMatchById(matchId)
               return match
             }),
           )
-
-          setMatches(matches)
         })
+
+      setMatches(matches)
     } finally {
       setLoading(false)
     }
-  }, [])
+  }
 
   async function loadMoreMatches() {
     if (!region || !summoner || loading) return

@@ -1,8 +1,8 @@
 import React from 'react'
-import { View, StyleSheet, Text, Image } from 'react-native'
-import { LeagueEntry } from '../../@types/riot'
-import colors from '../../colors'
-import { LeagueQueueNames, LeagueTierNames } from '../../constants'
+import { Image, StyleSheet, Text, View } from 'react-native'
+import { LeagueEntry } from '../../../@types/riot'
+import colors from '../../../colors'
+import { LeagueQueueNames, LeagueTierNames } from '../../../constants'
 
 type Props = {
   league: LeagueEntry
@@ -12,8 +12,6 @@ const LeagueInfo: React.FC<Props> = ({ league }) => {
   const winrate = ((league.wins / (league.wins + league.losses)) * 100).toFixed(
     1,
   )
-
-  console.log(league)
 
   return (
     <View style={styles.container}>

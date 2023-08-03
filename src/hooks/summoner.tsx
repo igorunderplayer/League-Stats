@@ -1,14 +1,14 @@
 import { AxiosError } from 'axios'
 import React, {
+  ReactNode,
   createContext,
   useContext,
-  useState,
-  ReactNode,
   useEffect,
+  useState,
 } from 'react'
 import Summoner from '../entities/Summoner'
-import usePersistedState from './usePersistedState'
 import riot from '../services/riot'
+import usePersistedState from './usePersistedState'
 
 type SummonerContextData = {
   name?: string
@@ -31,7 +31,6 @@ function SummonerProvider({ children }: SummonerProviderProps) {
   const [region, setRegion] = usePersistedState<string>('region')
 
   useEffect(() => {
-    console.log('aaaa')
     if (!summoner) {
       getSummoner()
     }
@@ -43,7 +42,7 @@ function SummonerProvider({ children }: SummonerProviderProps) {
       const res = await riot.getSummonerByName(name, region)
       setSummoner(res)
 
-      console.log('Summoner updated successfully', res)
+      console.log('Summoner updated successfully')
     } catch (e) {
       if (e instanceof AxiosError) {
         console.error({ ...e })
