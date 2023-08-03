@@ -59,9 +59,9 @@ function SummonerProvider({ children }: SummonerProviderProps) {
   return (
     <SummonerContext.Provider
       value={{
-        summoner,
         name,
         region,
+        summoner,
         setName,
         setRegion,
         resetSummoner,
