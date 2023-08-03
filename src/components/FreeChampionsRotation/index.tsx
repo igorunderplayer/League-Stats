@@ -1,28 +1,29 @@
+import * as Linking from 'expo-linking'
+import { getLocales } from 'expo-localization'
 import React, { useEffect, useState } from 'react'
 import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
   FlatList,
+  Image,
+  StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native'
-import * as Linking from 'expo-linking'
-import { useSummoner } from '../../hooks/summoner'
-import allChampions from '../../champions.json'
+import { ChampionData } from '../../@types/riot'
 import colors from '../../colors'
-import { getLocales } from 'expo-localization'
+import { useSummoner } from '../../hooks/summoner'
 import riot from '../../services/riot'
 
 const FreeChampionsRotation: React.FC = () => {
   const { region, summoner } = useSummoner()
-  const [champions, setChampions] = useState<any[]>([])
+  const [champions, setChampions] = useState<ChampionData[]>([])
 
   useEffect(() => {
     if (!region || !summoner) return
 
-    riot.getFreeChampionsIdRotation().then((ids) => {
-      const champValues = Object.values(allChampions.data)
+    riot.getFreeChampionsIdRotation().then(async (ids) => {
+      const allChampions = await riot.ddragon.getOrFetchChampions()
+      const champValues = Object.values(allChampions)
       const champions = ids.map((id) =>
         champValues.find((c) => c.key == String(id)),
       )
@@ -49,11 +50,7 @@ const FreeChampionsRotation: React.FC = () => {
 }
 
 type ItemProps = {
-  item: {
-    name: string
-    id: string
-    key: number
-  }
+  item: ChampionData
 }
 
 const ChampionItem = ({ item }: ItemProps) => {

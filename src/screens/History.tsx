@@ -1,13 +1,14 @@
-import React, { useCallback, useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { StyleSheet, View, FlatList } from 'react-native'
+import React, { useCallback, useEffect, useState } from 'react'
+import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native'
 import { Match } from '../@types/riot'
+import colors from '../colors'
 import MatchInfoCard from '../components/MatchInfo'
 import { useSummoner } from '../hooks/summoner'
+import riot from '../services/riot'
 import themes from '../themes'
 import MatchInfo from './MatchInfo'
-import riot from '../services/riot'
 
 type HistoryStackParamList = {
   historyDefault: undefined
@@ -42,9 +43,11 @@ export default function HistoryRouter() {
 function History() {
   const navigation = useNavigation()
   const { region, summoner } = useSummoner()
-  const [matches, setMatches] = useState<any[]>([])
+  const [matches, setMatches] = useState<Match[]>([])
 
   const [loading, setLoading] = useState(true)
+
+  console.log(loading)
 
   const handleOnClickMatch = useCallback((match: Match) => {
     navigation.navigate('matchInfo', {
@@ -54,6 +57,8 @@ function History() {
 
   useEffect(() => {
     if (!region || !summoner) return
+
+    setLoading(true)
 
     try {
       riot
@@ -114,6 +119,8 @@ function History() {
         )}
         onEndReached={loadMoreMatches}
       />
+
+      {loading ? <ActivityIndicator color={colors.softViolet} /> : null}
     </View>
   )
 }

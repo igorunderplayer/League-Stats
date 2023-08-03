@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'react-native'
 import colors from '../../colors'
 import ChampionMastery from '../../entities/ChampionMastery'
 
 import { getLocales } from 'expo-localization'
 
-import champions from '../../champions.json'
+import riot from '../../services/riot'
 
 type Props = {
   mastery: ChampionMastery
@@ -19,17 +19,21 @@ type Champion = {
 
 const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
   const [champion, setChampion] = useState<Champion>({} as Champion)
-
   const [locale] = getLocales()
 
   useEffect(() => {
-    const values = Object.values(champions.data)
+    findChampion()
+  }, [])
+
+  const findChampion = async () => {
+    const champions = await riot.ddragon.getOrFetchChampions()
+    const values = Object.values(champions)
     setChampion(
       values.find(
         (champ) => champ.key == String(mastery.championId),
       ) as Champion,
     )
-  }, [])
+  }
 
   return (
     <View style={styles.container}>

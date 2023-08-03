@@ -1,3 +1,21 @@
+// DDragon
+export interface DDragonChampionsRaw {
+  [key: string]: ChampionData
+}
+
+export interface ChampionData {
+  id: string
+  key: string
+  name: string
+  title: string
+  image: {
+    full: string
+    sprite: string
+  }
+}
+
+
+// League of Legends
 export interface LeagueEntry {
   leagueId: string
   summonerId: string

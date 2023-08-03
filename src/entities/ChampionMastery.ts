@@ -9,15 +9,15 @@ export default class ChampionMastery {
   championPointsSinceLastLevel: number
   tokensEarned: number
 
-  constructor(data: any = {}) {
-    this.championPointsUntilNextLevel = data.championPointsUntilNextLevel
-    this.chestGranted = data.chestGranted
-    this.championId = data.championId
-    this.lastPlayTime = data.lastPlayTime
-    this.championLevel = data.championLevel
-    this.summonerId = data.summonerId
-    this.championPoints = data.championPoints
-    this.championPointsSinceLastLevel = data.championPointsSinceLastLevel
-    this.tokensEarned = data.tokensEarned
+  constructor(data: Partial<ChampionMastery> = {}) {
+    this.championPointsUntilNextLevel = data.championPointsUntilNextLevel ?? 0
+    this.chestGranted = data.chestGranted ?? false
+    this.championId = data.championId ?? 0
+    this.lastPlayTime = data.lastPlayTime ?? 0
+    this.championLevel = data.championLevel ?? 0
+    this.summonerId = data.summonerId ?? ''
+    this.championPoints = data.championPoints ?? 0
+    this.championPointsSinceLastLevel = data.championPointsSinceLastLevel ?? 0
+    this.tokensEarned = data.tokensEarned ?? 0
   }
 }

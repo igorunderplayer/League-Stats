@@ -1,19 +1,45 @@
-import { useEffect } from 'react'
+import * as SplashScreen from 'expo-splash-screen'
+import { StatusBar } from 'expo-status-bar'
+import React, { useCallback, useEffect, useState } from 'react'
+import { View } from 'react-native'
 import { SummonerProvider } from './src/hooks/summoner'
 import { Routes } from './src/routes'
-
-import { StatusBar } from 'expo-status-bar'
 import riot from './src/services/riot'
 
+SplashScreen.preventAutoHideAsync()
+
 export default function App() {
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
-    riot.ddragon.getOrFetchVersions()
+    setupCache()
   }, [])
+
+  // Load static data from ddragon and set on cache
+  async function setupCache() {
+    await riot.ddragon.getOrFetchVersions()
+    await riot.ddragon.getOrFetchChampions()
+
+    setLoading(false)
+  }
+
+  const onLayoutRootView = useCallback(async () => {
+    if (!loading) {
+      await SplashScreen.hideAsync()
+    }
+  }, [loading])
+
+  if (loading) return null
 
   return (
     <SummonerProvider>
-      <Routes />
-      <StatusBar style='auto' />
+      <View
+        onLayout={onLayoutRootView}
+        style={{ flex: 1 }}
+      >
+        <Routes />
+        <StatusBar style='auto' />
+      </View>
     </SummonerProvider>
   )
 }

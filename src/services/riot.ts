@@ -1,9 +1,9 @@
 import axios, { AxiosInstance, AxiosResponse } from 'axios'
 
 import { RIOT_API_KEY } from '@env'
-import Summoner from '../entities/Summoner'
+import { LeagueEntry, Match } from '../@types/riot'
 import ChampionMastery from '../entities/ChampionMastery'
-import { LeagueEntry } from '../@types/riot'
+import Summoner from '../entities/Summoner'
 import ddragonApi from './ddragon'
 
 interface GetMatchesOptions {
@@ -95,7 +95,7 @@ class Riot {
       params.append(option, value.toString())
     }
 
-    const res = await this.request({
+    const res = await this.request<string[]>({
       url: `/lol/match/v5/matches/by-puuid/${puuid}/ids?${params.toString()}`,
       shard,
     })
@@ -104,7 +104,7 @@ class Riot {
   }
 
   async getMatchById(matchId: string, shard = this.defaultShard) {
-    const res = await this.request({
+    const res = await this.request<Match>({
       url: `/lol/match/v5/matches/${matchId}`,
       shard,
     })
@@ -112,7 +112,7 @@ class Riot {
     return res.data
   }
 
-  async request<T = any>(options: RequestOptions): Promise<AxiosResponse<T>> {
+  async request<T = unknown>(options: RequestOptions): Promise<AxiosResponse<T>> {
     const _options: RequestOptions = {
       shard: 'americas',
     }
