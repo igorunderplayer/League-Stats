@@ -66,6 +66,7 @@ export interface MatchParticipant {
   champLevel: number
   role: string
   teamId: number
+  teamPosition : 'TOP' | 'JUNGLE' | 'MIDDLE' | 'BOTTOM' | 'UTILITY'
 
   // kda
   assists: number

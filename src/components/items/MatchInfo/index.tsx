@@ -4,6 +4,7 @@ import { Match } from '../../../@types/riot'
 import colors from '../../../colors'
 import { useSummoner } from '../../../hooks/summoner'
 
+import getCombatScore from '../../../functions/combatScore'
 import runes from '../../../runes.json'
 import spells from '../../../spells.json'
 import SimpleKDA from '../../generic/SimpleKDA'
@@ -33,13 +34,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
     .filter((participant) => participant.teamId == myTeam?.teamId)
     .reduce((prev, curr) => prev + curr.kills, 0)
 
-  const combatScoreCalc = ((me.kills + me.assists) / myTeamKills) * 100
-
-  const combatScore = isNaN(combatScoreCalc)
-    ? 0
-    : !isFinite(combatScoreCalc)
-    ? 100
-    : combatScoreCalc
+  const combatScore = getCombatScore(me.kills, me.assists, myTeamKills)
 
   const gameMode = {
     ARAM: 'ARAM',

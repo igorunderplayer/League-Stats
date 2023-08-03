@@ -57,6 +57,16 @@ class DDragon {
     return this.#baseURL + `/cdn/${versions[0]}/img/profileicon/${iconId}.png`
   }
 
+  getChampionIcon(championId: string) {
+    const [version] = this.versions
+
+    if (!version)
+      return this.#baseURL + `/cdn/${this.#CURRENT_PATCH}/img/champion/${championId}.png`
+
+    return this.#baseURL + `/cdn/${version}/img/champion/${championId}.png`
+
+  }
+
   async getOrFetchVersions() {
     if (!this.#cache.versions.data) {
       const versions = await this.fetchVersions()
@@ -72,7 +82,7 @@ class DDragon {
     return this.#cache.versions.data
   }
 
-  async getOrFetchChampions() {
+  async getOrFetchChampions(): Promise<DDragonChampionsRaw> {
     if (!this.#cache.champions.data) {
       const champions = await this.fetchChampions()
 
@@ -81,14 +91,10 @@ class DDragon {
         data: champions,
       }
 
-      new Map()
-
-      
-
       return champions
     }
 
-    return this.#cache.champions.data
+    return this.#cache.champions.data as DDragonChampionsRaw
   }
 
   async fetchVersions() {

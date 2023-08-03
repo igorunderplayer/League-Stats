@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { MatchParticipant } from '../../../@types/riot'
 
 import SimpleKDA from '../../generic/SimpleKDA'
@@ -11,13 +11,14 @@ import spells from '../../../spells.json'
 
 type Props = {
   participant: MatchParticipant
+  onClick: () => unknown
 }
 
 const nameFilter = {
   FiddleSticks: 'Fiddlesticks',
 }
 
-const MatchParticipantInfo: React.FC<Props> = ({ participant }) => {
+const MatchParticipantInfo: React.FC<Props> = ({ participant, onClick }) => {
   const primaryMainRune = participant.perks.styles[0].selections[0].perk
   const runeIconPath =
     runes.find((rune) => rune.id == primaryMainRune)?.icon.toLowerCase() ?? ''
@@ -39,7 +40,10 @@ const MatchParticipantInfo: React.FC<Props> = ({ participant }) => {
     : nameFilter[participant.championName as keyof typeof nameFilter]
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={onClick}
+    >
       <View
         style={{ flexDirection: 'column', justifyContent: 'space-between' }}
       >
@@ -128,7 +132,7 @@ const MatchParticipantInfo: React.FC<Props> = ({ participant }) => {
           ]}
         />
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 

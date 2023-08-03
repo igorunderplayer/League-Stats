@@ -1,8 +1,9 @@
 import { useRoute } from '@react-navigation/native'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
-import { Match } from '../@types/riot'
+import { Match, MatchParticipant } from '../@types/riot'
 import colors from '../colors'
+import ParticipantFocusDetails from '../components/cards/ParticipantFocusDetail'
 import MatchParticipantInfo from '../components/items/MatchParticipantInfo'
 import { useSummoner } from '../hooks/summoner'
 import riot from '../services/riot'
@@ -12,48 +13,67 @@ export default function MatchInfo() {
   const route = useRoute()
   const { summoner, region } = useSummoner()
   const [match, setMatch] = useState<Match>()
+  const [focusedParticipantPuuid, setFocusedParticipantPuuid] =
+    useState<string>('')
+
+  const focusedParticipant =
+    match?.info.participants.find((p) => p.puuid === focusedParticipantPuuid) ??
+    ({} as MatchParticipant)
 
   useEffect(() => {
     if (!region || !summoner) return
     riot.getMatchById(route.params?.matchId).then((match) => {
       setMatch(match)
+      setFocusedParticipantPuuid(match.info.participants[0].puuid)
     })
   }, [])
 
   const team1Won = match?.info.teams[0].win
 
-  const team1Kda = match?.info.participants
-    .filter((p) => p.teamId == 100)
-    .reduce(
-      (prev, curr) => {
-        return {
-          kills: prev.kills + curr.kills,
-          deaths: prev.deaths + curr.deaths,
-          assists: prev.assists + curr.assists,
-        }
-      },
-      { kills: 0, deaths: 0, assists: 0 },
-    )
+  const team1Kda = useMemo(
+    () =>
+      match?.info.participants
+        .filter((p) => p.teamId == 100)
+        .reduce(
+          (prev, curr) => {
+            return {
+              kills: prev.kills + curr.kills,
+              deaths: prev.deaths + curr.deaths,
+              assists: prev.assists + curr.assists,
+            }
+          },
+          { kills: 0, deaths: 0, assists: 0 },
+        ),
+    [match],
+  )
 
-  const team2Kda = match?.info.participants
-    .filter((p) => p.teamId == 200)
-    .reduce(
-      (prev, curr) => {
-        return {
-          kills: prev.kills + curr.kills,
-          deaths: prev.deaths + curr.deaths,
-          assists: prev.assists + curr.assists,
-        }
-      },
-      { kills: 0, deaths: 0, assists: 0 },
-    )
+  const team2Kda = useMemo(
+    () =>
+      match?.info.participants
+        .filter((p) => p.teamId == 200)
+        .reduce(
+          (prev, curr) => {
+            return {
+              kills: prev.kills + curr.kills,
+              deaths: prev.deaths + curr.deaths,
+              assists: prev.assists + curr.assists,
+            }
+          },
+          { kills: 0, deaths: 0, assists: 0 },
+        ),
+    [match],
+  )
 
   if (!match) return <View style={styles.container}></View>
 
   return (
     <ScrollView
       style={styles.container}
-      contentContainerStyle={{ alignItems: 'center', justifyContent: 'center' }}
+      contentContainerStyle={{
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 8,
+      }}
     >
       <View style={{ flexDirection: 'row', gap: 6 }}>
         <View style={styles.team}>
@@ -79,6 +99,7 @@ export default function MatchInfo() {
                 key={participant.summonerName}
                 participant={participant}
                 match={match}
+                onClick={() => setFocusedParticipantPuuid(participant.puuid)}
               />
             ))}
         </View>
@@ -106,10 +127,13 @@ export default function MatchInfo() {
                 key={participant.summonerName}
                 participant={participant}
                 match={match}
+                onClick={() => setFocusedParticipantPuuid(participant.puuid)}
               />
             ))}
         </View>
       </View>
+
+      <ParticipantFocusDetails participant={focusedParticipant} />
     </ScrollView>
   )
 }
