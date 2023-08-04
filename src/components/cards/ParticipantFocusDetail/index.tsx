@@ -72,7 +72,11 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
         </View>
       </View>
 
-      <View>Dano causado: {participant.totalDamageDelt}</View>
+      <View>
+        <Text style={styles.text}>
+          Dano causado: {participant.totalDamageDelt}
+        </Text>
+      </View>
     </View>
   )
 }
