@@ -16,10 +16,6 @@ export default function MatchInfo() {
   const [focusedParticipantPuuid, setFocusedParticipantPuuid] =
     useState<string>('')
 
-  const focusedParticipant =
-    match?.info.participants.find((p) => p.puuid === focusedParticipantPuuid) ??
-    ({} as MatchParticipant)
-
   useEffect(() => {
     if (!region || !summoner) return
     riot.getMatchById(route.params?.matchId).then((match) => {
@@ -27,6 +23,10 @@ export default function MatchInfo() {
       setFocusedParticipantPuuid(match.info.participants[0].puuid)
     })
   }, [])
+
+  const focusedParticipant =
+    match?.info.participants.find((p) => p.puuid === focusedParticipantPuuid) ??
+    ({} as MatchParticipant)
 
   const team1Won = match?.info.teams[0].win
 
@@ -75,23 +75,44 @@ export default function MatchInfo() {
         gap: 8,
       }}
     >
-      <View style={{ flexDirection: 'row', gap: 6 }}>
+      <View style={styles.header}>
+        <View style={styles.heading}>
+          <Text
+            style={[
+              styles.text,
+              { color: team1Won ? colors.softCyan : colors.softRed },
+            ]}
+          >
+            {team1Won ? 'Vitória' : 'Derrota'}
+          </Text>
+
+          <Text style={styles.subText}>
+            {team1Kda?.kills} / {team1Kda?.deaths} / {team1Kda?.assists}
+          </Text>
+        </View>
+
+        <Text style={styles.text}>
+          {(match.info.gameDuration / 60).toFixed()}mins
+        </Text>
+
+        <View style={styles.heading}>
+          <Text
+            style={[
+              styles.text,
+              { color: !team1Won ? colors.softCyan : colors.softRed },
+            ]}
+          >
+            {!team1Won ? 'Vitória' : 'Derrota'}
+          </Text>
+
+          <Text style={styles.subText}>
+            {team2Kda?.kills} / {team2Kda?.deaths} / {team2Kda?.assists}
+          </Text>
+        </View>
+      </View>
+
+      <View style={styles.teamsContainer}>
         <View style={styles.team}>
-          <View style={styles.heading}>
-            <Text
-              style={[
-                styles.text,
-                { color: team1Won ? colors.softCyan : colors.softRed },
-              ]}
-            >
-              {team1Won ? 'Vitória' : 'Derrota'}
-            </Text>
-
-            <Text style={styles.subText}>
-              {team1Kda?.kills} / {team1Kda?.deaths} / {team1Kda?.assists}
-            </Text>
-          </View>
-
           {match.info.participants
             .filter((p) => p.teamId == 100)
             .map((participant) => (
@@ -99,27 +120,13 @@ export default function MatchInfo() {
                 key={participant.summonerName}
                 participant={participant}
                 match={match}
+                focused={participant.puuid == focusedParticipantPuuid}
                 onClick={() => setFocusedParticipantPuuid(participant.puuid)}
               />
             ))}
         </View>
 
         <View style={styles.team}>
-          <View style={styles.heading}>
-            <Text
-              style={[
-                styles.text,
-                { color: !team1Won ? colors.softCyan : colors.softRed },
-              ]}
-            >
-              {!team1Won ? 'Vitória' : 'Derrota'}
-            </Text>
-
-            <Text style={styles.subText}>
-              {team2Kda?.kills} / {team2Kda?.deaths} / {team2Kda?.assists}
-            </Text>
-          </View>
-
           {match.info.participants
             .filter((p) => p.teamId == 200)
             .map((participant) => (
@@ -127,13 +134,17 @@ export default function MatchInfo() {
                 key={participant.summonerName}
                 participant={participant}
                 match={match}
+                focused={participant.puuid == focusedParticipantPuuid}
                 onClick={() => setFocusedParticipantPuuid(participant.puuid)}
               />
             ))}
         </View>
       </View>
 
-      <ParticipantFocusDetails participant={focusedParticipant} />
+      <ParticipantFocusDetails
+        participant={focusedParticipant}
+        match={match}
+      />
     </ScrollView>
   )
 }
@@ -144,14 +155,26 @@ const styles = StyleSheet.create({
     backgroundColor: themes.dark.background,
     padding: 8,
   },
-  team: {
-    gap: 4,
-    flex: 1,
+  header: {
+    width: '100%',
+    flexDirection: 'row',
+    gap: 6,
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
   heading: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
+    gap: 4,
+  },
+  teamsContainer: {
+    flexDirection: 'row',
+    gap: 4,
+  },
+  team: {
+    flex: 1,
+    gap: 4,
   },
   text: {
     fontSize: 16,
@@ -159,7 +182,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   subText: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#ffffff80',
     fontWeight: 'bold',
   },

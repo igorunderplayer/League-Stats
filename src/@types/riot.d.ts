@@ -96,6 +96,20 @@ export interface MatchParticipant {
 
   goldEarned: number
   goldSpent: number
+
+
+  // Damage statistics
+  totalDamageDelt: number
+  totalDamageDealtToChampions: number
+
+  physicalDamageDealt: number	
+  physicalDamageDealtToChampions: number
+
+  magicDamageDealt: number
+  magicDamageDealtToChampions: number
+
+  trueDamageDealt: number
+  trueDamageDealtToChampions: number
 }
 
 export interface ParticipantPerks {

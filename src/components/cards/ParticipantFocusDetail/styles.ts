@@ -9,7 +9,15 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   header: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    gap: 16
+  },
+  column: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   title: {
     color: colors.white,
@@ -17,7 +25,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   text: {
-    color: colors.white
+    color: '#ffffff80'
+  },
+  subText: {
+    color: '#ffffff60'
   }
 })
 
