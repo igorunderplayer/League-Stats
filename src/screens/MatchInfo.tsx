@@ -1,4 +1,4 @@
-import { useRoute } from '@react-navigation/native'
+import { RouteProp, useRoute } from '@react-navigation/native'
 import React, { useEffect, useMemo, useState } from 'react'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import { Match, MatchParticipant } from '../@types/riot'
@@ -8,9 +8,12 @@ import MatchParticipantInfo from '../components/items/MatchParticipantInfo'
 import { useSummoner } from '../hooks/summoner'
 import riot from '../services/riot'
 import themes from '../themes'
+import { HistoryStackParamList } from './History'
+
+type matchInfoScreenProp = RouteProp<HistoryStackParamList, 'matchInfo'>
 
 export default function MatchInfo() {
-  const route = useRoute()
+  const route = useRoute<matchInfoScreenProp>()
   const { summoner, region } = useSummoner()
   const [match, setMatch] = useState<Match>()
   const [focusedParticipantPuuid, setFocusedParticipantPuuid] =
@@ -119,7 +122,6 @@ export default function MatchInfo() {
               <MatchParticipantInfo
                 key={participant.summonerName}
                 participant={participant}
-                match={match}
                 focused={participant.puuid == focusedParticipantPuuid}
                 onClick={() => setFocusedParticipantPuuid(participant.puuid)}
               />
@@ -133,7 +135,6 @@ export default function MatchInfo() {
               <MatchParticipantInfo
                 key={participant.summonerName}
                 participant={participant}
-                match={match}
                 focused={participant.puuid == focusedParticipantPuuid}
                 onClick={() => setFocusedParticipantPuuid(participant.puuid)}
               />

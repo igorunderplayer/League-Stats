@@ -14,3 +14,10 @@ export const LeagueTierNames = {
   GRANDMASTER: 'Grão-Mestre',
   CHALLENGER: 'Desafiante',
 } as const
+
+export const GameModeNames = {
+  ARAM: 'ARAM',
+  CLASSIC: 'Normal',
+  URF: 'Ultra rapido e furioso',
+  CHERRY: 'Arena'
+}

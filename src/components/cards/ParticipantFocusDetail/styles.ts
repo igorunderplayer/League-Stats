@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 16
   },
+  content: {
+    width: '100%',
+    padding: 12
+  },
   column: {
     flexDirection: 'column',
     justifyContent: 'center',

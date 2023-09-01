@@ -4,6 +4,7 @@ import { Match } from '../../../@types/riot'
 import colors from '../../../colors'
 import { useSummoner } from '../../../hooks/summoner'
 
+import { GameModeNames } from '../../../constants'
 import getCombatScore from '../../../functions/combatScore'
 import runes from '../../../runes.json'
 import spells from '../../../spells.json'
@@ -35,13 +36,6 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
     .reduce((prev, curr) => prev + curr.kills, 0)
 
   const combatScore = getCombatScore(me.kills, me.assists, myTeamKills)
-
-  const gameMode = {
-    ARAM: 'ARAM',
-    CLASSIC: 'Normal',
-    URF: 'Ultra rapido e furioso',
-    CHERRY: 'Arena',
-  }
 
   const handleOnClick = useCallback(() => {
     onClick(match)
@@ -140,7 +134,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
             { fontWeight: 'bold', maxWidth: 96, textAlign: 'center' },
           ]}
         >
-          {gameMode[match.info.gameMode] ?? match.info.gameMode}
+          {GameModeNames[match.info.gameMode] ?? match.info.gameMode}
         </Text>
 
         <Text style={styles.subText}>

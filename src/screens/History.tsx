@@ -1,5 +1,8 @@
 import { useNavigation } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import {
+  createNativeStackNavigator,
+  NativeStackNavigationProp,
+} from '@react-navigation/native-stack'
 import React, { useCallback, useEffect, useState } from 'react'
 import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native'
 import { Match } from '../@types/riot'
@@ -10,7 +13,7 @@ import riot from '../services/riot'
 import themes from '../themes'
 import MatchInfo from './MatchInfo'
 
-type HistoryStackParamList = {
+export type HistoryStackParamList = {
   historyDefault: undefined
   matchInfo: {
     matchId: string
@@ -18,6 +21,11 @@ type HistoryStackParamList = {
 }
 
 const Stack = createNativeStackNavigator<HistoryStackParamList>()
+
+type historyScreenProp = NativeStackNavigationProp<
+  HistoryStackParamList,
+  'historyDefault'
+>
 
 export default function HistoryRouter() {
   return (
@@ -41,7 +49,7 @@ export default function HistoryRouter() {
 }
 
 function History() {
-  const navigation = useNavigation()
+  const navigation = useNavigation<historyScreenProp>()
   const { region, summoner } = useSummoner()
   const [matches, setMatches] = useState<Match[]>([])
 
