@@ -197,7 +197,7 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
               />
               <Text style={styles.subText}>
                 <Text style={[styles.subText, { color: colors.white }]}>
-                  {participant.magicDamageDealtToChampions}{' '}
+                  {participant.trueDamageDealtToChampions}{' '}
                 </Text>
                 dano verdadeiro
               </Text>
