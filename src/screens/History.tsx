@@ -13,6 +13,8 @@ import riot from '../services/riot'
 import themes from '../themes'
 import MatchInfo from './MatchInfo'
 
+const COUNT = 10
+
 export type HistoryStackParamList = {
   historyDefault: undefined
   matchInfo: {
@@ -70,18 +72,12 @@ function History() {
     setLoading(true)
 
     try {
-      const matches = await riot
-        .getMatchesByPuuid(summoner.puuid, { count: 10 })
-        .then((data) => {
-          return Promise.all(
-            data.map(async (matchId) => {
-              const match = await riot.getMatchById(matchId)
-              return match
-            }),
-          )
-        })
+      const ids = await riot.getMatchesByPuuid(summoner.puuid, { count: COUNT })
 
-      setMatches(matches)
+      for await (const matchId of ids) {
+        const match = await riot.getMatchById(matchId)
+        setMatches((prev) => [...prev, match])
+      }
     } finally {
       setLoading(false)
     }
@@ -93,21 +89,15 @@ function History() {
     setLoading(true)
 
     try {
-      const more = await riot
-        .getMatchesByPuuid(summoner.puuid, {
-          count: 10,
-          start: matches.length,
-        })
-        .then(async (data) => {
-          return await Promise.all(
-            data.map(async (matchId) => {
-              const match = await riot.getMatchById(matchId)
-              return match
-            }),
-          )
-        })
+      const ids = await riot.getMatchesByPuuid(summoner.puuid, {
+        count: COUNT,
+        start: matches.length,
+      })
 
-      setMatches((val) => [...val, ...more])
+      for await (const matchId of ids) {
+        const match = await riot.getMatchById(matchId)
+        setMatches((prev) => [...prev, match])
+      }
     } finally {
       setLoading(false)
     }
@@ -127,9 +117,12 @@ function History() {
           />
         )}
         onEndReached={loadMoreMatches}
+        ListFooterComponent={
+          <View style={{ height: 12 }}>
+            {loading ? <ActivityIndicator color={colors.softViolet} /> : null}
+          </View>
+        }
       />
-
-      {loading ? <ActivityIndicator color={colors.softViolet} /> : null}
     </View>
   )
 }
@@ -147,5 +140,6 @@ const styles = StyleSheet.create({
   matchListContainer: {
     alignItems: 'center',
     justifyContent: 'space-between',
+    gap: 8,
   },
 })

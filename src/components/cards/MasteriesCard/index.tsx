@@ -1,15 +1,22 @@
 import { MaterialIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import colors from '../../../colors'
 import ChampionMastery from '../../../entities/ChampionMastery'
 import { useSummoner } from '../../../hooks/summoner'
+import { ProfileStackParamList } from '../../../screens/Profile'
 import riot from '../../../services/riot'
 import ChampionMasteryCard from '../../items/ChampionMastery'
 
+type profileScreenProp = NativeStackNavigationProp<
+  ProfileStackParamList,
+  'profileDefault'
+>
+
 const MasteriesCard: React.FC = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation<profileScreenProp>()
   const { region, summoner } = useSummoner()
 
   const [maestries, setMaestries] = useState<ChampionMastery[]>([])
@@ -71,7 +78,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff05',
   },
   maestries: {
-    width: '95%',
+    width: '100%',
+    paddingHorizontal: 2,
+    paddingVertical: 16,
+    gap: 8,
   },
   title: {
     color: colors.white,

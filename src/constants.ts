@@ -20,4 +20,4 @@ export const GameModeNames = {
   CLASSIC: 'Normal',
   URF: 'Ultra rapido e furioso',
   CHERRY: 'Arena'
-}
+} as const
