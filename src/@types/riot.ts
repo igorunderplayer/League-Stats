@@ -1,3 +1,5 @@
+import type { GameModeNames } from '../constants'
+
 // DDragon
 export interface DDragonChampionsRaw {
   [key: string]: ChampionData
@@ -25,7 +27,7 @@ export interface LeagueEntry {
   rank: string
   leaguePoints: number
   wins: number
-  losses: numebr
+  losses: number
   hotStreak: boolean
   veteran: boolean
   freshBlood: boolean
@@ -34,10 +36,10 @@ export interface LeagueEntry {
 }
 
 export interface MiniSeries {
-  losses: int
+  losses: number
   progress: string
-  target: int
-  wins: int
+  target: number
+  wins: number
 }
 
 export interface Match {
@@ -46,7 +48,7 @@ export interface Match {
   }
   info: {
     platformId: string
-    gameMode: string
+    gameMode: keyof typeof GameModeNames
     participants: MatchParticipant[]
     gameDuration: number
     teams: MatchTeam[]
@@ -66,6 +68,7 @@ export interface MatchParticipant {
   champLevel: number
   role: string
   teamId: number
+  teamPosition : 'TOP' | 'JUNGLE' | 'MIDDLE' | 'BOTTOM' | 'UTILITY'
 
   // kda
   assists: number
@@ -95,6 +98,20 @@ export interface MatchParticipant {
 
   goldEarned: number
   goldSpent: number
+
+
+  // Damage statistics
+  totalDamageDealt: number
+  totalDamageDealtToChampions: number
+
+  physicalDamageDealt: number	
+  physicalDamageDealtToChampions: number
+
+  magicDamageDealt: number
+  magicDamageDealtToChampions: number
+
+  trueDamageDealt: number
+  trueDamageDealtToChampions: number
 }
 
 export interface ParticipantPerks {

@@ -8,6 +8,11 @@ import ProfileCard from '../components/cards/ProfileCard'
 import themes from '../themes'
 import BestChampions from './BestChampions'
 
+export type ProfileStackParamList = {
+  profileDefault: undefined
+  bestChampions: undefined
+}
+
 const Stack = createNativeStackNavigator()
 
 export default function ProfileRoutes() {

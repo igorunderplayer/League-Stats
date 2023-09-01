@@ -1,14 +1,14 @@
 import React, { useCallback } from 'react'
 import {
-  StyleSheet,
-  TouchableOpacity,
-  Text,
   Image,
   Linking,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
 } from 'react-native'
 
 import { MaterialIcons } from '@expo/vector-icons'
-import colors from '../../colors'
+import colors from '../../../colors'
 
 type Props = {
   region?: string

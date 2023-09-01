@@ -1,9 +1,11 @@
-import React, { useCallback } from 'react'
+import React, { memo, useCallback } from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { Match } from '../../../@types/riot'
 import colors from '../../../colors'
 import { useSummoner } from '../../../hooks/summoner'
 
+import { GameModeNames } from '../../../constants'
+import getCombatScore from '../../../functions/combatScore'
 import runes from '../../../runes.json'
 import spells from '../../../spells.json'
 import SimpleKDA from '../../generic/SimpleKDA'
@@ -33,20 +35,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
     .filter((participant) => participant.teamId == myTeam?.teamId)
     .reduce((prev, curr) => prev + curr.kills, 0)
 
-  const combatScoreCalc = ((me.kills + me.assists) / myTeamKills) * 100
-
-  const combatScore = isNaN(combatScoreCalc)
-    ? 0
-    : !isFinite(combatScoreCalc)
-    ? 100
-    : combatScoreCalc
-
-  const gameMode = {
-    ARAM: 'ARAM',
-    CLASSIC: 'Normal',
-    URF: 'Ultra rapido e furioso',
-    CHERRY: 'Arena',
-  }
+  const combatScore = getCombatScore(me.kills, me.assists, myTeamKills)
 
   const handleOnClick = useCallback(() => {
     onClick(match)
@@ -145,7 +134,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
             { fontWeight: 'bold', maxWidth: 96, textAlign: 'center' },
           ]}
         >
-          {gameMode[match.info.gameMode] ?? match.info.gameMode}
+          {GameModeNames[match.info.gameMode] ?? match.info.gameMode}
         </Text>
 
         <Text style={styles.subText}>
@@ -175,7 +164,6 @@ const styles = StyleSheet.create({
   container: {
     padding: 12,
     borderRadius: 12,
-    marginVertical: 8,
     flexDirection: 'row',
     backgroundColor: '#ffffff05',
     alignItems: 'center',
@@ -215,4 +203,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default MatchInfoCard
+export default memo(MatchInfoCard)

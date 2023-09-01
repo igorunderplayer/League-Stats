@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosResponse } from 'axios'
+import axios, { AxiosResponse } from 'axios'
 
 import { RIOT_API_KEY } from '@env'
 import { LeagueEntry, Match } from '../@types/riot'
@@ -19,26 +19,15 @@ interface GetMatchesOptions {
 interface RequestOptions {
   url?: string
   region?: 'br1' | 'euw1' | 'kr1' | string
-  shard?: 'amercias' | string
+  shard?: 'americas' | string
 }
 
 class Riot {
-  api: AxiosInstance
   ddragon = ddragonApi
 
   //temp
   defaultRegion: RequestOptions['region'] = 'br1'
   defaultShard: RequestOptions['shard'] = 'americas'
-
-  constructor() {
-    const riotApi = axios.create({
-      baseURL: `https://br1.api.riotgames.com`,
-    })
-    riotApi.defaults.headers['X-Riot-Token'] = RIOT_API_KEY
-    riotApi.defaults.headers['User-Agent'] = 'LeagueStats'
-
-    this.api = riotApi
-  }
 
   async getSummonerByName(name: string, region = this.defaultRegion) {
     const res = await this.request<Summoner>({
@@ -73,8 +62,9 @@ class Riot {
     }
   }
 
-  async getFreeChampionsIdRotation(): Promise<number[]> {
-    const res = await this.api.get(`/lol/platform/v3/champion-rotations`)
+  async getFreeChampionsIdRotation(region = this.defaultRegion): Promise<number[]> {
+    const res = await this.request<{ freeChampionIds: number[] }>({ url: `/lol/platform/v3/champion-rotations`, region })
+    console.log(res.data)
     return res.data.freeChampionIds
   }
 

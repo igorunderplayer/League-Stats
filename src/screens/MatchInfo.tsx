@@ -1,115 +1,151 @@
-import { useRoute } from '@react-navigation/native'
-import React, { useEffect, useState } from 'react'
+import { RouteProp, useRoute } from '@react-navigation/native'
+import React, { useEffect, useMemo, useState } from 'react'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
-import { Match } from '../@types/riot'
+import { Match, MatchParticipant } from '../@types/riot'
 import colors from '../colors'
+import ParticipantFocusDetails from '../components/cards/ParticipantFocusDetail'
 import MatchParticipantInfo from '../components/items/MatchParticipantInfo'
 import { useSummoner } from '../hooks/summoner'
 import riot from '../services/riot'
 import themes from '../themes'
+import { HistoryStackParamList } from './History'
+
+type matchInfoScreenProp = RouteProp<HistoryStackParamList, 'matchInfo'>
 
 export default function MatchInfo() {
-  const route = useRoute()
+  const route = useRoute<matchInfoScreenProp>()
   const { summoner, region } = useSummoner()
   const [match, setMatch] = useState<Match>()
+  const [focusedParticipantPuuid, setFocusedParticipantPuuid] =
+    useState<string>('')
 
   useEffect(() => {
     if (!region || !summoner) return
     riot.getMatchById(route.params?.matchId).then((match) => {
       setMatch(match)
+      setFocusedParticipantPuuid(match.info.participants[0].puuid)
     })
   }, [])
 
+  const focusedParticipant =
+    match?.info.participants.find((p) => p.puuid === focusedParticipantPuuid) ??
+    ({} as MatchParticipant)
+
   const team1Won = match?.info.teams[0].win
 
-  const team1Kda = match?.info.participants
-    .filter((p) => p.teamId == 100)
-    .reduce(
-      (prev, curr) => {
-        return {
-          kills: prev.kills + curr.kills,
-          deaths: prev.deaths + curr.deaths,
-          assists: prev.assists + curr.assists,
-        }
-      },
-      { kills: 0, deaths: 0, assists: 0 },
-    )
+  const team1Kda = useMemo(
+    () =>
+      match?.info.participants
+        .filter((p) => p.teamId == 100)
+        .reduce(
+          (prev, curr) => {
+            return {
+              kills: prev.kills + curr.kills,
+              deaths: prev.deaths + curr.deaths,
+              assists: prev.assists + curr.assists,
+            }
+          },
+          { kills: 0, deaths: 0, assists: 0 },
+        ),
+    [match],
+  )
 
-  const team2Kda = match?.info.participants
-    .filter((p) => p.teamId == 200)
-    .reduce(
-      (prev, curr) => {
-        return {
-          kills: prev.kills + curr.kills,
-          deaths: prev.deaths + curr.deaths,
-          assists: prev.assists + curr.assists,
-        }
-      },
-      { kills: 0, deaths: 0, assists: 0 },
-    )
+  const team2Kda = useMemo(
+    () =>
+      match?.info.participants
+        .filter((p) => p.teamId == 200)
+        .reduce(
+          (prev, curr) => {
+            return {
+              kills: prev.kills + curr.kills,
+              deaths: prev.deaths + curr.deaths,
+              assists: prev.assists + curr.assists,
+            }
+          },
+          { kills: 0, deaths: 0, assists: 0 },
+        ),
+    [match],
+  )
 
   if (!match) return <View style={styles.container}></View>
 
   return (
     <ScrollView
       style={styles.container}
-      contentContainerStyle={{ alignItems: 'center', justifyContent: 'center' }}
+      contentContainerStyle={{
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 8,
+      }}
     >
-      <View style={{ flexDirection: 'row', gap: 6 }}>
+      <View style={styles.header}>
+        <View style={styles.heading}>
+          <Text
+            style={[
+              styles.text,
+              { color: team1Won ? colors.softCyan : colors.softRed },
+            ]}
+          >
+            {team1Won ? 'Vitória' : 'Derrota'}
+          </Text>
+
+          <Text style={styles.subText}>
+            {team1Kda?.kills} / {team1Kda?.deaths} / {team1Kda?.assists}
+          </Text>
+        </View>
+
+        <Text style={styles.text}>
+          {(match.info.gameDuration / 60).toFixed()}mins
+        </Text>
+
+        <View style={styles.heading}>
+          <Text
+            style={[
+              styles.text,
+              { color: !team1Won ? colors.softCyan : colors.softRed },
+            ]}
+          >
+            {!team1Won ? 'Vitória' : 'Derrota'}
+          </Text>
+
+          <Text style={styles.subText}>
+            {team2Kda?.kills} / {team2Kda?.deaths} / {team2Kda?.assists}
+          </Text>
+        </View>
+      </View>
+
+      <View style={styles.teamsContainer}>
         <View style={styles.team}>
-          <View style={styles.heading}>
-            <Text
-              style={[
-                styles.text,
-                { color: team1Won ? colors.softCyan : colors.softRed },
-              ]}
-            >
-              {team1Won ? 'Vitória' : 'Derrota'}
-            </Text>
-
-            <Text style={styles.subText}>
-              {team1Kda?.kills} / {team1Kda?.deaths} / {team1Kda?.assists}
-            </Text>
-          </View>
-
           {match.info.participants
             .filter((p) => p.teamId == 100)
             .map((participant) => (
               <MatchParticipantInfo
                 key={participant.summonerName}
                 participant={participant}
-                match={match}
+                focused={participant.puuid == focusedParticipantPuuid}
+                onClick={() => setFocusedParticipantPuuid(participant.puuid)}
               />
             ))}
         </View>
 
         <View style={styles.team}>
-          <View style={styles.heading}>
-            <Text
-              style={[
-                styles.text,
-                { color: !team1Won ? colors.softCyan : colors.softRed },
-              ]}
-            >
-              {!team1Won ? 'Vitória' : 'Derrota'}
-            </Text>
-
-            <Text style={styles.subText}>
-              {team2Kda?.kills} / {team2Kda?.deaths} / {team2Kda?.assists}
-            </Text>
-          </View>
-
           {match.info.participants
             .filter((p) => p.teamId == 200)
             .map((participant) => (
               <MatchParticipantInfo
                 key={participant.summonerName}
                 participant={participant}
-                match={match}
+                focused={participant.puuid == focusedParticipantPuuid}
+                onClick={() => setFocusedParticipantPuuid(participant.puuid)}
               />
             ))}
         </View>
       </View>
+
+      <ParticipantFocusDetails
+        participant={focusedParticipant}
+        match={match}
+      />
     </ScrollView>
   )
 }
@@ -120,14 +156,26 @@ const styles = StyleSheet.create({
     backgroundColor: themes.dark.background,
     padding: 8,
   },
-  team: {
-    gap: 4,
-    flex: 1,
+  header: {
+    width: '100%',
+    flexDirection: 'row',
+    gap: 6,
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
   heading: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
+    gap: 4,
+  },
+  teamsContainer: {
+    flexDirection: 'row',
+    gap: 4,
+  },
+  team: {
+    flex: 1,
+    gap: 4,
   },
   text: {
     fontSize: 16,
@@ -135,7 +183,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   subText: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#ffffff80',
     fontWeight: 'bold',
   },

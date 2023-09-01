@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { MatchParticipant } from '../../../@types/riot'
 
 import SimpleKDA from '../../generic/SimpleKDA'
@@ -7,28 +7,41 @@ import ParticipantItems from '../ParticipantItems'
 
 import colors from '../../../colors'
 import runes from '../../../runes.json'
-import spells from '../../../spells.json'
+import spells from '../../../spells2.json'
 
 type Props = {
   participant: MatchParticipant
+  focused: boolean
+  onClick: () => unknown
 }
 
 const nameFilter = {
   FiddleSticks: 'Fiddlesticks',
 }
 
-const MatchParticipantInfo: React.FC<Props> = ({ participant }) => {
+const formatter = new Intl.NumberFormat('en-US', { notation: 'compact' })
+
+const MatchParticipantInfo: React.FC<Props> = ({
+  participant,
+  onClick,
+  focused = false,
+}) => {
   const primaryMainRune = participant.perks.styles[0].selections[0].perk
   const runeIconPath =
     runes.find((rune) => rune.id == primaryMainRune)?.icon.toLowerCase() ?? ''
 
-  const spell1 = spells.find((spell) => spell.id == participant.summoner1Id)
-  const spell2 = spells.find((spell) => spell.id == participant.summoner2Id)
+  // const spell1 = spells.find((spell) => spell.id == participant.summoner1Id)
+  // const spell2 = spells.find((spell) => spell.id == participant.summoner2Id)
+
+  const a = participant.summoner1Id.toString() as keyof typeof spells
+  const b = participant.summoner2Id.toString() as keyof typeof spells
+
+  const spell1 = spells[a]
+  const spell2 = spells[b]
 
   const csScore =
     participant.totalMinionsKilled + participant.neutralMinionsKilled
 
-  const formatter = new Intl.NumberFormat('en-US', { notation: 'compact' })
   const totalGold = formatter.format(participant.goldEarned)
 
   // For some reason there are some champs that come with wrong formatting
@@ -39,7 +52,15 @@ const MatchParticipantInfo: React.FC<Props> = ({ participant }) => {
     : nameFilter[participant.championName as keyof typeof nameFilter]
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={[
+        styles.container,
+        {
+          backgroundColor: focused ? '#ffffff20' : '#ffffff05',
+        },
+      ]}
+      onPress={onClick}
+    >
       <View
         style={{ flexDirection: 'column', justifyContent: 'space-between' }}
       >
@@ -128,14 +149,13 @@ const MatchParticipantInfo: React.FC<Props> = ({ participant }) => {
           ]}
         />
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: '#ffffff05',
     borderRadius: 12,
     padding: 8,
     justifyContent: 'space-evenly',

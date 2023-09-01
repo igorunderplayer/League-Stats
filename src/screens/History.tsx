@@ -1,5 +1,8 @@
 import { useNavigation } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import {
+  createNativeStackNavigator,
+  NativeStackNavigationProp,
+} from '@react-navigation/native-stack'
 import React, { useCallback, useEffect, useState } from 'react'
 import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native'
 import { Match } from '../@types/riot'
@@ -10,7 +13,9 @@ import riot from '../services/riot'
 import themes from '../themes'
 import MatchInfo from './MatchInfo'
 
-type HistoryStackParamList = {
+const COUNT = 10
+
+export type HistoryStackParamList = {
   historyDefault: undefined
   matchInfo: {
     matchId: string
@@ -18,6 +23,11 @@ type HistoryStackParamList = {
 }
 
 const Stack = createNativeStackNavigator<HistoryStackParamList>()
+
+type historyScreenProp = NativeStackNavigationProp<
+  HistoryStackParamList,
+  'historyDefault'
+>
 
 export default function HistoryRouter() {
   return (
@@ -41,7 +51,7 @@ export default function HistoryRouter() {
 }
 
 function History() {
-  const navigation = useNavigation()
+  const navigation = useNavigation<historyScreenProp>()
   const { region, summoner } = useSummoner()
   const [matches, setMatches] = useState<Match[]>([])
 
@@ -62,18 +72,12 @@ function History() {
     setLoading(true)
 
     try {
-      const matches = await riot
-        .getMatchesByPuuid(summoner.puuid, { count: 10 })
-        .then((data) => {
-          return Promise.all(
-            data.map(async (matchId) => {
-              const match = await riot.getMatchById(matchId)
-              return match
-            }),
-          )
-        })
+      const ids = await riot.getMatchesByPuuid(summoner.puuid, { count: COUNT })
 
-      setMatches(matches)
+      for await (const matchId of ids) {
+        const match = await riot.getMatchById(matchId)
+        setMatches((prev) => [...prev, match])
+      }
     } finally {
       setLoading(false)
     }
@@ -85,21 +89,15 @@ function History() {
     setLoading(true)
 
     try {
-      const more = await riot
-        .getMatchesByPuuid(summoner.puuid, {
-          count: 10,
-          start: matches.length,
-        })
-        .then(async (data) => {
-          return await Promise.all(
-            data.map(async (matchId) => {
-              const match = await riot.getMatchById(matchId)
-              return match
-            }),
-          )
-        })
+      const ids = await riot.getMatchesByPuuid(summoner.puuid, {
+        count: COUNT,
+        start: matches.length,
+      })
 
-      setMatches((val) => [...val, ...more])
+      for await (const matchId of ids) {
+        const match = await riot.getMatchById(matchId)
+        setMatches((prev) => [...prev, match])
+      }
     } finally {
       setLoading(false)
     }
@@ -119,9 +117,12 @@ function History() {
           />
         )}
         onEndReached={loadMoreMatches}
+        ListFooterComponent={
+          <View style={{ height: 12 }}>
+            {loading ? <ActivityIndicator color={colors.softViolet} /> : null}
+          </View>
+        }
       />
-
-      {loading ? <ActivityIndicator color={colors.softViolet} /> : null}
     </View>
   )
 }
@@ -139,5 +140,6 @@ const styles = StyleSheet.create({
   matchListContainer: {
     alignItems: 'center',
     justifyContent: 'space-between',
+    gap: 8,
   },
 })

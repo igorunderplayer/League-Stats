@@ -5,20 +5,15 @@ import ChampionMastery from '../../../entities/ChampionMastery'
 
 import { getLocales } from 'expo-localization'
 
+import { ChampionData } from '../../../@types/riot'
 import riot from '../../../services/riot'
 
 type Props = {
   mastery: ChampionMastery
 }
 
-type Champion = {
-  name: string
-  key: string
-  id: string
-}
-
 const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
-  const [champion, setChampion] = useState<Champion>({} as Champion)
+  const [champion, setChampion] = useState<ChampionData>({} as ChampionData)
   const [locale] = getLocales()
 
   useEffect(() => {
@@ -31,7 +26,7 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
     setChampion(
       values.find(
         (champ) => champ.key == String(mastery.championId),
-      ) as Champion,
+      ) as ChampionData,
     )
   }
 
@@ -77,7 +72,6 @@ const styles = StyleSheet.create({
   container: {
     padding: 12,
     borderRadius: 12,
-    marginVertical: 8,
     flexDirection: 'row',
     backgroundColor: '#ffffff05',
     alignItems: 'center',

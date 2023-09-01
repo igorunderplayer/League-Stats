@@ -23,7 +23,10 @@ export default function BestChampions() {
     <View style={styles.container}>
       <Text style={styles.title}>Todos campeões</Text>
 
-      <ScrollView style={styles.maestries}>
+      <ScrollView
+        style={styles.maestries}
+        contentContainerStyle={{ gap: 8 }}
+      >
         {maestries.map((mastery) => (
           <ChampionMasteryCard
             key={mastery.championId}
@@ -52,5 +55,7 @@ const styles = StyleSheet.create({
   },
   maestries: {
     width: '95%',
+    paddingHorizontal: 2,
+    paddingVertical: 8,
   },
 })

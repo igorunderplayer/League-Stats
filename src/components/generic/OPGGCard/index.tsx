@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react'
-import { StyleSheet, TouchableOpacity, Image, Linking } from 'react-native'
+import { Image, Linking, StyleSheet, TouchableOpacity } from 'react-native'
 
 import { MaterialIcons } from '@expo/vector-icons'
-import colors from '../../colors'
+import colors from '../../../colors'
 
 type Props = {
   region?: string
