@@ -36,7 +36,7 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
         <Image
           style={styles.championIcon}
           source={{
-            uri: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${champion.id}.png`,
+            uri: riot.ddragon.getChampionIcon(champion.id),
           }}
         />
 

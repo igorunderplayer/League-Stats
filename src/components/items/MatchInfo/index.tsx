@@ -7,6 +7,7 @@ import { useSummoner } from '../../../hooks/summoner'
 import { GameModeNames } from '../../../constants'
 import getCombatScore from '../../../functions/combatScore'
 import runes from '../../../runes.json'
+import riot from '../../../services/riot'
 import spells from '../../../spells.json'
 import SimpleKDA from '../../generic/SimpleKDA'
 
@@ -63,7 +64,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
             marginRight: 12,
           }}
           source={{
-            uri: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${me.championName}.png`,
+            uri: riot.ddragon.getChampionIcon(me.championName),
           }}
         />
 

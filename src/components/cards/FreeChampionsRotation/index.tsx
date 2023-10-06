@@ -26,7 +26,7 @@ const FreeChampionsRotation: React.FC = () => {
       const champValues = Object.values(allChampions)
       const champions = ids.map((id) =>
         champValues.find((c) => c.key == String(id)),
-      )
+      ) as ChampionData[]
       setChampions(champions)
     })
   }, [])
@@ -71,7 +71,7 @@ const ChampionItem = ({ item }: ItemProps) => {
       <Image
         style={{ width: 48, height: 48 }}
         source={{
-          uri: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${item.id}.png`,
+          uri: riot.ddragon.getChampionIcon(item.id),
         }}
       />
 
