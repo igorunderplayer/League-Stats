@@ -1,6 +1,7 @@
 import React from 'react'
 import { Image, StyleSheet, View } from 'react-native'
 import colors from '../../../colors'
+import riot from '../../../services/riot'
 
 type Props = {
   items: { item: number; slot: number }[]
@@ -14,7 +15,7 @@ const ParticipantItems: React.FC<Props> = ({ items }) => {
           key={item.slot}
           style={styles.image}
           source={{
-            uri: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/item/${item.item}.png`,
+            uri: riot.ddragon.getCDN(`img/item/${item.item}.png`),
           }}
         />
       ))}

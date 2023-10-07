@@ -48,6 +48,10 @@ class DDragon {
     return versions.data
   }
 
+  getCDN(path: string) {
+    return this.#baseURL + `/cdn/${this.versions[0]}/` + path
+  }
+
   getIcon(iconId: number) {
     const versions = this.versions
 

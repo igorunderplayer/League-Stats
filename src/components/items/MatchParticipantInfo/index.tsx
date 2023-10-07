@@ -7,6 +7,7 @@ import ParticipantItems from '../ParticipantItems'
 
 import colors from '../../../colors'
 import runes from '../../../runes.json'
+import riot from '../../../services/riot'
 import spells from '../../../spells2.json'
 
 type Props = {
@@ -29,9 +30,6 @@ const MatchParticipantInfo: React.FC<Props> = ({
   const primaryMainRune = participant.perks.styles[0].selections[0].perk
   const runeIconPath =
     runes.find((rune) => rune.id == primaryMainRune)?.icon.toLowerCase() ?? ''
-
-  // const spell1 = spells.find((spell) => spell.id == participant.summoner1Id)
-  // const spell2 = spells.find((spell) => spell.id == participant.summoner2Id)
 
   const a = participant.summoner1Id.toString() as keyof typeof spells
   const b = participant.summoner2Id.toString() as keyof typeof spells
@@ -74,7 +72,7 @@ const MatchParticipantInfo: React.FC<Props> = ({
               marginRight: 12,
             }}
             source={{
-              uri: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${nameFiltered}.png`,
+              uri: riot.ddragon.getChampionIcon(nameFiltered),
             }}
           />
 
