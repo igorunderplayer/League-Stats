@@ -1,14 +1,13 @@
 import { AxiosError } from 'axios'
-import React, {
-  ReactNode,
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from 'react'
+import React, { ReactNode, createContext, useContext, useState } from 'react'
 import Summoner from '../entities/Summoner'
 import riot from '../services/riot'
 import usePersistedState from './usePersistedState'
+
+export type SummonerInfo = {
+  name: string
+  region: string
+}
 
 type SummonerContextData = {
   name?: string
@@ -17,6 +16,9 @@ type SummonerContextData = {
   setName: React.Dispatch<React.SetStateAction<string>>
   setRegion: React.Dispatch<React.SetStateAction<string>>
   resetSummoner: () => Promise<void>
+  getSummoner: (name: string, region: string) => Promise<void>
+  addSummoner: (name: string, region: string) => void
+  savedSummoners: SummonerInfo[]
 }
 
 type SummonerProviderProps = {
@@ -30,16 +32,17 @@ function SummonerProvider({ children }: SummonerProviderProps) {
   const [name, setName] = usePersistedState<string>('name')
   const [region, setRegion] = usePersistedState<string>('region')
 
-  useEffect(() => {
-    if (!summoner) {
-      getSummoner()
-    }
-  }, [name, region])
+  const [savedSummoners, setSavedSummoners] = usePersistedState<SummonerInfo[]>(
+    'summoners',
+    [],
+  )
 
-  async function getSummoner() {
+  async function getSummoner(name: string, region: string) {
     try {
       if (!name?.length || !region?.length) return
       const res = await riot.getSummonerByName(name, region)
+      setName(name)
+      setRegion(region)
       setSummoner(res)
 
       console.log('Summoner updated successfully')
@@ -48,6 +51,12 @@ function SummonerProvider({ children }: SummonerProviderProps) {
         console.error({ ...e })
       }
     }
+  }
+
+  function addSummoner(name: string, region: string) {
+    if (savedSummoners.find((s) => s.name == name && s.region == region)) return
+
+    setSavedSummoners((val) => [...val, { name, region }])
   }
 
   async function resetSummoner() {
@@ -65,6 +74,9 @@ function SummonerProvider({ children }: SummonerProviderProps) {
         setName,
         setRegion,
         resetSummoner,
+        getSummoner,
+        addSummoner,
+        savedSummoners,
       }}
     >
       {children}

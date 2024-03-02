@@ -3,17 +3,15 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationProp,
 } from '@react-navigation/native-stack'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native'
 import { Match } from '../@types/riot'
 import colors from '../colors'
 import MatchInfoCard from '../components/items/MatchInfo'
-import { useSummoner } from '../hooks/summoner'
-import riot from '../services/riot'
+import { useSummoner } from '../hooks/useSummoner'
+import useSummonerMatches from '../hooks/useSummonerMatches'
 import themes from '../themes'
 import MatchInfo from './MatchInfo'
-
-const COUNT = 10
 
 export type HistoryStackParamList = {
   historyDefault: undefined
@@ -52,10 +50,8 @@ export default function HistoryRouter() {
 
 function History() {
   const navigation = useNavigation<historyScreenProp>()
-  const { region, summoner } = useSummoner()
-  const [matches, setMatches] = useState<Match[]>([])
-
-  const [loading, setLoading] = useState(true)
+  const { summoner } = useSummoner()
+  const { matches, loading, loadMatches } = useSummonerMatches(summoner)
 
   const handleOnClickMatch = useCallback((match: Match) => {
     navigation.navigate('matchInfo', {
@@ -64,44 +60,8 @@ function History() {
   }, [])
 
   useEffect(() => {
-    loadMathes()
+    loadMatches()
   }, [])
-
-  async function loadMathes() {
-    if (!region || !summoner) return
-    setLoading(true)
-
-    try {
-      const ids = await riot.getMatchesByPuuid(summoner.puuid, { count: COUNT })
-
-      for await (const matchId of ids) {
-        const match = await riot.getMatchById(matchId)
-        setMatches((prev) => [...prev, match])
-      }
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  async function loadMoreMatches() {
-    if (!region || !summoner || loading) return
-
-    setLoading(true)
-
-    try {
-      const ids = await riot.getMatchesByPuuid(summoner.puuid, {
-        count: COUNT,
-        start: matches.length,
-      })
-
-      for await (const matchId of ids) {
-        const match = await riot.getMatchById(matchId)
-        setMatches((prev) => [...prev, match])
-      }
-    } finally {
-      setLoading(false)
-    }
-  }
 
   return (
     <View style={styles.container}>
@@ -110,16 +70,21 @@ function History() {
         contentContainerStyle={styles.matchListContainer}
         keyExtractor={(item) => item.metadata.matchId}
         data={matches}
-        renderItem={({ item }) => (
+        renderItem={({ item }: { item: Match }) => (
           <MatchInfoCard
             match={item}
             onClick={handleOnClickMatch}
           />
         )}
-        onEndReached={loadMoreMatches}
+        onEndReached={loadMatches}
         ListFooterComponent={
-          <View style={{ height: 12 }}>
-            {loading ? <ActivityIndicator color={colors.softViolet} /> : null}
+          <View style={{ height: 32 }}>
+            {loading ? (
+              <ActivityIndicator
+                size={32}
+                color={colors.softViolet}
+              />
+            ) : null}
           </View>
         }
       />
@@ -133,6 +98,7 @@ const styles = StyleSheet.create({
     backgroundColor: themes.dark.background,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 8,
   },
   matchList: {
     width: '100%',

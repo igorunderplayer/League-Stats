@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { LeagueEntry } from '../../../@types/riot'
 import colors from '../../../colors'
-import { useSummoner } from '../../../hooks/summoner'
+import { useSummoner } from '../../../hooks/useSummoner'
 import riot from '../../../services/riot'
 import LeagueInfo from '../../items/LeagueInfo'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { useSummoner } from '../hooks/summoner'
+import { useSummoner } from '../hooks/useSummoner'
 import themes from '../themes'
 
 export default function TestScreen() {

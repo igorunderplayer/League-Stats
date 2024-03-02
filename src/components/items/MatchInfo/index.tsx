@@ -2,7 +2,7 @@ import React, { memo, useCallback } from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { Match } from '../../../@types/riot'
 import colors from '../../../colors'
-import { useSummoner } from '../../../hooks/summoner'
+import { useSummoner } from '../../../hooks/useSummoner'
 
 import { GameModeNames } from '../../../constants'
 import getCombatScore from '../../../functions/combatScore'
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff05',
     alignItems: 'center',
     justifyContent: 'space-between',
-    width: '90%',
+    width: '100%',
   },
   leftBar: {
     left: 0,

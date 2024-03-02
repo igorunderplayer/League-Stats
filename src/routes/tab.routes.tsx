@@ -1,14 +1,14 @@
-import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Profile from '../screens/Profile'
+import React from 'react'
 import History from '../screens/History'
+import Profile from '../screens/Profile'
 
 import { MaterialIcons } from '@expo/vector-icons'
-import themes from '../themes'
+import { Text, TouchableOpacity } from 'react-native'
 import colors from '../colors'
+import { useSummoner } from '../hooks/useSummoner'
 import Home from '../screens/Home'
-import { TouchableOpacity, Text } from 'react-native'
-import { useSummoner } from '../hooks/summoner'
+import themes from '../themes'
 
 const Tab = createBottomTabNavigator()
 

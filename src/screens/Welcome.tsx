@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import React, { useState } from 'react'
 import {
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
@@ -8,17 +9,26 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import { useSummoner } from '../hooks/summoner'
+import { SummonerInfo, useSummoner } from '../hooks/useSummoner'
 import riot from '../services/riot'
 import themes from '../themes'
 
 export default function Welcome() {
-  const { setName, setRegion, resetSummoner } = useSummoner()
+  const { savedSummoners, resetSummoner, addSummoner, getSummoner } =
+    useSummoner()
 
   const [typingName, setTypingName] = useState('')
   const [typingRegion, setTypingRegion] = useState('BR1')
 
-  async function handleOnPress() {
+  const [loading, setLoading] = useState(false)
+
+  const [selectOpen, setSelectOpen] = useState(false)
+
+  async function handleOnSearchSummonerPress() {
+    if (loading) return
+
+    setLoading(true)
+
     ToastAndroid.show(`Searching for ${typingName}...`, ToastAndroid.SHORT)
     try {
       const summoner = await riot.getSummonerByName(
@@ -31,13 +41,28 @@ export default function Welcome() {
         ToastAndroid.SHORT,
       )
 
-      setRegion(typingRegion)
-      setName(typingName)
+      addSummoner(typingName, typingRegion)
+      getSummoner(typingName, typingRegion)
     } catch (e) {
       alert(
         'Não foi possivel recuperar a conta, certifique-se que digitou corretamente',
       )
       console.error(e)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  async function handleSelectSummoner(info: SummonerInfo) {
+    if (loading) return
+    setLoading(true)
+    try {
+      getSummoner(info.name, info.region)
+    } catch (e) {
+      alert('Não foi possivel recuperar a conta')
+      console.error(e)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -47,10 +72,10 @@ export default function Welcome() {
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <View style={{ alignItems: 'center' }}>
         <Text style={styles.title}>Bem vindo</Text>
-        <Text style={styles.subTitle}>
+        <Text style={styles.text}>
           Antes de começarmos... preencha os campos abaixo com as informações
         </Text>
       </View>
@@ -79,19 +104,59 @@ export default function Welcome() {
       </View>
 
       <TouchableOpacity
-        onPress={handleOnPress}
+        onPress={handleOnSearchSummonerPress}
         style={styles.button}
       >
-        <Text style={styles.subTitle}>Continuar</Text>
+        <Text style={styles.text}>Continuar</Text>
       </TouchableOpacity>
+
+      <View>{selectOpen ? <></> : null}</View>
+
+      {/* <View style={{ gap: 8, alignItems: 'center' }}>
+        <Text style={styles.subTitle}>Summoners recentes</Text>
+        {savedSummoners.map((x) => (
+          <View
+            style={styles.inputsContainer}
+            key={x.name + x.region}
+          >
+            <TouchableOpacity
+              onPress={() => handleSelectSummoner(x)}
+              style={[
+                styles.textInput,
+                {
+                  borderRightWidth: 1,
+                  borderColor: '#ffffff20',
+                  borderTopRightRadius: 0,
+                  borderBottomRightRadius: 0,
+                },
+              ]}
+            >
+              <Text style={styles.textInput}>{x.name}</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[
+                styles.textInput,
+                { borderTopLeftRadius: 0, borderBottomLeftRadius: 0 },
+              ]}
+            >
+              <MaterialCommunityIcons
+                name='trash-can'
+                color='#ffffff20'
+                size={48}
+              />
+            </TouchableOpacity>
+          </View>
+        ))}
+      </View> */}
 
       <TouchableOpacity
         onPress={handleOnPressDelete}
         style={styles.button}
       >
-        <Text style={styles.subTitle}>Delete data</Text>
+        <Text style={styles.text}>Delete data</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   )
 }
 
@@ -108,6 +173,11 @@ const styles = StyleSheet.create({
     fontSize: 32,
   },
   subTitle: {
+    color: '#ffffff95',
+    fontWeight: 'bold',
+    fontSize: 26,
+  },
+  text: {
     color: '#ffffff60',
     fontWeight: 'bold',
     fontSize: 20,
@@ -115,11 +185,8 @@ const styles = StyleSheet.create({
   inputsContainer: {
     backgroundColor: '#ffffff10',
     flexDirection: 'row',
-    overflow: 'hidden',
     borderRadius: 12,
     width: '75%',
-    height: 72,
-    margin: 12,
   },
   textInput: {
     color: '#ffffff70',
@@ -131,5 +198,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     paddingVertical: 12,
     borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 })
