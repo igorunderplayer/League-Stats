@@ -17,5 +17,6 @@
   },
   "submit": {
     "production": {}
-  }
+  },
+  "image": "default"
 }
