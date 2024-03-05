@@ -8,9 +8,9 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal",
-      "image": "latest",
+      "distribution": "internal",   
       "android": {
+        "image": "latest",
         "buildType": "apk"
       }
     },
