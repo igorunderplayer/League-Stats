@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import colors from '../colors'
 import ChampionMasteryCard from '../components/items/ChampionMastery'
 import ChampionMastery from '../entities/ChampionMastery'
-import { useSummoner } from '../hooks/summoner'
+import { useSummoner } from '../hooks/useSummoner'
 import riot from '../services/riot'
 import themes from '../themes'
 
@@ -13,10 +13,15 @@ export default function BestChampions() {
 
   useEffect(() => {
     if (!region || !summoner) return
-    riot.getSummonerChampionsMasteries(summoner?.id).then((maestries) => {
-      if (!maestries) return
-      setMaestries(maestries.sort((x, y) => y.championLevel - x.championLevel))
-    })
+    riot
+      .getSummonerChampionsMasteries(summoner?.puuid)
+      .then((maestries) => {
+        if (!maestries) return
+        setMaestries(
+          maestries.sort((x, y) => y.championLevel - x.championLevel),
+        )
+      })
+      .catch(console.error)
   }, [])
 
   return (
@@ -44,6 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: themes.dark.background,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 8,
   },
   title: {
     color: colors.white,
@@ -54,8 +60,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   maestries: {
-    width: '95%',
-    paddingHorizontal: 2,
-    paddingVertical: 8,
+    width: '100%',
   },
 })

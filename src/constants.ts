@@ -9,6 +9,7 @@ export const LeagueTierNames = {
   SILVER: 'Prata',
   GOLD: 'Ouro',
   PLATINUM: 'Platina',
+  EMERALD: 'Esmeralda',
   DIAMOND: 'Diamante',
   MASTER: 'Mestre',
   GRANDMASTER: 'Grão-Mestre',

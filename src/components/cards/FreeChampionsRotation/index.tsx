@@ -1,17 +1,10 @@
 import * as Linking from 'expo-linking'
 import { getLocales } from 'expo-localization'
 import React, { useEffect, useState } from 'react'
-import {
-  FlatList,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { ChampionData } from '../../../@types/riot'
 import colors from '../../../colors'
-import { useSummoner } from '../../../hooks/summoner'
+import { useSummoner } from '../../../hooks/useSummoner'
 import riot from '../../../services/riot'
 
 const FreeChampionsRotation: React.FC = () => {
@@ -37,14 +30,14 @@ const FreeChampionsRotation: React.FC = () => {
         <Text style={styles.title}>Rotação de campeões</Text>
       </View>
 
-      <FlatList
-        style={styles.flatlist}
-        contentContainerStyle={{ justifyContent: 'space-between' }}
-        data={champions}
-        renderItem={ChampionItem}
-        keyExtractor={(item) => String(item.key)}
-        numColumns={2}
-      />
+      <View style={styles.flatlist}>
+        {champions.map((champ) => (
+          <ChampionItem
+            key={champ.key}
+            item={champ}
+          />
+        ))}
+      </View>
     </View>
   )
 }
@@ -82,7 +75,7 @@ const ChampionItem = ({ item }: ItemProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '95%',
+    width: '100%',
     padding: 8,
     borderRadius: 12,
     backgroundColor: '#ffffff05',
@@ -103,16 +96,16 @@ const styles = StyleSheet.create({
   },
   flatlist: {
     width: '100%',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 4,
   },
   itemContainer: {
     backgroundColor: '#ffffff05',
     flexDirection: 'row',
     alignItems: 'center',
-    width: '45%',
-    marginVertical: 4,
-    marginHorizontal: '2.5%',
     borderRadius: 12,
-    overflow: 'hidden',
+    width: '49%',
   },
   championName: {
     padding: 8,

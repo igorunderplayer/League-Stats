@@ -18,6 +18,9 @@ export interface ChampionData {
 
 
 // League of Legends
+
+export type TeamPosition = 'TOP' | 'JUNGLE' | 'MIDDLE' | 'BOTTOM' | 'UTILITY'
+
 export interface LeagueEntry {
   leagueId: string
   summonerId: string
@@ -68,7 +71,7 @@ export interface MatchParticipant {
   champLevel: number
   role: string
   teamId: number
-  teamPosition : 'TOP' | 'JUNGLE' | 'MIDDLE' | 'BOTTOM' | 'UTILITY'
+  teamPosition: TeamPosition 
 
   // kda
   assists: number

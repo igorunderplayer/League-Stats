@@ -1,8 +1,8 @@
-import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import { useSummoner } from '../hooks/summoner'
-import TabRoutes from './tab.routes'
+import React from 'react'
+import { useSummoner } from '../hooks/useSummoner'
 import Welcome from '../screens/Welcome'
+import TabRoutes from './tab.routes'
 
 export function Routes() {
   const { summoner } = useSummoner()

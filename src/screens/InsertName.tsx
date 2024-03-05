@@ -6,9 +6,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import { useSummoner } from '../hooks/summoner'
-import themes from '../themes'
+import { useSummoner } from '../hooks/useSummoner'
 import riot from '../services/riot'
+import themes from '../themes'
 
 export default function InsertName() {
   const { setName, setRegion } = useSummoner()

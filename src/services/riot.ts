@@ -1,10 +1,11 @@
 import axios, { AxiosResponse } from 'axios'
 
-import { RIOT_API_KEY } from '@env'
 import { LeagueEntry, Match } from '../@types/riot'
 import ChampionMastery from '../entities/ChampionMastery'
 import Summoner from '../entities/Summoner'
 import ddragonApi from './ddragon'
+
+const RIOT_API_KEY = process.env.EXPO_PUBLIC_RIOT_API_KEY
 
 interface GetMatchesOptions {
   startTime?: number
@@ -48,11 +49,11 @@ class Riot {
   }
 
   async getSummonerChampionsMasteries(
-    summonerId: string,
+    puuid: string,
     region = this.defaultRegion,
   ) {
     const res = await this.request({
-      url: `/lol/champion-mastery/v4/champion-masteries/by-summoner/${summonerId}`,
+      url: `/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`,
       region,
     })
 

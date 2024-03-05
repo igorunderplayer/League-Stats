@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import colors from '../../../colors'
-import { useSummoner } from '../../../hooks/summoner'
+import { useSummoner } from '../../../hooks/useSummoner'
 import SummonerIcon from '../../generic/SummonerIcon'
 
 const ProfileCard: React.FC = () => {

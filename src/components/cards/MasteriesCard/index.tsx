@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import colors from '../../../colors'
 import ChampionMastery from '../../../entities/ChampionMastery'
-import { useSummoner } from '../../../hooks/summoner'
+import { useSummoner } from '../../../hooks/useSummoner'
 import { ProfileStackParamList } from '../../../screens/Profile'
 import riot from '../../../services/riot'
 import ChampionMasteryCard from '../../items/ChampionMastery'
@@ -23,7 +23,7 @@ const MasteriesCard: React.FC = () => {
 
   useEffect(() => {
     if (!region || !summoner) return
-    riot.getSummonerChampionsMasteries(summoner?.id).then((maestries) => {
+    riot.getSummonerChampionsMasteries(summoner?.puuid).then((maestries) => {
       if (!maestries) return
       setMaestries(
         maestries

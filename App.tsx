@@ -2,7 +2,7 @@ import * as SplashScreen from 'expo-splash-screen'
 import { StatusBar } from 'expo-status-bar'
 import React, { useCallback, useEffect, useState } from 'react'
 import { View } from 'react-native'
-import { SummonerProvider } from './src/hooks/summoner'
+import { SummonerProvider } from './src/hooks/useSummoner'
 import { Routes } from './src/routes'
 import riot from './src/services/riot'
 
