@@ -9,6 +9,7 @@
     },
     "preview": {
       "distribution": "internal",
+      "image": "latest",
       "android": {
         "buildType": "apk"
       }
@@ -17,6 +18,5 @@
   },
   "submit": {
     "production": {}
-  },
-  "image": "default"
+  }
 }
