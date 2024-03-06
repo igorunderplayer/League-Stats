@@ -9,6 +9,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
+import { leagueFromString } from '../@types/riot'
+import { SelectMenu } from '../components/generic/SelectMenu'
+import riotRegionFromLeague from '../functions/riotRegionFromLeague'
 import { SummonerInfo, useSummoner } from '../hooks/useSummoner'
 import riot from '../services/riot'
 import themes from '../themes'
@@ -22,18 +25,29 @@ export default function Welcome() {
 
   const [loading, setLoading] = useState(false)
 
-  const [selectOpen, setSelectOpen] = useState(false)
-
   async function handleOnSearchSummonerPress() {
     if (loading) return
-
     setLoading(true)
 
     ToastAndroid.show(`Searching for ${typingName}...`, ToastAndroid.SHORT)
     try {
-      const summoner = await riot.getSummonerByName(
-        typingName,
-        typingRegion.toLowerCase(),
+      const [name] = typingName.split('#')
+      let [, tag] = typingName.split('#')
+
+      if (!tag || tag.length) {
+        tag = typingRegion.toLowerCase()
+      }
+
+      const leagueRegion = leagueFromString(typingRegion.toUpperCase())
+      const riotAccount = await riot.getAccountByRiotId(
+        tag,
+        name,
+        riotRegionFromLeague(leagueRegion),
+      )
+
+      const summoner = await riot.getSummonerByPuuId(
+        riotAccount.puuid,
+        leagueRegion,
       )
 
       ToastAndroid.show(
@@ -41,8 +55,8 @@ export default function Welcome() {
         ToastAndroid.SHORT,
       )
 
-      addSummoner(typingName, typingRegion)
-      getSummoner(typingName, typingRegion)
+      getSummoner(leagueRegion, summoner.puuid)
+      addSummoner(leagueRegion, summoner.puuid, summoner.name)
     } catch (e) {
       alert(
         'Não foi possivel recuperar a conta, certifique-se que digitou corretamente',
@@ -53,11 +67,12 @@ export default function Welcome() {
     }
   }
 
-  async function handleSelectSummoner(info: SummonerInfo) {
+  async function handleSelectSummoner(data: SummonerInfo) {
     if (loading) return
     setLoading(true)
+
     try {
-      getSummoner(info.name, info.region)
+      getSummoner(leagueFromString(data.leagueRegion.toUpperCase()), data.puuid)
     } catch (e) {
       alert('Não foi possivel recuperar a conta')
       console.error(e)
@@ -110,45 +125,19 @@ export default function Welcome() {
         <Text style={styles.text}>Continuar</Text>
       </TouchableOpacity>
 
-      <View>{selectOpen ? <></> : null}</View>
-
-      {/* <View style={{ gap: 8, alignItems: 'center' }}>
-        <Text style={styles.subTitle}>Summoners recentes</Text>
-        {savedSummoners.map((x) => (
-          <View
-            style={styles.inputsContainer}
-            key={x.name + x.region}
-          >
-            <TouchableOpacity
-              onPress={() => handleSelectSummoner(x)}
-              style={[
-                styles.textInput,
-                {
-                  borderRightWidth: 1,
-                  borderColor: '#ffffff20',
-                  borderTopRightRadius: 0,
-                  borderBottomRightRadius: 0,
-                },
-              ]}
-            >
-              <Text style={styles.textInput}>{x.name}</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={[
-                styles.textInput,
-                { borderTopLeftRadius: 0, borderBottomLeftRadius: 0 },
-              ]}
-            >
-              <MaterialCommunityIcons
-                name='trash-can'
-                color='#ffffff20'
-                size={48}
-              />
-            </TouchableOpacity>
-          </View>
-        ))}
-      </View> */}
+      <SelectMenu
+        text='Campeões recentes'
+        onSelect={(item) => handleSelectSummoner(item.data as SummonerInfo)}
+        items={savedSummoners.map((x) => ({
+          text: x.name ?? 'Invocador desconhecido',
+          key: `${x.name}-${x.leagueRegion}`,
+          data: {
+            name: x.name,
+            leagueRegion: x.leagueRegion,
+            puuid: x.puuid,
+          },
+        }))}
+      />
 
       <TouchableOpacity
         onPress={handleOnPressDelete}

@@ -1,5 +1,30 @@
 import type { GameModeNames } from '../constants'
 
+// Riot
+
+export interface Account {
+  puuid: string,
+  gameName: string,
+  tagLine: string
+}
+
+export const RiotRegions = {
+  Americas: 'americas',
+  Asia: 'asia',
+  Europe: 'europe',
+  PBE: 'pbe',
+  Unknown: 'unknown',
+  isValidString(string: string) {
+    return !!this[string as keyof RiotRegion]
+  }
+} as const
+
+export type RiotRegion = (typeof RiotRegions)[keyof typeof RiotRegions]
+
+export function regionFromString(string: string): RiotRegion {
+  return RiotRegions[string as keyof RiotRegion]
+}
+
 // DDragon
 export interface DDragonChampionsRaw {
   [key: string]: ChampionData
@@ -18,6 +43,39 @@ export interface ChampionData {
 
 
 // League of Legends
+
+export const LeagueRegions = {
+  // America
+  BR1: 'br1',
+  NA1: 'na1',
+  LA1: 'la1',
+  LA2: 'la2',
+  // Europe
+  EUN1: 'eun1',
+  EUW1: 'euw1',
+  TR1: 'tr1',
+  RU: 'ru',
+  // Asia
+  JP1: 'jp1',
+  KR: 'kr',
+  SG2: 'sg2',
+  PH2: 'ph2',
+  TW2: 'tw2',
+  TH2: 'th2',
+  VN2: 'vn2',
+  ID1: 'id1',
+
+  // Other
+  PBE1: 'pbe1',
+  UNKNOWN: 'unknown'
+} as const
+
+
+export type LeagueRegion = (typeof LeagueRegions)[keyof typeof LeagueRegions]
+
+export function leagueFromString(string: string): LeagueRegion {
+  return LeagueRegions[string as keyof LeagueRegion]
+}
 
 export type TeamPosition = 'TOP' | 'JUNGLE' | 'MIDDLE' | 'BOTTOM' | 'UTILITY'
 
