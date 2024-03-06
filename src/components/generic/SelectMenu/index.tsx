@@ -39,7 +39,7 @@ const SelectMenu: React.FC<Props> = ({ text, items, onSelect }) => {
               onPress={() => onSelect(item)}
               key={item.key}
             >
-              <Text>{item.text}</Text>
+              <Text style={styles.subText}>{item.text}</Text>
             </TouchableOpacity>
           ))}
         </View>

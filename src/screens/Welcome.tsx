@@ -126,7 +126,7 @@ export default function Welcome() {
       </TouchableOpacity>
 
       <SelectMenu
-        text='Campeões recentes'
+        text='Invocadores recentes'
         onSelect={(item) => handleSelectSummoner(item.data as SummonerInfo)}
         items={savedSummoners.map((x) => ({
           text: x.name ?? 'Invocador desconhecido',

@@ -10,7 +10,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#ffffff70',
+    fontWeight: 'bold',
     fontSize: 18,
+  },
+  subText: {
+    color: '#ffffff60',
+    padding: 4
   }
 })
 
