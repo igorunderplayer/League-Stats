@@ -113,7 +113,7 @@ class Riot {
     return res.data
   }
 
-  async getMatchById(matchId: string, riotRegion = this.defaultRiotRegion) {
+  async getMatchById(matchId: string, riotRegion: RiotRegion = this.defaultRiotRegion) {
     const res = await this.request<Match>({
       url: `/lol/match/v5/matches/${matchId}`,
       riotRegion,
