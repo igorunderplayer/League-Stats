@@ -5,7 +5,6 @@ import ChampionMastery from '../entities/ChampionMastery'
 import Summoner from '../entities/Summoner'
 import ddragonApi from './ddragon'
 
-
 const RIOT_API_KEY = process.env.EXPO_PUBLIC_RIOT_API_KEY
 
 interface GetMatchesOptions {
@@ -94,7 +93,6 @@ class Riot {
     options: GetMatchesOptions = {},
     riotRegion: RiotRegion = this.defaultRiotRegion,
   ): Promise<string[]> {
-    console.log('Fetching matches for puuid: ', puuid)
     const params = new URLSearchParams()
 
     for (const option in options) {
@@ -131,7 +129,7 @@ class Riot {
 
     
 
-    console.log(`https://${_options.leagueRegion ?? _options.riotRegion}.api.riotgames.com` +
+    console.log(`[Riot Network] GET https://${_options.leagueRegion ?? _options.riotRegion}.api.riotgames.com` +
     _options.url)
 
     const res = await axios.request<T>({

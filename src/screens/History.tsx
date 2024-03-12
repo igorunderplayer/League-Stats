@@ -102,10 +102,10 @@ const styles = StyleSheet.create({
     backgroundColor: themes.dark.background,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 8,
   },
   matchList: {
     width: '100%',
+    padding: 8,
   },
   matchListContainer: {
     alignItems: 'center',

@@ -53,7 +53,7 @@ function SummonerProvider({ children }: SummonerProviderProps) {
       setLeagueRegion(leagueRegion)
       setSummoner(res)
 
-      console.log('Summoner updated successfully')
+      console.log('[SummonerContext] Summoner updated successfully')
     } catch (e) {
       if (e instanceof AxiosError) {
         console.error({ ...e })
