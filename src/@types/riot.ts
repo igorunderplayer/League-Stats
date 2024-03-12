@@ -13,16 +13,13 @@ export const RiotRegions = {
   Asia: 'asia',
   Europe: 'europe',
   PBE: 'pbe',
-  Unknown: 'unknown',
-  isValidString(string: string) {
-    return !!this[string as keyof RiotRegion]
-  }
+  Unknown: 'unknown'
 } as const
 
 export type RiotRegion = (typeof RiotRegions)[keyof typeof RiotRegions]
 
 export function regionFromString(string: string): RiotRegion {
-  return RiotRegions[string as keyof RiotRegion]
+  return RiotRegions[string as keyof typeof RiotRegions]
 }
 
 // DDragon
@@ -74,7 +71,7 @@ export const LeagueRegions = {
 export type LeagueRegion = (typeof LeagueRegions)[keyof typeof LeagueRegions]
 
 export function leagueFromString(string: string): LeagueRegion {
-  return LeagueRegions[string as keyof LeagueRegion]
+  return LeagueRegions[string as keyof typeof LeagueRegions]
 }
 
 export type TeamPosition = 'TOP' | 'JUNGLE' | 'MIDDLE' | 'BOTTOM' | 'UTILITY'
