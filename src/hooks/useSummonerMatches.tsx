@@ -13,9 +13,9 @@ export default function useSummonerMatches(
   const [loading, setLoading] = useState(false)
 
   const loadMatches = useCallback(async () => {
-    setLoading(true)
-
     if (loading) return
+
+    setLoading(true)
 
     try {
       if (!summoner) return
