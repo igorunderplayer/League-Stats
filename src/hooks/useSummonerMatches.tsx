@@ -18,7 +18,9 @@ export default function useSummonerMatches(
     setLoading(true)
 
     try {
-      if (!summoner) throw Error('Summoner is not available or null')
+      if (!summoner || !region) {
+        throw Error('Summoner or region is not available or null')
+      }
 
       const ids = await riot.getMatchesByPuuid(
         summoner.puuid,
@@ -33,9 +35,6 @@ export default function useSummonerMatches(
         const match = await riot.getMatchById(matchId, region)
         setMatches((prev) => [...prev, match])
       }
-
-      // const data = await Promise.all(ids.map((id) => riot.getMatchById(id)))
-      // setMatches((prev) => [...prev, ...data])
     } finally {
       setLoading(false)
     }

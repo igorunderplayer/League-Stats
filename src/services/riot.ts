@@ -1,9 +1,18 @@
 import axios, { AxiosResponse } from 'axios'
 
-import { Account, LeagueEntry, LeagueRegion, LeagueRegions, Match, RiotRegion, RiotRegions } from '../@types/riot'
+import { Account, LeagueEntry, LeagueRegion, Match, RiotRegion } from '../@types/riot'
 import ChampionMastery from '../entities/ChampionMastery'
 import Summoner from '../entities/Summoner'
 import ddragonApi from './ddragon'
+
+
+// TODO: Move process typing
+
+declare const process: {
+  env: {
+    [key: string]: string
+  }
+}
 
 const RIOT_API_KEY = process.env.EXPO_PUBLIC_RIOT_API_KEY
 
@@ -26,11 +35,7 @@ interface RequestOptions {
 class Riot {
   ddragon = ddragonApi
 
-  //temp
-  defaultRegion = LeagueRegions.BR1
-  defaultRiotRegion = RiotRegions.Americas
-
-  async getAccountByRiotId(tag: string, name: string, region: RiotRegion = this.defaultRiotRegion) {
+  async getAccountByRiotId(tag: string, name: string, region: RiotRegion) {
     const res = await this.request<Account>({
      url: `/riot/account/v1/accounts/by-riot-id/${name}/${tag}`,
      riotRegion: region
@@ -49,7 +54,7 @@ class Riot {
   }
 
 
-  async getSummonerByName(name: string, region: LeagueRegion = this.defaultRegion) {
+  async getSummonerByName(name: string, region: LeagueRegion) {
     const res = await this.request<Summoner>({
       url: `/lol/summoner/v4/summoners/by-name/${name}`,
       leagueRegion: region,
@@ -58,7 +63,7 @@ class Riot {
     return new Summoner(res.data)
   }
 
-  async getSummonerLeague(summonerId: string, region: LeagueRegion = this.defaultRegion) {
+  async getSummonerLeague(summonerId: string, region: LeagueRegion) {
     const res = await this.request<LeagueEntry[]>({
       url: `/lol/league/v4/entries/by-summoner/${summonerId}`,
       leagueRegion: region,
@@ -69,7 +74,7 @@ class Riot {
 
   async getSummonerChampionsMasteries(
     puuid: string,
-    region: LeagueRegion = this.defaultRegion,
+    region: LeagueRegion,
   ) {
     const res = await this.request<ChampionMastery[]>({
       url: `/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`,
@@ -83,7 +88,7 @@ class Riot {
     }
   }
 
-  async getFreeChampionsIdRotation(region: LeagueRegion = this.defaultRegion): Promise<number[]> {
+  async getFreeChampionsIdRotation(region: LeagueRegion): Promise<number[]> {
     const res = await this.request<{ freeChampionIds: number[] }>({ url: `/lol/platform/v3/champion-rotations`, leagueRegion: region })
     return res.data.freeChampionIds
   }
@@ -91,7 +96,7 @@ class Riot {
   async getMatchesByPuuid(
     puuid: string,
     options: GetMatchesOptions = {},
-    riotRegion: RiotRegion = this.defaultRiotRegion,
+    riotRegion: RiotRegion,
   ): Promise<string[]> {
     const params = new URLSearchParams()
 
@@ -111,7 +116,7 @@ class Riot {
     return res.data
   }
 
-  async getMatchById(matchId: string, riotRegion: RiotRegion = this.defaultRiotRegion) {
+  async getMatchById(matchId: string, riotRegion: RiotRegion) {
     const res = await this.request<Match>({
       url: `/lol/match/v5/matches/${matchId}`,
       riotRegion,
