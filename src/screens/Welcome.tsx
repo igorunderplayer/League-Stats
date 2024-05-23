@@ -34,7 +34,7 @@ export default function Welcome() {
       const [name] = typingName.split('#')
       let [, tag] = typingName.split('#')
 
-      if (!tag || tag.length) {
+      if (!tag || !tag.length) {
         tag = typingRegion.toLowerCase()
       }
 
