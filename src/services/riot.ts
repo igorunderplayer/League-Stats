@@ -35,6 +35,15 @@ interface RequestOptions {
 class Riot {
   ddragon = ddragonApi
 
+  async getAccountByPuuid(puuid: string, region: RiotRegion) {
+    const res = await this.request<Account>({
+      url: `/riot/account/v1/accounts/by-puuid/${puuid}`,
+      riotRegion: region
+    })
+
+    return res.data
+  }
+
   async getAccountByRiotId(tag: string, name: string, region: RiotRegion) {
     const res = await this.request<Account>({
      url: `/riot/account/v1/accounts/by-riot-id/${name}/${tag}`,

@@ -1,6 +1,12 @@
 import { MaterialIcons } from '@expo/vector-icons'
 import React, { useState } from 'react'
-import { Text, TouchableOpacity, View } from 'react-native'
+import {
+  StyleProp,
+  Text,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native'
 
 import { styles } from './styles'
 
@@ -12,15 +18,16 @@ interface Item {
 
 interface Props {
   text: string
+  styles?: StyleProp<ViewStyle>
   items: Item[]
   onSelect: (item: Item) => unknown
 }
 
-const SelectMenu: React.FC<Props> = ({ text, items, onSelect }) => {
+const SelectMenu: React.FC<Props> = ({ text, items, onSelect, ...props }) => {
   const [open, setOpen] = useState(false)
   return (
     <TouchableOpacity
-      style={styles.container}
+      style={[styles.container, props.styles]}
       onPress={() => setOpen((val) => !val)}
     >
       <View style={{ flexDirection: 'row' }}>

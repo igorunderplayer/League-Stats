@@ -125,6 +125,7 @@ export default function MatchInfo() {
               <MatchParticipantInfo
                 key={participant.puuid}
                 participant={participant}
+                region={riotRegionFromLeague(leagueRegion ?? 'br1')}
                 focused={participant.puuid == focusedParticipantPuuid}
                 onClick={() => setFocusedParticipantPuuid(participant.puuid)}
               />
@@ -137,6 +138,7 @@ export default function MatchInfo() {
             .map((participant) => (
               <MatchParticipantInfo
                 key={participant.puuid}
+                region={riotRegionFromLeague(leagueRegion ?? 'br1')}
                 participant={participant}
                 focused={participant.puuid == focusedParticipantPuuid}
                 onClick={() => setFocusedParticipantPuuid(participant.puuid)}

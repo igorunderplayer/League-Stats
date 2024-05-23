@@ -2,6 +2,7 @@ import { LeagueRegion, RiotRegion, RiotRegions } from '../@types/riot'
 
 
 export default function riotRegionFromLeague(region: LeagueRegion): RiotRegion {
+
   const _region = (region as string).toLowerCase()
   const mapping = { 
     'br1': RiotRegions.Americas,

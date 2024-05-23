@@ -56,7 +56,11 @@ export default function Welcome() {
       )
 
       getSummoner(leagueRegion, summoner.puuid)
-      addSummoner(leagueRegion, summoner.puuid, summoner.name)
+      addSummoner(
+        leagueRegion,
+        summoner.puuid,
+        `${riotAccount.gameName}#${riotAccount.tagLine}`,
+      )
     } catch (e) {
       alert(
         'Não foi possivel recuperar a conta, certifique-se que digitou corretamente',
@@ -95,26 +99,45 @@ export default function Welcome() {
         </Text>
       </View>
 
-      <View style={styles.inputsContainer}>
-        <TextInput
-          value={typingRegion}
-          onChangeText={(text) => setTypingRegion(text)}
-          style={[
-            styles.textInput,
-            {
-              width: '20%',
-              borderRightWidth: 1,
-              borderColor: '#ffffff50',
-            },
-          ]}
-        />
+      <View>
+        <View style={styles.inputsContainer}>
+          <TextInput
+            value={typingRegion}
+            onChangeText={(text) => setTypingRegion(text)}
+            style={[
+              styles.textInput,
+              {
+                width: '20%',
+                borderRightWidth: 1,
+                borderColor: '#ffffff50',
+              },
+            ]}
+          />
 
-        <TextInput
-          value={typingName}
-          placeholder='Seu nome de usuario'
-          placeholderTextColor='#ffffff45'
-          onChangeText={(text) => setTypingName(text)}
-          style={styles.textInput}
+          <TextInput
+            value={typingName}
+            placeholder='Seu nome de usuario'
+            placeholderTextColor='#ffffff45'
+            onChangeText={(text) => setTypingName(text)}
+            style={styles.textInput}
+          />
+        </View>
+        <SelectMenu
+          text='Invocadores recentes'
+          styles={{
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
+          }}
+          onSelect={(item) => handleSelectSummoner(item.data as SummonerInfo)}
+          items={savedSummoners.map((x) => ({
+            text: x.name ?? 'Invocador desconhecido',
+            key: x.puuid,
+            data: {
+              name: x.name,
+              leagueRegion: x.leagueRegion,
+              puuid: x.puuid,
+            },
+          }))}
         />
       </View>
 
@@ -124,20 +147,6 @@ export default function Welcome() {
       >
         <Text style={styles.text}>Continuar</Text>
       </TouchableOpacity>
-
-      <SelectMenu
-        text='Invocadores recentes'
-        onSelect={(item) => handleSelectSummoner(item.data as SummonerInfo)}
-        items={savedSummoners.map((x) => ({
-          text: x.name ?? 'Invocador desconhecido',
-          key: `${x.name}-${x.leagueRegion}`,
-          data: {
-            name: x.name,
-            leagueRegion: x.leagueRegion,
-            puuid: x.puuid,
-          },
-        }))}
-      />
 
       <TouchableOpacity
         onPress={handleOnPressDelete}
@@ -174,7 +183,12 @@ const styles = StyleSheet.create({
   inputsContainer: {
     backgroundColor: '#ffffff10',
     flexDirection: 'row',
-    borderRadius: 12,
+    borderTopLeftRadius: 12,
+    borderTopRightRadius: 12,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    borderColor: '#ffffff50',
+    borderBottomWidth: 1,
     width: '75%',
   },
   textInput: {

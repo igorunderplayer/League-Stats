@@ -107,6 +107,8 @@ export interface Match {
   info: {
     platformId: string
     gameMode: keyof typeof GameModeNames
+    gameName: string
+    gameType: string
     participants: MatchParticipant[]
     gameDuration: number
     teams: MatchTeam[]
