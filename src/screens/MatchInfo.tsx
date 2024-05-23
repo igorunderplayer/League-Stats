@@ -5,6 +5,7 @@ import { Match, MatchParticipant } from '../@types/riot'
 import colors from '../colors'
 import ParticipantFocusDetails from '../components/cards/ParticipantFocusDetail'
 import MatchParticipantInfo from '../components/items/MatchParticipantInfo'
+import riotRegionFromLeague from '../functions/riotRegionFromLeague'
 import { useSummoner } from '../hooks/useSummoner'
 import riot from '../services/riot'
 import themes from '../themes'
@@ -14,17 +15,19 @@ type matchInfoScreenProp = RouteProp<HistoryStackParamList, 'matchInfo'>
 
 export default function MatchInfo() {
   const route = useRoute<matchInfoScreenProp>()
-  const { summoner, region } = useSummoner()
+  const { summoner, leagueRegion } = useSummoner()
   const [match, setMatch] = useState<Match>()
   const [focusedParticipantPuuid, setFocusedParticipantPuuid] =
     useState<string>('')
 
   useEffect(() => {
-    if (!region || !summoner) return
-    riot.getMatchById(route.params?.matchId).then((match) => {
-      setMatch(match)
-      setFocusedParticipantPuuid(match.info.participants[0].puuid)
-    })
+    if (!leagueRegion || !summoner) return
+    riot
+      .getMatchById(route.params?.matchId, riotRegionFromLeague(leagueRegion))
+      .then((match) => {
+        setMatch(match)
+        setFocusedParticipantPuuid(match.info.participants[0].puuid)
+      })
   }, [])
 
   const focusedParticipant =
@@ -120,8 +123,9 @@ export default function MatchInfo() {
             .filter((p) => p.teamId == 100)
             .map((participant) => (
               <MatchParticipantInfo
-                key={participant.summonerName}
+                key={participant.puuid}
                 participant={participant}
+                region={riotRegionFromLeague(leagueRegion ?? 'br1')}
                 focused={participant.puuid == focusedParticipantPuuid}
                 onClick={() => setFocusedParticipantPuuid(participant.puuid)}
               />
@@ -133,7 +137,8 @@ export default function MatchInfo() {
             .filter((p) => p.teamId == 200)
             .map((participant) => (
               <MatchParticipantInfo
-                key={participant.summonerName}
+                key={participant.puuid}
+                region={riotRegionFromLeague(leagueRegion ?? 'br1')}
                 participant={participant}
                 focused={participant.puuid == focusedParticipantPuuid}
                 onClick={() => setFocusedParticipantPuuid(participant.puuid)}

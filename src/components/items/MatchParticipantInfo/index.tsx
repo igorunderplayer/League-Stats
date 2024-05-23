@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { MatchParticipant } from '../../../@types/riot'
+import { Account, MatchParticipant, RiotRegion } from '../../../@types/riot'
 
 import SimpleKDA from '../../generic/SimpleKDA'
 import ParticipantItems from '../ParticipantItems'
@@ -12,6 +12,7 @@ import spells from '../../../spells2.json'
 
 type Props = {
   participant: MatchParticipant
+  region: RiotRegion
   focused: boolean
   onClick: () => unknown
 }
@@ -24,9 +25,18 @@ const formatter = new Intl.NumberFormat('en-US', { notation: 'compact' })
 
 const MatchParticipantInfo: React.FC<Props> = ({
   participant,
+  region,
   onClick,
   focused = false,
 }) => {
+  const [account, setAccount] = useState<Account>()
+
+  useEffect(() => {
+    riot.getAccountByPuuid(participant.puuid, region).then((acc) => {
+      setAccount(acc)
+    })
+  }, [participant, region])
+
   const primaryMainRune = participant.perks.styles[0].selections[0].perk
   const runeIconPath =
     runes.find((rune) => rune.id == primaryMainRune)?.icon.toLowerCase() ?? ''
@@ -125,7 +135,9 @@ const MatchParticipantInfo: React.FC<Props> = ({
       </View>
 
       <View style={styles.basicPlayerInfo}>
-        <Text style={styles.name}>{participant.summonerName}</Text>
+        <Text style={styles.name}>
+          {account?.gameName}#{account?.tagLine}
+        </Text>
 
         <SimpleKDA
           kills={participant.kills}

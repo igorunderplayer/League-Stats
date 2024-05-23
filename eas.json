@@ -8,7 +8,7 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal",   
+      "distribution": "internal",
       "android": {
         "image": "latest",
         "buildType": "apk"

@@ -9,6 +9,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
+import { leagueFromString } from '../@types/riot'
+import { SelectMenu } from '../components/generic/SelectMenu'
+import riotRegionFromLeague from '../functions/riotRegionFromLeague'
 import { SummonerInfo, useSummoner } from '../hooks/useSummoner'
 import riot from '../services/riot'
 import themes from '../themes'
@@ -22,18 +25,29 @@ export default function Welcome() {
 
   const [loading, setLoading] = useState(false)
 
-  const [selectOpen, setSelectOpen] = useState(false)
-
   async function handleOnSearchSummonerPress() {
     if (loading) return
-
     setLoading(true)
 
     ToastAndroid.show(`Searching for ${typingName}...`, ToastAndroid.SHORT)
     try {
-      const summoner = await riot.getSummonerByName(
-        typingName,
-        typingRegion.toLowerCase(),
+      const [name] = typingName.split('#')
+      let [, tag] = typingName.split('#')
+
+      if (!tag || !tag.length) {
+        tag = typingRegion.toLowerCase()
+      }
+
+      const leagueRegion = leagueFromString(typingRegion.toUpperCase())
+      const riotAccount = await riot.getAccountByRiotId(
+        tag,
+        name,
+        riotRegionFromLeague(leagueRegion),
+      )
+
+      const summoner = await riot.getSummonerByPuuId(
+        riotAccount.puuid,
+        leagueRegion,
       )
 
       ToastAndroid.show(
@@ -41,8 +55,12 @@ export default function Welcome() {
         ToastAndroid.SHORT,
       )
 
-      addSummoner(typingName, typingRegion)
-      getSummoner(typingName, typingRegion)
+      getSummoner(leagueRegion, summoner.puuid)
+      addSummoner(
+        leagueRegion,
+        summoner.puuid,
+        `${riotAccount.gameName}#${riotAccount.tagLine}`,
+      )
     } catch (e) {
       alert(
         'Não foi possivel recuperar a conta, certifique-se que digitou corretamente',
@@ -53,11 +71,12 @@ export default function Welcome() {
     }
   }
 
-  async function handleSelectSummoner(info: SummonerInfo) {
+  async function handleSelectSummoner(data: SummonerInfo) {
     if (loading) return
     setLoading(true)
+
     try {
-      getSummoner(info.name, info.region)
+      getSummoner(leagueFromString(data.leagueRegion.toUpperCase()), data.puuid)
     } catch (e) {
       alert('Não foi possivel recuperar a conta')
       console.error(e)
@@ -80,26 +99,45 @@ export default function Welcome() {
         </Text>
       </View>
 
-      <View style={styles.inputsContainer}>
-        <TextInput
-          value={typingRegion}
-          onChangeText={(text) => setTypingRegion(text)}
-          style={[
-            styles.textInput,
-            {
-              width: '20%',
-              borderRightWidth: 1,
-              borderColor: '#ffffff50',
-            },
-          ]}
-        />
+      <View>
+        <View style={styles.inputsContainer}>
+          <TextInput
+            value={typingRegion}
+            onChangeText={(text) => setTypingRegion(text)}
+            style={[
+              styles.textInput,
+              {
+                width: '20%',
+                borderRightWidth: 1,
+                borderColor: '#ffffff50',
+              },
+            ]}
+          />
 
-        <TextInput
-          value={typingName}
-          placeholder='Seu nome de usuario'
-          placeholderTextColor='#ffffff45'
-          onChangeText={(text) => setTypingName(text)}
-          style={styles.textInput}
+          <TextInput
+            value={typingName}
+            placeholder='Seu nome de usuario'
+            placeholderTextColor='#ffffff45'
+            onChangeText={(text) => setTypingName(text)}
+            style={styles.textInput}
+          />
+        </View>
+        <SelectMenu
+          text='Invocadores recentes'
+          styles={{
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
+          }}
+          onSelect={(item) => handleSelectSummoner(item.data as SummonerInfo)}
+          items={savedSummoners.map((x) => ({
+            text: x.name ?? 'Invocador desconhecido',
+            key: x.puuid,
+            data: {
+              name: x.name,
+              leagueRegion: x.leagueRegion,
+              puuid: x.puuid,
+            },
+          }))}
         />
       </View>
 
@@ -109,46 +147,6 @@ export default function Welcome() {
       >
         <Text style={styles.text}>Continuar</Text>
       </TouchableOpacity>
-
-      <View>{selectOpen ? <></> : null}</View>
-
-      {/* <View style={{ gap: 8, alignItems: 'center' }}>
-        <Text style={styles.subTitle}>Summoners recentes</Text>
-        {savedSummoners.map((x) => (
-          <View
-            style={styles.inputsContainer}
-            key={x.name + x.region}
-          >
-            <TouchableOpacity
-              onPress={() => handleSelectSummoner(x)}
-              style={[
-                styles.textInput,
-                {
-                  borderRightWidth: 1,
-                  borderColor: '#ffffff20',
-                  borderTopRightRadius: 0,
-                  borderBottomRightRadius: 0,
-                },
-              ]}
-            >
-              <Text style={styles.textInput}>{x.name}</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={[
-                styles.textInput,
-                { borderTopLeftRadius: 0, borderBottomLeftRadius: 0 },
-              ]}
-            >
-              <MaterialCommunityIcons
-                name='trash-can'
-                color='#ffffff20'
-                size={48}
-              />
-            </TouchableOpacity>
-          </View>
-        ))}
-      </View> */}
 
       <TouchableOpacity
         onPress={handleOnPressDelete}
@@ -185,7 +183,12 @@ const styles = StyleSheet.create({
   inputsContainer: {
     backgroundColor: '#ffffff10',
     flexDirection: 'row',
-    borderRadius: 12,
+    borderTopLeftRadius: 12,
+    borderTopRightRadius: 12,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    borderColor: '#ffffff50',
+    borderBottomWidth: 1,
     width: '75%',
   },
   textInput: {

@@ -1,9 +1,18 @@
 import axios, { AxiosResponse } from 'axios'
 
-import { LeagueEntry, Match } from '../@types/riot'
+import { Account, LeagueEntry, LeagueRegion, Match, RiotRegion } from '../@types/riot'
 import ChampionMastery from '../entities/ChampionMastery'
 import Summoner from '../entities/Summoner'
 import ddragonApi from './ddragon'
+
+
+// TODO: Move process typing
+
+declare const process: {
+  env: {
+    [key: string]: string
+  }
+}
 
 const RIOT_API_KEY = process.env.EXPO_PUBLIC_RIOT_API_KEY
 
@@ -19,30 +28,54 @@ interface GetMatchesOptions {
 // TODO: type all
 interface RequestOptions {
   url?: string
-  region?: 'br1' | 'euw1' | 'kr1' | string
-  shard?: 'americas' | string
+  leagueRegion?: LeagueRegion
+  riotRegion?: RiotRegion
 }
 
 class Riot {
   ddragon = ddragonApi
 
-  //temp
-  defaultRegion: RequestOptions['region'] = 'br1'
-  defaultShard: RequestOptions['shard'] = 'americas'
+  async getAccountByPuuid(puuid: string, region: RiotRegion) {
+    const res = await this.request<Account>({
+      url: `/riot/account/v1/accounts/by-puuid/${puuid}`,
+      riotRegion: region
+    })
 
-  async getSummonerByName(name: string, region = this.defaultRegion) {
+    return res.data
+  }
+
+  async getAccountByRiotId(tag: string, name: string, region: RiotRegion) {
+    const res = await this.request<Account>({
+     url: `/riot/account/v1/accounts/by-riot-id/${name}/${tag}`,
+     riotRegion: region
+    })
+
+    return res.data
+  }
+
+  async getSummonerByPuuId(puuid: string, region: LeagueRegion) {
     const res = await this.request<Summoner>({
-      url: `/lol/summoner/v4/summoners/by-name/${name}`,
-      region,
+      url: `/lol/summoner/v4/summoners/by-puuid/${puuid}`,
+      leagueRegion: region,
     })
 
     return new Summoner(res.data)
   }
 
-  async getSummonerLeague(summonerId: string, region = this.defaultRegion) {
+
+  async getSummonerByName(name: string, region: LeagueRegion) {
+    const res = await this.request<Summoner>({
+      url: `/lol/summoner/v4/summoners/by-name/${name}`,
+      leagueRegion: region,
+    })
+
+    return new Summoner(res.data)
+  }
+
+  async getSummonerLeague(summonerId: string, region: LeagueRegion) {
     const res = await this.request<LeagueEntry[]>({
       url: `/lol/league/v4/entries/by-summoner/${summonerId}`,
-      region,
+      leagueRegion: region,
     })
 
     return res.data
@@ -50,12 +83,13 @@ class Riot {
 
   async getSummonerChampionsMasteries(
     puuid: string,
-    region = this.defaultRegion,
+    region: LeagueRegion,
   ) {
-    const res = await this.request({
+    const res = await this.request<ChampionMastery[]>({
       url: `/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`,
-      region,
+      leagueRegion: region,
     })
+
 
     if (Array.isArray(res.data)) {
       const masteries = res.data.map((m) => new ChampionMastery(m))
@@ -63,18 +97,16 @@ class Riot {
     }
   }
 
-  async getFreeChampionsIdRotation(region = this.defaultRegion): Promise<number[]> {
-    const res = await this.request<{ freeChampionIds: number[] }>({ url: `/lol/platform/v3/champion-rotations`, region })
-    console.log(res.data)
+  async getFreeChampionsIdRotation(region: LeagueRegion): Promise<number[]> {
+    const res = await this.request<{ freeChampionIds: number[] }>({ url: `/lol/platform/v3/champion-rotations`, leagueRegion: region })
     return res.data.freeChampionIds
   }
 
   async getMatchesByPuuid(
     puuid: string,
     options: GetMatchesOptions = {},
-    shard = this.defaultShard,
+    riotRegion: RiotRegion,
   ): Promise<string[]> {
-    console.log('Fetching matches for puuid: ', puuid)
     const params = new URLSearchParams()
 
     for (const option in options) {
@@ -87,16 +119,16 @@ class Riot {
 
     const res = await this.request<string[]>({
       url: `/lol/match/v5/matches/by-puuid/${puuid}/ids?${params.toString()}`,
-      shard,
+      riotRegion,
     })
 
     return res.data
   }
 
-  async getMatchById(matchId: string, shard = this.defaultShard) {
+  async getMatchById(matchId: string, riotRegion: RiotRegion) {
     const res = await this.request<Match>({
       url: `/lol/match/v5/matches/${matchId}`,
-      shard,
+      riotRegion,
     })
 
     return res.data
@@ -104,14 +136,19 @@ class Riot {
 
   async request<T = unknown>(options: RequestOptions): Promise<AxiosResponse<T>> {
     const _options: RequestOptions = {
-      shard: 'americas',
+      riotRegion: 'americas',
     }
 
     Object.assign(_options, options)
 
+    
+
+    console.log(`[Riot Network] GET https://${_options.leagueRegion ?? _options.riotRegion}.api.riotgames.com` +
+    _options.url)
+
     const res = await axios.request<T>({
       url:
-        `https://${_options.region ?? _options.shard}.api.riotgames.com` +
+        `https://${_options.leagueRegion ?? _options.riotRegion}.api.riotgames.com` +
         _options.url,
       headers: {
         'X-Riot-Token': RIOT_API_KEY,

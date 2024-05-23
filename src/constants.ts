@@ -18,7 +18,7 @@ export const LeagueTierNames = {
 
 export const GameModeNames = {
   ARAM: 'ARAM',
-  CLASSIC: 'Normal',
+  CLASSIC: 'Summoner\'s Rift',
   URF: 'Ultra rapido e furioso',
   CHERRY: 'Arena'
 } as const

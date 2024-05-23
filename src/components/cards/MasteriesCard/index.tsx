@@ -17,20 +17,22 @@ type profileScreenProp = NativeStackNavigationProp<
 
 const MasteriesCard: React.FC = () => {
   const navigation = useNavigation<profileScreenProp>()
-  const { region, summoner } = useSummoner()
+  const { leagueRegion, summoner } = useSummoner()
 
   const [maestries, setMaestries] = useState<ChampionMastery[]>([])
 
   useEffect(() => {
-    if (!region || !summoner) return
-    riot.getSummonerChampionsMasteries(summoner?.puuid).then((maestries) => {
-      if (!maestries) return
-      setMaestries(
-        maestries
-          .sort((x, y) => y.championLevel - x.championLevel)
-          ?.slice(0, 5),
-      )
-    })
+    if (!leagueRegion || !summoner) return
+    riot
+      .getSummonerChampionsMasteries(summoner?.puuid, leagueRegion)
+      .then((maestries) => {
+        if (!maestries) return
+        setMaestries(
+          maestries
+            .sort((x, y) => y.championLevel - x.championLevel)
+            ?.slice(0, 5),
+        )
+      })
   }, [])
 
   return (

@@ -102,13 +102,11 @@ class DDragon {
   }
 
   async fetchVersions() {
-    console.log('Fetching versions data')
     const res = await this.api.get<string[]>('api/versions.json')
     return res.data
   }
 
   async fetchChampions(locale: string = 'en_US'): Promise<DDragonChampionsRaw> {
-    console.log('Fetching champions data')
     const [version] = this.versions
     const res = await this.api.get(`/cdn/${version}/data/${locale}/champion.json`)
 

@@ -5,14 +5,16 @@ import { useSummoner } from '../../../hooks/useSummoner'
 import SummonerIcon from '../../generic/SummonerIcon'
 
 const ProfileCard: React.FC = () => {
-  const { summoner } = useSummoner()
+  const { summoner, riotAccount } = useSummoner()
 
   return (
     <View style={styles.container}>
       <SummonerIcon iconId={summoner?.profileIconId} />
 
       <View style={styles.textInfo}>
-        <Text style={styles.name}>{summoner?.name}</Text>
+        <Text style={styles.name}>
+          {riotAccount?.gameName}#{riotAccount?.tagLine}
+        </Text>
         <Text style={styles.level}>Nível {summoner?.summonerLevel}</Text>
       </View>
     </View>

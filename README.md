@@ -4,9 +4,9 @@ League Stats is a mobile application about League of Legends
 
 ## Requirements
 
-- A riot application at https://developer.riotgames.com (or use a development api key)
+- A riot application at <https://developer.riotgames.com> (or use a development api key)
 - [Node.js](https://nodejs.org) (>= 18 recommended)
-- [Expo](https://expo.dev/)
+- [Expo](https://expo.dev/) (>= 50)
 - Yarn (recommended)
 
 ## Running yourself
@@ -29,7 +29,6 @@ $ yarn start
 
 - Create a .env file at the root of the application with the following contents:
 
-```
+```text
 RIOT_API_KEY= <Place here your riot api key>
 ```
-

@@ -5,9 +5,10 @@ import {
 } from '@react-navigation/native-stack'
 import React, { useCallback, useEffect } from 'react'
 import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native'
-import { Match } from '../@types/riot'
+import { LeagueRegions, Match } from '../@types/riot'
 import colors from '../colors'
 import MatchInfoCard from '../components/items/MatchInfo'
+import riotRegionFromLeague from '../functions/riotRegionFromLeague'
 import { useSummoner } from '../hooks/useSummoner'
 import useSummonerMatches from '../hooks/useSummonerMatches'
 import themes from '../themes'
@@ -50,8 +51,11 @@ export default function HistoryRouter() {
 
 function History() {
   const navigation = useNavigation<historyScreenProp>()
-  const { summoner } = useSummoner()
-  const { matches, loading, loadMatches } = useSummonerMatches(summoner)
+  const { summoner, leagueRegion } = useSummoner()
+  const { matches, loading, loadMatches } = useSummonerMatches(
+    summoner,
+    riotRegionFromLeague(leagueRegion ?? LeagueRegions.BR1),
+  )
 
   const handleOnClickMatch = useCallback((match: Match) => {
     navigation.navigate('matchInfo', {
@@ -98,10 +102,10 @@ const styles = StyleSheet.create({
     backgroundColor: themes.dark.background,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 8,
   },
   matchList: {
     width: '100%',
+    padding: 8,
   },
   matchListContainer: {
     alignItems: 'center',

@@ -8,13 +8,13 @@ import riot from '../services/riot'
 import themes from '../themes'
 
 export default function BestChampions() {
-  const { summoner, region } = useSummoner()
+  const { summoner, leagueRegion } = useSummoner()
   const [maestries, setMaestries] = useState<ChampionMastery[]>([])
 
   useEffect(() => {
-    if (!region || !summoner) return
+    if (!leagueRegion || !summoner) return
     riot
-      .getSummonerChampionsMasteries(summoner?.puuid)
+      .getSummonerChampionsMasteries(summoner?.puuid, leagueRegion)
       .then((maestries) => {
         if (!maestries) return
         setMaestries(

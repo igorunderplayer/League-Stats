@@ -69,8 +69,6 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
               uri: `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-${participant.teamPosition?.toLowerCase()}.png`,
             }}
           />
-
-          <Text style={styles.subText}>{participant.teamPosition}</Text>
         </View>
       </View>
 

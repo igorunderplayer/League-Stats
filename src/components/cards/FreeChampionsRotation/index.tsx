@@ -8,13 +8,13 @@ import { useSummoner } from '../../../hooks/useSummoner'
 import riot from '../../../services/riot'
 
 const FreeChampionsRotation: React.FC = () => {
-  const { region, summoner } = useSummoner()
+  const { leagueRegion, summoner } = useSummoner()
   const [champions, setChampions] = useState<ChampionData[]>([])
 
   useEffect(() => {
-    if (!region || !summoner) return
+    if (!leagueRegion || !summoner) return
 
-    riot.getFreeChampionsIdRotation().then(async (ids) => {
+    riot.getFreeChampionsIdRotation(leagueRegion).then(async (ids) => {
       const allChampions = await riot.ddragon.getOrFetchChampions()
       const champValues = Object.values(allChampions)
       const champions = ids.map((id) =>

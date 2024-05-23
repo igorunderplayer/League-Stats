@@ -6,10 +6,11 @@ import { useSummoner } from '../../../hooks/useSummoner'
 
 import { GameModeNames } from '../../../constants'
 import getCombatScore from '../../../functions/combatScore'
+import SimpleKDA from '../../generic/SimpleKDA'
+
 import runes from '../../../runes.json'
 import riot from '../../../services/riot'
 import spells from '../../../spells.json'
-import SimpleKDA from '../../generic/SimpleKDA'
 
 type Props = {
   match: Match

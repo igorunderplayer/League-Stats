@@ -30,6 +30,8 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
     )
   }
 
+  const masteryLevel = mastery.championLevel >= 10 ? 10 : mastery.championLevel
+
   return (
     <View style={styles.container}>
       <View style={styles.basicInfo}>
@@ -40,29 +42,30 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
           }}
         />
 
-        <Text style={styles.name}>{champion.name}</Text>
+        <View>
+          <Text style={styles.name}>{champion.name}</Text>
+          <Text style={styles.subText}>
+            {mastery.championPoints
+              .toString()
+              .replace(
+                /\B(?=(\d{3})+(?!\d))/g,
+                locale.digitGroupingSeparator ?? '',
+              )}{' '}
+            pontos
+          </Text>
+        </View>
       </View>
 
       <View style={styles.masteryPoints}>
         <Image
-          style={{ width: 48, height: 48 }}
+          style={{ width: 96, height: 96, margin: -8 }}
           source={{
             uri:
               mastery.championLevel < 4
-                ? `https://raw.communitydragon.org/latest/game/assets/ux/mastery/mastery_icon_default.png`
-                : `https://raw.communitydragon.org/latest/game/assets/ux/mastery/mastery_icon_${mastery.championLevel}.png`,
+                ? `https://raw.communitydragon.org/latest/game/assets/ux/mastery/legendarychampionmastery/masterycrest_level_0_art.png`
+                : `https://raw.communitydragon.org/latest/game/assets/ux/mastery/legendarychampionmastery/masterycrest_level_${masteryLevel}_art.png`,
           }}
         />
-
-        <Text style={styles.subText}>
-          {mastery.championPoints
-            .toString()
-            .replace(
-              /\B(?=(\d{3})+(?!\d))/g,
-              locale.digitGroupingSeparator ?? '',
-            )}{' '}
-          pontos
-        </Text>
       </View>
     </View>
   )
@@ -70,7 +73,7 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 12,
+    padding: 8,
     borderRadius: 12,
     flexDirection: 'row',
     backgroundColor: '#ffffff05',
@@ -78,19 +81,20 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   name: {
-    padding: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 4,
     color: colors.white,
     fontSize: 18,
     fontWeight: 'bold',
   },
   subText: {
-    color: '#ffffff',
-    fontWeight: 'bold',
+    color: '#ffffff60',
+    paddingHorizontal: 12,
   },
   championIcon: {
-    width: 64,
-    height: 64,
-    borderRadius: 64 / 2,
+    width: 72,
+    height: 72,
+    borderRadius: 12,
   },
   basicInfo: {
     flexDirection: 'row',
