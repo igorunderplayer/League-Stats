@@ -6,7 +6,7 @@ League Stats is a mobile application about League of Legends
 
 - A riot application at <https://developer.riotgames.com> (or use a development api key)
 - [Node.js](https://nodejs.org) (>= 18 recommended)
-- [Expo](https://expo.dev/) (>= 50)
+- [Expo](https://expo.dev/) (>= 51)
 - Yarn (recommended)
 
 ## Running yourself
