@@ -6,12 +6,6 @@
     "name": "Electrocute"
   },
   {
-    "id": 8124,
-    "key": "Predator",
-    "icon": "perk-images/Styles/Domination/Predator/Predator.png",
-    "name": "Predator"
-  },
-  {
     "id": 8128,
     "key": "DarkHarvest",
     "icon": "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
@@ -66,12 +60,6 @@
     "name": "Treasure Hunter"
   },
   {
-    "id": 8134,
-    "key": "IngeniousHunter",
-    "icon": "perk-images/Styles/Domination/IngeniousHunter/IngeniousHunter.png",
-    "name": "Ingenious Hunter"
-  },
-  {
     "id": 8105,
     "key": "RelentlessHunter",
     "icon": "perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png",
@@ -114,22 +102,22 @@
     "name": "Magical Footwear"
   },
   {
+    "id": 8321,
+    "key": "CashBack",
+    "icon": "perk-images/Styles/Inspiration/CashBack/CashBack2.png",
+    "name": "Cash Back"
+  },
+  {
     "id": 8313,
     "key": "PerfectTiming",
-    "icon": "perk-images/Styles/Inspiration/PerfectTiming/PerfectTiming.png",
-    "name": "Perfect Timing"
+    "icon": "perk-images/Styles/Inspiration/PerfectTiming/AlchemistCabinet.png",
+    "name": "Triple Tonic"
   },
   {
-    "id": 8321,
-    "key": "FuturesMarket",
-    "icon": "perk-images/Styles/Inspiration/FuturesMarket/FuturesMarket.png",
-    "name": "Future's Market"
-  },
-  {
-    "id": 8316,
-    "key": "MinionDematerializer",
-    "icon": "perk-images/Styles/Inspiration/MinionDematerializer/MinionDematerializer.png",
-    "name": "Minion Dematerializer"
+    "id": 8352,
+    "key": "TimeWarpTonic",
+    "icon": "perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png",
+    "name": "Time Warp Tonic"
   },
   {
     "id": 8345,
@@ -150,22 +138,16 @@
     "name": "Approach Velocity"
   },
   {
-    "id": 8352,
-    "key": "TimeWarpTonic",
-    "icon": "perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png",
-    "name": "Time Warp Tonic"
+    "id": 8316,
+    "key": "JackOfAllTrades",
+    "icon": "perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png",
+    "name": "Jack Of All Trades"
   },
   {
     "id": 8005,
     "key": "PressTheAttack",
     "icon": "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
     "name": "Press the Attack"
-  },
-  {
-    "id": 8008,
-    "key": "LethalTempo",
-    "icon": "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-    "name": "Lethal Tempo"
   },
   {
     "id": 8021,
@@ -181,9 +163,9 @@
   },
   {
     "id": 9101,
-    "key": "Overheal",
-    "icon": "perk-images/Styles/Precision/Overheal.png",
-    "name": "Overheal"
+    "key": "AbsorbLife",
+    "icon": "perk-images/Styles/Precision/AbsorbLife/AbsorbLife.png",
+    "name": "Absorb Life"
   },
   {
     "id": 9111,
@@ -205,9 +187,9 @@
   },
   {
     "id": 9105,
-    "key": "LegendTenacity",
-    "icon": "perk-images/Styles/Precision/LegendTenacity/LegendTenacity.png",
-    "name": "Legend: Tenacity"
+    "key": "LegendHaste",
+    "icon": "perk-images/Styles/Precision/LegendHaste/LegendHaste.png",
+    "name": "Legend: Haste"
   },
   {
     "id": 9103,
