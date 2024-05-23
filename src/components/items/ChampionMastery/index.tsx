@@ -30,6 +30,8 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
     )
   }
 
+  const masteryLevel = mastery.championLevel >= 10 ? 10 : mastery.championLevel
+
   return (
     <View style={styles.container}>
       <View style={styles.basicInfo}>
@@ -49,8 +51,8 @@ const ChampionMasteryCard: React.FC<Props> = ({ mastery }) => {
           source={{
             uri:
               mastery.championLevel < 4
-                ? `https://raw.communitydragon.org/latest/game/assets/ux/mastery/mastery_icon_default.png`
-                : `https://raw.communitydragon.org/latest/game/assets/ux/mastery/mastery_icon_${mastery.championLevel}.png`,
+                ? `https://raw.communitydragon.org/latest/game/assets/ux/mastery/legendarychampionmastery/masterycrest_level_0_art.png`
+                : `https://raw.communitydragon.org/latest/game/assets/ux/mastery/legendarychampionmastery/masterycrest_level_${masteryLevel}_art.png`,
           }}
         />
 
