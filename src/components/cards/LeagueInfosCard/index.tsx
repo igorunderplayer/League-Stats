@@ -7,13 +7,13 @@ import riot from '../../../services/riot'
 import LeagueInfo from '../../items/LeagueInfo'
 
 const LeagueInfosCard: React.FC = () => {
-  const { region, summoner } = useSummoner()
+  const { leagueRegion, summoner } = useSummoner()
 
   const [leagues, setLeagues] = useState<LeagueEntry[]>([])
 
   useEffect(() => {
-    if (!region || !summoner) return
-    riot.getSummonerLeague(summoner?.id).then((leagues) => {
+    if (!leagueRegion || !summoner) return
+    riot.getSummonerLeague(summoner?.id, leagueRegion).then((leagues) => {
       setLeagues(leagues.filter((l) => l.queueType != 'CHERRY'))
     })
   }, [])
