@@ -1,4 +1,3 @@
-import type { GameModeNames } from '../constants'
 
 // Riot
 
@@ -76,12 +75,16 @@ export function leagueFromString(string: string): LeagueRegion {
 
 export type TeamPosition = 'TOP' | 'JUNGLE' | 'MIDDLE' | 'BOTTOM' | 'UTILITY'
 
+export type LeagueTier = "IRON" | "BRONZE" | "SILVER" | "GOLD" | "PLATINUM" | "EMERALD" | "DIAMOND" | "MASTER" | "GRANDMASTER" | "CHALLENGER"
+
+export type QueueType = "RANKED_SOLO_5x5" | "RANKED_FLEX_SR" | "CHERRY"
+
 export interface LeagueEntry {
   leagueId: string
   summonerId: string
   summonerName: string
-  queueType: string
-  tier: string
+  queueType: QueueType
+  tier: LeagueTier
   rank: string
   leaguePoints: number
   wins: number
@@ -100,13 +103,15 @@ export interface MiniSeries {
   wins: number
 }
 
+export type GameModes = "ARAM" | "CLASSIC" | "URF" | "CHERRY"
+
 export interface Match {
   metadata: {
     matchId: string
   }
   info: {
     platformId: string
-    gameMode: keyof typeof GameModeNames
+    gameMode: GameModes
     gameName: string
     gameType: string
     participants: MatchParticipant[]

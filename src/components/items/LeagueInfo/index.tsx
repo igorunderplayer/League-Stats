@@ -1,17 +1,21 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Image, StyleSheet, Text, View } from 'react-native'
 import { LeagueEntry } from '../../../@types/riot'
 import colors from '../../../colors'
-import { LeagueQueueNames, LeagueTierNames } from '../../../constants'
 
 type Props = {
   league: LeagueEntry
 }
 
 const LeagueInfo: React.FC<Props> = ({ league }) => {
+  const { t } = useTranslation()
+
   const winrate = ((league.wins / (league.wins + league.losses)) * 100).toFixed(
     1,
   )
+
+  const leagueTitle = t(`league.leagueTier.${league.tier}`)
 
   return (
     <View style={styles.container}>
@@ -21,40 +25,33 @@ const LeagueInfo: React.FC<Props> = ({ league }) => {
           uri: `https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/ranked-emblem/emblem-${league.tier?.toLowerCase()}.png`,
         }}
       />
+
       <View style={styles.leagueInfo}>
         <Text style={styles.title}>
-          {`${
-            LeagueTierNames[league.tier as keyof typeof LeagueTierNames] ??
-            league.tier
-          } ${league.rank}`}
+          {leagueTitle} {league.rank}
         </Text>
-
         <Text style={styles.text}>
-          {LeagueQueueNames[
-            league.queueType as keyof typeof LeagueQueueNames
-          ] ?? league.queueType}
+          {t(`league.queueType.${league.queueType}`)}
         </Text>
-
         <Text></Text>
-
-        <Text style={styles.text}>Pontos de liga: {league.leaguePoints}</Text>
-
+        <Text style={styles.text}>
+          {t('league.pdl')}: {league.leaguePoints}
+        </Text>
         <View style={styles.winrate}>
-          <Text style={styles.text}>
-            Vitórias:{' '}
+          <View style={{ flexDirection: 'row', gap: 4 }}>
+            <Text style={styles.text}>{t('common.victory')}:</Text>
             <Text style={{ color: colors.softCyan, fontWeight: 'bold' }}>
               {league.wins}
             </Text>
-          </Text>
+          </View>
           <Text style={styles.text}>({winrate}%)</Text>
         </View>
-
-        <Text style={styles.text}>
-          Derrotas:{' '}
+        <View style={{ flexDirection: 'row', gap: 4 }}>
+          <Text style={styles.text}>{t('common.defeat')}:</Text>
           <Text style={{ color: colors.softRed, fontWeight: 'bold' }}>
             {league.losses}
           </Text>
-        </Text>
+        </View>
       </View>
     </View>
   )

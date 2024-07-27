@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { StyleSheet, Text, View } from 'react-native'
 import { LeagueEntry } from '../../../@types/riot'
 import colors from '../../../colors'
@@ -8,6 +9,7 @@ import LeagueInfo from '../../items/LeagueInfo'
 
 const LeagueInfosCard: React.FC = () => {
   const { leagueRegion, summoner } = useSummoner()
+  const { t } = useTranslation()
 
   const [leagues, setLeagues] = useState<LeagueEntry[]>([])
 
@@ -22,7 +24,7 @@ const LeagueInfosCard: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Classificação pessoal</Text>
+      <Text style={styles.title}>{t('card.leagueInfo.title')}</Text>
 
       {leagues.map((league) => (
         <LeagueInfo

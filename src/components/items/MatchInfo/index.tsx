@@ -11,6 +11,7 @@ import SimpleKDA from '../../generic/SimpleKDA'
 import runes from '../../../runes.json'
 import riot from '../../../services/riot'
 import spells from '../../../spells.json'
+import VictoryDefeatIcon from '../../generic/VictoryDefeatIcon'
 
 type Props = {
   match: Match
@@ -98,37 +99,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
       </View>
 
       <View style={{ alignItems: 'center' }}>
-        <View
-          style={[
-            styles.name,
-            styles.winStatus,
-            { flexDirection: 'row', backgroundColor: '#ffffff05' },
-          ]}
-        >
-          <Text
-            style={{
-              fontWeight: me.win ? 'bold' : 'normal',
-              fontSize: 18,
-              color: me.win ? colors.softCyan : '#ffffff70',
-            }}
-          >
-            {' '}
-            V{' '}
-          </Text>
-
-          <Text style={{ color: '#fff', fontSize: 18 }}>/</Text>
-
-          <Text
-            style={{
-              fontWeight: !me.win ? 'bold' : 'normal',
-              fontSize: 18,
-              color: !me.win ? colors.softRed : '#ffffff70',
-            }}
-          >
-            {' '}
-            D{' '}
-          </Text>
-        </View>
+        <VictoryDefeatIcon win={me.win} />
 
         <Text
           style={[
@@ -179,9 +150,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 12,
     borderBottomRightRadius: 12,
     position: 'absolute',
-  },
-  winStatus: {
-    borderRadius: 12,
   },
   name: {
     padding: 4,
