@@ -2,8 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getLocales } from 'expo-localization';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { pt } from '../resources/strings';
-import { en } from '../resources/strings/en';
+import { en, pt } from '../resources/strings';
 
 const resources = {
   pt: { translation: pt},

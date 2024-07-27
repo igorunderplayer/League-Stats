@@ -65,5 +65,6 @@ export interface StringResources {
   }
 }
 
+export * from './en'
 export * from './pt'
 

@@ -1,7 +1,7 @@
-import { pt } from '../resources/strings';
+import { en } from '../resources/strings';
 
 const resources = {
-  translation: pt
+  translation: en
 } as const
 
 export default resources
