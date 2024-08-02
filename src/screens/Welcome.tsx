@@ -17,6 +17,7 @@ import riot from '../services/riot'
 import themes from '../themes'
 
 import { useTranslation } from 'react-i18next'
+import getRiotIdFromString from '../functions/ritoIdFromString'
 
 export default function Welcome() {
   const { savedSummoners, resetSummoner, addSummoner, getSummoner } =
@@ -35,17 +36,16 @@ export default function Welcome() {
 
     ToastAndroid.show(`Searching for ${typingName}...`, ToastAndroid.SHORT)
     try {
-      const [name] = typingName.split('#')
-      let [, tag] = typingName.split('#')
+      const riotId = getRiotIdFromString(typingName)
 
-      if (!tag || !tag.length) {
-        tag = typingRegion.toLowerCase()
+      if (!riotId.tag || !riotId.tag.length) {
+        riotId.tag = typingRegion.toLowerCase()
       }
 
       const leagueRegion = leagueFromString(typingRegion.toUpperCase())
       const riotAccount = await riot.getAccountByRiotId(
-        tag,
-        name,
+        riotId.tag,
+        riotId.name,
         riotRegionFromLeague(leagueRegion),
       )
 
@@ -147,7 +147,7 @@ export default function Welcome() {
         onPress={handleOnSearchSummonerPress}
         style={styles.button}
       >
-        <Text style={styles.text}>Continuar</Text>
+        <Text style={styles.text}>{t('screen.welcome.continue')}</Text>
       </TouchableOpacity>
 
       <TouchableOpacity

@@ -1,5 +1,6 @@
 import { RouteProp, useRoute } from '@react-navigation/native'
 import React, { useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import { Match, MatchParticipant } from '../@types/riot'
 import colors from '../colors'
@@ -19,6 +20,8 @@ export default function MatchInfo() {
   const [match, setMatch] = useState<Match>()
   const [focusedParticipantPuuid, setFocusedParticipantPuuid] =
     useState<string>('')
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (!leagueRegion || !summoner) return
@@ -89,7 +92,7 @@ export default function MatchInfo() {
               { color: team1Won ? colors.softCyan : colors.softRed },
             ]}
           >
-            {team1Won ? 'Vitória' : 'Derrota'}
+            {team1Won ? t('common.victory') : t('common.defeat')}
           </Text>
 
           <Text style={styles.subText}>
@@ -108,7 +111,7 @@ export default function MatchInfo() {
               { color: !team1Won ? colors.softCyan : colors.softRed },
             ]}
           >
-            {!team1Won ? 'Vitória' : 'Derrota'}
+            {!team1Won ? t('common.victory') : t('common.defeat')}
           </Text>
 
           <Text style={styles.subText}>

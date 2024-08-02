@@ -28,17 +28,25 @@ export interface StringResources {
       title: string
     },
     bestChampions: {
-      title: string
+      title: string,
     }
   },
   card: {
     leagueInfo: {
       title: string
+    },
+    bestChampions: {
+      title: string
     }
   },
   league: {
+    championRotation: string,
     pdl: string,
     pdlShort: string,
+    physicalDamage: string,
+    magicDamage: string,
+    trueDamage: string,
+    emotionalDamage: string,
     leagueTier: {
       IRON: string,
       BRONZE: string,

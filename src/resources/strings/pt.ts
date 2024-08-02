@@ -35,11 +35,19 @@ export const pt: StringResources = {
   card: {
     leagueInfo: {
       title: 'Classificação pessoal'
+    },
+    bestChampions: {
+      title: 'Best champions'
     }
   },
   league: {
+    championRotation: 'Rotação de campeões',
     pdl: 'Pontos de liga',
     pdlShort: 'PDL',
+    physicalDamage: 'dano físico',
+    magicDamage: 'dano mágico',
+    trueDamage: 'dano verdadeiro',
+    emotionalDamage: 'dano emocional',
     leagueTier: {
       IRON: 'Ferro',
       BRONZE: 'Bronze',

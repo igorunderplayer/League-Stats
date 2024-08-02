@@ -2,6 +2,7 @@ import { MaterialIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import colors from '../../../colors'
 import ChampionMastery from '../../../entities/ChampionMastery'
@@ -20,6 +21,8 @@ const MasteriesCard: React.FC = () => {
   const { leagueRegion, summoner } = useSummoner()
 
   const [maestries, setMaestries] = useState<ChampionMastery[]>([])
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (!leagueRegion || !summoner) return
@@ -41,7 +44,7 @@ const MasteriesCard: React.FC = () => {
         style={styles.cardHeader}
         onPress={() => navigation.navigate('bestChampions')}
       >
-        <Text style={styles.title}>Melhores campeões</Text>
+        <Text style={styles.title}>{t('card.bestChampions.title')}</Text>
 
         <MaterialIcons
           name='chevron-right'

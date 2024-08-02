@@ -15,7 +15,7 @@ const ProfileCard: React.FC = () => {
         <Text style={styles.name}>
           {riotAccount?.gameName}#{riotAccount?.tagLine}
         </Text>
-        <Text style={styles.level}>Nível {summoner?.summonerLevel}</Text>
+        <Text style={styles.level}>Level {summoner?.summonerLevel}</Text>
       </View>
     </View>
   )

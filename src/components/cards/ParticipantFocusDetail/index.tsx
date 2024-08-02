@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Image, Text, View } from 'react-native'
 import {
   DDragonChampionsRaw,
@@ -19,6 +20,8 @@ type Props = {
 const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
   const [championsData, setChampionsData] = useState<DDragonChampionsRaw>({})
   const champion = championsData[participant.championName] ?? {}
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     getChampionsData()
@@ -167,7 +170,7 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
                 <Text style={[styles.subText, { color: colors.softOrange }]}>
                   {participant.physicalDamageDealtToChampions}{' '}
                 </Text>
-                dano físico
+                {t('league.physicalDamage')}
               </Text>
             </View>
 
@@ -182,7 +185,7 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
                 <Text style={[styles.subText, { color: colors.softBlue }]}>
                   {participant.magicDamageDealtToChampions}{' '}
                 </Text>
-                dano magico
+                {t('league.magicDamage')}
               </Text>
             </View>
 
@@ -197,7 +200,7 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
                 <Text style={[styles.subText, { color: colors.white }]}>
                   {participant.trueDamageDealtToChampions}{' '}
                 </Text>
-                dano verdadeiro
+                {t('league.trueDamage')}
               </Text>
             </View>
           </View>

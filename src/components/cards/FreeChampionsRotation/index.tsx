@@ -1,6 +1,7 @@
 import * as Linking from 'expo-linking'
 import { getLocales } from 'expo-localization'
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { ChampionData } from '../../../@types/riot'
 import colors from '../../../colors'
@@ -10,6 +11,8 @@ import riot from '../../../services/riot'
 const FreeChampionsRotation: React.FC = () => {
   const { leagueRegion, summoner } = useSummoner()
   const [champions, setChampions] = useState<ChampionData[]>([])
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (!leagueRegion || !summoner) return
@@ -27,7 +30,7 @@ const FreeChampionsRotation: React.FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.cardHeader}>
-        <Text style={styles.title}>Rotação de campeões</Text>
+        <Text style={styles.title}>{t('league.championRotation')}</Text>
       </View>
 
       <View style={styles.flatlist}>

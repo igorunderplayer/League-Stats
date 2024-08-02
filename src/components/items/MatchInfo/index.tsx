@@ -4,10 +4,10 @@ import { Match } from '../../../@types/riot'
 import colors from '../../../colors'
 import { useSummoner } from '../../../hooks/useSummoner'
 
-import { GameModeNames } from '../../../constants'
 import getCombatScore from '../../../functions/combatScore'
 import SimpleKDA from '../../generic/SimpleKDA'
 
+import { useTranslation } from 'react-i18next'
 import runes from '../../../runes.json'
 import riot from '../../../services/riot'
 import spells from '../../../spells.json'
@@ -21,6 +21,8 @@ type Props = {
 
 const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
   const { summoner } = useSummoner()
+
+  const { t } = useTranslation()
 
   const me = match.info.participants.find((p) => p.puuid == summoner?.puuid)!
 
@@ -107,7 +109,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
             { fontWeight: 'bold', maxWidth: 96, textAlign: 'center' },
           ]}
         >
-          {GameModeNames[match.info.gameMode] ?? match.info.gameMode}
+          {t(`league.gameModeName.${match.info.gameMode}`)}
         </Text>
 
         <Text style={styles.subText}>
