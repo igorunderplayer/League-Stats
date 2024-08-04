@@ -4,13 +4,15 @@ import { Match } from '../../../@types/riot'
 import colors from '../../../colors'
 import { useSummoner } from '../../../hooks/useSummoner'
 
-import { GameModeNames } from '../../../constants'
 import getCombatScore from '../../../functions/combatScore'
 import SimpleKDA from '../../generic/SimpleKDA'
 
+import { useTranslation } from 'react-i18next'
+import queues from '../../../common/queues'
 import runes from '../../../runes.json'
 import riot from '../../../services/riot'
 import spells from '../../../spells.json'
+import VictoryDefeatIcon from '../../generic/VictoryDefeatIcon'
 
 type Props = {
   match: Match
@@ -20,6 +22,8 @@ type Props = {
 
 const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
   const { summoner } = useSummoner()
+
+  const { t } = useTranslation()
 
   const me = match.info.participants.find((p) => p.puuid == summoner?.puuid)!
 
@@ -42,6 +46,15 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
   const handleOnClick = useCallback(() => {
     onClick(match)
   }, [])
+
+  console.log(match.info.queueId)
+  const queue = queues.find((q) => q.queueId == match.info.queueId)?.key
+
+  console.log(queue)
+
+  const queueName = t(`league.queue.${queue}`, {
+    defaultValue: match.info.gameMode,
+  }) as string
 
   return (
     <TouchableOpacity
@@ -98,37 +111,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
       </View>
 
       <View style={{ alignItems: 'center' }}>
-        <View
-          style={[
-            styles.name,
-            styles.winStatus,
-            { flexDirection: 'row', backgroundColor: '#ffffff05' },
-          ]}
-        >
-          <Text
-            style={{
-              fontWeight: me.win ? 'bold' : 'normal',
-              fontSize: 18,
-              color: me.win ? colors.softCyan : '#ffffff70',
-            }}
-          >
-            {' '}
-            V{' '}
-          </Text>
-
-          <Text style={{ color: '#fff', fontSize: 18 }}>/</Text>
-
-          <Text
-            style={{
-              fontWeight: !me.win ? 'bold' : 'normal',
-              fontSize: 18,
-              color: !me.win ? colors.softRed : '#ffffff70',
-            }}
-          >
-            {' '}
-            D{' '}
-          </Text>
-        </View>
+        <VictoryDefeatIcon win={me.win} />
 
         <Text
           style={[
@@ -136,7 +119,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
             { fontWeight: 'bold', maxWidth: 96, textAlign: 'center' },
           ]}
         >
-          {GameModeNames[match.info.gameMode] ?? match.info.gameMode}
+          {queueName}
         </Text>
 
         <Text style={styles.subText}>
@@ -179,9 +162,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 12,
     borderBottomRightRadius: 12,
     position: 'absolute',
-  },
-  winStatus: {
-    borderRadius: 12,
   },
   name: {
     padding: 4,

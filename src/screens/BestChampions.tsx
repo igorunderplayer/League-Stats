@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import colors from '../colors'
 import ChampionMasteryCard from '../components/items/ChampionMastery'
@@ -8,6 +9,7 @@ import riot from '../services/riot'
 import themes from '../themes'
 
 export default function BestChampions() {
+  const { t } = useTranslation()
   const { summoner, leagueRegion } = useSummoner()
   const [maestries, setMaestries] = useState<ChampionMastery[]>([])
 
@@ -26,7 +28,7 @@ export default function BestChampions() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Todos campeões</Text>
+      <Text style={styles.title}>{t('screen.bestChampions.title')}</Text>
 
       <ScrollView
         style={styles.maestries}

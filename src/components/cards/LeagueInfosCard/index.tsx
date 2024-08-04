@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { useTranslation } from 'react-i18next'
+import { StyleSheet, Text } from 'react-native'
 import { LeagueEntry } from '../../../@types/riot'
 import colors from '../../../colors'
 import { useSummoner } from '../../../hooks/useSummoner'
 import riot from '../../../services/riot'
 import LeagueInfo from '../../items/LeagueInfo'
+import Card from '../../ui/card'
 
 const LeagueInfosCard: React.FC = () => {
   const { leagueRegion, summoner } = useSummoner()
+  const { t } = useTranslation()
 
   const [leagues, setLeagues] = useState<LeagueEntry[]>([])
 
@@ -21,8 +24,8 @@ const LeagueInfosCard: React.FC = () => {
   if (!leagues?.length) return <></>
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Classificação pessoal</Text>
+    <Card style={styles.container}>
+      <Text style={styles.title}>{t('card.leagueInfo.title')}</Text>
 
       {leagues.map((league) => (
         <LeagueInfo
@@ -30,17 +33,14 @@ const LeagueInfosCard: React.FC = () => {
           league={league}
         />
       ))}
-    </View>
+    </Card>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     width: '95%',
-    padding: 8,
-    borderRadius: 12,
     flexDirection: 'column',
-    backgroundColor: '#ffffff05',
     alignItems: 'center',
     gap: 12,
   },

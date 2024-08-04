@@ -4,6 +4,7 @@ import History from '../screens/History'
 import Profile from '../screens/Profile'
 
 import { MaterialIcons } from '@expo/vector-icons'
+import { useTranslation } from 'react-i18next'
 import { Text, TouchableOpacity } from 'react-native'
 import colors from '../colors'
 import { useSummoner } from '../hooks/useSummoner'
@@ -14,6 +15,8 @@ const Tab = createBottomTabNavigator()
 
 export default function TabRoutes() {
   const { resetSummoner } = useSummoner()
+
+  const { t } = useTranslation()
 
   function exitSummoner() {
     resetSummoner()
@@ -45,7 +48,7 @@ export default function TabRoutes() {
         name='Home'
         component={Home}
         options={{
-          title: 'Início',
+          title: t('screen.home.title'),
           tabBarIcon: ({ color, size }) => {
             return (
               <MaterialIcons
@@ -62,7 +65,7 @@ export default function TabRoutes() {
         name='History'
         component={History}
         options={{
-          title: 'Histórico',
+          title: t('screen.history.title'),
           tabBarIcon: ({ color, size }) => {
             return (
               <MaterialIcons
@@ -79,7 +82,7 @@ export default function TabRoutes() {
         name='Profile'
         component={Profile}
         options={{
-          title: 'Perfil',
+          title: t('screen.profile.title'),
           tabBarIcon: ({ color, size }) => {
             return (
               <MaterialIcons

@@ -1,10 +1,12 @@
 import { RouteProp, useRoute } from '@react-navigation/native'
 import React, { useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import { Match, MatchParticipant } from '../@types/riot'
 import colors from '../colors'
 import ParticipantFocusDetails from '../components/cards/ParticipantFocusDetail'
 import MatchParticipantInfo from '../components/items/MatchParticipantInfo'
+import Card from '../components/ui/card'
 import riotRegionFromLeague from '../functions/riotRegionFromLeague'
 import { useSummoner } from '../hooks/useSummoner'
 import riot from '../services/riot'
@@ -19,6 +21,8 @@ export default function MatchInfo() {
   const [match, setMatch] = useState<Match>()
   const [focusedParticipantPuuid, setFocusedParticipantPuuid] =
     useState<string>('')
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (!leagueRegion || !summoner) return
@@ -89,7 +93,7 @@ export default function MatchInfo() {
               { color: team1Won ? colors.softCyan : colors.softRed },
             ]}
           >
-            {team1Won ? 'Vitória' : 'Derrota'}
+            {team1Won ? t('common.victory') : t('common.defeat')}
           </Text>
 
           <Text style={styles.subText}>
@@ -108,7 +112,7 @@ export default function MatchInfo() {
               { color: !team1Won ? colors.softCyan : colors.softRed },
             ]}
           >
-            {!team1Won ? 'Vitória' : 'Derrota'}
+            {!team1Won ? t('common.victory') : t('common.defeat')}
           </Text>
 
           <Text style={styles.subText}>
@@ -151,6 +155,10 @@ export default function MatchInfo() {
         participant={focusedParticipant}
         match={match}
       />
+
+      <Card>
+        <Text style={styles.subText}>Match id: {match.metadata.matchId}</Text>
+      </Card>
     </ScrollView>
   )
 }
@@ -190,6 +198,5 @@ const styles = StyleSheet.create({
   subText: {
     fontSize: 14,
     color: '#ffffff80',
-    fontWeight: 'bold',
   },
 })

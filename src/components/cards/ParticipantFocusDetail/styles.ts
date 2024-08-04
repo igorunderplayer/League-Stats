@@ -3,9 +3,6 @@ import colors from '../../../colors'
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ffffff05',
-    padding: 12,
-    borderRadius: 12,
     width: '100%'
   },
   header: {

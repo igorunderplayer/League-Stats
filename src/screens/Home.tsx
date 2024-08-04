@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <ScrollView
       style={styles.container}
-      contentContainerStyle={styles.contentContaienr}
+      contentContainerStyle={styles.contentContainer}
     >
       <FreeChampionsRotation />
     </ScrollView>

@@ -16,6 +16,9 @@ import { SummonerInfo, useSummoner } from '../hooks/useSummoner'
 import riot from '../services/riot'
 import themes from '../themes'
 
+import { useTranslation } from 'react-i18next'
+import getRiotIdFromString from '../functions/ritoIdFromString'
+
 export default function Welcome() {
   const { savedSummoners, resetSummoner, addSummoner, getSummoner } =
     useSummoner()
@@ -25,23 +28,24 @@ export default function Welcome() {
 
   const [loading, setLoading] = useState(false)
 
+  const { t } = useTranslation()
+
   async function handleOnSearchSummonerPress() {
     if (loading) return
     setLoading(true)
 
     ToastAndroid.show(`Searching for ${typingName}...`, ToastAndroid.SHORT)
     try {
-      const [name] = typingName.split('#')
-      let [, tag] = typingName.split('#')
+      const riotId = getRiotIdFromString(typingName)
 
-      if (!tag || !tag.length) {
-        tag = typingRegion.toLowerCase()
+      if (!riotId.tag || !riotId.tag.length) {
+        riotId.tag = typingRegion.toLowerCase()
       }
 
       const leagueRegion = leagueFromString(typingRegion.toUpperCase())
       const riotAccount = await riot.getAccountByRiotId(
-        tag,
-        name,
+        riotId.tag,
+        riotId.name,
         riotRegionFromLeague(leagueRegion),
       )
 
@@ -93,10 +97,8 @@ export default function Welcome() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={{ alignItems: 'center' }}>
-        <Text style={styles.title}>Bem vindo</Text>
-        <Text style={styles.text}>
-          Antes de começarmos... preencha os campos abaixo com as informações
-        </Text>
+        <Text style={styles.title}>{t('screen.welcome.welcome')}</Text>
+        <Text style={styles.text}>{t('screen.welcome.subText')}</Text>
       </View>
 
       <View>
@@ -116,21 +118,21 @@ export default function Welcome() {
 
           <TextInput
             value={typingName}
-            placeholder='Seu nome de usuario'
+            placeholder={t('screen.welcome.input.riotID')}
             placeholderTextColor='#ffffff45'
             onChangeText={(text) => setTypingName(text)}
             style={styles.textInput}
           />
         </View>
         <SelectMenu
-          text='Invocadores recentes'
+          text={t('screen.welcome.recentSummoners')}
           styles={{
             borderTopLeftRadius: 0,
             borderTopRightRadius: 0,
           }}
           onSelect={(item) => handleSelectSummoner(item.data as SummonerInfo)}
           items={savedSummoners.map((x) => ({
-            text: x.name ?? 'Invocador desconhecido',
+            text: x.name ?? t('common.unknownSummoner'),
             key: x.puuid,
             data: {
               name: x.name,
@@ -145,7 +147,7 @@ export default function Welcome() {
         onPress={handleOnSearchSummonerPress}
         style={styles.button}
       >
-        <Text style={styles.text}>Continuar</Text>
+        <Text style={styles.text}>{t('screen.welcome.continue')}</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -195,6 +197,7 @@ const styles = StyleSheet.create({
     color: '#ffffff70',
     padding: 12,
     fontSize: 18,
+    width: '75%',
   },
   button: {
     backgroundColor: '#ffffff10',

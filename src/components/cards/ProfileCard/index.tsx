@@ -3,31 +3,29 @@ import { StyleSheet, Text, View } from 'react-native'
 import colors from '../../../colors'
 import { useSummoner } from '../../../hooks/useSummoner'
 import SummonerIcon from '../../generic/SummonerIcon'
+import Card from '../../ui/card'
 
 const ProfileCard: React.FC = () => {
   const { summoner, riotAccount } = useSummoner()
 
   return (
-    <View style={styles.container}>
+    <Card style={styles.container}>
       <SummonerIcon iconId={summoner?.profileIconId} />
 
       <View style={styles.textInfo}>
         <Text style={styles.name}>
           {riotAccount?.gameName}#{riotAccount?.tagLine}
         </Text>
-        <Text style={styles.level}>Nível {summoner?.summonerLevel}</Text>
+        <Text style={styles.level}>Level {summoner?.summonerLevel}</Text>
       </View>
-    </View>
+    </Card>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     width: '95%',
-    padding: 12,
-    borderRadius: 12,
     flexDirection: 'row',
-    backgroundColor: '#ffffff05',
     alignItems: 'center',
   },
   textInfo: {

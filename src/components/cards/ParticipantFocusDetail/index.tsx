@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Image, Text, View } from 'react-native'
 import {
   DDragonChampionsRaw,
@@ -9,6 +10,7 @@ import colors from '../../../colors'
 import riot from '../../../services/riot'
 import SimpleKDA from '../../generic/SimpleKDA'
 import ParticipantItems from '../../items/ParticipantItems'
+import Card from '../../ui/card'
 import styles from './styles'
 
 type Props = {
@@ -19,6 +21,8 @@ type Props = {
 const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
   const [championsData, setChampionsData] = useState<DDragonChampionsRaw>({})
   const champion = championsData[participant.championName] ?? {}
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     getChampionsData()
@@ -35,7 +39,7 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
   const csPerMin = csScore / (match.info.gameDuration / 60)
 
   return (
-    <View style={styles.container}>
+    <Card style={styles.container}>
       <View style={styles.header}>
         <Image
           style={{ width: 72, height: 72 }}
@@ -46,7 +50,6 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
 
         <View>
           <Text style={styles.title}>{participant.championName}</Text>
-          <Text style={styles.text}>{participant.summonerName}</Text>
         </View>
 
         <View style={styles.column}>
@@ -167,7 +170,7 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
                 <Text style={[styles.subText, { color: colors.softOrange }]}>
                   {participant.physicalDamageDealtToChampions}{' '}
                 </Text>
-                dano físico
+                {t('league.physicalDamage')}
               </Text>
             </View>
 
@@ -182,7 +185,7 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
                 <Text style={[styles.subText, { color: colors.softBlue }]}>
                   {participant.magicDamageDealtToChampions}{' '}
                 </Text>
-                dano magico
+                {t('league.magicDamage')}
               </Text>
             </View>
 
@@ -197,13 +200,13 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
                 <Text style={[styles.subText, { color: colors.white }]}>
                   {participant.trueDamageDealtToChampions}{' '}
                 </Text>
-                dano verdadeiro
+                {t('league.trueDamage')}
               </Text>
             </View>
           </View>
         </View>
       </View>
-    </View>
+    </Card>
   )
 }
 

@@ -2,6 +2,7 @@ import { MaterialIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import colors from '../../../colors'
 import ChampionMastery from '../../../entities/ChampionMastery'
@@ -9,6 +10,7 @@ import { useSummoner } from '../../../hooks/useSummoner'
 import { ProfileStackParamList } from '../../../screens/Profile'
 import riot from '../../../services/riot'
 import ChampionMasteryCard from '../../items/ChampionMastery'
+import Card from '../../ui/card'
 
 type profileScreenProp = NativeStackNavigationProp<
   ProfileStackParamList,
@@ -20,6 +22,8 @@ const MasteriesCard: React.FC = () => {
   const { leagueRegion, summoner } = useSummoner()
 
   const [maestries, setMaestries] = useState<ChampionMastery[]>([])
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (!leagueRegion || !summoner) return
@@ -36,12 +40,12 @@ const MasteriesCard: React.FC = () => {
   }, [])
 
   return (
-    <View style={styles.container}>
+    <Card style={styles.container}>
       <TouchableOpacity
         style={styles.cardHeader}
         onPress={() => navigation.navigate('bestChampions')}
       >
-        <Text style={styles.title}>Melhores campeões</Text>
+        <Text style={styles.title}>{t('card.bestChampions.title')}</Text>
 
         <MaterialIcons
           name='chevron-right'
@@ -58,16 +62,13 @@ const MasteriesCard: React.FC = () => {
           />
         ))}
       </View>
-    </View>
+    </Card>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     width: '95%',
-    padding: 12,
-    borderRadius: 12,
-    backgroundColor: '#ffffff05',
     alignItems: 'center',
   },
   cardHeader: {

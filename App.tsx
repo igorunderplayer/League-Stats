@@ -6,6 +6,9 @@ import { SummonerProvider } from './src/hooks/useSummoner'
 import { Routes } from './src/routes'
 import riot from './src/services/riot'
 
+// Load i18n
+import './src/i18n'
+
 SplashScreen.preventAutoHideAsync()
 
 export default function App() {
