@@ -37,7 +37,7 @@ export const pt: StringResources = {
       title: 'Classificação pessoal'
     },
     bestChampions: {
-      title: 'Best champions'
+      title: 'Melhores campeões'
     }
   },
   league: {
@@ -48,6 +48,12 @@ export const pt: StringResources = {
     magicDamage: 'dano mágico',
     trueDamage: 'dano verdadeiro',
     emotionalDamage: 'dano emocional',
+    queue: {
+      normalBlindPick: 'Normal - Escolha às cegas',
+      normalDraftPick: 'Normal - Escolha alternada',
+      rankedSolo: 'Soloqueue',
+      rankedFlex: 'Flex',
+    },
     leagueTier: {
       IRON: 'Ferro',
       BRONZE: 'Bronze',

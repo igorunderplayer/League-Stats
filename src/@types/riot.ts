@@ -12,6 +12,7 @@ export const RiotRegions = {
   Asia: 'asia',
   Europe: 'europe',
   PBE: 'pbe',
+  Sea: 'sea',
   Unknown: 'unknown'
 } as const
 
@@ -117,6 +118,7 @@ export interface Match {
     participants: MatchParticipant[]
     gameDuration: number
     teams: MatchTeam[]
+    queueId: number
   }
 }
 

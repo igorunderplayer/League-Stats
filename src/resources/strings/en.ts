@@ -48,6 +48,12 @@ export const en: StringResources = {
     magicDamage: 'magic damage',
     trueDamage: 'true damage',
     emotionalDamage: 'emotional damage',
+    queue: {
+      normalBlindPick: 'Normal - Blind Pick',
+      normalDraftPick: 'Normal - Draft Pick',
+      rankedSolo: 'Soloqueue',
+      rankedFlex: 'Flex',
+    },
     leagueTier: {
       IRON: 'Iron',
       BRONZE: 'Bronze',

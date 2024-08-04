@@ -49,7 +49,6 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
 
         <View>
           <Text style={styles.title}>{participant.championName}</Text>
-          <Text style={styles.text}>{participant.summonerName}</Text>
         </View>
 
         <View style={styles.column}>

@@ -47,6 +47,12 @@ export interface StringResources {
     magicDamage: string,
     trueDamage: string,
     emotionalDamage: string,
+    queue: {
+      normalBlindPick: string,
+      normalDraftPick: string,
+      rankedSolo: string,
+      rankedFlex: string,
+    },
     leagueTier: {
       IRON: string,
       BRONZE: string,

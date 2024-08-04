@@ -8,6 +8,7 @@ import getCombatScore from '../../../functions/combatScore'
 import SimpleKDA from '../../generic/SimpleKDA'
 
 import { useTranslation } from 'react-i18next'
+import queues from '../../../common/queues'
 import runes from '../../../runes.json'
 import riot from '../../../services/riot'
 import spells from '../../../spells.json'
@@ -45,6 +46,15 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
   const handleOnClick = useCallback(() => {
     onClick(match)
   }, [])
+
+  console.log(match.info.queueId)
+  const queue = queues.find((q) => q.queueId == match.info.queueId)?.key
+
+  console.log(queue)
+
+  const queueName = t(`league.queue.${queue}`, {
+    defaultValue: match.info.gameMode,
+  }) as string
 
   return (
     <TouchableOpacity
@@ -109,7 +119,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
             { fontWeight: 'bold', maxWidth: 96, textAlign: 'center' },
           ]}
         >
-          {t(`league.gameModeName.${match.info.gameMode}`)}
+          {queueName}
         </Text>
 
         <Text style={styles.subText}>

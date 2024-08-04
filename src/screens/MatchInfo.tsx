@@ -6,6 +6,7 @@ import { Match, MatchParticipant } from '../@types/riot'
 import colors from '../colors'
 import ParticipantFocusDetails from '../components/cards/ParticipantFocusDetail'
 import MatchParticipantInfo from '../components/items/MatchParticipantInfo'
+import Card from '../components/ui/card'
 import riotRegionFromLeague from '../functions/riotRegionFromLeague'
 import { useSummoner } from '../hooks/useSummoner'
 import riot from '../services/riot'
@@ -154,6 +155,10 @@ export default function MatchInfo() {
         participant={focusedParticipant}
         match={match}
       />
+
+      <Card>
+        <Text style={styles.subText}>Match id: {match.metadata.matchId}</Text>
+      </Card>
     </ScrollView>
   )
 }
@@ -193,6 +198,5 @@ const styles = StyleSheet.create({
   subText: {
     fontSize: 14,
     color: '#ffffff80',
-    fontWeight: 'bold',
   },
 })
