@@ -7,6 +7,7 @@ import { ChampionData } from '../../../@types/riot'
 import colors from '../../../colors'
 import { useSummoner } from '../../../hooks/useSummoner'
 import riot from '../../../services/riot'
+import Card from '../../ui/card'
 
 const FreeChampionsRotation: React.FC = () => {
   const { leagueRegion, summoner } = useSummoner()
@@ -28,7 +29,7 @@ const FreeChampionsRotation: React.FC = () => {
   }, [])
 
   return (
-    <View style={styles.container}>
+    <Card style={styles.container}>
       <View style={styles.cardHeader}>
         <Text style={styles.title}>{t('league.championRotation')}</Text>
       </View>
@@ -41,7 +42,7 @@ const FreeChampionsRotation: React.FC = () => {
           />
         ))}
       </View>
-    </View>
+    </Card>
   )
 }
 
@@ -79,9 +80,6 @@ const ChampionItem = ({ item }: ItemProps) => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    padding: 8,
-    borderRadius: 12,
-    backgroundColor: '#ffffff05',
     alignItems: 'center',
   },
   cardHeader: {
@@ -89,7 +87,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 12,
+    padding: 4,
   },
   title: {
     color: colors.white,

@@ -10,6 +10,7 @@ import { useSummoner } from '../../../hooks/useSummoner'
 import { ProfileStackParamList } from '../../../screens/Profile'
 import riot from '../../../services/riot'
 import ChampionMasteryCard from '../../items/ChampionMastery'
+import Card from '../../ui/card'
 
 type profileScreenProp = NativeStackNavigationProp<
   ProfileStackParamList,
@@ -39,7 +40,7 @@ const MasteriesCard: React.FC = () => {
   }, [])
 
   return (
-    <View style={styles.container}>
+    <Card style={styles.container}>
       <TouchableOpacity
         style={styles.cardHeader}
         onPress={() => navigation.navigate('bestChampions')}
@@ -61,16 +62,13 @@ const MasteriesCard: React.FC = () => {
           />
         ))}
       </View>
-    </View>
+    </Card>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     width: '95%',
-    padding: 12,
-    borderRadius: 12,
-    backgroundColor: '#ffffff05',
     alignItems: 'center',
   },
   cardHeader: {

@@ -10,6 +10,7 @@ import colors from '../../../colors'
 import riot from '../../../services/riot'
 import SimpleKDA from '../../generic/SimpleKDA'
 import ParticipantItems from '../../items/ParticipantItems'
+import Card from '../../ui/card'
 import styles from './styles'
 
 type Props = {
@@ -38,7 +39,7 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
   const csPerMin = csScore / (match.info.gameDuration / 60)
 
   return (
-    <View style={styles.container}>
+    <Card style={styles.container}>
       <View style={styles.header}>
         <Image
           style={{ width: 72, height: 72 }}
@@ -205,7 +206,7 @@ const ParticipantFocusDetails: React.FC<Props> = ({ participant, match }) => {
           </View>
         </View>
       </View>
-    </View>
+    </Card>
   )
 }
 
