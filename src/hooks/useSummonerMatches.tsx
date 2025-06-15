@@ -35,7 +35,7 @@ export default function useSummonerMatches(
       await Promise.all(
         ids.map(async (id) => await leaguestats.getMatchById(region, id)),
       ).then((matches) => {
-        setMatches((prev) => [...prev, ...matches])
+        setMatches((prev) => prev.concat(matches))
       })
     } finally {
       setLoading(false)

@@ -59,13 +59,9 @@ export default function MatchInfo() {
     setLoading(false)
   }
 
-  const focusedParticipant = useMemo(() => {
-    return (
-      match?.info.participants.find(
-        (p) => p.puuid === focusedParticipantPuuid,
-      ) ?? ({} as MatchParticipant)
-    )
-  }, [match])
+  const focusedParticipant =
+    match?.info.participants.find((p) => p.puuid === focusedParticipantPuuid) ??
+    ({} as MatchParticipant)
 
   const team1Won = match?.info.teams[0].win ?? true
 
