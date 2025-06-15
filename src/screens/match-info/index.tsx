@@ -1,6 +1,5 @@
 import { RouteProp, useRoute } from '@react-navigation/native'
 import React, { useEffect, useMemo, useState } from 'react'
-import { useTranslation } from 'react-i18next'
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { Match, MatchParticipant } from '../../@types/riot'
 import ParticipantFocusDetails from '../../components/cards/ParticipantFocusDetail'
@@ -17,7 +16,7 @@ import Markdown from 'react-native-markdown-display'
 import { useLeagueStats } from '../../hooks/useLeagueStats'
 import { usePreferences } from '../../hooks/usePreferences'
 import { styles, mdStyles } from './styles'
-import colors from '../../colors'
+import { TeamKDA } from '../../components/generic/TeamKDA'
 
 type matchInfoScreenProp = RouteProp<HistoryStackParamList, 'matchInfo'>
 
@@ -35,15 +34,13 @@ export default function MatchInfo() {
   const [aiCoachText, setAiCoachText] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(false)
 
-  const { t } = useTranslation()
-
   useEffect(() => {
     if (!leagueRegion || !summoner) return
 
     leaguestats
       .getMatchById(riotRegionFromLeague(leagueRegion), route.params?.matchId)
       .then((match) => setMatch(match))
-  }, [])
+  }, [summoner, leagueRegion])
 
   const analyzeMatch = async () => {
     if (!match || !summoner?.puuid || loading || !leagueRegion) return
@@ -58,52 +55,35 @@ export default function MatchInfo() {
       language,
     )
 
-    console.log('AI Coach response:', res)
-
     setAiCoachText(res.content)
-
     setLoading(false)
   }
 
-  const focusedParticipant =
-    match?.info.participants.find((p) => p.puuid === focusedParticipantPuuid) ??
-    ({} as MatchParticipant)
+  const focusedParticipant = useMemo(() => {
+    return (
+      match?.info.participants.find(
+        (p) => p.puuid === focusedParticipantPuuid,
+      ) ?? ({} as MatchParticipant)
+    )
+  }, [match])
 
-  const team1Won = match?.info.teams[0].win
+  const team1Won = match?.info.teams[0].win ?? true
 
-  const team1Kda = useMemo(
-    () =>
-      match?.info.participants
-        .filter((p) => p.teamId == 100)
-        .reduce(
-          (prev, curr) => {
-            return {
-              kills: prev.kills + curr.kills,
-              deaths: prev.deaths + curr.deaths,
-              assists: prev.assists + curr.assists,
-            }
-          },
-          { kills: 0, deaths: 0, assists: 0 },
-        ),
-    [match],
-  )
+  const [team1, team2] = useMemo(() => {
+    const participants = match?.info?.participants ?? []
+    const team1 = []
+    const team2 = []
 
-  const team2Kda = useMemo(
-    () =>
-      match?.info.participants
-        .filter((p) => p.teamId == 200)
-        .reduce(
-          (prev, curr) => {
-            return {
-              kills: prev.kills + curr.kills,
-              deaths: prev.deaths + curr.deaths,
-              assists: prev.assists + curr.assists,
-            }
-          },
-          { kills: 0, deaths: 0, assists: 0 },
-        ),
-    [match],
-  )
+    for (const participant of participants) {
+      if (participant.teamId == 100) {
+        team1.push(participant)
+      } else {
+        team2.push(participant)
+      }
+    }
+
+    return [team1, team2]
+  }, [match])
 
   const matchDate = new Date(match?.info?.gameCreation ?? 0)
 
@@ -123,66 +103,42 @@ export default function MatchInfo() {
       }}
     >
       <View style={styles.header}>
-        <View style={styles.heading}>
-          <Text
-            style={[
-              styles.text,
-              { color: team1Won ? colors.softCyan : colors.softRed },
-            ]}
-          >
-            {team1Won ? t('common.victory') : t('common.defeat')}
-          </Text>
-
-          <Text style={styles.subText}>
-            {team1Kda?.kills} / {team1Kda?.deaths} / {team1Kda?.assists}
-          </Text>
-        </View>
+        <TeamKDA
+          won={team1Won}
+          participants={team1}
+        />
 
         <Text style={styles.text}>
           {(match.info.gameDuration / 60).toFixed()}mins
         </Text>
 
-        <View style={styles.heading}>
-          <Text
-            style={[
-              styles.text,
-              { color: !team1Won ? colors.softCyan : colors.softRed },
-            ]}
-          >
-            {!team1Won ? t('common.victory') : t('common.defeat')}
-          </Text>
-
-          <Text style={styles.subText}>
-            {team2Kda?.kills} / {team2Kda?.deaths} / {team2Kda?.assists}
-          </Text>
-        </View>
+        <TeamKDA
+          won={!team1Won}
+          participants={team2}
+        />
       </View>
 
       <View style={styles.teamsContainer}>
         <View style={styles.team}>
-          {match.info.participants
-            .filter((p) => p.teamId == 100)
-            .map((participant) => (
-              <MatchParticipantInfo
-                key={participant.puuid}
-                participant={participant}
-                focused={participant.puuid == focusedParticipantPuuid}
-                onClick={() => setFocusedParticipantPuuid(participant.puuid)}
-              />
-            ))}
+          {team1.map((participant) => (
+            <MatchParticipantInfo
+              key={participant.puuid}
+              participant={participant}
+              focused={participant.puuid == focusedParticipantPuuid}
+              onClick={() => setFocusedParticipantPuuid(participant.puuid)}
+            />
+          ))}
         </View>
 
         <View style={styles.team}>
-          {match.info.participants
-            .filter((p) => p.teamId == 200)
-            .map((participant) => (
-              <MatchParticipantInfo
-                key={participant.puuid}
-                participant={participant}
-                focused={participant.puuid == focusedParticipantPuuid}
-                onClick={() => setFocusedParticipantPuuid(participant.puuid)}
-              />
-            ))}
+          {team2.map((participant) => (
+            <MatchParticipantInfo
+              key={participant.puuid}
+              participant={participant}
+              focused={participant.puuid == focusedParticipantPuuid}
+              onClick={() => setFocusedParticipantPuuid(participant.puuid)}
+            />
+          ))}
         </View>
       </View>
 
