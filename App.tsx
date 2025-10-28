@@ -2,20 +2,21 @@ import * as SplashScreen from 'expo-splash-screen'
 import { StatusBar } from 'expo-status-bar'
 import React, { useCallback, useEffect, useState } from 'react'
 import { View } from 'react-native'
-import { PaperProvider, MD3DarkTheme, adaptNavigationTheme } from 'react-native-paper'
+import { PaperProvider, MD3DarkTheme } from 'react-native-paper'
 import { SummonerProvider } from './src/hooks/useSummoner'
 import { Routes } from './src/routes'
 
 // Load i18n
 import './src/i18n'
 import themes from './src/themes'
-import { PreferencesProvider } from './src/hooks/usePreferences'
+import { PreferencesProvider, usePreferences } from './src/hooks/usePreferences'
 import ddragon from './src/services/ddragon'
 
 SplashScreen.preventAutoHideAsync()
 
-export default function App() {
+function AppContent() {
   const [loading, setLoading] = useState(true)
+  const { primaryColor } = usePreferences()
 
   useEffect(() => {
     setupCache()
@@ -37,15 +38,14 @@ export default function App() {
 
   if (loading) return null
 
-  // Create Material You dark theme based on the app's theme
+  // Create Material You dark theme based on the app's theme and user preferences
   const paperTheme = {
     ...MD3DarkTheme,
     colors: {
       ...MD3DarkTheme.colors,
-      primary: themes.dark.primary,
+      primary: primaryColor,
       background: themes.dark.background,
       surface: themes.dark.surface,
-      text: themes.dark.text,
       onPrimary: themes.dark.text,
       onBackground: themes.dark.text,
       onSurface: themes.dark.text,
@@ -54,17 +54,23 @@ export default function App() {
 
   return (
     <PaperProvider theme={paperTheme}>
-      <PreferencesProvider>
-        <SummonerProvider>
-          <View
-            onLayout={onLayoutRootView}
-            style={{ flex: 1, backgroundColor: themes.dark.background }}
-          >
-            <Routes />
-            <StatusBar style='auto' />
-          </View>
-        </SummonerProvider>
-      </PreferencesProvider>
+      <SummonerProvider>
+        <View
+          onLayout={onLayoutRootView}
+          style={{ flex: 1, backgroundColor: themes.dark.background }}
+        >
+          <Routes />
+          <StatusBar style='auto' />
+        </View>
+      </SummonerProvider>
     </PaperProvider>
+  )
+}
+
+export default function App() {
+  return (
+    <PreferencesProvider>
+      <AppContent />
+    </PreferencesProvider>
   )
 }

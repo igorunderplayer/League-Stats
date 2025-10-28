@@ -68,7 +68,7 @@ export default function Settings() {
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <Text variant="titleMedium" style={styles.title}>
-          ⚠️ {t('screen.settings.customApiUrl')}:{' '}
+          ⚠️ {t('screen.settings.customApiUrl')}
         </Text>
         <TextInput
           placeholder={t('screen.settings.customApiUrlPlaceholder')}
