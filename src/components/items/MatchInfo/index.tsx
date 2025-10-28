@@ -1,5 +1,6 @@
 import React, { memo, useCallback } from 'react'
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, View } from 'react-native'
+import { TouchableRipple, Text } from 'react-native-paper'
 import { formatDistanceToNow } from 'date-fns'
 import { Match } from '../../../@types/riot'
 import colors from '../../../colors'
@@ -63,92 +64,94 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
   })
 
   return (
-    <TouchableOpacity
+    <TouchableRipple
       style={styles.container}
       onPress={handleOnClick}
     >
-      <View
-        style={[
-          styles.leftBar,
-          { backgroundColor: me.win ? colors.softCyan : colors.softRed },
-        ]}
-      />
-
-      <View style={styles.basicInfo}>
-        <Image
-          style={{
-            width: 72,
-            height: 72,
-            borderTopLeftRadius: 12,
-            borderTopRightRadius: 12,
-            marginRight: 12,
-          }}
-          source={{
-            uri: ddragon.getChampionIcon(me.championName),
-          }}
-        />
-
-        {!runeIconPath && !spell1 && !spell2 ? (
-          <></>
-        ) : (
-          <View style={{ flexDirection: 'row' }}>
-            <Image
-              style={{ width: 24, height: 24, borderBottomLeftRadius: 12 }}
-              source={{
-                uri: `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/${runeIconPath}`,
-              }}
-            />
-
-            <Image
-              style={{ width: 24, height: 24 }}
-              source={{
-                uri: `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/${spell1?.iconPath.toLowerCase()}`,
-              }}
-            />
-
-            <Image
-              style={{ width: 24, height: 24, borderBottomRightRadius: 12 }}
-              source={{
-                uri: `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/${spell2?.iconPath.toLowerCase()}`,
-              }}
-            />
-          </View>
-        )}
-      </View>
-
-      <View style={{ alignItems: 'center' }}>
-        <VictoryDefeatIcon win={me.win} />
-
-        <Text
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+        <View
           style={[
-            styles.subText,
-            { fontWeight: '500', maxWidth: 96, textAlign: 'center' },
+            styles.leftBar,
+            { backgroundColor: me.win ? colors.softCyan : colors.softRed },
           ]}
-        >
-          {queueName}
-        </Text>
-      </View>
-
-      <View style={{ alignItems: 'center' }}>
-        <SimpleKDA
-          kills={me.kills}
-          deaths={me.deaths}
-          assists={me.assists}
         />
 
-        <Text style={styles.subText}>
-          {isNaN(combatScore) ? 0 : combatScore.toFixed(1)}%{' '}
-          {t('league.killParticipation')}
-        </Text>
-        <Text style={styles.subText}>
-          {me.totalMinionsKilled + me.neutralMinionsKilled} CS
-        </Text>
+        <View style={styles.basicInfo}>
+          <Image
+            style={{
+              width: 72,
+              height: 72,
+              borderTopLeftRadius: 12,
+              borderTopRightRadius: 12,
+              marginRight: 12,
+            }}
+            source={{
+              uri: ddragon.getChampionIcon(me.championName),
+            }}
+          />
 
-        <Text style={styles.subText}>
-          {(match.info.gameDuration / 60).toFixed()} min • {timeAgo}
-        </Text>
+          {!runeIconPath && !spell1 && !spell2 ? (
+            <></>
+          ) : (
+            <View style={{ flexDirection: 'row' }}>
+              <Image
+                style={{ width: 24, height: 24, borderBottomLeftRadius: 12 }}
+                source={{
+                  uri: `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/${runeIconPath}`,
+                }}
+              />
+
+              <Image
+                style={{ width: 24, height: 24 }}
+                source={{
+                  uri: `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/${spell1?.iconPath.toLowerCase()}`,
+                }}
+              />
+
+              <Image
+                style={{ width: 24, height: 24, borderBottomRightRadius: 12 }}
+                source={{
+                  uri: `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/data/${spell2?.iconPath.toLowerCase()}`,
+                }}
+              />
+            </View>
+          )}
+        </View>
+
+        <View style={{ alignItems: 'center' }}>
+          <VictoryDefeatIcon win={me.win} />
+
+          <Text
+            style={[
+              styles.subText,
+              { fontWeight: '500', maxWidth: 96, textAlign: 'center' },
+            ]}
+          >
+            {queueName}
+          </Text>
+        </View>
+
+        <View style={{ alignItems: 'center' }}>
+          <SimpleKDA
+            kills={me.kills}
+            deaths={me.deaths}
+            assists={me.assists}
+          />
+
+          <Text style={styles.subText}>
+            {isNaN(combatScore) ? 0 : combatScore.toFixed(1)}%{' '}
+            {t('league.killParticipation')}
+          </Text>
+          <Text style={styles.subText}>
+            {me.totalMinionsKilled + me.neutralMinionsKilled} CS
+          </Text>
+
+          <Text style={styles.subText}>
+            {(match.info.gameDuration / 60).toFixed()} min • {timeAgo}
+          </Text>
+        </View>
       </View>
-    </TouchableOpacity>
+    </TouchableRipple>
   )
 }
 
@@ -156,10 +159,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 12,
     borderRadius: 12,
-    flexDirection: 'row',
     backgroundColor: '#ffffff05',
-    alignItems: 'center',
-    justifyContent: 'space-between',
     width: '100%',
   },
   leftBar: {
@@ -170,14 +170,8 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 12,
     position: 'absolute',
   },
-  name: {
-    padding: 4,
-    color: colors.white,
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
   subText: {
-    color: '#ffffff60',
+    opacity: 0.6,
   },
   championIcon: {
     width: 64,

@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
-import { Image, Linking, StyleSheet, TouchableOpacity } from 'react-native'
+import { Image, Linking, StyleSheet } from 'react-native'
+import { Button } from 'react-native-paper'
 
-import { MaterialIcons } from '@expo/vector-icons'
 import colors from '../../../colors'
 
 type Props = {
@@ -17,38 +17,26 @@ const OPGGCard: React.FC<Props> = ({ region = '', name = '' }) => {
   }, [])
 
   return (
-    <TouchableOpacity
-      style={styles.container}
+    <Button
+      mode="contained"
       onPress={handleOnClick}
+      buttonColor={colors.softRed}
+      icon={() => (
+        <Image
+          style={styles.logo}
+          resizeMode='center'
+          source={require('../../../assets/opgglogo.png')}
+        />
+      )}
+      contentStyle={{ height: 48 }}
+      style={{ borderRadius: 12 }}
     >
-      <Image
-        style={styles.logo}
-        resizeMode='center'
-        source={require('../../../assets/opgglogo.png')}
-      />
-      <MaterialIcons
-        name='chevron-right'
-        size={28}
-        color='#fff'
-      />
-    </TouchableOpacity>
+      {' '}
+    </Button>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 6,
-    height: 48,
-    borderRadius: 12,
-    flexDirection: 'row',
-    backgroundColor: colors.softRed,
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-  },
-  text: {
-    color: '#fff',
-    fontWeight: 'bold',
-  },
   logo: {
     height: 28,
     width: 72,

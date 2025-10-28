@@ -3,9 +3,9 @@ import {
   Image,
   Linking,
   StyleSheet,
-  Text,
-  TouchableOpacity,
+  View,
 } from 'react-native'
+import { Button } from 'react-native-paper'
 
 import { MaterialIcons } from '@expo/vector-icons'
 import colors from '../../../colors'
@@ -23,41 +23,26 @@ const MasteryChartCard: React.FC<Props> = ({ region = '', name = '' }) => {
   }, [])
 
   return (
-    <TouchableOpacity
-      style={styles.container}
+    <Button
+      mode="contained"
       onPress={handleOnClick}
+      buttonColor={colors.softOrange}
+      icon={() => (
+        <Image
+          resizeMode='center'
+          style={styles.logo}
+          source={require('../../../assets/masterychartlogo.png')}
+        />
+      )}
+      contentStyle={{ height: 48 }}
+      style={{ borderRadius: 12 }}
     >
-      <Image
-        resizeMode='center'
-        style={styles.logo}
-        source={require('../../../assets/masterychartlogo.png')}
-      />
-
-      <Text style={styles.text}>Mastery Chart</Text>
-
-      <MaterialIcons
-        name='chevron-right'
-        size={28}
-        color='#fff'
-      />
-    </TouchableOpacity>
+      Mastery Chart
+    </Button>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 6,
-    height: 48,
-    borderRadius: 12,
-    flexDirection: 'row',
-    backgroundColor: colors.softOrange,
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-  },
-  text: {
-    color: '#fff',
-    fontWeight: 'bold',
-  },
   logo: {
     height: 28,
     width: 28,

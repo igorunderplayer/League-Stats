@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import {
   ScrollView,
-  Text,
-  TextInput,
   ToastAndroid,
-  TouchableOpacity,
   View,
 } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
+import { Button, TextInput, Text, IconButton } from 'react-native-paper'
 import { leagueFromString } from '../../@types/riot'
 import { SelectMenu } from '../../components/generic/SelectMenu'
 import { SummonerInfo, useSummoner } from '../../hooks/useSummoner'
@@ -127,30 +125,20 @@ export default function Welcome() {
             <TextInput
               value={typingRegion}
               placeholder={t('screen.welcome.input.region')}
-              placeholderTextColor='#ffffff45'
               onChangeText={(text) => setTypingRegion(text)}
-              cursorColor={primaryColor}
-              selectionColor={primaryColor}
-              selectionHandleColor={primaryColor}
-              style={[
-                styles.textInput,
-                {
-                  width: '30%',
-                  borderRightWidth: 1,
-                  borderColor: '#ffffff50',
-                },
-              ]}
+              mode="outlined"
+              style={{
+                width: '30%',
+                backgroundColor: themes.dark.surface,
+              }}
             />
 
             <TextInput
               value={typingName}
               placeholder={t('screen.welcome.input.riotID')}
-              placeholderTextColor='#ffffff45'
-              cursorColor={primaryColor}
-              selectionColor={primaryColor}
-              selectionHandleColor={primaryColor}
               onChangeText={(text) => setTypingName(text)}
-              style={styles.textInput}
+              mode="outlined"
+              style={{ flex: 1, backgroundColor: themes.dark.surface }}
             />
           </View>
           <SelectMenu
@@ -175,35 +163,29 @@ export default function Welcome() {
         </View>
 
         <View>
-          <TouchableOpacity
+          <Button
+            mode="contained"
             onPress={handleOnSearchSummonerPress}
-            style={[styles.button, { backgroundColor: primaryColor }]}
+            loading={loading}
+            disabled={loading}
+            style={{ marginTop: 16 }}
           >
-            <Text style={styles.text}>{t('screen.welcome.continue')}</Text>
-          </TouchableOpacity>
+            {t('screen.welcome.continue')}
+          </Button>
         </View>
       </ScrollView>
 
-      <TouchableOpacity
-        style={{
-          alignSelf: 'flex-end',
-          padding: 12,
-          backgroundColor: primaryColor,
-          borderRadius: 12,
-          margin: 16,
-          flexDirection: 'row',
-          gap: 8,
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
+      <IconButton
+        icon="settings"
+        size={32}
+        mode="contained"
         onPress={() => navigation.navigate('settings')}
-      >
-        <MaterialIcons
-          name='settings'
-          size={32}
-          color={'#fff'}
-        />
-      </TouchableOpacity>
+        style={{
+          position: 'absolute',
+          bottom: 16,
+          right: 16,
+        }}
+      />
     </View>
   )
 }

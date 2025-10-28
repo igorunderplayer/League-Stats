@@ -1,5 +1,6 @@
-import React, { TextInput, View, Text, TouchableOpacity } from 'react-native'
+import React, { View } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { TextInput, Button, Text } from 'react-native-paper'
 import { styles } from './styles'
 import { SelectMenu } from '../../components/generic/SelectMenu'
 import colors from '../../colors'
@@ -66,14 +67,14 @@ export default function Settings() {
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        <Text style={styles.title}>
+        <Text variant="titleMedium" style={styles.title}>
           ⚠️ {t('screen.settings.customApiUrl')}:{' '}
         </Text>
         <TextInput
           placeholder={t('screen.settings.customApiUrlPlaceholder')}
-          placeholderTextColor='#ffffff80'
-          style={styles.input}
+          style={{ marginBottom: 8, backgroundColor: themes.dark.surface }}
           onChangeText={(text) => setCustomApiUrl(text)}
+          mode="outlined"
         />
 
         <View
@@ -85,25 +86,22 @@ export default function Settings() {
             gap: 8,
           }}
         >
-          <TouchableOpacity
-            style={[
-              styles.button,
-              { backgroundColor: colors.softRed, width: '25%' },
-            ]}
+          <Button
+            mode="contained"
             onPress={resetApiUrl}
+            buttonColor={colors.softRed}
+            style={{ width: '25%' }}
           >
-            <Text style={styles.text}>Reset</Text>
-          </TouchableOpacity>
+            Reset
+          </Button>
 
-          <TouchableOpacity
-            style={[
-              styles.button,
-              { backgroundColor: primaryColor, flexGrow: 1 },
-            ]}
+          <Button
+            mode="contained"
             onPress={changeApiUrl}
+            style={{ flexGrow: 1 }}
           >
-            <Text style={styles.text}>{t('common.confirm')}</Text>
-          </TouchableOpacity>
+            {t('common.confirm')}
+          </Button>
         </View>
       </View>
 
@@ -133,26 +131,14 @@ export default function Settings() {
         />
       </View>
 
-      <TouchableOpacity
+      <Button
+        mode="contained"
         onPress={handleOnPressDelete}
-        style={[
-          styles.button,
-          {
-            backgroundColor: colors.softRed,
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-          },
-        ]}
+        buttonColor={colors.softRed}
+        icon="trash-can-outline"
       >
-        <MaterialCommunityIcons
-          name='trash-can-outline'
-          color={themes.dark.text}
-          size={32}
-        />
-
-        <Text style={styles.text}>{t('screen.settings.deleteData')}</Text>
-      </TouchableOpacity>
+        {t('screen.settings.deleteData')}
+      </Button>
     </View>
   )
 }

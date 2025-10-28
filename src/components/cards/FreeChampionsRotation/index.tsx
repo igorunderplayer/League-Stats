@@ -2,9 +2,9 @@ import * as Linking from 'expo-linking'
 import { getLocales } from 'expo-localization'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, View } from 'react-native'
+import { List, TouchableRipple, Text } from 'react-native-paper'
 import { ChampionData } from '../../../@types/riot'
-import colors from '../../../colors'
 import { useSummoner } from '../../../hooks/useSummoner'
 import Card from '../../ui/card'
 import Title from '../../ui/title'
@@ -69,19 +69,26 @@ const ChampionItem = ({ item }: ItemProps) => {
   }
 
   return (
-    <TouchableOpacity
+    <TouchableRipple
       style={styles.itemContainer}
       onPress={openChampionURL}
     >
-      <Image
-        style={{ width: 48, height: 48 }}
-        source={{
-          uri: ddragon.getChampionIcon(item.id),
-        }}
-      />
+      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <Image
+          style={{ width: 48, height: 48 }}
+          source={{
+            uri: ddragon.getChampionIcon(item.id),
+          }}
+        />
 
-      <Text style={styles.championName}>{item.name}</Text>
-    </TouchableOpacity>
+        <Text
+          variant="titleMedium"
+          style={styles.championName}
+        >
+          {item.name}
+        </Text>
+      </View>
+    </TouchableRipple>
   )
 }
 
@@ -105,15 +112,11 @@ const styles = StyleSheet.create({
   },
   itemContainer: {
     backgroundColor: '#ffffff05',
-    flexDirection: 'row',
-    alignItems: 'center',
     borderRadius: 12,
     width: '49%',
   },
   championName: {
     padding: 8,
-    color: colors.white,
-    fontSize: 16,
     fontWeight: 'bold',
   },
 })

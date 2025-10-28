@@ -2,11 +2,10 @@ import { MaterialIcons } from '@expo/vector-icons'
 import React from 'react'
 import {
   StyleProp,
-  Text,
-  TouchableOpacity,
   View,
   ViewStyle,
 } from 'react-native'
+import { List, TouchableRipple, Text } from 'react-native-paper'
 
 import { styles } from './styles'
 
@@ -34,32 +33,34 @@ const SelectMenu: React.FC<Props> = ({
   ...props
 }) => {
   return (
-    <TouchableOpacity
-      style={[styles.container, props.styles]}
-      onPress={onPress}
-    >
-      <View style={{ flexDirection: 'row' }}>
-        <Text style={styles.text}>{text}</Text>
-        <MaterialIcons
-          name={open ? 'keyboard-arrow-down' : 'keyboard-arrow-up'}
-          size={32}
-          color='#ffffff70'
-        />
-      </View>
+    <View style={[styles.container, props.styles]}>
+      <TouchableRipple
+        onPress={onPress}
+        style={{ padding: 12 }}
+      >
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Text variant="titleMedium">{text}</Text>
+          <MaterialIcons
+            name={open ? 'keyboard-arrow-down' : 'keyboard-arrow-up'}
+            size={32}
+            color='#ffffff70'
+          />
+        </View>
+      </TouchableRipple>
 
       {open ? (
         <View>
           {items.map((item) => (
-            <TouchableOpacity
-              onPress={() => onSelect(item)}
+            <List.Item
               key={item.key}
-            >
-              <Text style={styles.subText}>{item.text}</Text>
-            </TouchableOpacity>
+              title={item.text}
+              onPress={() => onSelect(item)}
+              style={{ paddingLeft: 24 }}
+            />
           ))}
         </View>
       ) : null}
-    </TouchableOpacity>
+    </View>
   )
 }
 

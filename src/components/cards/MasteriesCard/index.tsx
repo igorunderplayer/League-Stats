@@ -3,7 +3,8 @@ import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { StyleSheet, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import { TouchableRipple } from 'react-native-paper'
 import ChampionMastery from '../../../entities/ChampionMastery'
 import { useSummoner } from '../../../hooks/useSummoner'
 import { ProfileStackParamList } from '../../../screens/Profile'
@@ -44,18 +45,20 @@ const MasteriesCard: React.FC = () => {
 
   return (
     <Card style={styles.container}>
-      <TouchableOpacity
+      <TouchableRipple
         style={styles.cardHeader}
         onPress={() => navigation.navigate('bestChampions')}
       >
-        <Title>{t('card.bestChampions.title')}</Title>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+          <Title>{t('card.bestChampions.title')}</Title>
 
-        <MaterialIcons
-          name='chevron-right'
-          size={28}
-          color='#fff'
-        />
-      </TouchableOpacity>
+          <MaterialIcons
+            name='chevron-right'
+            size={28}
+            color='#fff'
+          />
+        </View>
+      </TouchableRipple>
 
       <View style={styles.maestries}>
         {masteries.map((mastery) => (
@@ -76,9 +79,6 @@ const styles = StyleSheet.create({
   },
   cardHeader: {
     width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
     padding: 12,
     borderRadius: 12,
     backgroundColor: '#ffffff05',

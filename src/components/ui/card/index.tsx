@@ -1,17 +1,18 @@
 import React from 'react'
-import { View, ViewProps } from 'react-native'
-import styles from './styles'
+import { Surface } from 'react-native-paper'
+import { ViewProps } from 'react-native'
 
 export interface CardProps extends ViewProps {}
 
 const Card: React.FC<CardProps> = ({ children, style, ...props }) => {
   return (
-    <View
-      style={[styles.container, style]}
+    <Surface
+      style={[{ padding: 12, borderRadius: 12 }, style]}
+      elevation={0}
       {...props}
     >
       {children}
-    </View>
+    </Surface>
   )
 }
 

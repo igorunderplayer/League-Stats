@@ -1,6 +1,7 @@
 import { RouteProp, useRoute } from '@react-navigation/native'
 import React, { useEffect, useMemo, useState } from 'react'
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
+import { ScrollView, View } from 'react-native'
+import { Button, Text } from 'react-native-paper'
 import { Match, MatchParticipant } from '../../@types/riot'
 import ParticipantFocusDetails from '../../components/cards/ParticipantFocusDetail'
 import MatchParticipantInfo from '../../components/items/MatchParticipantInfo'
@@ -153,12 +154,14 @@ export default function MatchInfo() {
       >
         <Title>🤖 Coach AI</Title>
 
-        <TouchableOpacity
-          style={styles.button}
+        <Button
+          mode="contained"
           onPress={analyzeMatch}
+          loading={loading}
+          disabled={loading}
         >
-          <Text style={styles.text}>Analyze</Text>
-        </TouchableOpacity>
+          Analyze
+        </Button>
 
         <Card>
           <Markdown style={mdStyles}>
