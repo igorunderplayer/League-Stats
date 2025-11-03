@@ -1,7 +1,5 @@
 import React, { View } from 'react-native'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
-import { TextInput, Button, Text } from 'react-native-paper'
-import { styles } from './styles'
+import { TextInput, Button, Text, Surface, Divider, List } from 'react-native-paper'
 import { SelectMenu } from '../../components/generic/SelectMenu'
 import colors from '../../colors'
 import { useState } from 'react'
@@ -17,9 +15,6 @@ export default function Settings() {
   const { primaryColor, setPrimaryColor, setApiUrl, setLanguage } =
     usePreferences()
   const { t } = useTranslation()
-
-  const [colorsOpen, setColorsOpen] = useState(false)
-  const [languagesOpen, setLanguagesOpen] = useState(false)
 
   const [customApiUrl, setCustomApiUrl] = useState('')
 
@@ -65,80 +60,96 @@ export default function Settings() {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.inputContainer}>
-        <Text variant="titleMedium" style={styles.title}>
-          ⚠️ {t('screen.settings.customApiUrl')}
-        </Text>
-        <TextInput
-          placeholder={t('screen.settings.customApiUrlPlaceholder')}
-          style={{ marginBottom: 8, backgroundColor: themes.dark.surface }}
-          onChangeText={(text) => setCustomApiUrl(text)}
-          mode="outlined"
-        />
+    <Surface
+      style={{
+        flex: 1,
+        backgroundColor: themes.dark.background,
+      }}
+    >
+      <View style={{ padding: 16, gap: 16 }}>
+        {/* API Configuration Section */}
+        <Surface elevation={1} style={{ borderRadius: 16, padding: 16, gap: 12 }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <Text variant="titleLarge">⚠️</Text>
+            <Text variant="titleMedium">{t('screen.settings.customApiUrl')}</Text>
+          </View>
+          
+          <TextInput
+            placeholder={t('screen.settings.customApiUrlPlaceholder')}
+            onChangeText={(text) => setCustomApiUrl(text)}
+            mode="outlined"
+            dense
+          />
 
-        <View
-          style={{
-            width: '100%',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: 8,
+          <View style={{ flexDirection: 'row', gap: 8 }}>
+            <Button
+              mode="outlined"
+              onPress={resetApiUrl}
+              style={{ flex: 1 }}
+            >
+              Reset
+            </Button>
+
+            <Button
+              mode="contained"
+              onPress={changeApiUrl}
+              style={{ flex: 2 }}
+            >
+              {t('common.confirm')}
+            </Button>
+          </View>
+        </Surface>
+
+        {/* Appearance Section */}
+        <Surface elevation={1} style={{ borderRadius: 16, padding: 16, gap: 12 }}>
+          <Text variant="titleMedium">{t('screen.settings.appColor')}</Text>
+          <SelectMenu
+            onSelect={(item) => onSelectColor(item.data as string)}
+            items={items.map((c) => ({
+              key: c.value,
+              data: c.value,
+              text: c.name,
+            }))}
+            text={t('screen.settings.appColor')}
+          />
+
+          <Divider style={{ marginVertical: 8 }} />
+
+          <Text variant="titleMedium">{t('screen.settings.language')}</Text>
+          <SelectMenu
+            onSelect={(item) => onSelectLanguage(item.data as string)}
+            items={languages.map((lang) => ({
+              key: lang.value,
+              data: lang.value,
+              text: lang.name,
+            }))}
+            text={t('screen.settings.language')}
+          />
+        </Surface>
+
+        {/* Danger Zone */}
+        <Surface 
+          elevation={1} 
+          style={{ 
+            borderRadius: 16, 
+            padding: 16, 
+            gap: 12,
           }}
         >
+          <Text variant="titleMedium" style={{ color: colors.softRed }}>
+            Danger Zone
+          </Text>
+          
           <Button
             mode="contained"
-            onPress={resetApiUrl}
+            onPress={handleOnPressDelete}
             buttonColor={colors.softRed}
-            style={{ width: '25%' }}
+            icon="delete-forever"
           >
-            Reset
+            {t('screen.settings.deleteData')}
           </Button>
-
-          <Button
-            mode="contained"
-            onPress={changeApiUrl}
-            style={{ flexGrow: 1 }}
-          >
-            {t('common.confirm')}
-          </Button>
-        </View>
+        </Surface>
       </View>
-
-      <View style={styles.inputContainer}>
-        <SelectMenu
-          open={colorsOpen}
-          onPress={() => setColorsOpen((val) => !val)}
-          onSelect={(item) => onSelectColor(item.data as string)}
-          items={items.map((c) => ({
-            key: c.value,
-            data: c.value,
-            text: c.name,
-          }))}
-          text={t('screen.settings.appColor')}
-        />
-
-        <SelectMenu
-          open={languagesOpen}
-          onPress={() => setLanguagesOpen((val) => !val)}
-          onSelect={(item) => onSelectLanguage(item.data as string)}
-          items={languages.map((lang) => ({
-            key: lang.value,
-            data: lang.value,
-            text: lang.name,
-          }))}
-          text={t('screen.settings.language')}
-        />
-      </View>
-
-      <Button
-        mode="contained"
-        onPress={handleOnPressDelete}
-        buttonColor={colors.softRed}
-        icon="trash-can-outline"
-      >
-        {t('screen.settings.deleteData')}
-      </Button>
-    </View>
+    </Surface>
   )
 }

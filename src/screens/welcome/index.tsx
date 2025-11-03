@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import { ScrollView, ToastAndroid, View } from 'react-native'
 import {
-  ScrollView,
-  ToastAndroid,
-  View,
-} from 'react-native'
-import { MaterialIcons } from '@expo/vector-icons'
-import { Button, TextInput, Text, IconButton } from 'react-native-paper'
+  Button,
+  TextInput,
+  Text,
+  IconButton,
+  Surface,
+  Divider,
+} from 'react-native-paper'
 import { leagueFromString } from '../../@types/riot'
 import { SelectMenu } from '../../components/generic/SelectMenu'
 import { SummonerInfo, useSummoner } from '../../hooks/useSummoner'
@@ -18,16 +20,12 @@ import { useNavigation } from '@react-navigation/native'
 import { usePreferences } from '../../hooks/usePreferences'
 import { useLeagueStats } from '../../hooks/useLeagueStats'
 
-import { styles } from './styles'
-
 type welcomeScreenProp = NativeStackNavigationProp<
   WelcomeStackParamList,
   'welcome'
 >
 
 export default function Welcome() {
-  const { primaryColor } = usePreferences()
-
   const { leaguestats } = useLeagueStats()
   const { savedSummoners, addSummoner, getSummoner } = useSummoner()
 
@@ -37,8 +35,6 @@ export default function Welcome() {
   const [typingRegion, setTypingRegion] = useState('BR1')
 
   const [loading, setLoading] = useState(false)
-
-  const [selectOpen, setSelectOpen] = useState(true)
 
   const { t } = useTranslation()
 
@@ -102,83 +98,103 @@ export default function Welcome() {
   }
 
   return (
-    <View
+    <Surface
       style={{
         flex: 1,
         backgroundColor: themes.dark.background,
-        paddingVertical: 32,
       }}
     >
-      <ScrollView contentContainerStyle={styles.container}>
-        <View
-          style={{
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Text style={styles.title}>{t('screen.welcome.welcome')}</Text>
-          <Text style={styles.subTitle}>{t('screen.welcome.subText')}</Text>
+      <ScrollView
+        contentContainerStyle={{
+          padding: 16,
+          gap: 24,
+        }}
+      >
+        {/* Header Section */}
+        <View style={{ alignItems: 'center', gap: 8, paddingVertical: 32 }}>
+          <Text variant="displaySmall" style={{ fontWeight: 'bold' }}>
+            {t('screen.welcome.welcome')}
+          </Text>
+          <Text variant="bodyLarge" style={{ opacity: 0.7, textAlign: 'center' }}>
+            {t('screen.welcome.subText')}
+          </Text>
         </View>
 
-        <View>
-          <View style={styles.inputsContainer}>
+        {/* Search Card */}
+        <Surface
+          elevation={1}
+          style={{
+            borderRadius: 16,
+            padding: 16,
+            gap: 16,
+          }}
+        >
+          <Text variant="titleMedium">{t('screen.welcome.input.riotID')}</Text>
+          
+          <View style={{ flexDirection: 'row', gap: 8 }}>
             <TextInput
               value={typingRegion}
               placeholder={t('screen.welcome.input.region')}
               onChangeText={(text) => setTypingRegion(text)}
               mode="outlined"
-              style={{
-                width: '30%',
-                backgroundColor: themes.dark.surface,
-              }}
+              style={{ flex: 1 }}
+              dense
             />
-
             <TextInput
               value={typingName}
-              placeholder={t('screen.welcome.input.riotID')}
+              placeholder="Summoner#TAG"
               onChangeText={(text) => setTypingName(text)}
               mode="outlined"
-              style={{ flex: 1, backgroundColor: themes.dark.surface }}
+              style={{ flex: 3 }}
+              dense
             />
           </View>
-          <SelectMenu
-            open={selectOpen}
-            onPress={() => setSelectOpen((val) => !val)}
-            text={t('screen.welcome.recentSummoners')}
-            styles={{
-              borderTopLeftRadius: 0,
-              borderTopRightRadius: 0,
-            }}
-            onSelect={(item) => handleSelectSummoner(item.data as SummonerInfo)}
-            items={savedSummoners.map((x) => ({
-              text: x.name ?? t('common.unknownSummoner'),
-              key: x.puuid,
-              data: {
-                name: x.name,
-                leagueRegion: x.leagueRegion,
-                puuid: x.puuid,
-              },
-            }))}
-          />
-        </View>
 
-        <View>
           <Button
             mode="contained"
             onPress={handleOnSearchSummonerPress}
             loading={loading}
             disabled={loading}
-            style={{ marginTop: 16 }}
+            icon="magnify"
           >
             {t('screen.welcome.continue')}
           </Button>
-        </View>
+        </Surface>
+
+        {/* Recent Summoners Section */}
+        {savedSummoners.length > 0 && (
+          <Surface
+            elevation={1}
+            style={{
+              borderRadius: 16,
+              padding: 16,
+              gap: 8,
+            }}
+          >
+            <Text variant="titleMedium">{t('screen.welcome.recentSummoners')}</Text>
+            <Divider style={{ marginVertical: 8 }} />
+            
+            {savedSummoners.map((summoner) => (
+              <Button
+                key={summoner.puuid}
+                mode="outlined"
+                onPress={() => handleSelectSummoner(summoner)}
+                disabled={loading}
+                icon="account"
+                contentStyle={{ justifyContent: 'flex-start' }}
+              >
+                {summoner.name ?? t('common.unknownSummoner')}
+              </Button>
+            ))}
+          </Surface>
+        )}
       </ScrollView>
 
+      {/* Settings FAB */}
       <IconButton
         icon="settings"
-        size={32}
         mode="contained"
+        size={28}
         onPress={() => navigation.navigate('settings')}
         style={{
           position: 'absolute',
@@ -186,6 +202,6 @@ export default function Welcome() {
           right: 16,
         }}
       />
-    </View>
+    </Surface>
   )
 }

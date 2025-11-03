@@ -1,13 +1,6 @@
-import { MaterialIcons } from '@expo/vector-icons'
-import React from 'react'
-import {
-  StyleProp,
-  View,
-  ViewStyle,
-} from 'react-native'
-import { List, TouchableRipple, Text } from 'react-native-paper'
-
-import { styles } from './styles'
+import React, { useState } from 'react'
+import { View } from 'react-native'
+import { Menu, Button, Divider } from 'react-native-paper'
 
 interface Item {
   text: string
@@ -17,50 +10,50 @@ interface Item {
 
 interface Props {
   text: string
-  open: boolean
-  styles?: StyleProp<ViewStyle>
   items: Item[]
-  onPress: () => unknown
   onSelect: (item: Item) => unknown
 }
 
 const SelectMenu: React.FC<Props> = ({
   text,
-  open,
   items,
-  onPress,
   onSelect,
-  ...props
 }) => {
-  return (
-    <View style={[styles.container, props.styles]}>
-      <TouchableRipple
-        onPress={onPress}
-        style={{ padding: 12 }}
-      >
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Text variant="titleMedium">{text}</Text>
-          <MaterialIcons
-            name={open ? 'keyboard-arrow-down' : 'keyboard-arrow-up'}
-            size={32}
-            color='#ffffff70'
-          />
-        </View>
-      </TouchableRipple>
+  const [visible, setVisible] = useState(false)
 
-      {open ? (
-        <View>
-          {items.map((item) => (
-            <List.Item
-              key={item.key}
-              title={item.text}
-              onPress={() => onSelect(item)}
-              style={{ paddingLeft: 24 }}
-            />
-          ))}
-        </View>
-      ) : null}
-    </View>
+  const openMenu = () => setVisible(true)
+  const closeMenu = () => setVisible(false)
+
+  const handleSelect = (item: Item) => {
+    onSelect(item)
+    closeMenu()
+  }
+
+  return (
+    <Menu
+      visible={visible}
+      onDismiss={closeMenu}
+      anchor={
+        <Button
+          mode="outlined"
+          onPress={openMenu}
+          icon="menu-down"
+          contentStyle={{ flexDirection: 'row-reverse' }}
+        >
+          {text}
+        </Button>
+      }
+    >
+      {items.map((item, index) => (
+        <React.Fragment key={item.key}>
+          <Menu.Item
+            onPress={() => handleSelect(item)}
+            title={item.text}
+          />
+          {index < items.length - 1 && <Divider />}
+        </React.Fragment>
+      ))}
+    </Menu>
   )
 }
 

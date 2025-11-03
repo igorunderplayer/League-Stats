@@ -1,18 +1,20 @@
 import React from 'react'
-import { Surface } from 'react-native-paper'
+import { Card as PaperCard } from 'react-native-paper'
 import { ViewProps } from 'react-native'
 
 export interface CardProps extends ViewProps {}
 
 const Card: React.FC<CardProps> = ({ children, style, ...props }) => {
   return (
-    <Surface
-      style={[{ padding: 12, borderRadius: 12 }, style]}
-      elevation={0}
+    <PaperCard
+      style={style}
+      mode="contained"
       {...props}
     >
-      {children}
-    </Surface>
+      <PaperCard.Content>
+        {children}
+      </PaperCard.Content>
+    </PaperCard>
   )
 }
 
