@@ -185,4 +185,91 @@ export class LeagueStats {
     const data = await res.json()
     return data
   }
+
+  /**
+   * Streams AI Coach analysis for a match using SSE (Server-Sent Events)
+   * Uses XMLHttpRequest for React Native compatibility
+   */
+  analyzeMatchStream(
+    riotRegion: RiotRegion,
+    matchId: string,
+    participantPuuid: string,
+    locale = 'en-US',
+    onChunk: (text: string) => void,
+    onComplete: () => void,
+    onError: (error: Error) => void,
+  ): { abort: () => void } {
+    const url = `${this.apiUrl}/match/${riotRegion}/${matchId}/analyze/${participantPuuid}/stream?locale=${locale}`
+    console.log(`Streaming match analysis at URL: ${url}`)
+
+    const xhr = new XMLHttpRequest()
+    let lastIndex = 0
+
+    xhr.open('POST', url, true)
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.setRequestHeader('Accept', 'text/event-stream')
+
+    xhr.onprogress = () => {
+      const newData = xhr.responseText.substring(lastIndex)
+      lastIndex = xhr.responseText.length
+
+      if (newData) {
+        this.processSSEData(newData, onChunk)
+      }
+    }
+
+    xhr.onload = () => {
+      // Process any remaining data
+      const remainingData = xhr.responseText.substring(lastIndex)
+      if (remainingData) {
+        this.processSSEData(remainingData, onChunk)
+      }
+      onComplete()
+    }
+
+    xhr.onerror = () => {
+      onError(new Error(`Request failed with status: ${xhr.status}`))
+    }
+
+    xhr.ontimeout = () => {
+      onError(new Error('Request timed out'))
+    }
+
+    xhr.send()
+
+    return {
+      abort: () => xhr.abort(),
+    }
+  }
+
+  /**
+   * Processes SSE data and extracts content chunks
+   */
+  private processSSEData(
+    data: string,
+    onChunk: (text: string) => void,
+  ): void {
+    const lines = data.split('\n')
+
+    for (const line of lines) {
+      if (line.startsWith('data: ')) {
+        const jsonStr = line.slice(6)
+        if (jsonStr === '[DONE]') continue
+
+        try {
+          const parsed = JSON.parse(jsonStr)
+          const content =
+            parsed.content ?? parsed.text ?? parsed.delta?.content ?? null
+          if (content) {
+            onChunk(content)
+          }
+        } catch {
+          // If not valid JSON, use as plain text
+          if (jsonStr.trim()) {
+            onChunk(jsonStr)
+          }
+        }
+      }
+    }
+  }
 }

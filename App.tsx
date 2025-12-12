@@ -7,9 +7,9 @@ import { Routes } from './src/routes'
 
 // Load i18n
 import './src/i18n'
-import themes from './src/themes'
 import { PreferencesProvider } from './src/hooks/usePreferences'
 import ddragon from './src/services/ddragon'
+import themes from './src/themes'
 
 SplashScreen.preventAutoHideAsync()
 
@@ -44,7 +44,6 @@ export default function App() {
           style={{ flex: 1, backgroundColor: themes.dark.background }}
         >
           <Routes />
-          <StatusBar style='auto' />
         </View>
       </SummonerProvider>
     </PreferencesProvider>

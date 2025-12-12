@@ -1,22 +1,29 @@
 import { RouteProp, useRoute } from '@react-navigation/native'
-import React, { useEffect, useMemo, useState } from 'react'
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
+import { format } from 'date-fns'
+import { getLocales } from 'expo-localization'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import {
+  ActivityIndicator,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native'
+import Markdown from 'react-native-markdown-display'
 import { Match, MatchParticipant } from '../../@types/riot'
+import colors from '../../colors'
 import ParticipantFocusDetails from '../../components/cards/ParticipantFocusDetail'
+import { TeamKDA } from '../../components/generic/TeamKDA'
 import MatchParticipantInfo from '../../components/items/MatchParticipantInfo'
 import Card from '../../components/ui/card'
-import riotRegionFromLeague from '../../functions/riotRegionFromLeague'
-import { useSummoner } from '../../hooks/useSummoner'
-import { HistoryStackParamList } from '../../routes/history.routes'
-import { expoToDateFnsLocale } from '../../functions/expoToDateFnsLocale'
-import { getLocales } from 'expo-localization'
-import { format } from 'date-fns'
 import Title from '../../components/ui/title'
-import Markdown from 'react-native-markdown-display'
+import { expoToDateFnsLocale } from '../../functions/expoToDateFnsLocale'
+import riotRegionFromLeague from '../../functions/riotRegionFromLeague'
 import { useLeagueStats } from '../../hooks/useLeagueStats'
 import { usePreferences } from '../../hooks/usePreferences'
-import { styles, mdStyles } from './styles'
-import { TeamKDA } from '../../components/generic/TeamKDA'
+import { useSummoner } from '../../hooks/useSummoner'
+import { HistoryStackParamList } from '../../routes/history.routes'
+import { mdStyles, styles } from './styles'
 
 type matchInfoScreenProp = RouteProp<HistoryStackParamList, 'matchInfo'>
 
@@ -33,6 +40,8 @@ export default function MatchInfo() {
 
   const [aiCoachText, setAiCoachText] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(false)
+  const [isStreaming, setIsStreaming] = useState<boolean>(false)
+  const streamContentRef = useRef<string>('')
 
   useEffect(() => {
     if (!leagueRegion || !summoner) return
@@ -40,23 +49,43 @@ export default function MatchInfo() {
     leaguestats
       .getMatchById(riotRegionFromLeague(leagueRegion), route.params?.matchId)
       .then((match) => setMatch(match))
-  }, [summoner, leagueRegion])
+  }, [leaguestats, route?.params.matchId, summoner, leagueRegion])
+
+  const handleStreamChunk = useCallback((text: string) => {
+    streamContentRef.current += text
+    setAiCoachText(streamContentRef.current)
+  }, [])
+
+  const handleStreamComplete = useCallback(() => {
+    setIsStreaming(false)
+    setLoading(false)
+  }, [])
+
+  const handleStreamError = useCallback((error: Error) => {
+    console.error('Stream error:', error)
+    setIsStreaming(false)
+    setLoading(false)
+    setAiCoachText('Failed to analyze match. Please try again.')
+  }, [])
 
   const analyzeMatch = async () => {
     if (!match || !summoner?.puuid || loading || !leagueRegion) return
 
-    console.log('Analyzing match...')
+    console.log('Analyzing match with streaming...')
     setLoading(true)
+    setIsStreaming(true)
+    streamContentRef.current = ''
+    setAiCoachText('')
 
-    const res = await leaguestats.analyzeMatch(
+    leaguestats.analyzeMatchStream(
       riotRegionFromLeague(leagueRegion),
       match?.metadata.matchId ?? '',
       summoner.puuid,
       language,
+      handleStreamChunk,
+      handleStreamComplete,
+      handleStreamError,
     )
-
-    setAiCoachText(res.content)
-    setLoading(false)
   }
 
   const focusedParticipant =
@@ -154,18 +183,55 @@ export default function MatchInfo() {
         <Title>🤖 Coach AI</Title>
 
         <TouchableOpacity
-          style={styles.button}
+          style={[styles.button, loading && { opacity: 0.5 }]}
           onPress={analyzeMatch}
+          disabled={loading}
         >
-          <Text style={styles.text}>Analyze</Text>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 8,
+            }}
+          >
+            {loading && (
+              <ActivityIndicator
+                size='small'
+                color={colors.white}
+              />
+            )}
+            <Text style={styles.text}>
+              {loading ? 'Analyzing...' : 'Analyze'}
+            </Text>
+          </View>
         </TouchableOpacity>
 
         <Card>
           <Markdown style={mdStyles}>
-            {loading
+            {loading && !aiCoachText
               ? 'Please wait, we are analyzing your match...'
-              : aiCoachText ?? 'Your analysis will appear here.'}
+              : aiCoachText || 'Your analysis will appear here.'}
           </Markdown>
+          {isStreaming && !!aiCoachText && (
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginTop: 8,
+              }}
+            >
+              <ActivityIndicator
+                size='small'
+                color={colors.softCyan}
+              />
+              <Text
+                style={{ color: colors.softCyan, marginLeft: 8, fontSize: 12 }}
+              >
+                Receiving analysis...
+              </Text>
+            </View>
+          )}
         </Card>
       </Card>
 
