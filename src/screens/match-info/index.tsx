@@ -1,7 +1,7 @@
 import { RouteProp, useRoute } from '@react-navigation/native'
 import { format } from 'date-fns'
 import { getLocales } from 'expo-localization'
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   ActivityIndicator,
   ScrollView,
@@ -10,7 +10,7 @@ import {
   View,
 } from 'react-native'
 import Markdown from 'react-native-markdown-display'
-import { Match, MatchParticipant } from '../../@types/riot'
+import type { Match, MatchParticipant } from '../../@types/riot'
 import colors from '../../colors'
 import ParticipantFocusDetails from '../../components/cards/ParticipantFocusDetail'
 import { TeamKDA } from '../../components/generic/TeamKDA'
@@ -22,7 +22,7 @@ import riotRegionFromLeague from '../../functions/riotRegionFromLeague'
 import { useLeagueStats } from '../../hooks/useLeagueStats'
 import { usePreferences } from '../../hooks/usePreferences'
 import { useSummoner } from '../../hooks/useSummoner'
-import { HistoryStackParamList } from '../../routes/history.routes'
+import type { HistoryStackParamList } from '../../routes/history.routes'
 import { mdStyles, styles } from './styles'
 
 type matchInfoScreenProp = RouteProp<HistoryStackParamList, 'matchInfo'>

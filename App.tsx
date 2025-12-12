@@ -1,38 +1,35 @@
 import * as SplashScreen from 'expo-splash-screen'
-import { StatusBar } from 'expo-status-bar'
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { View } from 'react-native'
+import { PreferencesProvider } from './src/hooks/usePreferences'
 import { SummonerProvider } from './src/hooks/useSummoner'
 import { Routes } from './src/routes'
-
-// Load i18n
-import './src/i18n'
-import { PreferencesProvider } from './src/hooks/usePreferences'
 import ddragon from './src/services/ddragon'
 import themes from './src/themes'
+import './src/i18n'
 
 SplashScreen.preventAutoHideAsync()
 
 export default function App() {
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    setupCache()
-  }, [])
-
   // Load static data from ddragon and set on cache
-  async function setupCache() {
+  const setupCache = useCallback(async () => {
     await ddragon.getOrFetchVersions()
     await ddragon.getOrFetchChampions()
 
     setLoading(false)
-  }
+  }, [])
 
   const onLayoutRootView = useCallback(async () => {
     if (!loading) {
       await SplashScreen.hideAsync()
     }
   }, [loading])
+
+  useEffect(() => {
+    setupCache()
+  }, [setupCache])
 
   if (loading) return null
 
