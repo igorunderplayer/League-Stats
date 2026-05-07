@@ -98,6 +98,6 @@ export * from './en'
 export * from './pt'
 
 export const languageNames = {
-  pt: '🇧🇷 Português',
-  en: '🇺🇸 English',
+  pt_BR: '🇧🇷 Português',
+  en_US: '🇺🇸 English',
 }

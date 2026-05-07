@@ -1,6 +1,6 @@
 import { StringResources } from '.'
 
-export const pt: StringResources = {
+export const pt_BR: StringResources = {
   common: {
     unknownSummoner: 'Invocador desconhecido',
     victory: 'Vitória',

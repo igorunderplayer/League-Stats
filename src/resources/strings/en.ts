@@ -1,6 +1,6 @@
 import { StringResources } from '.'
 
-export const en: StringResources = {
+export const en_US: StringResources = {
   common: {
     unknownSummoner: 'Unknown summoner',
     victory: 'Victory',

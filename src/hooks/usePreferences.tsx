@@ -3,6 +3,7 @@ import colors from '../colors'
 import usePersistedState from './usePersistedState'
 import i18n from '../i18n'
 import { getLocales } from 'expo-localization'
+import { normalizeLocale } from '../functions/normalizeLocale'
 
 interface PreferencesContextType {
   primaryColor: string
@@ -32,11 +33,26 @@ export const PreferencesProvider: React.FC<{ children: ReactNode }> = ({
 
   const [language, setLanguage] = usePersistedState(
     'preferences.language',
-    getLocales()[0].languageCode ?? 'en',
+    normalizeLocale(
+      (() => {
+        const locale = getLocales()[0]
+        const languageCode = locale.languageCode ?? 'en'
+        const regionCode = locale.regionCode
+
+        return regionCode ? `${languageCode}_${regionCode}` : languageCode
+      })(),
+    ),
   )
 
   useEffect(() => {
-    i18n.changeLanguage(language)
+    const normalizedLanguage = normalizeLocale(language)
+
+    if (language !== normalizedLanguage) {
+      setLanguage(normalizedLanguage)
+      return
+    }
+
+    i18n.changeLanguage(normalizedLanguage)
   }, [language])
 
   return (
