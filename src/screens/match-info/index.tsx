@@ -1,7 +1,7 @@
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { RouteProp, useRoute } from '@react-navigation/native'
 import { format } from 'date-fns'
 import { getLocales } from 'expo-localization'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   ActivityIndicator,
   ScrollView,

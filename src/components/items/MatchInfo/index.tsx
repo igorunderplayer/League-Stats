@@ -19,7 +19,7 @@ import ddragon from '../../../services/ddragon'
 
 type Props = {
   match: Match
-  // eslint-disable-next-line no-unused-vars
+   
   onClick: (match: Match) => unknown
 }
 

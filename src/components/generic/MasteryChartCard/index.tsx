@@ -30,6 +30,7 @@ const MasteryChartCard: React.FC<Props> = ({ region = '', name = '' }) => {
       <Image
         resizeMode='center'
         style={styles.logo}
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
         source={require('../../../assets/masterychartlogo.png')}
       />
 
