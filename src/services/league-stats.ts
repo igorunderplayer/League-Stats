@@ -245,10 +245,7 @@ export class LeagueStats {
   /**
    * Processes SSE data and extracts content chunks
    */
-  private processSSEData(
-    data: string,
-    onChunk: (text: string) => void,
-  ): void {
+  private processSSEData(data: string, onChunk: (text: string) => void): void {
     const lines = data.split('\n')
 
     for (const line of lines) {

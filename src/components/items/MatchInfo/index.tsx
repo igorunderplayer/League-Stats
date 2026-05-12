@@ -19,7 +19,7 @@ import ddragon from '../../../services/ddragon'
 
 type Props = {
   match: Match
-   
+
   onClick: (match: Match) => unknown
 }
 

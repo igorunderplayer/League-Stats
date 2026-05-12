@@ -28,9 +28,7 @@ const useLeagueStats = () => {
       'API URL is not defined. Please set EXPO_PUBLIC_LEAGUE_STATS_API_URL in your environment variables or provide it in preferences.',
     )
   }
-  const leaguestats = getLeagueStats(
-    url,
-  )
+  const leaguestats = getLeagueStats(url)
   return { leaguestats }
 }
 
