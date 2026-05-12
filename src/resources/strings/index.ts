@@ -21,8 +21,8 @@ export interface StringResources {
     }
     settings: {
       title: string
-      customRiotApiKey: string
-      customRiotApiKeyPlaceholder: string
+      customApiUrl: string
+      customApiUrlPlaceholder: string
       deleteData: string
       appColor: string
       language: string
@@ -98,6 +98,6 @@ export * from './en'
 export * from './pt'
 
 export const languageNames = {
-  pt: '🇧🇷 Português',
-  en: '🇺🇸 English',
+  pt_BR: '🇧🇷 Português',
+  en_US: '🇺🇸 English',
 }

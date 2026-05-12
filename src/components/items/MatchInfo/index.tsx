@@ -13,18 +13,17 @@ import queues from '../../../common/queues'
 import runes from '../../../runes.json'
 import spells from '../../../spells.json'
 import VictoryDefeatIcon from '../../generic/VictoryDefeatIcon'
-import { useRiot } from '../../../hooks/useRiot'
 import { expoToDateFnsLocale } from '../../../functions/expoToDateFnsLocale'
 import { usePreferences } from '../../../hooks/usePreferences'
+import ddragon from '../../../services/ddragon'
 
 type Props = {
   match: Match
-  // eslint-disable-next-line no-unused-vars
+
   onClick: (match: Match) => unknown
 }
 
 const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
-  const { riot } = useRiot()
   const { summoner } = useSummoner()
 
   const { language } = usePreferences()
@@ -85,7 +84,7 @@ const MatchInfoCard: React.FC<Props> = ({ match, onClick }) => {
             marginRight: 12,
           }}
           source={{
-            uri: riot.ddragon.getChampionIcon(me.championName),
+            uri: ddragon.getChampionIcon(me.championName),
           }}
         />
 

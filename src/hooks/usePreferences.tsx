@@ -2,14 +2,16 @@ import React, { createContext, useContext, ReactNode, useEffect } from 'react'
 import colors from '../colors'
 import usePersistedState from './usePersistedState'
 import i18n from '../i18n'
+import { getLocales } from 'expo-localization'
+import { normalizeLocale } from '../functions/normalizeLocale'
 
 interface PreferencesContextType {
   primaryColor: string
-  riotApiKey: string | undefined
+  apiUrl: string | undefined
   language: string
   setLanguage: (language: string) => void
   setPrimaryColor: (color: string) => void
-  setRiotApiKey: (apiKey: string | undefined) => void
+  setApiUrl: (apiUrl: string | undefined) => void
 }
 
 const PreferencesContext = createContext<PreferencesContextType>(
@@ -24,28 +26,43 @@ export const PreferencesProvider: React.FC<{ children: ReactNode }> = ({
     colors.softPurple,
   )
 
-  const [riotApiKey, setRiotApiKey] = usePersistedState<string | undefined>(
-    'preferences.riotApiKey',
+  const [apiUrl, setApiUrl] = usePersistedState<string | undefined>(
+    'preferences.apiUrl',
     undefined,
   )
 
   const [language, setLanguage] = usePersistedState(
     'preferences.language',
-    'en',
+    normalizeLocale(
+      (() => {
+        const locale = getLocales()[0]
+        const languageCode = locale.languageCode ?? 'en'
+        const regionCode = locale.regionCode
+
+        return regionCode ? `${languageCode}_${regionCode}` : languageCode
+      })(),
+    ),
   )
 
   useEffect(() => {
-    i18n.changeLanguage(language)
+    const normalizedLanguage = normalizeLocale(language)
+
+    if (language !== normalizedLanguage) {
+      setLanguage(normalizedLanguage)
+      return
+    }
+
+    i18n.changeLanguage(normalizedLanguage)
   }, [language])
 
   return (
     <PreferencesContext.Provider
       value={{
         primaryColor,
-        riotApiKey,
+        apiUrl,
         language,
         setPrimaryColor,
-        setRiotApiKey,
+        setApiUrl,
         setLanguage,
       }}
     >

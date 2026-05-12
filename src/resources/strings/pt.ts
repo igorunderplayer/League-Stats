@@ -1,6 +1,6 @@
 import { StringResources } from '.'
 
-export const pt: StringResources = {
+export const pt_BR: StringResources = {
   common: {
     unknownSummoner: 'Invocador desconhecido',
     victory: 'Vitória',
@@ -24,9 +24,8 @@ export const pt: StringResources = {
     },
     settings: {
       title: 'Configurações',
-      customRiotApiKey: 'Chave API personalizada Riot',
-      customRiotApiKeyPlaceholder:
-        'Insira sua chave de API personalizada da Riot aqui',
+      customApiUrl: 'URL da API personalizada',
+      customApiUrlPlaceholder: 'Insira sua URL da API personalizada aqui',
       appColor: 'Cor do aplicativo',
       deleteData: 'Excluir todos os dados',
       language: 'Idioma',

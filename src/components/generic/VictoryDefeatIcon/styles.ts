@@ -15,6 +15,6 @@ export const styles = StyleSheet.create({
   },
   separator: {
     color: '#fff',
-    fontSize: 18
-  }
+    fontSize: 18,
+  },
 })

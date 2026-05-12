@@ -8,27 +8,32 @@ import colors from '../../../colors'
 import { useSummoner } from '../../../hooks/useSummoner'
 import Card from '../../ui/card'
 import Title from '../../ui/title'
-import { useRiot } from '../../../hooks/useRiot'
+import { useLeagueStats } from '../../../hooks/useLeagueStats'
+import ddragon from '../../../services/ddragon'
 
 const FreeChampionsRotation: React.FC = () => {
   const { leagueRegion, summoner } = useSummoner()
   const [champions, setChampions] = useState<ChampionData[]>([])
 
-  const { riot } = useRiot()
+  const { leaguestats } = useLeagueStats()
 
   const { t } = useTranslation()
 
   useEffect(() => {
     if (!leagueRegion || !summoner) return
 
-    riot.getFreeChampionsIdRotation(leagueRegion).then(async (ids) => {
-      const allChampions = await riot.ddragon.getOrFetchChampions()
-      const champValues = Object.values(allChampions)
-      const champions = ids.map((id) =>
-        champValues.find((c) => c.key == String(id)),
-      ) as ChampionData[]
-      setChampions(champions)
-    })
+    try {
+      leaguestats.getFreeChamopionRotation(leagueRegion).then(async (ids) => {
+        const allChampions = await ddragon.getOrFetchChampions()
+        const champValues = Object.values(allChampions)
+        const champions = ids.map((id) =>
+          champValues.find((c) => c.key == String(id)),
+        ) as ChampionData[]
+        setChampions(champions)
+      })
+    } catch {
+      alert('Could not fetch free champion rotation')
+    }
   }, [])
 
   return (
@@ -56,8 +61,6 @@ type ItemProps = {
 const ChampionItem = ({ item }: ItemProps) => {
   const [locale] = getLocales()
 
-  const { riot } = useRiot()
-
   const local = locale.languageTag.toLowerCase()
 
   function openChampionURL() {
@@ -73,7 +76,7 @@ const ChampionItem = ({ item }: ItemProps) => {
       <Image
         style={{ width: 48, height: 48 }}
         source={{
-          uri: riot.ddragon.getChampionIcon(item.id),
+          uri: ddragon.getChampionIcon(item.id),
         }}
       />
 

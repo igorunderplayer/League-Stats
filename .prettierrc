@@ -3,5 +3,6 @@
   "semi": false,
   "singleQuote": true,
   "singleAttributePerLine": true,
-  "jsxSingleQuote": true
+  "jsxSingleQuote": true,
+  "endOfLine": "lf"
 }

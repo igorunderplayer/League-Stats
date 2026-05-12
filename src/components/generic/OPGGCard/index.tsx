@@ -24,6 +24,7 @@ const OPGGCard: React.FC<Props> = ({ region = '', name = '' }) => {
       <Image
         style={styles.logo}
         resizeMode='center'
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
         source={require('../../../assets/opgglogo.png')}
       />
       <MaterialIcons
