@@ -5,16 +5,23 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "node": "24.15.0",
+      "pnpm": "11.1.1"
     },
     "preview": {
       "distribution": "internal",
+      "node": "24.15.0",
+      "pnpm": "11.1.1",
       "android": {
         "image": "latest",
         "buildType": "apk"
       }
     },
-    "production": {}
+    "production": {
+      "node": "24.15.0",
+      "pnpm": "11.1.1"
+    }
   },
   "submit": {
     "production": {}
