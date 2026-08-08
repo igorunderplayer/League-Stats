@@ -7,13 +7,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#121212"
-    },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.igorzizinio.leaguestats"
@@ -23,7 +19,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#121212"
       },
-      "package": "com.igorzizinio.leaguestats"    },
+      "package": "com.igorzizinio.leaguestats"
+    },
     "extra": {
       "eas": {
         "projectId": "f045a167-a0c2-4fa8-b3d5-92888ff774c3"
@@ -38,7 +35,9 @@
             "usesCleartextTraffic": true
           }
         }
-      ]
+      ],
+      "expo-splash-screen",
+      "expo-status-bar"
     ]
   }
 }

@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import { MaterialIcons } from '@expo/vector-icons'
+import { MaterialIcons } from '@react-native-vector-icons/material-icons'
 import { leagueFromString } from '../../@types/riot'
 import { SelectMenu } from '../../components/generic/SelectMenu'
 import { SummonerInfo, useSummoner } from '../../hooks/useSummoner'

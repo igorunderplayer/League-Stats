@@ -1,5 +1,5 @@
 import React, { TextInput, View, Text, TouchableOpacity } from 'react-native'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { MaterialCommunityIcons } from '@react-native-vector-icons/material-icons'
 import { styles } from './styles'
 import { SelectMenu } from '../../components/generic/SelectMenu'
 import colors from '../../colors'

@@ -1,6 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import React from 'react'
-import { MaterialIcons } from '@expo/vector-icons'
+import { MaterialIcons } from '@react-native-vector-icons/material-icons'
 import { useTranslation } from 'react-i18next'
 import { TouchableOpacity } from 'react-native'
 import colors from '../colors'
